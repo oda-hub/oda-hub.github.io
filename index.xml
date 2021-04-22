@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About ODA</title>
-    <link>/</link>
+    <link>https://doc.odahub.io/</link>
     <description>Recent content on About ODA</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://doc.odahub.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>/reasoning-engine/</link>
+      <link>https://doc.odahub.io/reasoning-engine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reasoning-engine/</guid>
+      <guid>https://doc.odahub.io/reasoning-engine/</guid>
       <description>Details about the reasoning engines Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
 Workflow execution is
 This approach separates:</description>
