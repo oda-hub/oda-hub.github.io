@@ -11,7 +11,7 @@
 <meta property="og:description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #  Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
  collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://doc.odahub.io/docs/guide/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://odahub.io/docs/guide/" /><meta property="article:section" content="docs" />
 
 
 
@@ -19,7 +19,7 @@
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.e935e20bd0d469378cb482f0958edf258c731a4f895dccd55799c6fbc8043f23.css" integrity="sha256-6TXiC9DUaTeMtILwlY7fJYxzGk&#43;JXczVV5nG&#43;8gEPyM=">
-<script defer src="../../en.search.min.0a3de6ad45a8a8cec56cb651ab5f9b7e15fd856bfc4a58d01ac4b61424ede739.js" integrity="sha256-Cj3mrUWoqM7FbLZRq1&#43;bfhX9hWv8SljQGsS2FCTt5zk="></script>
+<script defer src="../../en.search.min.56d89f28356b3817dc2ae34c20f32c28d38f2232137c05e2d91158b6de9be1ae.js" integrity="sha256-VtifKDVrOBfcKuNMIPMsKNOPIjITfAXi2RFYtt6b4a4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -72,7 +72,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://doc.odahub.io/docs/reasoning-engine/" class="">Reasoning engines</a>
+    <a href="https://odahub.io/docs/reasoning-engine/" class="">Reasoning engines</a>
   
 
         </li>
@@ -85,7 +85,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://doc.odahub.io/docs/guide/" class=" active">Guide</a>
+    <a href="https://odahub.io/docs/guide/" class=" active">Guide</a>
   
 
         </li>
@@ -165,12 +165,13 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#literature-building">Literature building</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#viewing-computed-workflows">Viewing computed workflows</a></li>
-    <li><a href="#adding-a-workflow">Adding a workflow</a></li>
-    <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
+    <li><a href="#human-interventions-into-the-kg">Human interventions into the KG</a>
+      <ul>
+        <li><a href="#viewing-computed-workflows">Viewing computed workflows</a></li>
+        <li><a href="#adding-a-workflow">Adding a workflow</a></li>
+        <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -191,7 +192,7 @@ https://github.com/alex-shpak/hugo-book
   Purpose of this note
   <a class="anchor" href="#purpose-of-this-note">#</a>
 </h2>
-<p>We want to demostrate on concrete and scientifically-useful working examples how an <strong>astronomer</strong>, who might indeed have relatively little interest to look in the code, can leverage <strong>ODA Knowledge Base</strong> and <strong>Knowledge Graphs</strong> together with other valuable resources (especially <a href="renkulab.io/">Renku</a>):</p>
+<p>We want to demostrate on concrete and scientifically-useful working examples how an <strong>astronomer</strong>, who might indeed have relatively little interest to look in the code, can leverage <strong>ODA Knowledge Base</strong> and <strong>Knowledge Graphs</strong> together with other valuable resources (especially <a href="https://renkulab.io/">Renku</a>):</p>
 <ul>
 <li><strong>collaborate</strong> on workflows</li>
 <li><strong>discover and use ODA-built services</strong></li>
@@ -320,30 +321,31 @@ This restricted form of general reasoning.</p>
 <p>Integrating data into paper. Adding another compile step deriving data from various sources (a lot of the time - workflow executions) and producing macroses for the latex.</p>
 <p>Made use-case first, for the easist possible latex work.</p>
 <p><a href="https://github.com/oda-hub/linked-data-latex">https://github.com/oda-hub/linked-data-latex</a></p>
-<h1 id="capturing-human-intervention-into-the-kg">
-  Capturing human intervention into the KG
-  <a class="anchor" href="#capturing-human-intervention-into-the-kg">#</a>
-</h1>
+<h2 id="human-interventions-into-the-kg">
+  Human interventions into the KG
+  <a class="anchor" href="#human-interventions-into-the-kg">#</a>
+</h2>
 <p>Human agents are first-class citizens in the ODA KB/KB, on paar with the automated workflows. Humans are not very reproducible, but provide unique intuitively-guided inputs, owing to their own built-in very large but a bit vague Knowledge &ldquo;Graphs&rdquo;.
 Key aspect of our development here is to allow data and workflow interoperability. It is only natural that we are concerned with human-ODA unteroperability. Technically, we implement <strong>human interactions are implemented in the same way workflow executions</strong>.</p>
 <p>Most Humans experience the KB through various frontends. These multiple light-weight frontends allow making pre-defined actions, leading to workflow excutions.</p>
 <p>Some pre-built frontends for develoment needs are presented here:</p>
 <p><a href="https://in.odahub.io/odatests/">https://in.odahub.io/odatests/</a></p>
-<h2 id="viewing-computed-workflows">
+<h3 id="viewing-computed-workflows">
   Viewing computed workflows
   <a class="anchor" href="#viewing-computed-workflows">#</a>
-</h2>
+</h3>
 <p>As described in the <a href="reasoning-engine.md">details on reasoning engine</a> computed workflows are fully curryied workflows are equivalent to simple data-fetching workflows.</p>
-<h2 id="adding-a-workflow">
+<h3 id="adding-a-workflow">
   Adding a workflow
   <a class="anchor" href="#adding-a-workflow">#</a>
-</h2>
-<p>it should be as simple as pushinga button. They could be synchronized from <strong>Renku</strong>.
+</h3>
+<p>it should be as simple as pushing a button. They could be synchronized from <strong>Renku</strong>.
 If <strong>Renku</strong> will provide simple a limited public graph, we could directly use it, without reproducing it part of it in ODA KG.</p>
-<h2 id="example-of-adding-new-workflow--which-reacts-on-astro-transients">
+<h3 id="example-of-adding-new-workflow--which-reacts-on-astro-transients">
   Example of adding new workflow  which reacts on astro transients
   <a class="anchor" href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">#</a>
-</h2>
+</h3>
+<p>TODO</p>
 </article>
  
       
@@ -402,12 +404,13 @@ If <strong>Renku</strong> will provide simple a limited public graph, we could d
         <li><a href="#literature-building">Literature building</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#viewing-computed-workflows">Viewing computed workflows</a></li>
-    <li><a href="#adding-a-workflow">Adding a workflow</a></li>
-    <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
+    <li><a href="#human-interventions-into-the-kg">Human interventions into the KG</a>
+      <ul>
+        <li><a href="#viewing-computed-workflows">Viewing computed workflows</a></li>
+        <li><a href="#adding-a-workflow">Adding a workflow</a></li>
+        <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
