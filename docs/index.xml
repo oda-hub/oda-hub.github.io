@@ -5,18 +5,7 @@
     <link>https://odahub.io/docs/</link>
     <description>Recent content in Docs on About ODA</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 22 Apr 2021 20:45:55 +0200</lastBuildDate><atom:link href="https://odahub.io/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Reasoning engines</title>
-      <link>https://odahub.io/docs/reasoning-engine/</link>
-      <pubDate>Thu, 22 Apr 2021 20:45:55 +0200</pubDate>
-      
-      <guid>https://odahub.io/docs/reasoning-engine/</guid>
-      <description>Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
-Workflow execution is</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://odahub.io/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://odahub.io/docs/guide/</link>
@@ -25,6 +14,16 @@ Workflow execution is</description>
       <guid>https://odahub.io/docs/guide/</guid>
       <description>Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #  Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
  collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://odahub.io/docs/reasoning-engine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://odahub.io/docs/reasoning-engine/</guid>
+      <description>Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
+Workflow execution is</description>
     </item>
     
   </channel>
