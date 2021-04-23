@@ -19,7 +19,7 @@
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.e935e20bd0d469378cb482f0958edf258c731a4f895dccd55799c6fbc8043f23.css" integrity="sha256-6TXiC9DUaTeMtILwlY7fJYxzGk&#43;JXczVV5nG&#43;8gEPyM=">
-<script defer src="../../en.search.min.0a3e75b8ad03ae935ad8cbe0b51f0c9e616d16d90fd9cd7b4e0e68e56b41dc94.js" integrity="sha256-Cj51uK0DrpNa2MvgtR8MnmFtFtkP2c17Tg5o5WtB3JQ="></script>
+<script defer src="../../en.search.min.56d89f28356b3817dc2ae34c20f32c28d38f2232137c05e2d91158b6de9be1ae.js" integrity="sha256-VtifKDVrOBfcKuNMIPMsKNOPIjITfAXi2RFYtt6b4a4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -172,37 +172,6 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#purpose-of-this-note-1">Purpose of this note</a></li>
-    <li><a href="#developing-the-workflow-1">Developing the workflow</a></li>
-    <li><a href="#ontology-1">Ontology</a>
-      <ul>
-        <li><a href="#workflow-inputs-1">Workflow inputs</a></li>
-        <li><a href="#workflow-properties-from-capturing-workflow-behavior-1">Workflow properties from capturing workflow behavior</a></li>
-        <li><a href="#other-domain-specific-knowledge-1">Other Domain-specific knowledge</a></li>
-      </ul>
-    </li>
-    <li><a href="#from-workflow-to-web-based-data-analysis-1">From Workflow to Web-Based Data Analysis</a></li>
-    <li><a href="#reasoning-workflows-1">Reasoning workflows</a>
-      <ul>
-        <li><a href="#workflow-exection-1">Workflow exection</a></li>
-        <li><a href="#other-reasoning-rules-1">Other reasoning rules</a></li>
-      </ul>
-    </li>
-    <li><a href="#literature-1">Literature</a>
-      <ul>
-        <li><a href="#literature-parsing-1">Literature parsing</a></li>
-        <li><a href="#literature-building-1">Literature building</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#viewing-computed-workflows-1">Viewing computed workflows</a></li>
-    <li><a href="#adding-a-workflow-1">Adding a workflow</a></li>
-    <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients-1">Example of adding new workflow  which reacts on astro transients</a></li>
   </ul>
 </nav>
 
@@ -377,167 +346,6 @@ If <strong>Renku</strong> will provide simple a limited public graph, we could d
   <a class="anchor" href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">#</a>
 </h3>
 <p>TODO</p>
-<h1 id="workflow-publishing-and-discovery-with-kg-old-school-astronomer-guide-1">
-  Workflow Publishing and Discovery with KG: Old-School Astronomer Guide
-  <a class="anchor" href="#workflow-publishing-and-discovery-with-kg-old-school-astronomer-guide-1">#</a>
-</h1>
-<h2 id="purpose-of-this-note-1">
-  Purpose of this note
-  <a class="anchor" href="#purpose-of-this-note-1">#</a>
-</h2>
-<p>We want to demostrate on concrete and scientifically-useful working examples how an <strong>astronomer</strong>, who might indeed have relatively little interest to look in the code, can leverage <strong>ODA Knowledge Base</strong> and <strong>Knowledge Graphs</strong> together with other valuable resources (especially <a href="renkulab.io/">Renku</a>):</p>
-<ul>
-<li><strong>collaborate</strong> on workflows</li>
-<li><strong>discover and use ODA-built services</strong></li>
-<li>discovery and use our record of globally available <strong>web-based data analysis services</strong></li>
-<li>easily <strong>contribute</strong> your own analysis as web-servces</li>
-<li>annotate your work in the ways ready for consumption by the synthetic astronomer <strong>robots</strong>, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their <strong>irreplacible scientific capacities</strong>.</li>
-</ul>
-<p>It&rsquo;s clear that much of this functionality is available in other frameworks, usually custom for purpose. We make use of many the re-usable open-source technologies, to support an ecosystem of tools and other developments, which can be re-used between some of our projects.</p>
-<p><img src="robotization.png" alt="" /></p>
-<h2 id="developing-the-workflow-1">
-  Developing the workflow
-  <a class="anchor" href="#developing-the-workflow-1">#</a>
-</h2>
-<p>The simplest way to build a workflow is to write a <strong>jupyter notebook</strong>. We will not go in every details here, see <a href="https://github.com/oda-hub/guide-to-create-workflows/">dedicated guide</a> for step-by-step instructions.</p>
-<p>Instead, this document here focuses on workflow annotation, publishing, and discovery.
-These features are powered by an <strong>RDF Knowledge Graph</strong>. What exactly is stored in the Knowledge Graph, is described by the <strong>ontologies</strong> (which are themselves stored in some KG).</p>
-<h2 id="ontology-1">
-  Ontology
-  <a class="anchor" href="#ontology-1">#</a>
-</h2>
-<p>We will describe here the simplest elements of the ontology, which are necessary for workflow annotation.</p>
-<p><strong>Ontology</strong> describes relations between some <strong>things</strong>, <strong>terms</strong> (represented as <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">RDF URIs</a>). <strong>URI</strong> can look like a URL, e.g. <a href="https://odahub.io/ontology/sources/Mrk421">https://odahub.io/ontology/sources/Mrk421</a> (the URL may or may not be leading to a real location, although it generally should). The <strong>URI</strong> can be also shortened, assuming a namespace prefix:</p>
-<pre><code class="language-rdf" data-lang="rdf">PREFIX odaSources: &lt;https://odahub.io/ontology/sources#&gt;
-</code></pre><p>(see some default list of prefixes <a href="http://ontology.odahub.io/defaults/defaults.yaml">here</a>)</p>
-<p>This way, <a href="https://odahub.io/ontology/sources/Mrk421">https://odahub.io/ontology/sources/Mrk421</a> becomes <code>odaSources:Mrk421</code>.</p>
-<p>It is necessary to annotate the workflow with these <strong>terms</strong>. Specifically, to make relations between the <strong>workflow</strong> and these <strong>terms</strong>. Relations have a form of simply propositions, expressed as <strong>subject-predicate-object</strong> <strong>triples</strong>.</p>
-<p>For example</p>
-<pre><code class="language-rdf" data-lang="rdf">oda:sdssWorkflow oda:isImportantIn oda:radioAstronomy .
-</code></pre><p>or</p>
-<pre><code class="language-rdf" data-lang="rdf">oda:sdssWorkflow astroquery:uses astroquery:sdssArchive .
-</code></pre><pre><code class="language-rdf" data-lang="rdf">oda:sdssWorkflow oda:isAbout odaSources:Mrk421 .
-</code></pre><p>Consider that it is benefitial to use terms already used by other people, described in existing ontologies. This way we speak in the same language as other people, and will be able to more easily combine our resources.
-However, it can be quite an effort to understand what other people meant, which is necessary to use their terms correctly. This effort should be made conciously when possible. It is advisable to also discuss unclear points withing our group, and come to a common solution.</p>
-<p>Particular attention should be paid to International Virtual Observatory (IVOA)  vocabulaires. See their rdf vocabularies here: <a href="https://www.ivoa.net/rdf/index.html">https://www.ivoa.net/rdf/index.html</a> and references therein.
-Developments used in variety of tables managed by CDS-Strasbourg, where much of the needed terms for astrophysical entities can be found (one can start <a href="https://www.ivoa.net/documents/UCD1&#43;/">here</a>).</p>
-<p>It is however, often important to adopt project-specific narrowed-down scope. For example, our understanding of what an <code>AGN</code> is, may differ from that of <code>CDS-Strasbourg</code>. Which is why, in unclear cases, we should not hesitate to use custom terms, such as <code>odaSources:AGN</code>. Then, we can also model and encode equivalence between our own understanding of the <code>AGN</code> with that of <code>CDS</code>. For example, as so:</p>
-<pre><code class="language-rdf" data-lang="rdf">odaSources:Mrk421 oda:isSubclassOf odaSources:AGN .
-odaSources:AGN oda:equivalentTo cds:AGN .
-</code></pre><p>Later, these equivalences can be reduced under specific assumptions: for example some agent may assume that <code>oda:equivalentTo</code> implies literal substitution in all contexts.</p>
-<h3 id="workflow-inputs-1">
-  Workflow inputs
-  <a class="anchor" href="#workflow-inputs-1">#</a>
-</h3>
-<p>For our purposes, the most important workflow properties are set by their inputs and outputs.</p>
-<p>We will use <code>nb2workflow</code> (commands below will need <code>pip install nb2workflow</code>) to add addition details and instrospection on the workflow notebooks.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">name_input <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mrk 421&#34;</span> <span style="color:#75715e"># name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName</span>
-radius_input <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.0</span> <span style="color:#75715e"># arcmin</span>
-</code></pre></div><p>They can be see for example with</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nbinspect final.ipynb
-...
-<span style="color:#e6db74">&#34;name_input&#34;</span>: <span style="color:#f92672">{</span>
-        <span style="color:#e6db74">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34; name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName&#34;</span>,
-        <span style="color:#e6db74">&#34;default_value&#34;</span>: <span style="color:#e6db74">&#34;Mrk 421&#34;</span>,
-        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;name_input&#34;</span>,
-        <span style="color:#e6db74">&#34;owl_type&#34;</span>: <span style="color:#e6db74">&#34;http://odahub.io/ontology/sourceName&#34;</span>,
-        <span style="color:#e6db74">&#34;python_type&#34;</span>: <span style="color:#e6db74">&#34;&lt;class &#39;str&#39;&gt;&#34;</span>,
-        <span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;Mrk 421&#34;</span>
-    <span style="color:#f92672">}</span>,
-...
-<span style="color:#e6db74">&#34;radius_input&#34;</span>: <span style="color:#f92672">{</span>
-        <span style="color:#e6db74">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34; arcmin&#34;</span>,
-        <span style="color:#e6db74">&#34;default_value&#34;</span>: 3.0,
-        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;radius_input&#34;</span>,
-        <span style="color:#e6db74">&#34;owl_type&#34;</span>: <span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema#float&#34;</span>,
-        <span style="color:#e6db74">&#34;python_type&#34;</span>: <span style="color:#e6db74">&#34;&lt;class &#39;float&#39;&gt;&#34;</span>,
-        <span style="color:#e6db74">&#34;value&#34;</span>: 3.0
-    <span style="color:#f92672">}</span>
-...
-</code></pre></div><p>Notice how in the first case, owl_type (OWL being the ontology definition language) is derived from the comment.
-And in the second case, it is derived from the variable type.</p>
-<p>To generate a graph from the notebook:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nb2rdf final-an.ipynb final.rdf
-</code></pre></div><p>This graph can be viewed, for example, with <a href="www.visualdataweb.de/webvowl">WebVOWL</a>. It can also be published in a common location (see <code>nb2service --help</code>).</p>
-<p><em>TODO: show command to publish</em></p>
-<h3 id="workflow-properties-from-capturing-workflow-behavior-1">
-  Workflow properties from capturing workflow behavior
-  <a class="anchor" href="#workflow-properties-from-capturing-workflow-behavior-1">#</a>
-</h3>
-<p>Renku (with a renku plugin) is currently able to deduce that workflow uses some algorithms, providing basis for useful automatic annotation. Current plugin is dedicated to ML algorithms.</p>
-<p>We expect in the future to make an ODA-specific (or, more generally, astrquery-specific) renku plugin.</p>
-<h3 id="other-domain-specific-knowledge-1">
-  Other Domain-specific knowledge
-  <a class="anchor" href="#other-domain-specific-knowledge-1">#</a>
-</h3>
-<p>It is possible to assign any other characteristics to the workflow. It should be seem in case what makes sense. We used <code>oda:importantIn</code> predicate to assign relevance to some domains, e.g. <code>domain:transients</code>. In many cases these predicates can be assigned based on reasoning rules.</p>
-<h2 id="from-workflow-to-web-based-data-analysis-1">
-  From Workflow to Web-Based Data Analysis
-  <a class="anchor" href="#from-workflow-to-web-based-data-analysis-1">#</a>
-</h2>
-<p>We made a simple tool to present an HTTP service executing given notebook on demand. See <a href="https://github.com/oda-hub/nb2workflow">https://github.com/oda-hub/nb2workflow</a></p>
-<h2 id="reasoning-workflows-1">
-  Reasoning workflows
-  <a class="anchor" href="#reasoning-workflows-1">#</a>
-</h2>
-<p><strong>Reasoning is transformation of knowledge.</strong></p>
-<p><strong>Since our knowledge base is the knowledge graph, our reasoning is transformation of the knowledge graph.</strong></p>
-<p>I know, it may sound ambitious and unreasonable to claim capacity of out platform to reason.
-However, this terminology has been accepted in the community.
-This restricted form of general reasoning.</p>
-<p>Ingesting data into the graph also transforms the graph. Moreoever, workflows ingesting data may be guided by the present, graph content. When possible, we separate reasoning from external source ingestion by ingesting first, and reasoning later: this allows to preserve. But it is not always feasible.</p>
-<p>Reasoning is performed by executing these reasoning workflows: in response to external triggers, or just regularly.</p>
-<h3 id="workflow-exection-1">
-  Workflow exection
-  <a class="anchor" href="#workflow-exection-1">#</a>
-</h3>
-<p>Curiusly, it is very convenient to see worklow execution as reasoning. See <a href="reasoning-engine.md">more details</a>.</p>
-<h3 id="other-reasoning-rules-1">
-  Other reasoning rules
-  <a class="anchor" href="#other-reasoning-rules-1">#</a>
-</h3>
-<p>Various standard reasoning rules can be applied.</p>
-<h2 id="literature-1">
-  Literature
-  <a class="anchor" href="#literature-1">#</a>
-</h2>
-<h3 id="literature-parsing-1">
-  Literature parsing
-  <a class="anchor" href="#literature-parsing-1">#</a>
-</h3>
-<p>Simple workflows to read astronomical and arxiv publications and produce some RDF.</p>
-<p><a href="https://github.com/oda-hub/literature-to-facts">https://github.com/oda-hub/literature-to-facts</a></p>
-<h3 id="literature-building-1">
-  Literature building
-  <a class="anchor" href="#literature-building-1">#</a>
-</h3>
-<p>Integrating data into paper. Adding another compile step deriving data from various sources (a lot of the time - workflow executions) and producing macroses for the latex.</p>
-<p>Made use-case first, for the easist possible latex work.</p>
-<p><a href="https://github.com/oda-hub/linked-data-latex">https://github.com/oda-hub/linked-data-latex</a></p>
-<h1 id="capturing-human-intervention-into-the-kg">
-  Capturing human intervention into the KG
-  <a class="anchor" href="#capturing-human-intervention-into-the-kg">#</a>
-</h1>
-<p>Human agents are first-class citizens in the ODA KB/KB, on paar with the automated workflows. Humans are not very reproducible, but provide unique intuitively-guided inputs, owing to their own built-in very large but a bit vague Knowledge &ldquo;Graphs&rdquo;.
-Key aspect of our development here is to allow data and workflow interoperability. It is only natural that we are concerned with human-ODA unteroperability. Technically, we implement <strong>human interactions are implemented in the same way workflow executions</strong>.</p>
-<p>Most Humans experience the KB through various frontends. These multiple light-weight frontends allow making pre-defined actions, leading to workflow excutions.</p>
-<p>Some pre-built frontends for develoment needs are presented here:</p>
-<p><a href="https://in.odahub.io/odatests/">https://in.odahub.io/odatests/</a></p>
-<h2 id="viewing-computed-workflows-1">
-  Viewing computed workflows
-  <a class="anchor" href="#viewing-computed-workflows-1">#</a>
-</h2>
-<p>As described in the <a href="reasoning-engine.md">details on reasoning engine</a> computed workflows are fully curryied workflows are equivalent to simple data-fetching workflows.</p>
-<h2 id="adding-a-workflow-1">
-  Adding a workflow
-  <a class="anchor" href="#adding-a-workflow-1">#</a>
-</h2>
-<p>it should be as simple as pushinga button. They could be synchronized from <strong>Renku</strong>.
-If <strong>Renku</strong> will provide simple a limited public graph, we could directly use it, without reproducing it part of it in ODA KG.</p>
-<h2 id="example-of-adding-new-workflow--which-reacts-on-astro-transients-1">
-  Example of adding new workflow  which reacts on astro transients
-  <a class="anchor" href="#example-of-adding-new-workflow--which-reacts-on-astro-transients-1">#</a>
-</h2>
 </article>
  
       
@@ -603,37 +411,6 @@ If <strong>Renku</strong> will provide simple a limited public graph, we could d
         <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#purpose-of-this-note-1">Purpose of this note</a></li>
-    <li><a href="#developing-the-workflow-1">Developing the workflow</a></li>
-    <li><a href="#ontology-1">Ontology</a>
-      <ul>
-        <li><a href="#workflow-inputs-1">Workflow inputs</a></li>
-        <li><a href="#workflow-properties-from-capturing-workflow-behavior-1">Workflow properties from capturing workflow behavior</a></li>
-        <li><a href="#other-domain-specific-knowledge-1">Other Domain-specific knowledge</a></li>
-      </ul>
-    </li>
-    <li><a href="#from-workflow-to-web-based-data-analysis-1">From Workflow to Web-Based Data Analysis</a></li>
-    <li><a href="#reasoning-workflows-1">Reasoning workflows</a>
-      <ul>
-        <li><a href="#workflow-exection-1">Workflow exection</a></li>
-        <li><a href="#other-reasoning-rules-1">Other reasoning rules</a></li>
-      </ul>
-    </li>
-    <li><a href="#literature-1">Literature</a>
-      <ul>
-        <li><a href="#literature-parsing-1">Literature parsing</a></li>
-        <li><a href="#literature-building-1">Literature building</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#viewing-computed-workflows-1">Viewing computed workflows</a></li>
-    <li><a href="#adding-a-workflow-1">Adding a workflow</a></li>
-    <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients-1">Example of adding new workflow  which reacts on astro transients</a></li>
   </ul>
 </nav>
 
