@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About ODA</title>
-    <link>https://doc.odahub.io/</link>
-    <description>Recent content on About ODA</description>
+    <title>Docs on About ODA</title>
+    <link>https://doc.odahub.io/docs/</link>
+    <description>Recent content in Docs on About ODA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Apr 2021 20:45:55 +0200</lastBuildDate><atom:link href="https://doc.odahub.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 20:45:55 +0200</lastBuildDate><atom:link href="https://doc.odahub.io/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reasoning engines</title>
       <link>https://doc.odahub.io/docs/reasoning-engine/</link>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
+Workflow execution is">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Reasoning engines" />
+<meta property="og:description" content="Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
+Workflow execution is" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.odahub.io/docs/reasoning-engine/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-04-22T20:45:55&#43;02:00" />
+<meta property="article:modified_time" content="2021-04-22T20:45:55&#43;02:00" />
+
+<title>Reasoning engines | About ODA</title>
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../../book.min.e935e20bd0d469378cb482f0958edf258c731a4f895dccd55799c6fbc8043f23.css" integrity="sha256-6TXiC9DUaTeMtILwlY7fJYxzGk&#43;JXczVV5nG&#43;8gEPyM=">
+<script defer src="../../en.search.min.0a3de6ad45a8a8cec56cb651ab5f9b7e15fd856bfc4a58d01ac4b61424ede739.js" integrity="sha256-Cj3mrUWoqM7FbLZRq1&#43;bfhX9hWv8SljQGsS2FCTt5zk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="../../"><span>About ODA</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://doc.odahub.io/docs/reasoning-engine/" class=" active">Reasoning engines</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://doc.odahub.io/docs/guide/" class="">Guide</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Reasoning engines</strong>
+
+  <label for="toc-control">
+    
+    <img src="../../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#currying-worker">Currying worker</a></li>
+    <li><a href="#execution">Execution</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="details-about-the-reasoning-engines">
+  Details about the reasoning engines
+  <a class="anchor" href="#details-about-the-reasoning-engines">#</a>
+</h1>
+<p>Workflows entities in the KG can undergo various transformations. One key transformation is <strong>currying</strong>, understood in the same way as function <a href="https://en.wikipedia.org/wiki/Currying">currying</a> - since workflow, for our purposes, is very similar to a <strong>function</strong>. <strong>Currying</strong> transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that <strong>only workflow without parameters can be computed (executed)</strong>.</p>
+<p>Workflow <strong>execution</strong> is</p>
+<p>This approach separates:</p>
+<ul>
+<li>workflow <strong>composition</strong>, which becomes one of the workflow transformation operations.</li>
+<li>workflow <strong>execution</strong> (computing)</li>
+</ul>
+<p>Reasoning engine is itself a process (workflow) which takes as an input some KG state, and produces new triples (which can be inserted back in the KG).</p>
+<h2 id="currying-worker">
+  Currying worker
+  <a class="anchor" href="#currying-worker">#</a>
+</h2>
+<h2 id="execution">
+  Execution
+  <a class="anchor" href="#execution">#</a>
+</h2>
+<p>workflows have a property which describes what can execute them. Two forms used now are</p>
+<p><strong>Executing, computing the workflow is also a reasoning action</strong>, deriving equivalence between the given workflow and a trivial worklow which implements to request to data store.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#currying-worker">Currying worker</a></li>
+    <li><a href="#execution">Execution</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
