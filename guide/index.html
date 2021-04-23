@@ -1,87 +1,159 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title>Guide - About ODA</title>
-    
-    <meta name="description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide Purpose of this note We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #  Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
  collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities.">
-    <meta name="author" content="">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Guide" />
+<meta property="og:description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #  Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
+ collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.odahub.io/guide/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2021-04-22T20:45:55&#43;02:00" />
+<meta property="article:modified_time" content="2021-04-22T20:45:55&#43;02:00" />
+
+<title>Guide | About ODA</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../book.min.e935e20bd0d469378cb482f0958edf258c731a4f895dccd55799c6fbc8043f23.css" integrity="sha256-6TXiC9DUaTeMtILwlY7fJYxzGk&#43;JXczVV5nG&#43;8gEPyM=">
+<script defer src="../en.search.min.ed89273f2ffd0147f0456c33582f58bbb5959368f7f4c8696dcfe83489264739.js" integrity="sha256-7YknPy/9AUfwRWwzWC9Yu7WVk2j39Mhpbc/oNIkmRzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="../"><span>About ODA</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Guide</strong>
+
+  <label for="toc-control">
     
-    <link href="https://doc.odahub.io/an-old-hope.min.css" rel="stylesheet">
-    <link href="https://doc.odahub.io/style.css" rel="stylesheet">
-    <link href="https://doc.odahub.io/custom.css" rel="stylesheet">
+    <img src="../svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
-    <link rel="apple-touch-icon" href="https://doc.odahub.io/apple-touch-icon.png">
-    <link rel="icon" href="https://doc.odahub.io/favicon.ico">
-    <meta name="generator" content="Hugo 0.80.0" />
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
     
-    
-    
-    <script>
-      function setTheme() {
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#purpose-of-this-note">Purpose of this note</a></li>
+    <li><a href="#developing-the-workflow">Developing the workflow</a></li>
+    <li><a href="#ontology">Ontology</a>
+      <ul>
+        <li><a href="#workflow-inputs">Workflow inputs</a></li>
+      </ul>
+    </li>
+    <li><a href="#workflow-properties-from-capturing-workflow-behavior">Workflow properties from capturing workflow behavior</a></li>
+    <li><a href="#other-domain-specific-knowledge">Other Domain-specific knowledge</a></li>
+    <li><a href="#from-workflow-to-web-based-data-analysis">From Workflow to Web-Based Data Analysis</a></li>
+  </ul>
 
-        const time = new Date();
-        const prev = localStorage.getItem('date');
-        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+  <ul>
+    <li><a href="#literature-parsing">Literature parsing</a></li>
+    <li><a href="#literature-building">Literature building</a></li>
+    <li><a href="#workflow-exection">Workflow exection</a></li>
+    <li><a href="#other-reasoning-rules">Other reasoning rules</a></li>
+  </ul>
 
-        const now = time.getTime();
-        let sunrise;
-        let sunset;
-
-        function setBodyClass() {
-          if (now > sunrise && now < sunset) return;
-        }
-
-        if (date !== prev) {
-          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
-            .then((res) => res.json())
-            .then((data) => {
-              sunrise = data.sunrise.split(':').map(Number);
-              sunset = data.sunset.split(':').map(Number);
-            })
-            .catch(() => {
-              sunrise = [7, 0];
-              sunset = [19, 0];
-            })
-            .finally(() => {
-              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
-              sunset = time.setHours(sunset[0], sunset[1], 0);
-              setBodyClass();
-              localStorage.setItem('sunrise', sunrise);
-              localStorage.setItem('sunset', sunset);
-            });
-          localStorage.setItem('date', date);
-        } else {
-          sunrise = Number(localStorage.getItem('sunrise'));
-          sunset = Number(localStorage.getItem('sunset'));
-          setBodyClass();
-        }
-      }
-    </script>
-  </head>
-  <body class="single">
-    <script>
-      setTheme();
-    </script>
-    <header class="header">
-      <nav class="nav">
-        <p class="logo"><a href="https://doc.odahub.io/">About ODA</a></p>
-      </nav>
-    </header>
-    <main class="main">
+  <ul>
+    <li><a href="#viewing-computed-workflows">Viewing computed workflows</a></li>
+    <li><a href="#adding-a-workflow">Adding a workflow</a></li>
+    <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
+  </ul>
+</nav>
 
 
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">Guide</h1>
-    <div class="post-meta">April 22, 2021</div>
-  </header>
-  <div class="post-content"><h1 id="workflow-publishing-and-discovery-with-kg-old-school-astronomer-guide">Workflow Publishing and Discovery with KG: Old-School Astronomer Guide</h1>
-<h2 id="purpose-of-this-note">Purpose of this note</h2>
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="workflow-publishing-and-discovery-with-kg-old-school-astronomer-guide">
+  Workflow Publishing and Discovery with KG: Old-School Astronomer Guide
+  <a class="anchor" href="#workflow-publishing-and-discovery-with-kg-old-school-astronomer-guide">#</a>
+</h1>
+<h2 id="purpose-of-this-note">
+  Purpose of this note
+  <a class="anchor" href="#purpose-of-this-note">#</a>
+</h2>
 <p>We want to demostrate on concrete and scientifically-useful working examples how an <strong>astronomer</strong>, who might indeed have relatively little interest to look in the code, can leverage <strong>ODA Knowledge Base</strong> and <strong>Knowledge Graphs</strong> together with other valuable resources (especially <a href="renkulab.io/">Renku</a>):</p>
 <ul>
 <li><strong>collaborate</strong> on workflows</li>
@@ -91,12 +163,18 @@
 <li>annotate your work in the ways ready for consumption by the synthetic astronomer <strong>robots</strong>, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their <strong>irreplacible scientific capacities</strong>.</li>
 </ul>
 <p>It&rsquo;s clear that much of this functionality is available in other frameworks, usually custom for purpose. We make use of many the re-usable open-source technologies, to support an ecosystem of tools and other developments, which can be re-used between some of our projects.</p>
-<p><img src="robotization.png" alt=""></p>
-<h2 id="developing-the-workflow">Developing the workflow</h2>
+<p><img src="robotization.png" alt="" /></p>
+<h2 id="developing-the-workflow">
+  Developing the workflow
+  <a class="anchor" href="#developing-the-workflow">#</a>
+</h2>
 <p>The simplest way to build a workflow is to write a <strong>jupyter notebook</strong>. We will not go in every details here, see <a href="https://github.com/oda-hub/guide-to-create-workflows/">dedicated guide</a> for step-by-step instructions.</p>
 <p>Instead, this document here focuses on workflow annotation, publishing, and discovery.
 These features are powered by an <strong>RDF Knowledge Graph</strong>. What exactly is stored in the Knowledge Graph, is described by the <strong>ontologies</strong> (which are themselves stored in some KG).</p>
-<h2 id="ontology">Ontology</h2>
+<h2 id="ontology">
+  Ontology
+  <a class="anchor" href="#ontology">#</a>
+</h2>
 <p>We will describe here the simplest elements of the ontology, which are necessary for workflow annotation.</p>
 <p><strong>Ontology</strong> describes relations between some <strong>things</strong>, <strong>terms</strong> (represented as <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">RDF URIs</a>). <strong>URI</strong> can look like a URL, e.g. <a href="https://odahub.io/ontology/sources/Mrk421">https://odahub.io/ontology/sources/Mrk421</a> (the URL may or may not be leading to a real location, although it generally should). The <strong>URI</strong> can be also shortened, assuming a namespace prefix:</p>
 <pre><code class="language-rdf" data-lang="rdf">PREFIX odaSources: &lt;https://odahub.io/ontology/sources#&gt;
@@ -111,12 +189,15 @@ These features are powered by an <strong>RDF Knowledge Graph</strong>. What exac
 </code></pre><p>Consider that it is benefitial to use terms already used by other people, described in existing ontologies. This way we speak in the same language as other people, and will be able to more easily combine our resources.
 However, it can be quite an effort to understand what other people meant, which is necessary to use their terms correctly. This effort should be made conciously when possible. It is advisable to also discuss unclear points withing our group, and come to a common solution.</p>
 <p>Particular attention should be paid to International Virtual Observatory (IVOA)  vocabulaires. See their rdf vocabularies here: <a href="https://www.ivoa.net/rdf/index.html">https://www.ivoa.net/rdf/index.html</a> and references therein.
-Developments used in variety of tables managed by CDS-Strasbourg, where much of the needed terms for astrophysical entities can be found (one can start <a href="https://www.ivoa.net/documents/UCD1+/">here</a>).</p>
+Developments used in variety of tables managed by CDS-Strasbourg, where much of the needed terms for astrophysical entities can be found (one can start <a href="https://www.ivoa.net/documents/UCD1&#43;/">here</a>).</p>
 <p>It is however, often important to adopt project-specific narrowed-down scope. For example, our understanding of what an <code>AGN</code> is, may differ from that of <code>CDS-Strasbourg</code>. Which is why, in unclear cases, we should not hesitate to use custom terms, such as <code>odaSources:AGN</code>. Then, we can also model and encode equivalence between our own understanding of the <code>AGN</code> with that of <code>CDS</code>. For example, as so:</p>
 <pre><code class="language-rdf" data-lang="rdf">odaSources:Mrk421 oda:isSubclassOf odaSources:AGN .
 odaSources:AGN oda:equivalentTo cds:AGN .
 </code></pre><p>Later, these equivalences can be reduced under specific assumptions: for example some agent may assume that <code>oda:equivalentTo</code> implies literal substitution in all contexts.</p>
-<h3 id="workflow-inputs">Workflow inputs</h3>
+<h3 id="workflow-inputs">
+  Workflow inputs
+  <a class="anchor" href="#workflow-inputs">#</a>
+</h3>
 <p>For our purposes, the most important workflow properties are set by their inputs and outputs.</p>
 <p>We will use <code>nb2workflow</code> (commands below will need <code>pip install nb2workflow</code>) to add addition details and instrospection on the workflow notebooks.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">name_input <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mrk 421&#34;</span> <span style="color:#75715e"># name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName</span>
@@ -148,14 +229,26 @@ And in the second case, it is derived from the variable type.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nb2rdf final-an.ipynb final.rdf
 </code></pre></div><p>This graph can be viewed, for example, with <a href="www.visualdataweb.de/webvowl">WebVOWL</a>. It can also be published in a common location (see <code>nb2service --help</code>).</p>
 <p><em>TODO: show command to publish</em></p>
-<h2 id="workflow-properties-from-capturing-workflow-behavior">Workflow properties from capturing workflow behavior</h2>
+<h2 id="workflow-properties-from-capturing-workflow-behavior">
+  Workflow properties from capturing workflow behavior
+  <a class="anchor" href="#workflow-properties-from-capturing-workflow-behavior">#</a>
+</h2>
 <p>Renku (with a renku plugin) is currently able to deduce that workflow uses some algorithms, providing basis for useful automatic annotation. Current plugin is dedicated to ML algorithms.</p>
 <p>We expect in the future to make an ODA-specific (or, more generally, astrquery-specific) renku plugin.</p>
-<h2 id="other-domain-specific-knowledge">Other Domain-specific knowledge</h2>
+<h2 id="other-domain-specific-knowledge">
+  Other Domain-specific knowledge
+  <a class="anchor" href="#other-domain-specific-knowledge">#</a>
+</h2>
 <p>It is possible to assign any other characteristics to the workflow. It should be seem in case what makes sense. We used <code>oda:importantIn</code> predicate to assign relevance to some domains, e.g. <code>domain:transients</code>. In many cases these predicates can be assigned based on reasoning rules.</p>
-<h2 id="from-workflow-to-web-based-data-analysis">From Workflow to Web-Based Data Analysis</h2>
+<h2 id="from-workflow-to-web-based-data-analysis">
+  From Workflow to Web-Based Data Analysis
+  <a class="anchor" href="#from-workflow-to-web-based-data-analysis">#</a>
+</h2>
 <p>We made a simple tool to present an HTTP service executing given notebook on demand. See <a href="https://github.com/oda-hub/nb2workflow">https://github.com/oda-hub/nb2workflow</a></p>
-<h1 id="reasoning-workflows">Reasoning workflows</h1>
+<h1 id="reasoning-workflows">
+  Reasoning workflows
+  <a class="anchor" href="#reasoning-workflows">#</a>
+</h1>
 <p><strong>Reasoning is transformation of knowledge.</strong></p>
 <p><strong>Since our knowledge base is the knowledge graph, our reasoning is transformation of the knowledge graph.</strong></p>
 <p>I know, it may sound ambitious and unreasonable to claim capacity of out platform to reason.
@@ -163,43 +256,135 @@ However, this terminology has been accepted in the community.
 This restricted form of general reasoning.</p>
 <p>Ingesting data into the graph also transforms the graph. Moreoever, workflows ingesting data may be guided by the present, graph content. When possible, we separate reasoning from external source ingestion by ingesting first, and reasoning later: this allows to preserve. But it is not always feasible.</p>
 <p>Reasoning is performed by executing these reasoning workflows: in response to external triggers, or just regularly.</p>
-<h2 id="literature-parsing">Literature parsing</h2>
+<h2 id="literature-parsing">
+  Literature parsing
+  <a class="anchor" href="#literature-parsing">#</a>
+</h2>
 <p>Simple workflows to read astronomical and arxiv publications and produce some RDF.</p>
 <p><a href="https://github.com/oda-hub/literature-to-facts">https://github.com/oda-hub/literature-to-facts</a></p>
-<h2 id="literature-building">Literature building</h2>
+<h2 id="literature-building">
+  Literature building
+  <a class="anchor" href="#literature-building">#</a>
+</h2>
 <p>Integrating data into paper. Adding another compile step deriving data from various sources (a lot of the time - workflow executions) and producing macroses for the latex.</p>
 <p>Made use-case first, for the easist possible latex work.</p>
 <p><a href="https://github.com/oda-hub/linked-data-latex">https://github.com/oda-hub/linked-data-latex</a></p>
-<h2 id="workflow-exection">Workflow exection</h2>
+<h2 id="workflow-exection">
+  Workflow exection
+  <a class="anchor" href="#workflow-exection">#</a>
+</h2>
 <p>Curiusly, it is very convenient to see worklow execution as reasoning. See <a href="reasoning-engine.md">more details</a>.</p>
-<h2 id="other-reasoning-rules">Other reasoning rules</h2>
+<h2 id="other-reasoning-rules">
+  Other reasoning rules
+  <a class="anchor" href="#other-reasoning-rules">#</a>
+</h2>
 <p>Various standard reasoning rules can be applied.</p>
-<h1 id="capturing-human-intervention-into-the-kg">Capturing human intervention into the KG</h1>
+<h1 id="capturing-human-intervention-into-the-kg">
+  Capturing human intervention into the KG
+  <a class="anchor" href="#capturing-human-intervention-into-the-kg">#</a>
+</h1>
 <p>Human agents are first-class citizens in the ODA KB/KB, on paar with the automated workflows. Humans are not very reproducible, but provide unique intuitively-guided inputs, owing to their own built-in very large but a bit vague Knowledge &ldquo;Graphs&rdquo;.
 Key aspect of our development here is to allow data and workflow interoperability. It is only natural that we are concerned with human-ODA unteroperability. Technically, we implement <strong>human interactions are implemented in the same way workflow executions</strong>.</p>
 <p>Most Humans experience the KB through various frontends. These multiple light-weight frontends allow making pre-defined actions, leading to workflow excutions.</p>
 <p>Some pre-built frontends for develoment needs are presented here:</p>
 <p><a href="https://in.odahub.io/odatests/">https://in.odahub.io/odatests/</a></p>
-<h2 id="viewing-computed-workflows">Viewing computed workflows</h2>
+<h2 id="viewing-computed-workflows">
+  Viewing computed workflows
+  <a class="anchor" href="#viewing-computed-workflows">#</a>
+</h2>
 <p>As described in the <a href="reasoning-engine.md">details on reasoning engine</a> computed workflows are fully curryied workflows are equivalent to simple data-fetching workflows.</p>
-<h2 id="adding-a-workflow">Adding a workflow</h2>
+<h2 id="adding-a-workflow">
+  Adding a workflow
+  <a class="anchor" href="#adding-a-workflow">#</a>
+</h2>
 <p>it should be as simple as pushinga button. They could be synchronized from <strong>Renku</strong>.
 If <strong>Renku</strong> will provide simple a limited public graph, we could directly use it, without reproducing it part of it in ODA KG.</p>
-<h2 id="example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</h2>
+<h2 id="example-of-adding-new-workflow--which-reacts-on-astro-transients">
+  Example of adding new workflow  which reacts on astro transients
+  <a class="anchor" href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">#</a>
+</h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
 </div>
   
-</article></main>
-<footer class="footer">
-  <span>&copy; 2021 <a href="https://doc.odahub.io/">About ODA</a></span>
-  <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
-  <span>&middot;</span>
-  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
-</footer>
-<script src="https://doc.odahub.io/highlight.min.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#purpose-of-this-note">Purpose of this note</a></li>
+    <li><a href="#developing-the-workflow">Developing the workflow</a></li>
+    <li><a href="#ontology">Ontology</a>
+      <ul>
+        <li><a href="#workflow-inputs">Workflow inputs</a></li>
+      </ul>
+    </li>
+    <li><a href="#workflow-properties-from-capturing-workflow-behavior">Workflow properties from capturing workflow behavior</a></li>
+    <li><a href="#other-domain-specific-knowledge">Other Domain-specific knowledge</a></li>
+    <li><a href="#from-workflow-to-web-based-data-analysis">From Workflow to Web-Based Data Analysis</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#literature-parsing">Literature parsing</a></li>
+    <li><a href="#literature-building">Literature building</a></li>
+    <li><a href="#workflow-exection">Workflow exection</a></li>
+    <li><a href="#other-reasoning-rules">Other reasoning rules</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#viewing-computed-workflows">Viewing computed workflows</a></li>
+    <li><a href="#adding-a-workflow">Adding a workflow</a></li>
+    <li><a href="#example-of-adding-new-workflow--which-reacts-on-astro-transients">Example of adding new workflow  which reacts on astro transients</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
