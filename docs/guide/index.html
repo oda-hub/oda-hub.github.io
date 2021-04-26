@@ -5,11 +5,9 @@
   <meta name="generator" content="Hugo 0.83.0-DEV" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #  Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
- collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities.">
+<meta name="description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #           Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/    Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #  Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
- collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities." />
+<meta property="og:description" content="Workflow Publishing and Discovery with KG: Old-School Astronomer Guide #           Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/    Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://odahub.io/docs/guide/" /><meta property="article:section" content="docs" />
 
@@ -19,7 +17,7 @@
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.e935e20bd0d469378cb482f0958edf258c731a4f895dccd55799c6fbc8043f23.css" integrity="sha256-6TXiC9DUaTeMtILwlY7fJYxzGk&#43;JXczVV5nG&#43;8gEPyM=">
-<script defer src="../../en.search.min.face0cd22612a4b743159d9706a7d64ae7fe528a987f370bea4a8f608a521c8b.js" integrity="sha256-&#43;s4M0iYSpLdDFZ2XBqfWSuf&#43;UoqYfzcL6kqPYIpSHIs="></script>
+<script defer src="../../en.search.min.a17a26583ca9427a3cbc9d56749c30ce8fd5cfca90076ae11155525010acd8f5.js" integrity="sha256-oXomWDypQno8vJ1WdJwwzo/Vz8qQB2rhEVVSUBCs2PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -188,6 +186,20 @@ https://github.com/alex-shpak/hugo-book
   Workflow Publishing and Discovery with KG: Old-School Astronomer Guide
   <a class="anchor" href="#workflow-publishing-and-discovery-with-kg-old-school-astronomer-guide">#</a>
 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Latest-Version</td>
+<td style="text-align:left"><a href="https://github.com/oda-hub/workflow-discovery/,">https://github.com/oda-hub/workflow-discovery/,</a> also deployed as <a href="https://odahub.io/">https://odahub.io/</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="purpose-of-this-note">
   Purpose of this note
   <a class="anchor" href="#purpose-of-this-note">#</a>
@@ -213,7 +225,7 @@ These features are powered by an <strong>RDF Knowledge Graph</strong>. What exac
   Ontology
   <a class="anchor" href="#ontology">#</a>
 </h2>
-<p>We will describe here the simplest elements of the ontology, which are necessary for workflow annotation.</p>
+<p>We will describe here the simplest elements of the ontology, which are necessary for workflow annotation. We will <strong>not</strong> go into details about how to define various constrains and relations on/between things here.</p>
 <p><strong>Ontology</strong> describes relations between some <strong>things</strong>, <strong>terms</strong> (represented as <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">RDF URIs</a>). <strong>URI</strong> can look like a URL, e.g. <a href="https://odahub.io/ontology/sources/Mrk421">https://odahub.io/ontology/sources/Mrk421</a> (the URL may or may not be leading to a real location, although it generally should). The <strong>URI</strong> can be also shortened, assuming a namespace prefix:</p>
 <pre><code class="language-rdf" data-lang="rdf">PREFIX odaSources: &lt;https://odahub.io/ontology/sources#&gt;
 </code></pre><p>(see some default list of prefixes <a href="http://ontology.odahub.io/defaults/defaults.yaml">here</a>)</p>
