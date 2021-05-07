@@ -5,6 +5,10 @@
     <loc>https://odahub.io/</loc>
     <priority>0</priority>
   </url><url>
+    <loc>https://odahub.io/docs/guide-development/</loc>
+  </url><url>
+    <loc>https://odahub.io/docs/guide-discovery/</loc>
+  </url><url>
     <loc>https://odahub.io/docs/guide/</loc>
   </url><url>
     <loc>https://odahub.io/docs/issues/</loc>
