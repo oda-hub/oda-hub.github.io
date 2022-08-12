@@ -1,8 +1,31 @@
 [ {
   "@id" : "http://odahub.io/ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/abstract" : [ {
+    "@value" : "IVOA kindly provides various types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows."
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@id" : "https://github.com/volodymyrss"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Astrophysical Workflows, and corresponding input-output data types (Data Products, Input Parameters, etc) \n                                used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)"
+  } ],
+  "http://purl.org/dc/elements/1.1/source" : [ {
+    "@value" : "https://github.com/volodymyrss/hugo-odahub.git"
+  } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "MMODA Astrophysical Workflow Ontology"
+  }, {
     "@value" : "MMODA Astrophysical Workflows and Data Products"
+  } ],
+  "http://purl.org/vocab/vannpreferredNamespaceUri" : [ {
+    "@value" : "http://odahub.io/ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@value" : "0.1.0"
+  } ],
+  "http://xmlns.com/foaf/0.1logo" : [ {
+    "@id" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#",
@@ -60,6 +83,9 @@
 }, {
   "@id" : "http://odahub.io/ontology#SkyCoordinates",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sky coordinates. Typically represented as a string as known to https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html .\nSubclasses may have other ways to express the content."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SkyCoordinates"
   } ]
@@ -108,6 +134,27 @@
     "@id" : "http://odahub.io/ontology#isRequesting"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vannpreferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1logo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]
