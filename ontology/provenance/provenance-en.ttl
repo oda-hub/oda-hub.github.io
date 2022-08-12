@@ -4,6 +4,12 @@
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
 	 dc:title "MMODA Astrophysical Workflow Ontology";
+	 prov:wasAttributedTo <https://github.com/andriineronov>;
+	 dc:creator <https://github.com/andriineronov>;
+	 prov:wasAttributedTo <https://github.com/burnout87>;
+	 dc:creator <https://github.com/burnout87>;
+	 prov:wasAttributedTo <https://github.com/dsavchenko>;
+	 dc:creator <https://github.com/dsavchenko>;
 	 prov:wasAttributedTo <https://github.com/volodymyrss>;
 	 dc:creator <https://github.com/volodymyrss>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;

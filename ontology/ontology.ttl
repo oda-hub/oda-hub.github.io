@@ -11,7 +11,10 @@
                                 It is possible to combine function types (e.g. https://fno.io) with data types. 
                                 In this ontology we define supporting types, our own versions of some of the generic types, 
                                 and anything else needed to descrie Astrophysical Analysis Workflows.""" ;
-                             <http://purl.org/dc/elements/1.1/creator> <https://github.com/volodymyrss> ;
+                             <http://purl.org/dc/elements/1.1/creator> <https://github.com/andriineronov> ,
+                                                                       <https://github.com/burnout87> ,
+                                                                       <https://github.com/dsavchenko> ,
+                                                                       <https://github.com/volodymyrss> ;
                              <http://purl.org/dc/elements/1.1/description> """Astrophysical Workflows, and corresponding input-output data types (Data Products, Input Parameters, etc) 
                                 used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)""" ;
                              <http://purl.org/dc/elements/1.1/source> "https://github.com/volodymyrss/hugo-odahub.git" ;

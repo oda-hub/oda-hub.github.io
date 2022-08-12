@@ -4,10 +4,10 @@
     "languages" : [ "undefined" ],
     "baseIris" : [ "http://odahub.io/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
     "title" : {
-      "undefined" : "MMODA Astrophysical Workflows and Data Products"
+      "undefined" : "MMODA Astrophysical Workflow Ontology"
     },
     "iri" : "http://odahub.io/ontology",
-    "author" : [ "https://github.com/volodymyrss" ],
+    "author" : [ "https://github.com/burnout87", "https://github.com/dsavchenko", "https://github.com/volodymyrss", "https://github.com/andriineronov" ],
     "description" : {
       "undefined" : "Astrophysical Workflows, and corresponding input-output data types (Data Products, Input Parameters, etc) \n                                used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)"
     },
@@ -21,7 +21,22 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
+        "value" : "https://github.com/burnout87",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
         "value" : "https://github.com/volodymyrss",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://github.com/andriineronov",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://github.com/dsavchenko",
         "type" : "iri"
       } ],
       "logo" : [ {
@@ -29,12 +44,6 @@
         "language" : "undefined",
         "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
         "type" : "iri"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "undefined",
-        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.",
-        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -48,15 +57,21 @@
         "value" : "http://odahub.io/ontology",
         "type" : "label"
       } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.",
+        "type" : "label"
+      } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "MMODA Astrophysical Workflow Ontology",
+        "value" : "MMODA Astrophysical Workflows and Data Products",
         "type" : "label"
       }, {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "MMODA Astrophysical Workflows and Data Products",
+        "value" : "MMODA Astrophysical Workflow Ontology",
         "type" : "label"
       } ]
     }
@@ -118,7 +133,7 @@
   }, {
     "instances" : 0,
     "union" : [ "2", "7" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "6"
   }, {
     "iri" : "http://odahub.io/ontology#AstroqueryModule",
@@ -264,7 +279,7 @@
     },
     "domain" : "16",
     "subproperty" : [ "3" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "13"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",

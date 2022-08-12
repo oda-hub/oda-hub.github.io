@@ -14,6 +14,9 @@
                                 It is possible to combine function types (e.g. https://fno.io) with data types. 
                                 In this ontology we define supporting types, our own versions of some of the generic types, 
                                 and anything else needed to descrie Astrophysical Analysis Workflows.</dc:abstract>
+        <dc:creator rdf:resource="https://github.com/andriineronov"/>
+        <dc:creator rdf:resource="https://github.com/burnout87"/>
+        <dc:creator rdf:resource="https://github.com/dsavchenko"/>
         <dc:creator rdf:resource="https://github.com/volodymyrss"/>
         <dc:description>Astrophysical Workflows, and corresponding input-output data types (Data Products, Input Parameters, etc) 
                                 used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)</dc:description>
