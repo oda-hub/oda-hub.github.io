@@ -4,14 +4,48 @@
     "languages" : [ "undefined" ],
     "baseIris" : [ "http://odahub.io/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
     "title" : {
-      "undefined" : "MMODA Astrophysical Workflows and Data Products"
+      "undefined" : "MMODA Astrophysical Workflow Ontology"
     },
     "iri" : "http://odahub.io/ontology",
+    "author" : [ "https://github.com/volodymyrss" ],
+    "description" : {
+      "undefined" : "Astrophysical Workflows, and corresponding input-output data types (Data Products, Input Parameters, etc) \n                                used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)"
+    },
     "other" : {
+      "versionIRI" : [ {
+        "identifier" : "versionIRI",
+        "language" : "undefined",
+        "value" : "0.1.0",
+        "type" : "label"
+      } ],
+      "0.1logo" : [ {
+        "identifier" : "0.1logo",
+        "language" : "undefined",
+        "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://github.com/volodymyrss",
+        "type" : "iri"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "IVOA kindly provides various types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
+        "type" : "label"
+      } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "MMODA Astrophysical Workflows and Data Products",
+        "value" : "MMODA Astrophysical Workflow Ontology",
         "type" : "label"
       } ],
       "vannpreferredNamespaceUri" : [ {
@@ -73,7 +107,7 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "7" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "6"
   }, {
     "iri" : "http://odahub.io/ontology#AstroqueryModule",
@@ -160,7 +194,7 @@
   }, {
     "range" : "0",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "8"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",

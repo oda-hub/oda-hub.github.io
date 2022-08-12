@@ -1,6 +1,12 @@
 <http://odahub.io/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
+<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/abstract> "IVOA kindly provides various types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows." .
+<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/creator> <https://github.com/volodymyrss> .
+<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/description> "Astrophysical Workflows, and corresponding input-output data types (Data Products, Input Parameters, etc) \n                                used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)" .
+<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/source> "https://github.com/volodymyrss/hugo-odahub.git" .
+<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" .
 <http://odahub.io/ontology> <http://purl.org/vocab/vannpreferredNamespaceUri> "http://odahub.io/ontology" .
+<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "0.1.0" .
+<http://odahub.io/ontology> <http://xmlns.com/foaf/0.1logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 # 
 # 
 # #################################################################
@@ -10,6 +16,18 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -18,6 +36,12 @@
 # 
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1logo
+<http://xmlns.com/foaf/0.1logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
