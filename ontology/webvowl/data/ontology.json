@@ -83,6 +83,9 @@
       "IRI-based" : "AstroqueryModule",
       "undefined" : "AstroqueryModule"
     },
+    "comment" : {
+      "undefined" : "An astroquery module is used internally by workflows to access data (observations, catalogs, etc)."
+    },
     "id" : "9"
   }, {
     "iri" : "http://odahub.io/ontology#SkyCoordinates",
@@ -174,12 +177,12 @@
   }, {
     "range" : "0",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "8"
   }, {
     "range" : "1",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "10"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",
@@ -213,7 +216,7 @@
     },
     "domain" : "16",
     "subproperty" : [ "5" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "13"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",

@@ -21,6 +21,9 @@
 }, {
   "@id" : "http://odahub.io/ontology#AstroqueryModule",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An astroquery module is used internally by workflows to access data (observations, catalogs, etc)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "AstroqueryModule"
   } ],

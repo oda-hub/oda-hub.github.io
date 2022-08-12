@@ -58,6 +58,7 @@
 ###  http://odahub.io/ontology#AstroqueryModule
 :AstroqueryModule rdf:type owl:Class ;
                   rdfs:subClassOf owl:Thing ;
+                  rdfs:comment "An astroquery module is used internally by workflows to access data (observations, catalogs, etc)." ;
                   rdfs:label "AstroqueryModule" .
 
 
