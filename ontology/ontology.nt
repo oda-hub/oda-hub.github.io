@@ -52,7 +52,7 @@
 # 
 # http://odahub.io/ontology#AstrophysicalObject
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Astrophysical object, possibly contained in space and/or time: galaxy, gamma-ray burst, universe" .
+<http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun." .
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "AstrophysicalObject" .
 # 
 # http://odahub.io/ontology#AstroqueryModule

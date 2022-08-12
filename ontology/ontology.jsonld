@@ -13,7 +13,7 @@
   "@id" : "http://odahub.io/ontology#AstrophysicalObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Any Astrophysical object, possibly contained in space and/or time: galaxy, gamma-ray burst, universe"
+    "@value" : "Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "AstrophysicalObject"

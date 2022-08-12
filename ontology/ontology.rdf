@@ -100,7 +100,7 @@
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#AstrophysicalObject">
-        <rdfs:comment>Any Astrophysical object, possibly contained in space and/or time: galaxy, gamma-ray burst, universe</rdfs:comment>
+        <rdfs:comment>Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun.</rdfs:comment>
         <rdfs:label>AstrophysicalObject</rdfs:label>
     </owl:Class>
     

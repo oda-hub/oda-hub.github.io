@@ -67,13 +67,13 @@
       "undefined" : "AstrophysicalObject"
     },
     "comment" : {
-      "undefined" : "Any Astrophysical object, possibly contained in space and/or time: galaxy, gamma-ray burst, universe"
+      "undefined" : "Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun."
     },
     "id" : "4"
   }, {
     "instances" : 0,
     "union" : [ "4", "7" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "6"
   }, {
     "iri" : "http://odahub.io/ontology#AstroqueryModule",
@@ -213,7 +213,7 @@
     },
     "domain" : "16",
     "subproperty" : [ "5" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "13"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
