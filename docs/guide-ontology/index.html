@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Details about the reasoning engines Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
-Workflow execution is
-This approach separates:">
+<meta name="description" content="Ontology Purpose Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
+While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations - see discovery In an increasingly large number of cases we identify and assign annotations automatically.
+The tools we develop commit to implement the common understanding of the terms.
+Discovering graphdb.ontotext.com
+Updating webprotege.obsuks1.unige.ch">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Details about the reasoning engines Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
-Workflow execution is
-This approach separates:" />
+<meta property="og:description" content="Ontology Purpose Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
+While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations - see discovery In an increasingly large number of cases we identify and assign annotations automatically.
+The tools we develop commit to implement the common understanding of the terms.
+Discovering graphdb.ontotext.com
+Updating webprotege.obsuks1.unige.ch" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://odahub.io/docs/reasoning-engine/" />
+<meta property="og:url" content="https://odahub.io/docs/guide-ontology/" />
 
-<title>Reasoning Engine | About ODA</title>
+<title>Guide Ontology | About ODA</title>
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
@@ -95,7 +99,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/guide-ontology/" class="">Guide Ontology</a>
+    <a href="https://odahub.io/docs/guide-ontology/" class=" active">Guide Ontology</a>
   
 
         </li>
@@ -121,7 +125,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/reasoning-engine/" class=" active">Reasoning Engine</a>
+    <a href="https://odahub.io/docs/reasoning-engine/" class="">Reasoning Engine</a>
   
 
         </li>
@@ -163,7 +167,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="../../svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Reasoning Engine</strong>
+  <strong>Guide Ontology</strong>
 
   <label for="toc-control">
     
@@ -179,8 +183,9 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#currying-worker">Currying worker</a></li>
-    <li><a href="#execution">Execution</a></li>
+    <li><a href="#purpose">Purpose</a></li>
+    <li><a href="#discovering">Discovering</a></li>
+    <li><a href="#updating">Updating</a></li>
   </ul>
 </nav>
 
@@ -193,19 +198,16 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="details-about-the-reasoning-engines">Details about the reasoning engines</h1>
-<p>Workflows entities in the KG can undergo various transformations. One key transformation is <strong>currying</strong>, understood in the same way as function <a href="https://en.wikipedia.org/wiki/Currying">currying</a> - since workflow, for our purposes, is very similar to a <strong>function</strong>. <strong>Currying</strong> transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that <strong>only workflow without parameters can be computed (executed)</strong>.</p>
-<p>Workflow <strong>execution</strong> is</p>
-<p>This approach separates:</p>
-<ul>
-<li>workflow <strong>composition</strong>, which becomes one of the workflow transformation operations.</li>
-<li>workflow <strong>execution</strong> (computing)</li>
-</ul>
-<p>Reasoning engine is itself a process (workflow) which takes as an input some KG state, and produces new triples (which can be inserted back in the KG).</p>
-<h2 id="currying-worker">Currying worker</h2>
-<h2 id="execution">Execution</h2>
-<p>workflows have a property which describes what can execute them. Two forms used now are</p>
-<p><strong>Executing, computing the workflow is also a reasoning action</strong>, deriving equivalence between the given workflow and a trivial worklow which implements to request to data store.</p>
+  <article class="markdown"><h1 id="ontology">Ontology</h1>
+<h2 id="purpose">Purpose</h2>
+<p>Ontology defines terms in which we describe what we do: data, workflows, publications, etc.</p>
+<p>While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations - see <a href="">discovery</a>
+In an increasingly large number of cases we identify and assign annotations automatically.</p>
+<p>The tools we develop commit to implement the common understanding of the terms.</p>
+<h2 id="discovering">Discovering</h2>
+<p>graphdb.ontotext.com</p>
+<h2 id="updating">Updating</h2>
+<p>webprotege.obsuks1.unige.ch</p>
 </article>
  
       
@@ -248,8 +250,9 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#currying-worker">Currying worker</a></li>
-    <li><a href="#execution">Execution</a></li>
+    <li><a href="#purpose">Purpose</a></li>
+    <li><a href="#discovering">Discovering</a></li>
+    <li><a href="#updating">Updating</a></li>
   </ul>
 </nav>
 
