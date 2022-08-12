@@ -6,11 +6,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vocab="http://purl.org/vocab/">
+     xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="http://odahub.io/ontology">
-        <dc:abstract>IVOA kindly provides various types, but very little is availble about workflow types. 
+        <dc:abstract>IVOA kindly provides various data and object types, but very little is availble about workflow types. 
                                 It is possible to combine function types (e.g. https://fno.io) with data types. 
                                 In this ontology we define supporting types, our own versions of some of the generic types, 
                                 and anything else needed to descrie Astrophysical Analysis Workflows.</dc:abstract>
@@ -20,7 +20,7 @@
         <dc:source>https://github.com/volodymyrss/hugo-odahub.git</dc:source>
         <dc:title>MMODA Astrophysical Workflow Ontology</dc:title>
         <dc:title>MMODA Astrophysical Workflows and Data Products</dc:title>
-        <vocab:vannpreferredNamespaceUri>http://odahub.io/ontology</vocab:vannpreferredNamespaceUri>
+        <vann:preferredNamespaceUri>http://odahub.io/ontology</vann:preferredNamespaceUri>
         <owl:versionIRI>0.1.0</owl:versionIRI>
         <foaf:logo rdf:resource="https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"/>
     </owl:Ontology>
@@ -74,10 +74,10 @@
     
 
 
-    <!-- http://purl.org/vocab/vannpreferredNamespaceUri -->
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vannpreferredNamespaceUri"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -88,10 +88,10 @@
     
 
 
-    <!-- http://xmlns.com/foaf/0.1logo -->
+    <!-- http://xmlns.com/foaf/0.1/logo -->
 
 
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1logo"/>
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
     
 
 
