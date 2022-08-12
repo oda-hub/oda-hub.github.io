@@ -18,7 +18,7 @@
                              <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" ;
                              <http://purl.org/vocab/vannpreferredNamespaceUri> "http://odahub.io/ontology" ;
                              owl:versionIRI "0.1.0" ;
-                             <http://xmlns.com/foaf/0.1logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
+                             <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 
 #################################################################
 #    Annotation properties
@@ -56,8 +56,8 @@
 owl:versionIRI rdf:type owl:AnnotationProperty .
 
 
-###  http://xmlns.com/foaf/0.1logo
-<http://xmlns.com/foaf/0.1logo> rdf:type owl:AnnotationProperty .
+###  http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
 
 
 #################################################################

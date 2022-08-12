@@ -22,7 +22,7 @@
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@value" : "0.1.0"
   } ],
-  "http://xmlns.com/foaf/0.1logo" : [ {
+  "http://xmlns.com/foaf/0.1/logo" : [ {
     "@id" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"
   } ]
 }, {
@@ -133,6 +133,6 @@
   "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://xmlns.com/foaf/0.1logo",
+  "@id" : "http://xmlns.com/foaf/0.1/logo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

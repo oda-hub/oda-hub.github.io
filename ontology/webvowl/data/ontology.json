@@ -18,16 +18,16 @@
         "value" : "0.1.0",
         "type" : "label"
       } ],
-      "0.1logo" : [ {
-        "identifier" : "0.1logo",
-        "language" : "undefined",
-        "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
-        "type" : "iri"
-      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "https://github.com/volodymyrss",
+        "type" : "iri"
+      } ],
+      "logo" : [ {
+        "identifier" : "logo",
+        "language" : "undefined",
+        "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
         "type" : "iri"
       } ],
       "abstract" : [ {
@@ -76,13 +76,13 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "3",
     "type" : "owl:Thing"
   }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "14",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -140,7 +140,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "14",
+    "id" : "3",
     "label" : {
       "undefined" : "Thing"
     }
@@ -156,7 +156,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "3",
+    "id" : "14",
     "label" : {
       "undefined" : "Thing"
     }
@@ -194,7 +194,7 @@
   }, {
     "range" : "0",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "8"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",
