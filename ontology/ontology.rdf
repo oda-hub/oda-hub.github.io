@@ -14,7 +14,6 @@
                                 It is possible to combine function types (e.g. https://fno.io) with data types. 
                                 In this ontology we define supporting types, our own versions of some of the generic types, 
                                 and anything else needed to descrie Astrophysical Analysis Workflows.
-                                
                                 Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.</dc:abstract>
         <dc:creator rdf:resource="https://github.com/andriineronov"/>
         <dc:creator rdf:resource="https://github.com/burnout87"/>
