@@ -272,7 +272,7 @@
     },
     "domain" : "15",
     "subproperty" : [ "3" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "12"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
