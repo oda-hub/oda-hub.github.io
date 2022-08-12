@@ -4,7 +4,7 @@
     "languages" : [ "undefined" ],
     "baseIris" : [ "http://odahub.io/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
     "title" : {
-      "undefined" : "MMODA Astrophysical Workflows and Data Products"
+      "undefined" : "MMODA Astrophysical Workflow Ontology"
     },
     "iri" : "http://odahub.io/ontology",
     "author" : [ "https://github.com/volodymyrss" ],
@@ -45,12 +45,12 @@
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "MMODA Astrophysical Workflow Ontology",
+        "value" : "MMODA Astrophysical Workflows and Data Products",
         "type" : "label"
       }, {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "MMODA Astrophysical Workflows and Data Products",
+        "value" : "MMODA Astrophysical Workflow Ontology",
         "type" : "label"
       } ],
       "vannpreferredNamespaceUri" : [ {
@@ -84,13 +84,13 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "16",
     "type" : "owl:Thing"
   }, {
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "3",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -118,7 +118,7 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "7" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "6"
   }, {
     "iri" : "http://odahub.io/ontology#AstroqueryModule",
@@ -168,7 +168,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "3",
+    "id" : "16",
     "label" : {
       "undefined" : "Thing"
     }
@@ -184,7 +184,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "16",
+    "id" : "3",
     "label" : {
       "undefined" : "Thing"
     }
@@ -264,7 +264,7 @@
     },
     "domain" : "16",
     "subproperty" : [ "5" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "13"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",

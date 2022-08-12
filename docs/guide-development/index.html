@@ -16,7 +16,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.d2a70f84e9f19b6562ed8074e2dc9de77cb33322c06be17c5d0d422f3094d960.js" integrity="sha256-0qcPhOnxm2Vi7YB04tyd53yzMyLAa&#43;F8XQ1CLzCU2WA=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.e95fb668162f0b03fb3d1f457cbab6fe5c35aa5b16f4f43771b1537a7db2bee6.js" integrity="sha256-6V&#43;2aBYvCwP7PR9FfLq2/lw1qlsW9PQ3cbFTen2yvuY=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -177,7 +177,15 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</a></li>
+    <li><a href="#simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</a>
+      <ul>
+        <li><a href="#write-a-working-repeatable-workflow">Write a working repeatable workflow</a></li>
+        <li><a href="#parametetrize-the-notebook">Parametetrize the notebook</a></li>
+        <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
+        <li><a href="#try-a-test-service">Try a test service</a></li>
+        <li><a href="#add-some-verification-test-cases">Add some verification test cases</a></li>
+      </ul>
+    </li>
     <li><a href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
   </ul>
 </nav>
@@ -198,10 +206,19 @@ This is easy enough to do in first approximation, but might be harder to achieve
 <p>Generally, we want the workflows to be parametrized. Non-parametrized but strickly repeatable notebooks are equivalent to their output data.</p>
 <p>One way to create them in ODA is to build <strong>jupyter notebook</strong>.</p>
 <h2 id="simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</h2>
+<h3 id="write-a-working-repeatable-workflow">Write a working repeatable workflow</h3>
+<p>First you need to make sure your notebook runs in a cloud environment. It needs to be repeatable - i.e. you can run it many times. If it depends on external services - try to make sure the requests are also repeatable - you might need to specify sufficient details. If the notebook does not produce the exactly
+the same result every time - it&rsquo;s unfortunate, but do not worry too much, it might still be reproducible (see motivation on <a href="https://github.com/volodymyrss/reproducibility-motivation/">the difference between reproducibility and repeatability</a>)</p>
 <ul>
 <li>write your notebook, and make sure it runs from top to bottom</li>
 <li>make a requirements.txt will the modules you need for this notebook</li>
-<li>parameterize the notebook, by creating cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):</li>
+</ul>
+<h3 id="parametetrize-the-notebook">Parametetrize the notebook</h3>
+<ul>
+<li>create a cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):</li>
+</ul>
+<h3 id="annotate-the-notebook-outputs">Annotate the notebook outputs</h3>
+<ul>
 <li>define the notebook output, similarly creating cell with tag &ldquo;outputs&rdquo;.
 <ul>
 <li>outputs may be strings, floats, lists</li>
@@ -209,6 +226,9 @@ This is easy enough to do in first approximation, but might be harder to achieve
 </ul>
 </li>
 <li>if you want to give more detailed description of the notebook input and output, use <code>terms</code> from the <a href="docs/guide-ontology.">ontology</a>.</li>
+</ul>
+<h3 id="try-a-test-service">Try a test service</h3>
+<ul>
 <li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda] --upgrade</code></li>
 <li>inspect the notebook <code>nbinspect my-notebook.ipynb</code></li>
 <li>try to run the notebook <code>nbrun my-notebook.ipynb</code>
@@ -221,6 +241,8 @@ This is easy enough to do in first approximation, but might be harder to achieve
 <li>publish the workflow to RenkuLab in the dedicated group: <a href="https://renkulab.io/gitlab/astronomy/mmoda/">https://renkulab.io/gitlab/astronomy/mmoda/</a></li>
 <li>the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a>!</li>
 </ul>
+<h3 id="add-some-verification-test-cases">Add some verification test cases</h3>
+<p>we will explain later how.</p>
 <h2 id="maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</h2>
 <p>At some point, it may be advisable to move part of code in functions of a <strong>python module</strong> (e.g. <code>my_functions.py</code>), stored in the same repository. The functions can be called from the workflow notebook as <code>from my_functions import my_nice_function; my_nice_function(argument)</code>.</p>
 <p>If some functions are often re-used, they can be stored in external packages, and even published on <strong>pypi</strong> (to allow <code>pip install my_function_package</code>).</p>
@@ -273,7 +295,15 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</a></li>
+    <li><a href="#simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</a>
+      <ul>
+        <li><a href="#write-a-working-repeatable-workflow">Write a working repeatable workflow</a></li>
+        <li><a href="#parametetrize-the-notebook">Parametetrize the notebook</a></li>
+        <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
+        <li><a href="#try-a-test-service">Try a test service</a></li>
+        <li><a href="#add-some-verification-test-cases">Add some verification test cases</a></li>
+      </ul>
+    </li>
     <li><a href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
   </ul>
 </nav>
