@@ -3,8 +3,6 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
-	 dc:title "MMODA Astrophysical Workflow Ontology";
-	 prov:wasAttributedTo <https://github.com/volodymyrss>;
-	 dc:creator <https://github.com/volodymyrss>;
+	 dc:title "MMODA Astrophysical Workflows and Data Products";
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
