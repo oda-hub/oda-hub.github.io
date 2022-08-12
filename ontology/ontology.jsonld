@@ -121,6 +121,12 @@
 }, {
   "@id" : "http://odahub.io/ontology#isRequestingAstroObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This properties indicates that the :Workflow is making internally a call to another :Workflow, which derives some data about an :AstrophysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#Workflow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://odahub.io/ontology#AstrophysicalObject"
   } ],
@@ -136,6 +142,12 @@
 }, {
   "@id" : "http://odahub.io/ontology#isUsing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#Workflow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://odahub.io/ontology#Workflow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://odahub.io/ontology#isRequesting"
   } ]

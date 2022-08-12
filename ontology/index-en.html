@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Aug 12 16:43:51 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Aug 12 16:49:16 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -372,6 +372,13 @@ Subclasses may have other ways to express the content.</span>
          <dt>is in domain of</dt>
          <dd>
             <a href="#isRequesting" title="http://odahub.io/ontology#isRequesting">is requesting</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isRequestingAstroObject" title="http://odahub.io/ontology#isRequestingAstroObject">is requesting astro object</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUsing" title="http://odahub.io/ontology#isUsing">is using</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isUsing" title="http://odahub.io/ontology#isUsing">is using</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -446,12 +453,20 @@ Subclasses may have other ways to express the content.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://odahub.io/ontology#isRequestingAstroObject</p>
+      <div class="comment">
+         <span class="markdown">This properties indicates that the :Workflow is making internally a call to another :Workflow, which derives some data about an :AstrophysicalObject</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
                <a href="#isRequesting" title="http://odahub.io/ontology#isRequesting">is requesting</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -491,6 +506,16 @@ Subclasses may have other ways to express the content.</span>
             <dd>
                <a href="#isRequesting" title="http://odahub.io/ontology#isRequesting">is requesting</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>

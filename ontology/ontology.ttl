@@ -76,7 +76,9 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#isRequestingAstroObject
 :isRequestingAstroObject rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :isRequesting ;
-                         rdfs:range :AstrophysicalObject .
+                         rdfs:domain :Workflow ;
+                         rdfs:range :AstrophysicalObject ;
+                         rdfs:comment "This properties indicates that the :Workflow is making internally a call to another :Workflow, which derives some data about an :AstrophysicalObject" .
 
 
 ###  http://odahub.io/ontology#isRequestingParameter
@@ -86,7 +88,9 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#isUsing
 :isUsing rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :isRequesting .
+         rdfs:subPropertyOf :isRequesting ;
+         rdfs:domain :Workflow ;
+         rdfs:range :Workflow .
 
 
 #################################################################
