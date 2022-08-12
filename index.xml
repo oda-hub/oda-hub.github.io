@@ -38,7 +38,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
       <description>Ontology Purpose Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
 While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations. In an increasingly large number of cases we identify and assign annotations automatically.
 The tools we develop commit to implement the common understanding of the terms.
-Sometimes, it is necessary to add a new term.</description>
+Discovering terms to use The terms look like URLs, e.</description>
     </item>
     
     <item>
