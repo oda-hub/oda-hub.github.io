@@ -36,10 +36,9 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
       
       <guid>https://odahub.io/docs/guide-ontology/</guid>
       <description>Ontology Purpose Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
-While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations - see discovery In an increasingly large number of cases we identify and assign annotations automatically.
+While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations. In an increasingly large number of cases we identify and assign annotations automatically.
 The tools we develop commit to implement the common understanding of the terms.
-Discovering graphdb.ontotext.com
-Updating webprotege.obsuks1.unige.ch</description>
+Sometimes, it is necessary to add a new term.</description>
     </item>
     
     <item>
