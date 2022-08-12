@@ -5,14 +5,18 @@
     <link>https://odahub.io/docs/</link>
     <description>Recent content in Docs on About ODA</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://odahub.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://odahub.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title></title>
       <link>https://odahub.io/docs/guide-development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://odahub.io/docs/guide-development/</guid>
-      <description>Workflow development Guide #  Workflows are all things that can be computed, broadly speaking.
+      <description>Workflow development Guide Workflows are all things that can be computed, broadly speaking.
 For reproducibility, we want our workflows to be repeatable: producing the same output every time they are computed. This is easy enough to do in first approximation, but might be harder to achieve than it seems when the workflow relies on external resources. But we track every execution so it is not necessary to be overly concerned about these delicate details at every moment.</description>
     </item>
     
@@ -22,7 +26,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://odahub.io/docs/guide-discovery/</guid>
-      <description>Workflow Publishing and Discovery with KG: Astronomer Guide #           Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/    Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):</description>
+      <description>Workflow Publishing and Discovery with KG: Astronomer Guide          Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/    Purpose of this note We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):</description>
     </item>
     
     <item>
@@ -31,8 +35,8 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://odahub.io/docs/issues/</guid>
-      <description>What if a user experiences a problem? #  Purpose #  Explain to users how issues are handled, and what can be expected.
-Process #   user receives a kind message, &amp;ldquo;treatment redirected to humans, follow-up promised&amp;rdquo;. This may be delivered in the interactive session, and/or in the email.  issue is addressed by the support, and request can be submitted again. It will be generally pre-computed by the time of the new request.</description>
+      <description>What if a user experiences a problem? Purpose Explain to users how issues are handled, and what can be expected.
+Process  user receives a kind message, &amp;ldquo;treatment redirected to humans, follow-up promised&amp;rdquo;. This may be delivered in the interactive session, and/or in the email.  issue is addressed by the support, and request can be submitted again. It will be generally pre-computed by the time of the new request.   user is informed by the platform that all is good, but it is clear to the user that the result is not satisfactory  &amp;ldquo;feedback&amp;rdquo; button   anything is unclear  please feel free to contact contact@odahub.</description>
     </item>
     
     <item>
@@ -41,8 +45,9 @@ Process #   user receives a kind message, &amp;ldquo;treatment redirected to hum
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://odahub.io/docs/reasoning-engine/</guid>
-      <description>Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
-Workflow execution is</description>
+      <description>Details about the reasoning engines Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
+Workflow execution is
+This approach separates:</description>
     </item>
     
   </channel>

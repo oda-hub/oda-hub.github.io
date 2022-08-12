@@ -1,0 +1,211 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://odahub.io/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "MMODA Astrophysical Workflows and Data Products"
+    },
+    "iri" : "http://odahub.io/ontology",
+    "other" : {
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://odahub.io/ontology",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "MMODA Astrophysical Workflows and Data Products",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://odahub.io/ontology#DataProduct",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataProduct",
+      "undefined" : "DataProduct"
+    },
+    "subClasses" : [ "5" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://odahub.io/ontology#AstrophysicalObject",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AstrophysicalObject",
+      "undefined" : "AstrophysicalObject"
+    },
+    "id" : "2"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "7" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://odahub.io/ontology#AstroqueryModule",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AstroqueryModule",
+      "undefined" : "AstroqueryModule"
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://odahub.io/ontology#SkyCoordinates",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SkyCoordinates",
+      "undefined" : "SkyCoordinates"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://odahub.io/ontology#LightCurveList",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightCurveList",
+      "undefined" : "LightCurveList"
+    },
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "14",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://odahub.io/ontology#Workflow",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Workflow",
+      "undefined" : "Workflow"
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://odahub.io/ontology#isRequestingAstroObject",
+    "baseIri" : "http://odahub.io/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isRequestingAstroObject"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://odahub.io/ontology#isRequesting",
+    "baseIri" : "http://odahub.io/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "isRequesting"
+    },
+    "superproperty" : [ "11" ],
+    "domain" : "10",
+    "subproperty" : [ "0", "12", "13" ],
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://odahub.io/ontology#isRequestingParameter",
+    "baseIri" : "http://odahub.io/ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "isRequestingParameter"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "14",
+    "subproperty" : [ "3" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://odahub.io/ontology#isUsing",
+    "baseIri" : "http://odahub.io/ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "isUsing"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "13"
+  } ]
+}

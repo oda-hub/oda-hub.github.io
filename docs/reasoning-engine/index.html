@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
-Workflow execution is">
+<meta name="description" content="Details about the reasoning engines Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
+Workflow execution is
+This approach separates:">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Details about the reasoning engines #  Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
-Workflow execution is" />
+<meta property="og:description" content="Details about the reasoning engines Workflows entities in the KG can undergo various transformations. One key transformation is currying, understood in the same way as function currying - since workflow, for our purposes, is very similar to a function. Currying transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that only workflow without parameters can be computed (executed).
+Workflow execution is
+This approach separates:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://odahub.io/docs/reasoning-engine/" /><meta property="article:section" content="docs" />
-
-
+<meta property="og:url" content="https://odahub.io/docs/reasoning-engine/" />
 
 <title>Reasoning Engine | About ODA</title>
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="../../book.min.3e90539cf7130f0a89ba2f8b9f54ac5e5ecdd1fa345b6c8e3e5a83ec6f19ec8e.css" integrity="sha256-PpBTnPcTDwqJui&#43;Ln1SsXl7N0fo0W2yOPlqD7G8Z7I4=" crossorigin="anonymous">
+<link rel="stylesheet" href="../../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.b96f4a7c6596b501584d9466c734c62fa079610a1b783d9ea0453f31ef4819f7.js" integrity="sha256-uW9KfGWWtQFYTZRmxzTGL6B5YQobeD2eoEU/Me9IGfc=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.4644a7d8699ccbe03d6d8b682ec6bae54edf75eb58a7c55353edc2ed83b9d028.js" integrity="sha256-RkSn2Gmcy&#43;A9bYtoLsa65U7fdetYp8VTU&#43;3C7YO50Cg=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -135,7 +135,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -180,10 +180,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="details-about-the-reasoning-engines">
-  Details about the reasoning engines
-  <a class="anchor" href="#details-about-the-reasoning-engines">#</a>
-</h1>
+  <article class="markdown"><h1 id="details-about-the-reasoning-engines">Details about the reasoning engines</h1>
 <p>Workflows entities in the KG can undergo various transformations. One key transformation is <strong>currying</strong>, understood in the same way as function <a href="https://en.wikipedia.org/wiki/Currying">currying</a> - since workflow, for our purposes, is very similar to a <strong>function</strong>. <strong>Currying</strong> transforms workflow with parameters with workflow with less parameters (arguments), possibly without any parameters. We assume that <strong>only workflow without parameters can be computed (executed)</strong>.</p>
 <p>Workflow <strong>execution</strong> is</p>
 <p>This approach separates:</p>
@@ -192,14 +189,8 @@ https://github.com/alex-shpak/hugo-book
 <li>workflow <strong>execution</strong> (computing)</li>
 </ul>
 <p>Reasoning engine is itself a process (workflow) which takes as an input some KG state, and produces new triples (which can be inserted back in the KG).</p>
-<h2 id="currying-worker">
-  Currying worker
-  <a class="anchor" href="#currying-worker">#</a>
-</h2>
-<h2 id="execution">
-  Execution
-  <a class="anchor" href="#execution">#</a>
-</h2>
+<h2 id="currying-worker">Currying worker</h2>
+<h2 id="execution">Execution</h2>
 <p>workflows have a property which describes what can execute them. Two forms used now are</p>
 <p><strong>Executing, computing the workflow is also a reasoning action</strong>, deriving equivalence between the given workflow and a trivial worklow which implements to request to data store.</p>
 </article>
@@ -218,7 +209,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
 
 
  

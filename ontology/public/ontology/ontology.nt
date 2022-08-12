@@ -1,0 +1,85 @@
+<http://odahub.io/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
+<http://odahub.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://odahub.io/ontology#isRequesting
+<http://odahub.io/ontology#isRequesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#isRequesting> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://odahub.io/ontology#isRequesting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#Workflow> .
+<http://odahub.io/ontology#isRequesting> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#AstrophysicalObject> .
+<http://odahub.io/ontology#isRequesting> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#SkyCoordinates> .
+# 
+# http://odahub.io/ontology#isRequestingAstroObject
+<http://odahub.io/ontology#isRequestingAstroObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#isRequestingAstroObject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://odahub.io/ontology#isRequesting> .
+<http://odahub.io/ontology#isRequestingAstroObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#AstrophysicalObject> .
+# 
+# http://odahub.io/ontology#isRequestingParameter
+<http://odahub.io/ontology#isRequestingParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#isRequestingParameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://odahub.io/ontology#isRequesting> .
+# 
+# http://odahub.io/ontology#isUsing
+<http://odahub.io/ontology#isUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#isUsing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://odahub.io/ontology#isRequesting> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://odahub.io/ontology#AstrophysicalObject
+<http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "AstrophysicalObject" .
+# 
+# http://odahub.io/ontology#AstroqueryModule
+<http://odahub.io/ontology#AstroqueryModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#AstroqueryModule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#AstroqueryModule> <http://www.w3.org/2000/01/rdf-schema#label> "AstroqueryModule" .
+# 
+# http://odahub.io/ontology#DataProduct
+<http://odahub.io/ontology#DataProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#DataProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#DataProduct> <http://www.w3.org/2000/01/rdf-schema#label> "DataProduct" .
+# 
+# http://odahub.io/ontology#LightCurveList
+<http://odahub.io/ontology#LightCurveList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#LightCurveList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
+<http://odahub.io/ontology#LightCurveList> <http://www.w3.org/2000/01/rdf-schema#label> "LightCurveList" .
+# 
+# http://odahub.io/ontology#SkyCoordinates
+<http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/2000/01/rdf-schema#label> "SkyCoordinates" .
+# 
+# http://odahub.io/ontology#Workflow
+<http://odahub.io/ontology#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
