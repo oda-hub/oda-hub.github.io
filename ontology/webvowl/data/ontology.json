@@ -76,13 +76,13 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "14",
     "type" : "owl:Thing"
   }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "3",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -140,7 +140,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "3",
+    "id" : "14",
     "label" : {
       "undefined" : "Thing"
     }
@@ -156,7 +156,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "14",
+    "id" : "3",
     "label" : {
       "undefined" : "Thing"
     }
@@ -194,7 +194,7 @@
   }, {
     "range" : "0",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "8"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",
@@ -228,7 +228,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "5" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "11"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
