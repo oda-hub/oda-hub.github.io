@@ -16,7 +16,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.3e16becb28c3c37cc8c6cbeee8781ab6c64290e99347583a57304bff0dc01b7a.js" integrity="sha256-Pha&#43;yyjDw3zIxsvu6HgatsZCkOmTR1g6VzBL/w3AG3o=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.2c6341696fb150c7fe1d55fd0894ba0a1e0f8bdf0d2888330c655a15349ba24b.js" integrity="sha256-LGNBaW&#43;xUMf&#43;HVX9CJS6Ch4Pi98NKIgzDGVaFTSboks=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -178,11 +178,7 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</a></li>
-    <li><a href="#workflows-development-progression-towards-python-modules-packages-apis">Workflows development progression: towards python modules, packages, API&rsquo;s</a>
-      <ul>
-        <li><a href="#as-asd">as asd</a></li>
-      </ul>
-    </li>
+    <li><a href="#workflows-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Workflows development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
   </ul>
 </nav>
 
@@ -225,8 +221,7 @@ This is easy enough to do in first approximation, but might be harder to achieve
 <li>publish the workflow to RenkuLab in the dedicated group: <a href="https://renkulab.io/gitlab/astronomy/mmoda/">https://renkulab.io/gitlab/astronomy/mmoda/</a></li>
 <li>the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a>!</li>
 </ul>
-<h2 id="workflows-development-progression-towards-python-modules-packages-apis">Workflows development progression: towards python modules, packages, API&rsquo;s</h2>
-<h3 id="as-asd">as asd</h3>
+<h2 id="workflows-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Workflows development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</h2>
 <p>At some point, it may be advisable to move part of code in functions of a <strong>python module</strong> (e.g. <code>my_functions.py</code>), stored in the same repository. The functions can be called from the workflow notebook as <code>from my_functions import my_nice_function; my_nice_function(argument)</code>.</p>
 <p>If some functions are often re-used, they can be stored in external packages, and even published on <strong>pypi</strong> (to allow <code>pip install my_function_package</code>).</p>
 <p>Sometimes, the <strong>function may be in fact called remotely, though API</strong>. From the point of view of workflow (e.g. notebook) where the function is called there such a remotely executed function may look very similar to local function from a module, giving similar advantages and posing similar challenges.</p>
@@ -279,11 +274,7 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
 <nav id="TableOfContents">
   <ul>
     <li><a href="#simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</a></li>
-    <li><a href="#workflows-development-progression-towards-python-modules-packages-apis">Workflows development progression: towards python modules, packages, API&rsquo;s</a>
-      <ul>
-        <li><a href="#as-asd">as asd</a></li>
-      </ul>
-    </li>
+    <li><a href="#workflows-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Workflows development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
   </ul>
 </nav>
 
