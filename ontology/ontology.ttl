@@ -10,7 +10,9 @@
                              <http://purl.org/dc/elements/1.1/abstract> """IVOA kindly provides various data and object types, but very little is availble about workflow types. 
                                 It is possible to combine function types (e.g. https://fno.io) with data types. 
                                 In this ontology we define supporting types, our own versions of some of the generic types, 
-                                and anything else needed to descrie Astrophysical Analysis Workflows.""" ;
+                                and anything else needed to descrie Astrophysical Analysis Workflows.
+                                
+                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.""" ;
                              <http://purl.org/dc/elements/1.1/creator> <https://github.com/andriineronov> ,
                                                                        <https://github.com/burnout87> ,
                                                                        <https://github.com/dsavchenko> ,

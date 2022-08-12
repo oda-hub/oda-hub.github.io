@@ -60,7 +60,7 @@
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "undefined",
-        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.",
+        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.\n                                \n                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -99,13 +99,13 @@
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "16",
     "type" : "owl:Thing"
   }, {
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "1",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -183,7 +183,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "1",
+    "id" : "16",
     "label" : {
       "undefined" : "Thing"
     }
@@ -199,7 +199,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "16",
+    "id" : "1",
     "label" : {
       "undefined" : "Thing"
     }
@@ -240,12 +240,12 @@
   }, {
     "range" : "4",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "8"
   }, {
     "range" : "5",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "10"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",

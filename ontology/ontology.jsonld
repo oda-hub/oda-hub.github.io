@@ -2,7 +2,7 @@
   "@id" : "http://odahub.io/ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/abstract" : [ {
-    "@value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows."
+    "@value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.\n                                \n                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute."
   } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@id" : "https://github.com/andriineronov"
