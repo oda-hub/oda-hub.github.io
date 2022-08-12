@@ -16,7 +16,7 @@
                                 used in MMODA project (https://www.astro.unige.ch/mmoda/, https://odahub.io/)""" ;
                              <http://purl.org/dc/elements/1.1/source> "https://github.com/volodymyrss/hugo-odahub.git" ;
                              <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" ;
-                             <http://purl.org/vocab/vannpreferredNamespaceUri> "http://odahub.io/ontology" ;
+                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" ;
                              owl:versionIRI "0.1.0" ;
                              <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 
@@ -45,7 +45,7 @@
 
 
 ###  http://purl.org/vocab/vannpreferredNamespaceUri
-<http://purl.org/vocab/vannpreferredNamespaceUri> rdf:type owl:AnnotationProperty .
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
