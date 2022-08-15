@@ -16,7 +16,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.8c72c9ad5c03aa880241b7247b35f19e6f53d461ee701cd0a788947e74c16a55.js" integrity="sha256-jHLJrVwDqogCQbckezXxnm9T1GHucBzQp4iUfnTBalU=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.901b4d9b7e71096c8ee815544eb9f62a7064f21880cd02d15c082d81411c128e.js" integrity="sha256-kBtNm35xCWyO6BVUTrn2KnBk8hiAzQLRXAgtgUEcEo4=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -182,8 +182,10 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#write-a-working-repeatable-workflow">Write a working repeatable workflow</a></li>
         <li><a href="#parametetrize-the-notebook">Parametetrize the notebook</a></li>
         <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
-        <li><a href="#try-a-test-service">Try a test service</a></li>
-        <li><a href="#add-some-verification-test-cases">Add some verification test cases</a></li>
+        <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
+        <li><a href="#optional-add-some-verification-test-cases">(optional) Add some verification test cases</a></li>
+        <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
+        <li><a href="#try-to-access-your-new-service">Try to access your new service</a></li>
       </ul>
     </li>
     <li><a href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
@@ -213,6 +215,7 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <li>write your notebook, and make sure it runs from top to bottom</li>
 <li>make a requirements.txt will the modules you need for this notebook</li>
 </ul>
+<p>You can use a mock <a href="https://renkulab.io/gitlab/astronomy/mmoda/lightcurve-example">lightcurve notebook</a> as an example.</p>
 <h3 id="parametetrize-the-notebook">Parametetrize the notebook</h3>
 <ul>
 <li>create a cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):</li>
@@ -227,23 +230,21 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 </li>
 <li>if you want to give more detailed description of the notebook input and output, use <code>terms</code> from the <a href="docs/guide-ontology.">ontology</a>.</li>
 </ul>
-<h3 id="try-a-test-service">Try a test service</h3>
+<h3 id="optional-try-a-test-service">(optional) Try a test service</h3>
+<!-- raw HTML omitted -->
+<h3 id="optional-add-some-verification-test-cases">(optional) Add some verification test cases</h3>
+<!-- raw HTML omitted -->
+<p>we will explain later how to do this.</p>
+<!-- raw HTML omitted -->
+<h3 id="publish-your-workflow-as-a-test-service">Publish your workflow as a test service</h3>
 <ul>
-<li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda] --upgrade</code></li>
-<li>inspect the notebook <code>nbinspect my-notebook.ipynb</code></li>
-<li>try to run the notebook <code>nbrun my-notebook.ipynb</code>
-<ul>
-<li>it will use all default parameters</li>
-<li>you can specify parameters as <code>nbrun --inp-nbins=10 my-notebook.ipynb</code>, if <code>nbins</code> happens to be one of the parameters.</li>
-</ul>
-</li>
-<li>try to start the service <code>nb2service my-notebook.ipynb</code></li>
 <li>publish the workflow to RenkuLab in the dedicated group: <a href="https://renkulab.io/gitlab/astronomy/mmoda/">https://renkulab.io/gitlab/astronomy/mmoda/</a></li>
-<li>the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a>!</li>
+<li>once some bots do their job, the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a>!</li>
 </ul>
-<h3 id="add-some-verification-test-cases">Add some verification test cases</h3>
-<p>we will explain later how.</p>
-<h2 id="maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</h2>
+<h3 id="try-to-access-your-new-service">Try to access your new service</h3>
+<p>Assuming <code>lightcurve-example</code> from above was used, and the notebook name was <code>random</code>, you can run this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oda-api get  -i lightcurve-example -p random -a T1_isot<span style="color:#f92672">=</span><span style="color:#ae81ff">30000</span>
+</code></pre></div><h2 id="maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</h2>
 <p>At some point, it may be advisable to move part of code in functions of a <strong>python module</strong> (e.g. <code>my_functions.py</code>), stored in the same repository. The functions can be called from the workflow notebook as <code>from my_functions import my_nice_function; my_nice_function(argument)</code>.</p>
 <p>If some functions are often re-used, they can be stored in external packages, and even published on <strong>pypi</strong> (to allow <code>pip install my_function_package</code>).</p>
 <p>Sometimes, the <strong>function may be in fact called remotely, though API</strong>. From the point of view of workflow (e.g. notebook) where the function is called there such a remotely executed function may look very similar to local function from a module, giving similar advantages and posing similar challenges.</p>
@@ -300,8 +301,10 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
         <li><a href="#write-a-working-repeatable-workflow">Write a working repeatable workflow</a></li>
         <li><a href="#parametetrize-the-notebook">Parametetrize the notebook</a></li>
         <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
-        <li><a href="#try-a-test-service">Try a test service</a></li>
-        <li><a href="#add-some-verification-test-cases">Add some verification test cases</a></li>
+        <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
+        <li><a href="#optional-add-some-verification-test-cases">(optional) Add some verification test cases</a></li>
+        <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
+        <li><a href="#try-to-access-your-new-service">Try to access your new service</a></li>
       </ul>
     </li>
     <li><a href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
