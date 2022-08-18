@@ -16,7 +16,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.ea8871f16e8400e599f8dc2d4b5ba5fd15f66b4104d5dc375f028c94cfebb3f1.js" integrity="sha256-6ohx8W6EAOWZ&#43;NwtS1ul/RX2a0EE1dw3XwKMlM/rs/E=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.1bceb11633d7cbfabde3c7158ba8fe798d1415d36f9709e947b7dd00f739af79.js" integrity="sha256-G86xFjPXy/q948cVi6j&#43;eY0UFdNvlwnpR7fdAPc5r3k=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -198,10 +198,8 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
         <li><a href="#optional-add-some-verification-test-cases">(optional) Add some verification test cases</a></li>
         <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
-        <li><a href="#try-to-access-your-new-service">Try to access your new service</a></li>
       </ul>
     </li>
-    <li><a href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
   </ul>
 </nav>
 
@@ -251,22 +249,15 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <!-- raw HTML omitted -->
 <h3 id="publish-your-workflow-as-a-test-service">Publish your workflow as a test service</h3>
 <ul>
-<li>publish the workflow to RenkuLab in the dedicated group: <a href="https://renkulab.io/gitlab/astronomy/mmoda/">https://renkulab.io/gitlab/astronomy/mmoda/</a></li>
-<li>once some bots do their job, the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a>!</li>
+<li>publish the workflow to RenkuLab in the dedicated group: <a href="https://renkulab.io/gitlab/astronomy/mmoda/,">https://renkulab.io/gitlab/astronomy/mmoda/,</a> and add a &ldquo;live-workflow&rdquo; topic.</li>
+<li>once some bots do their job, the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a>, and you will recevie and email!</li>
 </ul>
-<h3 id="try-to-access-your-new-service">Try to access your new service</h3>
-<p>Assuming <code>lightcurve-example</code> from above was used, and the notebook name was <code>random</code>, you can run this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oda-api get  -i lightcurve-example -p random -a T1_isot<span style="color:#f92672">=</span><span style="color:#ae81ff">30000</span>
-</code></pre></div><h2 id="maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</h2>
-<p>At some point, it may be advisable to move part of code in functions of a <strong>python module</strong> (e.g. <code>my_functions.py</code>), stored in the same repository. The functions can be called from the workflow notebook as <code>from my_functions import my_nice_function; my_nice_function(argument)</code>.</p>
-<p>If some functions are often re-used, they can be stored in external packages, and even published on <strong>pypi</strong> (to allow <code>pip install my_function_package</code>).</p>
-<p>Sometimes, the <strong>function may be in fact called remotely, though API</strong>. From the point of view of workflow (e.g. notebook) where the function is called there such a remotely executed function may look very similar to local function from a module, giving similar advantages and posing similar challenges.</p>
-<p>On should be wary that extracting the functions <strong>somewhat obscure content of the workflow, by introducing structure which is not generally automatically traced by workflow execution provenance tracking</strong>.<br>
-So when reusable part of the workflow matures, it may be extracted and treated as another workflow, providing inputs to the current workflow under development.</p>
-<p>It is not feasible to always design workflow to use other workflows by consuming some pre-computed inputs. As described above in this section, workflow development progression often separates some function from within the workflow, or uses.
-<strong>SmarkSky</strong> project and in a way in general <strong>renku plugins</strong> essentially acknowledges this feature of the workflows: they use external functions from within the code at random locations, possibly calling them multiple times.</p>
-<p>This additional information about functions called by the workflow can be introduced to the workflow metadata with special annotations (see more about workflow annotation in <a href="https://github.com/oda-hub/workflow-discovery">ODA Workflow Publishing and Discovery Guide</a>), such as <code>oda:requestsAstroqueryService</code>. These annotations should be also include information about parameters used to annotate the workflow.
-This additional structure associated with workflows will be ingested in the KG. While <strong>it can not be directly interpretted as workflow provenance graph, it is possible to produce additional similar-looking graph with inferred provenance, which is different but analogous to strict renku-derivde provenance</strong>.</p>
+<h4 id="try-to-access-your-new-service">Try to access your new service</h4>
+<ul>
+<li>Assuming <code>lightcurve-example</code> from above was used, and the notebook name was <code>random</code>, you can run this:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ oda-api -u https://dispatcher-staging.obsuks1.unige.ch get -i lightcurve-example -p random -a n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</code></pre></div><p>TODO: workflow version, plot here and in renku create</p>
 </article>
  
       
@@ -317,10 +308,8 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
         <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
         <li><a href="#optional-add-some-verification-test-cases">(optional) Add some verification test cases</a></li>
         <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
-        <li><a href="#try-to-access-your-new-service">Try to access your new service</a></li>
       </ul>
     </li>
-    <li><a href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</a></li>
   </ul>
 </nav>
 
