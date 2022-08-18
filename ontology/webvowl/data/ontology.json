@@ -233,12 +233,12 @@
   }, {
     "range" : "4",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "6"
   }, {
     "range" : "5",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",
@@ -272,7 +272,7 @@
     },
     "domain" : "15",
     "subproperty" : [ "3" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "12"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
