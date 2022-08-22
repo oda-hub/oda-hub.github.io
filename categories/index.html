@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Categories" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://odahub.io/categories/" />
@@ -12,15 +13,15 @@
 <title>Categories | About ODA</title>
 <link rel="manifest" href="../manifest.json">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="../book.min.0be8d61b557097f76ada0b8f654a7cfbb4ce4456162d2df1ffb7117c6b42d7c0.css" integrity="sha256-C&#43;jWG1Vwl/dq2guPZUp8&#43;7TORFYWLS3x/7cRfGtC18A=" crossorigin="anonymous">
+<link rel="stylesheet" href="../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.1f823a0be84497dba701bc412595667da5804fce0b4fb669002447b651dc99f0.js" integrity="sha256-H4I6C&#43;hEl9unAbxBJZVmfaWAT84LT7ZpACRHtlHcmfA=" crossorigin="anonymous"></script>
+  <script defer src="../en.search.min.cdfd4273a6a9ee039e544892b72c33c2ddaeb40b5b5a6f8f43b992c04db4d169.js" integrity="sha256-zf1Cc6ap7gOeVEiStywzwt2utAtbWm&#43;PQ7mSwE200Wk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://odahub.io/categories/index.xml" title="About ODA" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
-  
+  <script src="https://hypothes.is/embed.js" async></script>
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -31,7 +32,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a href="../"><span>About ODA</span>
+  <a class="flex align-center" href="../"><span>About ODA</span>
   </a>
 </h2>
 
@@ -41,6 +42,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+
 
 
 
@@ -66,7 +68,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/guide-development/" class="">Guide Development</a>
+    <a href="../docs/guide-development/" class="">Guide Development</a>
   
 
         </li>
@@ -79,7 +81,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/guide-discovery/" class="">Guide Discovery</a>
+    <a href="../docs/guide-discovery/" class="">Guide Discovery</a>
   
 
         </li>
@@ -92,7 +94,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/guide-ontology/" class="">Guide Ontology</a>
+    <a href="../docs/guide-ontology/" class="">Guide Ontology</a>
   
 
         </li>
@@ -105,7 +107,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/issues/" class="">Issues</a>
+    <a href="../docs/issues/" class="">Issues</a>
   
 
         </li>
@@ -118,7 +120,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/reasoning-engine/" class="">Reasoning Engine</a>
+    <a href="../docs/reasoning-engine/" class="">Reasoning Engine</a>
   
 
         </li>
@@ -131,7 +133,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://odahub.io/docs/workflow-development-progression/" class="">Workflow Development Progression</a>
+    <a href="../docs/workflow-development-progression/" class="">Workflow Development Progression</a>
   
 
         </li>
@@ -239,7 +241,8 @@ https://github.com/alex-shpak/hugo-book
 
 
   <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
-document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
 
 
  
