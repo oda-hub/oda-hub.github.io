@@ -53,6 +53,20 @@
 # #################################################################
 # 
 # 
+# http://odahub.io/ontology#hasDec
+<http://odahub.io/ontology#hasDec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#hasDec> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://odahub.io/ontology#hasDec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#SkyCoordinates> .
+<http://odahub.io/ontology#hasDec> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#Declination> .
+<http://odahub.io/ontology#hasDec> <http://www.w3.org/2000/01/rdf-schema#label> "hasDec" .
+# 
+# http://odahub.io/ontology#hasRA
+<http://odahub.io/ontology#hasRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#hasRA> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://odahub.io/ontology#hasRA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#SkyCoordinates> .
+<http://odahub.io/ontology#hasRA> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#RightAscention> .
+<http://odahub.io/ontology#hasRA> <http://www.w3.org/2000/01/rdf-schema#label> "hasRA" .
+# 
 # http://odahub.io/ontology#isRequesting
 <http://odahub.io/ontology#isRequesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://odahub.io/ontology#isRequesting> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -102,6 +116,25 @@
 <http://odahub.io/ontology#DataProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
 <http://odahub.io/ontology#DataProduct> <http://www.w3.org/2000/01/rdf-schema#label> "DataProduct" .
 # 
+# http://odahub.io/ontology#Declination
+<http://odahub.io/ontology#Declination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Declination> <http://www.w3.org/2000/01/rdf-schema#label> "Declination" .
+# 
+# http://odahub.io/ontology#Gaia
+<http://odahub.io/ontology#Gaia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Gaia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Instrument> .
+<http://odahub.io/ontology#Gaia> <http://www.w3.org/2000/01/rdf-schema#label> "Gaia" .
+# 
+# http://odahub.io/ontology#GaiaFilter
+<http://odahub.io/ontology#GaiaFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#GaiaFilter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#GaiaFilter> <http://www.w3.org/2000/01/rdf-schema#label> "GaiaFilter" .
+# 
+# http://odahub.io/ontology#Instrument
+<http://odahub.io/ontology#Instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Instrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#Instrument> <http://www.w3.org/2000/01/rdf-schema#label> "Instrument" .
+# 
 # http://odahub.io/ontology#LightCurveList
 <http://odahub.io/ontology#LightCurveList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#LightCurveList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
@@ -111,6 +144,11 @@
 <http://odahub.io/ontology#ODAAPILightcurveList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#ODAAPILightcurveList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#LightCurveList> .
 <http://odahub.io/ontology#ODAAPILightcurveList> <http://www.w3.org/2000/01/rdf-schema#label> "ODAAPILightcurveList" .
+# 
+# http://odahub.io/ontology#RightAscention
+<http://odahub.io/ontology#RightAscention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#RightAscention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#RightAscention> <http://www.w3.org/2000/01/rdf-schema#label> "RightAscention" .
 # 
 # http://odahub.io/ontology#SkyCoordinates
 <http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

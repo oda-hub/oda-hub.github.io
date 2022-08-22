@@ -65,6 +65,22 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://odahub.io/ontology#hasDec
+:hasDec rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :SkyCoordinates ;
+        rdfs:range :Declination ;
+        rdfs:label "hasDec" .
+
+
+###  http://odahub.io/ontology#hasRA
+:hasRA rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :SkyCoordinates ;
+       rdfs:range :RightAscention ;
+       rdfs:label "hasRA" .
+
+
 ###  http://odahub.io/ontology#isRequesting
 :isRequesting rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
@@ -116,6 +132,29 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
              rdfs:label "DataProduct" .
 
 
+###  http://odahub.io/ontology#Declination
+:Declination rdf:type owl:Class ;
+             rdfs:label "Declination" .
+
+
+###  http://odahub.io/ontology#Gaia
+:Gaia rdf:type owl:Class ;
+      rdfs:subClassOf :Instrument ;
+      rdfs:label "Gaia" .
+
+
+###  http://odahub.io/ontology#GaiaFilter
+:GaiaFilter rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:label "GaiaFilter" .
+
+
+###  http://odahub.io/ontology#Instrument
+:Instrument rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:label "Instrument" .
+
+
 ###  http://odahub.io/ontology#LightCurveList
 :LightCurveList rdf:type owl:Class ;
                 rdfs:subClassOf :DataProduct ;
@@ -126,6 +165,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 :ODAAPILightcurveList rdf:type owl:Class ;
                       rdfs:subClassOf :LightCurveList ;
                       rdfs:label "ODAAPILightcurveList" .
+
+
+###  http://odahub.io/ontology#RightAscention
+:RightAscention rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "RightAscention" .
 
 
 ###  http://odahub.io/ontology#SkyCoordinates
