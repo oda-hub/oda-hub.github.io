@@ -21,7 +21,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/andriineronov",
+        "value" : "https://github.com/burnout87",
         "type" : "iri"
       }, {
         "identifier" : "creator",
@@ -36,7 +36,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/burnout87",
+        "value" : "https://github.com/andriineronov",
         "type" : "iri"
       } ],
       "logo" : [ {
@@ -45,10 +45,10 @@
         "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
         "type" : "iri"
       } ],
-      "source" : [ {
-        "identifier" : "source",
+      "abstract" : [ {
+        "identifier" : "abstract",
         "language" : "undefined",
-        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
+        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.\n                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -57,10 +57,10 @@
         "value" : "http://odahub.io/ontology",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
+      "source" : [ {
+        "identifier" : "source",
         "language" : "undefined",
-        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.\n                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.",
+        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
         "type" : "label"
       } ],
       "title" : [ {
@@ -78,10 +78,10 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "4",
+    "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "9",
@@ -93,13 +93,13 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "15",
     "type" : "owl:Thing"
   }, {
-    "id" : "1",
+    "id" : "3",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -113,8 +113,8 @@
       "IRI-based" : "DataProduct",
       "undefined" : "DataProduct"
     },
-    "subClasses" : [ "5" ],
-    "id" : "4"
+    "subClasses" : [ "1" ],
+    "id" : "0"
   }, {
     "iri" : "http://odahub.io/ontology#AstrophysicalObject",
     "baseIri" : "http://odahub.io/ontology",
@@ -126,7 +126,7 @@
     "comment" : {
       "undefined" : "Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun."
     },
-    "id" : "2"
+    "id" : "4"
   }, {
     "iri" : "http://odahub.io/ontology#AstroqueryModule",
     "baseIri" : "http://odahub.io/ontology",
@@ -160,7 +160,7 @@
       "undefined" : "ODAAPILightcurveList"
     },
     "id" : "8",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://odahub.io/ontology#LightCurveList",
     "baseIri" : "http://odahub.io/ontology",
@@ -170,8 +170,8 @@
       "undefined" : "LightCurveList"
     },
     "subClasses" : [ "8" ],
-    "id" : "5",
-    "superClasses" : [ "4" ]
+    "id" : "1",
+    "superClasses" : [ "0" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -187,15 +187,15 @@
       "IRI-based" : "Workflow",
       "undefined" : "Workflow"
     },
-    "id" : "1"
+    "id" : "3"
   }, {
     "instances" : 0,
-    "union" : [ "2", "10" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "4", "10" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "11"
   } ],
   "property" : [ {
-    "id" : "0",
+    "id" : "2",
     "type" : "owl:objectProperty"
   }, {
     "id" : "6",
@@ -204,7 +204,7 @@
     "id" : "7",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "3",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "13",
@@ -219,26 +219,26 @@
   "propertyAttribute" : [ {
     "iri" : "http://odahub.io/ontology#isRequestingAstroObject",
     "baseIri" : "http://odahub.io/ontology",
-    "range" : "2",
+    "range" : "4",
     "label" : {
       "IRI-based" : "isRequestingAstroObject"
     },
-    "superproperty" : [ "3" ],
-    "domain" : "1",
+    "superproperty" : [ "5" ],
+    "domain" : "3",
     "comment" : {
       "undefined" : "This properties indicates that the :Workflow is making internally a call to another :Workflow, which derives some data about an :AstrophysicalObject"
     },
     "attributes" : [ "object" ],
-    "id" : "0"
+    "id" : "2"
   }, {
-    "range" : "4",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "6"
   }, {
-    "range" : "5",
+    "range" : "1",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",
@@ -248,10 +248,10 @@
       "IRI-based" : "isRequesting"
     },
     "superproperty" : [ "12" ],
-    "domain" : "1",
-    "subproperty" : [ "0", "13", "14" ],
+    "domain" : "3",
+    "subproperty" : [ "2", "13", "14" ],
     "attributes" : [ "object" ],
-    "id" : "3"
+    "id" : "5"
   }, {
     "iri" : "http://odahub.io/ontology#isRequestingParameter",
     "baseIri" : "http://odahub.io/ontology",
@@ -259,7 +259,7 @@
     "label" : {
       "IRI-based" : "isRequestingParameter"
     },
-    "superproperty" : [ "3" ],
+    "superproperty" : [ "5" ],
     "domain" : "15",
     "attributes" : [ "object" ],
     "id" : "13"
@@ -271,18 +271,18 @@
       "IRI-based" : "topObjectProperty"
     },
     "domain" : "15",
-    "subproperty" : [ "3" ],
-    "attributes" : [ "object", "external" ],
+    "subproperty" : [ "5" ],
+    "attributes" : [ "external", "object" ],
     "id" : "12"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
     "baseIri" : "http://odahub.io/ontology",
-    "range" : "1",
+    "range" : "3",
     "label" : {
       "IRI-based" : "isUsing"
     },
-    "superproperty" : [ "3" ],
-    "domain" : "1",
+    "superproperty" : [ "5" ],
+    "domain" : "3",
     "attributes" : [ "object" ],
     "id" : "14"
   } ]
