@@ -90,6 +90,8 @@
     "@value" : "EndTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#TimeInstant"
+  }, {
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
@@ -169,6 +171,15 @@
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#Quantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#RightAscention",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -185,6 +196,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SkyCoordinates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Quantity"
+  }, {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#StartTime",
@@ -193,7 +209,18 @@
     "@value" : "StartTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#TimeInstant"
+  }, {
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TimeInstant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TimeInstant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Quantity"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#Workflow",

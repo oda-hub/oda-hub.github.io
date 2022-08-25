@@ -153,7 +153,8 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#EndTime
 :EndTime rdf:type owl:Class ;
-         rdfs:subClassOf :WorkflowParameter ;
+         rdfs:subClassOf :TimeInstant ,
+                         :WorkflowParameter ;
          rdfs:label "EndTime" .
 
 
@@ -207,6 +208,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                    rdfs:label "PointOfInterestRA" .
 
 
+###  http://odahub.io/ontology#Quantity
+:Quantity rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Quantity" .
+
+
 ###  http://odahub.io/ontology#RightAscention
 :RightAscention rdf:type owl:Class ;
                 rdfs:subClassOf owl:Thing ;
@@ -215,6 +222,8 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#SkyCoordinates
 :SkyCoordinates rdf:type owl:Class ;
+                rdfs:subClassOf :Quantity ,
+                                :WorkflowParameter ;
                 rdfs:comment """Sky coordinates. Typically represented as a string as known to https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html .
 Subclasses may have other ways to express the content.""" ;
                 rdfs:label "SkyCoordinates" .
@@ -222,8 +231,15 @@ Subclasses may have other ways to express the content.""" ;
 
 ###  http://odahub.io/ontology#StartTime
 :StartTime rdf:type owl:Class ;
-           rdfs:subClassOf :WorkflowParameter ;
+           rdfs:subClassOf :TimeInstant ,
+                           :WorkflowParameter ;
            rdfs:label "StartTime" .
+
+
+###  http://odahub.io/ontology#TimeInstant
+:TimeInstant rdf:type owl:Class ;
+             rdfs:subClassOf :Quantity ;
+             rdfs:label "TimeInstant" .
 
 
 ###  http://odahub.io/ontology#Workflow

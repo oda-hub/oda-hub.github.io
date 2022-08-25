@@ -134,6 +134,7 @@
 # 
 # http://odahub.io/ontology#EndTime
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#label> "EndTime" .
 # 
@@ -179,6 +180,11 @@
 <http://odahub.io/ontology#PointOfInterestRA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#PointOfInterestRA> <http://www.w3.org/2000/01/rdf-schema#label> "PointOfInterestRA" .
 # 
+# http://odahub.io/ontology#Quantity
+<http://odahub.io/ontology#Quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Quantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#Quantity> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity" .
+# 
 # http://odahub.io/ontology#RightAscention
 <http://odahub.io/ontology#RightAscention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#RightAscention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
@@ -186,13 +192,21 @@
 # 
 # http://odahub.io/ontology#SkyCoordinates
 <http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Quantity> .
+<http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Sky coordinates. Typically represented as a string as known to https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html .\nSubclasses may have other ways to express the content." .
 <http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/2000/01/rdf-schema#label> "SkyCoordinates" .
 # 
 # http://odahub.io/ontology#StartTime
 <http://odahub.io/ontology#StartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#StartTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
 <http://odahub.io/ontology#StartTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#StartTime> <http://www.w3.org/2000/01/rdf-schema#label> "StartTime" .
+# 
+# http://odahub.io/ontology#TimeInstant
+<http://odahub.io/ontology#TimeInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Quantity> .
+<http://odahub.io/ontology#TimeInstant> <http://www.w3.org/2000/01/rdf-schema#label> "TimeInstant" .
 # 
 # http://odahub.io/ontology#Workflow
 <http://odahub.io/ontology#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
