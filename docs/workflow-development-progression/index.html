@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s At some point, it may be advisable to move part of code in functions of a python module (e.g. my_functions.py), stored in the same repository. The functions can be called from the workflow notebook as from my_functions import my_nice_function; my_nice_function(argument).
+<meta name="description" content="Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s # At some point, it may be advisable to move part of code in functions of a python module (e.g. my_functions.py), stored in the same repository. The functions can be called from the workflow notebook as from my_functions import my_nice_function; my_nice_function(argument).
 If some functions are often re-used, they can be stored in external packages, and even published on pypi (to allow pip install my_function_package).">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s At some point, it may be advisable to move part of code in functions of a python module (e.g. my_functions.py), stored in the same repository. The functions can be called from the workflow notebook as from my_functions import my_nice_function; my_nice_function(argument).
+<meta property="og:description" content="Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s # At some point, it may be advisable to move part of code in functions of a python module (e.g. my_functions.py), stored in the same repository. The functions can be called from the workflow notebook as from my_functions import my_nice_function; my_nice_function(argument).
 If some functions are often re-used, they can be stored in external packages, and even published on pypi (to allow pip install my_function_package)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://odahub.io/docs/workflow-development-progression/" />
+<meta property="og:url" content="https://odahub.io/docs/workflow-development-progression/" /><meta property="article:section" content="docs" />
+
+
 
 <title>Workflow Development Progression | About ODA</title>
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.dfb092b6b16f8ea7d015f24af61605175aab6aa1be752373be9036e6496f6529.js" integrity="sha256-37CStrFvjqfQFfJK9hYFF1qraqG&#43;dSNzvpA25klvZSk=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.0a95d1719f723bf105a0e3c909adbc4523208874e5601100c47d1a7ded026f21.js" integrity="sha256-CpXRcZ9yO/EFoOPJCa28RSMgiHTlYBEAxH0afe0CbyE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -161,7 +163,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -205,7 +207,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h2 id="maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s</h2>
+  <article class="markdown"><h2 id="maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">
+  Maintaining semantic coherence in workflow development progression: from jupyter notebooks to python modules, packages, API&rsquo;s
+  <a class="anchor" href="#maintaining-semantic-coherence-in-workflow-development-progression-from-jupyter-notebooks-to-python-modules-packages-apis">#</a>
+</h2>
 <p>At some point, it may be advisable to move part of code in functions of a <strong>python module</strong> (e.g. <code>my_functions.py</code>), stored in the same repository. The functions can be called from the workflow notebook as <code>from my_functions import my_nice_function; my_nice_function(argument)</code>.</p>
 <p>If some functions are often re-used, they can be stored in external packages, and even published on <strong>pypi</strong> (to allow <code>pip install my_function_package</code>).</p>
 <p>Sometimes, the <strong>function may be in fact called remotely, though API</strong>. From the point of view of workflow (e.g. notebook) where the function is called there such a remotely executed function may look very similar to local function from a module, giving similar advantages and posing similar challenges.</p>
@@ -231,9 +236,7 @@ This additional structure associated with workflows will be ingested in the KG. 
 
 
 
-  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
-document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
-select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

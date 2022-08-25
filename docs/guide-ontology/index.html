@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ontology Purpose Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
+<meta name="description" content="Ontology # Purpose # Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
 While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations. In an increasingly large number of cases we identify and assign annotations automatically.
 The tools we develop commit to implement the common understanding of the terms.
-Discovering terms to use The terms look like URLs, e.">
+Discovering terms to use # The terms look like URLs, e.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Ontology Purpose Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
+<meta property="og:description" content="Ontology # Purpose # Ontology defines terms in which we describe what we do: data, workflows, publications, etc.
 While creating and discovering workflows it is useful to learn to speak in these terms: find and assign suitable annotations. In an increasingly large number of cases we identify and assign annotations automatically.
 The tools we develop commit to implement the common understanding of the terms.
-Discovering terms to use The terms look like URLs, e." />
+Discovering terms to use # The terms look like URLs, e." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://odahub.io/docs/guide-ontology/" />
+<meta property="og:url" content="https://odahub.io/docs/guide-ontology/" /><meta property="article:section" content="docs" />
+
+
 
 <title>Guide Ontology | About ODA</title>
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.dfb092b6b16f8ea7d015f24af61605175aab6aa1be752373be9036e6496f6529.js" integrity="sha256-37CStrFvjqfQFfJK9hYFF1qraqG&#43;dSNzvpA25klvZSk=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.0a95d1719f723bf105a0e3c909adbc4523208874e5601100c47d1a7ded026f21.js" integrity="sha256-CpXRcZ9yO/EFoOPJCa28RSMgiHTlYBEAxH0afe0CbyE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -165,7 +167,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -211,18 +213,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ontology">Ontology</h1>
-<h2 id="purpose">Purpose</h2>
+  <article class="markdown"><h1 id="ontology">
+  Ontology
+  <a class="anchor" href="#ontology">#</a>
+</h1>
+<h2 id="purpose">
+  Purpose
+  <a class="anchor" href="#purpose">#</a>
+</h2>
 <p>Ontology defines <code>terms</code> in which we describe what we do: data, workflows, publications, etc.</p>
 <p>While creating and discovering workflows it is useful to learn to speak in these <code>terms</code>: find and assign suitable annotations.
 In an increasingly large number of cases we identify and assign annotations automatically.</p>
 <p>The tools we develop commit to implement the common understanding of the terms.</p>
-<h2 id="discovering-terms-to-use">Discovering <code>terms</code> to use</h2>
+<h2 id="discovering-terms-to-use">
+  Discovering <code>terms</code> to use
+  <a class="anchor" href="#discovering-terms-to-use">#</a>
+</h2>
 <p>The <code>terms</code> look like URLs, e.g. <a href="https://odahub.io/ontology/#AstrophysicalObject">https://odahub.io/ontology/#AstrophysicalObject</a> . These URLs can be directly pasted in the browser, leading to some description:</p>
 <p><img src="../ontology-doc.png" alt="" /></p>
 <p>We advise to look into public ontologies like <a href="https://www.ivoa.net/rdf/object-type/2020-10-06/object-type.rdf">https://www.ivoa.net/rdf/object-type/2020-10-06/object-type.rdf</a> and <a href="https://odahub.io/ontology/">https://odahub.io/ontology/</a> for the available terms. If it looks like there is nothing suitable there - it may be necessary to introduce new <code>terms</code>.</p>
 <p><em>Advanced</em>: It is also possible to look into an interactive graph explorer <a href="http://graphdb.obsuks1.unige.ch/">http://graphdb.obsuks1.unige.ch/</a> and <a href="https://share.streamlit.io/oda-hub/streamlite-graph/javascript-lib-interaction/main/main.py">https://share.streamlit.io/oda-hub/streamlite-graph/javascript-lib-interaction/main/main.py</a> .</p>
-<h2 id="adding-new-terms-to-the-ontology">Adding new <code>terms</code> to the ontology</h2>
+<h2 id="adding-new-terms-to-the-ontology">
+  Adding new <code>terms</code> to the ontology
+  <a class="anchor" href="#adding-new-terms-to-the-ontology">#</a>
+</h2>
 <p>Sometimes, it is necessary to add a new <code>term</code>. In principle, Workflow Developer may add a new <code>term</code> at will - it is their own understanding of what is being labeled. But the term will not be fully used until it is related to other <code>terms</code> in the Ontology, which is done either automatically or by the Ontology Developers.</p>
 <p>Ontology Developers can improve the common ontology with <a href="http://webprotege.obsuks1.unige.ch">http://webprotege.obsuks1.unige.ch</a> .</p>
 <p>There is also an experimental edit interface <a href="https://odahub.io/ontology/webvowl/index.html#opts=cd=130;dd=10;editorMode=true;filter_disjoint=false;mode_multiColor=true;mode_pnp=true;">here</a>, the edited result should be stored and uploaded manually.</p>
@@ -242,9 +256,7 @@ In an increasingly large number of cases we identify and assign annotations auto
 
 
 
-  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
-document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
-select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

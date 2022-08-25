@@ -108,7 +108,7 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "6",
@@ -226,7 +226,7 @@
       "IRI-based" : "GaiaFilter",
       "undefined" : "GaiaFilter"
     },
-    "id" : "22"
+    "id" : "20"
   }, {
     "iri" : "http://odahub.io/ontology#Instrument",
     "baseIri" : "http://odahub.io/ontology",
@@ -278,10 +278,10 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "20",
+    "id" : "21",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "21",
+    "id" : "22",
     "type" : "owl:objectProperty"
   }, {
     "id" : "16",
@@ -304,17 +304,17 @@
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "range" : "8",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "10"
   }, {
     "range" : "6",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "12"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -325,7 +325,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "15", "16", "3" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "13"
   }, {
     "iri" : "http://odahub.io/ontology#hasRA",
@@ -348,7 +348,7 @@
     },
     "superproperty" : [ "13" ],
     "domain" : "1",
-    "subproperty" : [ "0", "20", "21" ],
+    "subproperty" : [ "0", "21", "22" ],
     "attributes" : [ "object" ],
     "id" : "3"
   }, {
@@ -361,7 +361,7 @@
     "superproperty" : [ "3" ],
     "domain" : "14",
     "attributes" : [ "object" ],
-    "id" : "20"
+    "id" : "21"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
     "baseIri" : "http://odahub.io/ontology",
@@ -372,7 +372,7 @@
     "superproperty" : [ "3" ],
     "domain" : "1",
     "attributes" : [ "object" ],
-    "id" : "21"
+    "id" : "22"
   }, {
     "iri" : "http://odahub.io/ontology#hasDec",
     "baseIri" : "http://odahub.io/ontology",

@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Workflow development Guide Workflows are all things that can be computed, broadly speaking.
+<meta name="description" content="Workflow development Guide # Workflows are all things that can be computed, broadly speaking.
 For reproducibility, we want our workflows to be repeatable: producing the same output every time they are computed. This is easy enough to do in first approximation, but might be harder to achieve than it seems when the workflow relies on external resources. But we track every execution so it is not necessary to be overly concerned about these delicate details at every moment.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Workflow development Guide Workflows are all things that can be computed, broadly speaking.
+<meta property="og:description" content="Workflow development Guide # Workflows are all things that can be computed, broadly speaking.
 For reproducibility, we want our workflows to be repeatable: producing the same output every time they are computed. This is easy enough to do in first approximation, but might be harder to achieve than it seems when the workflow relies on external resources. But we track every execution so it is not necessary to be overly concerned about these delicate details at every moment." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://odahub.io/docs/guide-development/" />
+<meta property="og:url" content="https://odahub.io/docs/guide-development/" /><meta property="article:section" content="docs" />
+
+
 
 <title>Guide Development | About ODA</title>
 <link rel="manifest" href="../../manifest.json">
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.dfb092b6b16f8ea7d015f24af61605175aab6aa1be752373be9036e6496f6529.js" integrity="sha256-37CStrFvjqfQFfJK9hYFF1qraqG&#43;dSNzvpA25klvZSk=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.0a95d1719f723bf105a0e3c909adbc4523208874e5601100c47d1a7ded026f21.js" integrity="sha256-CpXRcZ9yO/EFoOPJCa28RSMgiHTlYBEAxH0afe0CbyE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -161,7 +163,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -214,14 +216,23 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="workflow-development-guide">Workflow development Guide</h1>
+  <article class="markdown"><h1 id="workflow-development-guide">
+  Workflow development Guide
+  <a class="anchor" href="#workflow-development-guide">#</a>
+</h1>
 <p>Workflows are all things that can be computed, broadly speaking.</p>
 <p>For reproducibility, we want our workflows to be repeatable: producing the same output every time they are computed.
 This is easy enough to do in first approximation, but might be harder to achieve than it seems when the workflow relies on external resources. But we track every execution so it is not necessary to be overly concerned about these delicate details at every moment.</p>
-<p>Generally, we want the workflows to be parametrized. Non-parametrized but strickly repeatable notebooks are equivalent to their output data.</p>
+<p>Generally, we want the workflows to be parametrized. Non-parametrized but strickly repeatable notebooks are less <strong>reusable</strong> since they always produce the same output data.</p>
 <p>One way to create them in ODA is to build <strong>jupyter notebook</strong>.</p>
-<h2 id="simple-oda-jupyter-notebook-to-a-workflow">Simple ODA Jupyter Notebook to a workflow</h2>
-<h3 id="write-a-working-repeatable-workflow">Write a working repeatable workflow</h3>
+<h2 id="simple-oda-jupyter-notebook-to-a-workflow">
+  Simple ODA Jupyter Notebook to a workflow
+  <a class="anchor" href="#simple-oda-jupyter-notebook-to-a-workflow">#</a>
+</h2>
+<h3 id="write-a-working-repeatable-workflow">
+  Write a working repeatable workflow
+  <a class="anchor" href="#write-a-working-repeatable-workflow">#</a>
+</h3>
 <p>First you need to make sure your notebook runs in a cloud environment. It needs to be repeatable - i.e. you can run it many times. If it depends on external services - try to make sure the requests are also repeatable - you might need to specify sufficient details. If the notebook does not produce the exactly
 the same result every time - it&rsquo;s unfortunate, but do not worry too much, it might still be reproducible (see motivation on <a href="https://github.com/volodymyrss/reproducibility-motivation/">the difference between reproducibility and repeatability</a>)</p>
 <ul>
@@ -229,34 +240,60 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <li>make a requirements.txt will the modules you need for this notebook</li>
 </ul>
 <p>You can use a mock <a href="https://renkulab.io/gitlab/astronomy/mmoda/lightcurve-example">lightcurve notebook</a> as an example.</p>
-<h3 id="parametetrize-the-notebook">Parametetrize the notebook</h3>
+<h3 id="parametetrize-the-notebook">
+  Parametetrize the notebook
+  <a class="anchor" href="#parametetrize-the-notebook">#</a>
+</h3>
+<p>Create a cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):</p>
 <ul>
-<li>create a cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):
-<ul>
-<li>
-<p>the names of the declared variables will be used as parameter names in the MMODA service (except the &ldquo;default&rdquo; parameters, see below)</p>
-</li>
-<li>
-<p>if not annotated, the types of the inputs parameters are determined based on the parameter default value</p>
-</li>
-<li>
-<p>one can annotate the input parameter by putting comment with the <code>term</code> from the <a href="https://odahub.io/docs/guide-ontology">ontology</a>.</p>
-</li>
-<li>
-<p>several default common parameters are always set by the MMODA frontend. These includes:
-| Type annotation | Parameter default name |
-| &mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&ndash; |
-| <a href="http://odahub.io/ontology#PointOfInterestRA">http://odahub.io/ontology#PointOfInterestRA</a> | RA |
-| <a href="http://odahub.io/ontology#PointOfInterestDEC">http://odahub.io/ontology#PointOfInterestDEC</a> | DEC |
-| <a href="http://odahub.io/ontology#StartTime">http://odahub.io/ontology#StartTime</a> | T1 |
-| <a href="http://odahub.io/ontology#EndTime">http://odahub.io/ontology#EndTime</a> | T2 |
-| <a href="http://odahub.io/ontology#AstrophysicalObject">http://odahub.io/ontology#AstrophysicalObject</a> | src_name |</p>
-<p>if notebook contains parameters anotated with these types, their names will be automatically converted by the dispatcher plugin to the default ones. If some of them are ommited, they will be added to the list of workflow parameters automatically.</p>
-</li>
+<li>the names of the declared variables will be used as parameter names in the MMODA service (except the <strong>default</strong> parameters, see below)</li>
+<li>if not annotated, the types of the inputs parameters are determined based on the parameter default value</li>
+<li>one can annotate the input parameter by putting comment with the <code>term</code> from the <a href="https://odahub.io/docs/guide-ontology">ontology</a>.</li>
 </ul>
-</li>
-</ul>
-<h3 id="annotate-the-notebook-outputs">Annotate the notebook outputs</h3>
+<h4 id="default-parameters">
+  Default parameters
+  <a class="anchor" href="#default-parameters">#</a>
+</h4>
+<p>Several <strong>default</strong> common parameters are always set by the MMODA frontend. These include:</p>
+<table>
+<thead>
+<tr>
+<th>Type annotation</th>
+<th>Parameter default name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://odahub.io/ontology#PointOfInterestRA">http://odahub.io/ontology#PointOfInterestRA</a></td>
+<td>RA</td>
+</tr>
+<tr>
+<td><a href="http://odahub.io/ontology#PointOfInterestDEC">http://odahub.io/ontology#PointOfInterestDEC</a></td>
+<td>DEC</td>
+</tr>
+<tr>
+<td><a href="http://odahub.io/ontology#StartTime">http://odahub.io/ontology#StartTime</a></td>
+<td>T1</td>
+</tr>
+<tr>
+<td><a href="http://odahub.io/ontology#EndTime">http://odahub.io/ontology#EndTime</a></td>
+<td>T2</td>
+</tr>
+<tr>
+<td><a href="http://odahub.io/ontology#AstrophysicalObject">http://odahub.io/ontology#AstrophysicalObject</a></td>
+<td>src_name</td>
+</tr>
+</tbody>
+</table>
+<p>If notebook contains parameters anotated with these types, their names will be automatically converted by the dispatcher plugin to the default ones. If some of them are ommited, they will be added to the list of workflow parameters automatically.</p>
+<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
+<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice note" >
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#note-notice"></use></svg></span>Note</p><p>Note that both target (Point of Interest) <strong>source name</strong> and target <strong>source coordinates</strong> are passed to the workflow, and in principle there is no guarantee the coordinates are that of the source. Indeed the exact choice of the coordinates for a given source depends on the energy band, desired precision, etc. For now, we leave is up to the workflow developer to reconcile these parameters.</p></div>
+
+<h3 id="annotate-the-notebook-outputs">
+  Annotate the notebook outputs
+  <a class="anchor" href="#annotate-the-notebook-outputs">#</a>
+</h3>
 <ul>
 <li>define the notebook output, similarly creating cell with tag &ldquo;outputs&rdquo;.
 <ul>
@@ -266,7 +303,10 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 </li>
 <li>if you want to give more detailed description of the notebook input and output, use <code>terms</code> from the <a href="[docs/guide-ontology.]%28https://odahub.io/docs/guide-ontology%29">ontology</a>.</li>
 </ul>
-<h3 id="publish-your-workflow-as-a-test-service">Publish your workflow as a test service</h3>
+<h3 id="publish-your-workflow-as-a-test-service">
+  Publish your workflow as a test service
+  <a class="anchor" href="#publish-your-workflow-as-a-test-service">#</a>
+</h3>
 <ul>
 <li>publish the workflow to RenkuLab in the dedicated group: <a href="https://renkulab.io/gitlab/astronomy/mmoda/">https://renkulab.io/gitlab/astronomy/mmoda/</a></li>
 <li>add a &ldquo;live-workflow&rdquo; topic.</li>
@@ -276,13 +316,19 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <ul>
 <li>once some bots do their job, the workflow will be automatically installed in <a href="https://www.astro.unige.ch/mmoda">MMODA</a> (by default, on a staging instance), and you will recieve an email!</li>
 </ul>
-<h4 id="try-to-access-your-new-service">Try to access your new service</h4>
+<h4 id="try-to-access-your-new-service">
+  Try to access your new service
+  <a class="anchor" href="#try-to-access-your-new-service">#</a>
+</h4>
 <ul>
 <li>Assuming <code>lightcurve-example</code> from above was used, and the notebook name was <code>random</code>, you can run this:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ oda-api -u https://dispatcher-staging.obsuks1.unige.ch get -i lightcurve-example -p random -a n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-</code></pre></div><p>TODO: workflow version, plot here and in renku create</p>
-<h3 id="optional-try-a-test-service">(optional) Try a test service</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ oda-api -u https://dispatcher-staging.obsuks1.unige.ch get -i lightcurve-example -p random -a n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p>TODO: workflow version, plot here and in renku create</p>
+<h3 id="optional-try-a-test-service">
+  (optional) Try a test service
+  <a class="anchor" href="#optional-try-a-test-service">#</a>
+</h3>
 <ul>
 <li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda] --upgrade</code></li>
 <li>inspect the notebook <code>nbinspect my-notebook.ipynb</code></li>
@@ -295,7 +341,10 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <li>try to start the service <code>nb2service my-notebook.ipynb</code></li>
 <li>try containerized service <code>nb2deploy $PWD test --local</code></li>
 </ul>
-<h3 id="optional-add-some-verification-test-cases">(optional) Add some verification test cases</h3>
+<h3 id="optional-add-some-verification-test-cases">
+  (optional) Add some verification test cases
+  <a class="anchor" href="#optional-add-some-verification-test-cases">#</a>
+</h3>
 <p>To make sure your service does not break with future updates, it&rsquo;s useful to express some assumptions about the service outputs in some reference cases.
 They will be tested automatically every time new workflow version is installed.</p>
 <p>we will explain later how to do this.</p>
@@ -315,9 +364,7 @@ They will be tested automatically every time new workflow version is installed.<
 
 
 
-  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
-document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
-select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
