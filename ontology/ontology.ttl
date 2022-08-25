@@ -188,6 +188,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                       rdfs:label "ODAAPILightcurveList" .
 
 
+###  http://odahub.io/ontology#Platform
+:Platform rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/description> "A space where an activity can be performed" ;
+          rdfs:label "Platform" .
+
+
 ###  http://odahub.io/ontology#PointOfInterest
 :PointOfInterest rdf:type owl:Class ;
                  rdfs:subClassOf :SkyCoordinates ;

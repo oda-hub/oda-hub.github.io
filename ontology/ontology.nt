@@ -163,6 +163,11 @@
 <http://odahub.io/ontology#ODAAPILightcurveList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#LightCurveList> .
 <http://odahub.io/ontology#ODAAPILightcurveList> <http://www.w3.org/2000/01/rdf-schema#label> "ODAAPILightcurveList" .
 # 
+# http://odahub.io/ontology#Platform
+<http://odahub.io/ontology#Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Platform> <http://purl.org/dc/elements/1.1/description> "A space where an activity can be performed" .
+<http://odahub.io/ontology#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform" .
+# 
 # http://odahub.io/ontology#PointOfInterest
 <http://odahub.io/ontology#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#PointOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#SkyCoordinates> .

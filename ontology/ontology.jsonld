@@ -140,6 +140,15 @@
     "@id" : "http://odahub.io/ontology#LightCurveList"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#Platform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A space where an activity can be performed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Platform"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#PointOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {

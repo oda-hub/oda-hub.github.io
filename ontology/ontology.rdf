@@ -314,6 +314,16 @@
     
 
 
+    <!-- http://odahub.io/ontology#Platform -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Platform">
+        <dc:description>A space where an activity can be performed</dc:description>
+        <rdfs:label>Platform</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#PointOfInterest -->
 
 
