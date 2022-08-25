@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Thu Aug 25 10:01:36 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Thu Aug 25 10:04:37 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -120,6 +120,10 @@ This ontology has the following classes and properties.</span>
       <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
    </li>
    <li>
+      <a href="#AstrophysicalObjectOfInterest"
+         title="http://odahub.io/ontology#AstrophysicalObjectOfInterest">AstrophysicalObjectOfInterest</a>
+   </li>
+   <li>
       <a href="#AstroqueryModule" title="http://odahub.io/ontology#AstroqueryModule">AstroqueryModule</a>
    </li>
    <li>
@@ -127,6 +131,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+   </li>
+   <li>
+      <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
    </li>
    <li>
       <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
@@ -144,15 +151,33 @@ This ontology has the following classes and properties.</span>
       <a href="#ODAAPILightcurveList" title="http://odahub.io/ontology#ODAAPILightcurveList">ODAAPILightcurveList</a>
    </li>
    <li>
+      <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
+   </li>
+   <li>
+      <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
+   </li>
+   <li>
+      <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
+   </li>
+   <li>
       <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
    </li>
    <li>
       <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
    </li>
    <li>
+      <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+   </li>
+   <li>
       <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
    </li>
+   <li>
+      <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+   </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasCoordinates" title="http://odahub.io/ontology#hasCoordinates">hasCoordinates</a>
+   </li>
    <li>
       <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
    </li>
@@ -243,6 +268,10 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
       </li>
       <li>
+         <a href="#AstrophysicalObjectOfInterest"
+            title="http://odahub.io/ontology#AstrophysicalObjectOfInterest">AstrophysicalObjectOfInterest</a>
+      </li>
+      <li>
          <a href="#AstroqueryModule" title="http://odahub.io/ontology#AstroqueryModule">AstroqueryModule</a>
       </li>
       <li>
@@ -250,6 +279,9 @@ This section provides details for each class and property defined by MMODA Astro
       </li>
       <li>
          <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+      </li>
+      <li>
+         <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
       </li>
       <li>
          <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
@@ -267,13 +299,28 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#ODAAPILightcurveList" title="http://odahub.io/ontology#ODAAPILightcurveList">ODAAPILightcurveList</a>
       </li>
       <li>
+         <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
+      </li>
+      <li>
+         <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
+      </li>
+      <li>
+         <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
+      </li>
+      <li>
          <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
       </li>
       <li>
          <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
       </li>
       <li>
+         <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+      </li>
+      <li>
          <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+      </li>
+      <li>
+         <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
       </li>
    </ul>
    <div class="entity" id="AstrophysicalObject">
@@ -287,12 +334,38 @@ This section provides details for each class and property defined by MMODA Astro
          <span class="markdown">Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun.</span>
       </div>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AstrophysicalObjectOfInterest"
+               title="http://odahub.io/ontology#AstrophysicalObjectOfInterest">AstrophysicalObjectOfInterest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCoordinates" title="http://odahub.io/ontology#hasCoordinates">hasCoordinates</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#isRequesting" title="http://odahub.io/ontology#isRequesting">is requesting</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isRequestingAstroObject"
                title="http://odahub.io/ontology#isRequestingAstroObject">is requesting astro object</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AstrophysicalObjectOfInterest">
+      <h3>AstrophysicalObjectOfInterest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#AstrophysicalObjectOfInterest</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -346,10 +419,30 @@ This section provides details for each class and property defined by MMODA Astro
       <p>
          <strong>IRI:</strong> http://odahub.io/ontology#Declination</p>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EndTime">
+      <h3>EndTime<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#EndTime</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -442,6 +535,53 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PointOfInterest">
+      <h3>PointOfInterest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#PointOfInterest</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PointOfInterestDEC">
+      <h3>PointOfInterestDEC<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#PointOfInterestDEC</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PointOfInterestRA">
+      <h3>PointOfInterestRA<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#PointOfInterestRA</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="RightAscention">
       <h3>RightAscention<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -455,6 +595,11 @@ This section provides details for each class and property defined by MMODA Astro
             <a href="http://www.w3.org/2002/07/owl#Thing"
                target="_blank"
                title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -476,6 +621,11 @@ This section provides details for each class and property defined by MMODA Astro
 Subclasses may have other ways to express the content.</span>
       </div>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
@@ -484,8 +634,24 @@ Subclasses may have other ways to express the content.</span>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#isRequesting" title="http://odahub.io/ontology#isRequesting">is requesting</a>
+            <a href="#hasCoordinates" title="http://odahub.io/ontology#hasCoordinates">hasCoordinates</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isRequesting" title="http://odahub.io/ontology#isRequesting">is requesting</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StartTime">
+      <h3>StartTime<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#StartTime</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -519,9 +685,30 @@ Subclasses may have other ways to express the content.</span>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="WorkflowParameter">
+      <h3>WorkflowParameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#WorkflowParameter</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#hasCoordinates" title="http://odahub.io/ontology#hasCoordinates">hasCoordinates</a>
+      </li>
       <li>
          <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
       </li>
@@ -550,6 +737,34 @@ Subclasses may have other ways to express the content.</span>
          </a>
       </li>
    </ul>
+   <div class="entity" id="hasCoordinates">
+      <h3>hasCoordinates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#hasCoordinates</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasDec">
       <h3>hasDec<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>

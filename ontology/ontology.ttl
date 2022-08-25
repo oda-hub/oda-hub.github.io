@@ -65,6 +65,14 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://odahub.io/ontology#hasCoordinates
+:hasCoordinates rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :AstrophysicalObject ;
+                rdfs:range :SkyCoordinates ;
+                rdfs:label "hasCoordinates" .
+
+
 ###  http://odahub.io/ontology#hasDec
 :hasDec rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf owl:topObjectProperty ;
@@ -119,6 +127,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                      rdfs:label "AstrophysicalObject" .
 
 
+###  http://odahub.io/ontology#AstrophysicalObjectOfInterest
+:AstrophysicalObjectOfInterest rdf:type owl:Class ;
+                               rdfs:subClassOf :AstrophysicalObject ;
+                               rdfs:label "AstrophysicalObjectOfInterest" .
+
+
 ###  http://odahub.io/ontology#AstroqueryModule
 :AstroqueryModule rdf:type owl:Class ;
                   rdfs:subClassOf owl:Thing ;
@@ -135,6 +149,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#Declination
 :Declination rdf:type owl:Class ;
              rdfs:label "Declination" .
+
+
+###  http://odahub.io/ontology#EndTime
+:EndTime rdf:type owl:Class ;
+         rdfs:subClassOf :WorkflowParameter ;
+         rdfs:label "EndTime" .
 
 
 ###  http://odahub.io/ontology#Gaia
@@ -167,6 +187,26 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                       rdfs:label "ODAAPILightcurveList" .
 
 
+###  http://odahub.io/ontology#PointOfInterest
+:PointOfInterest rdf:type owl:Class ;
+                 rdfs:subClassOf :SkyCoordinates ;
+                 rdfs:label "PointOfInterest" .
+
+
+###  http://odahub.io/ontology#PointOfInterestDEC
+:PointOfInterestDEC rdf:type owl:Class ;
+                    rdfs:subClassOf :Declination ,
+                                    :WorkflowParameter ;
+                    rdfs:label "PointOfInterestDEC" .
+
+
+###  http://odahub.io/ontology#PointOfInterestRA
+:PointOfInterestRA rdf:type owl:Class ;
+                   rdfs:subClassOf :RightAscention ,
+                                   :WorkflowParameter ;
+                   rdfs:label "PointOfInterestRA" .
+
+
 ###  http://odahub.io/ontology#RightAscention
 :RightAscention rdf:type owl:Class ;
                 rdfs:subClassOf owl:Thing ;
@@ -180,10 +220,21 @@ Subclasses may have other ways to express the content.""" ;
                 rdfs:label "SkyCoordinates" .
 
 
+###  http://odahub.io/ontology#StartTime
+:StartTime rdf:type owl:Class ;
+           rdfs:subClassOf :WorkflowParameter ;
+           rdfs:label "StartTime" .
+
+
 ###  http://odahub.io/ontology#Workflow
 :Workflow rdf:type owl:Class ;
           rdfs:subClassOf owl:Thing ;
           rdfs:label "Workflow" .
+
+
+###  http://odahub.io/ontology#WorkflowParameter
+:WorkflowParameter rdf:type owl:Class ;
+                   rdfs:label "WorkflowParameter" .
 
 
 #################################################################

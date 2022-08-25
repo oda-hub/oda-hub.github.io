@@ -48,6 +48,15 @@
     "@value" : "AstrophysicalObject"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#AstrophysicalObjectOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AstrophysicalObjectOfInterest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#AstrophysicalObject"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#AstroqueryModule",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -73,6 +82,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Declination"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#EndTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EndTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#Gaia",
@@ -120,6 +138,37 @@
     "@id" : "http://odahub.io/ontology#LightCurveList"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#PointOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PointOfInterest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#SkyCoordinates"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#PointOfInterestDEC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PointOfInterestDEC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Declination"
+  }, {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#PointOfInterestRA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PointOfInterestRA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#RightAscention"
+  }, {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#RightAscention",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -138,6 +187,15 @@
     "@value" : "SkyCoordinates"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#StartTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "StartTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#Workflow",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -145,6 +203,27 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#WorkflowParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#hasCoordinates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#AstrophysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCoordinates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://odahub.io/ontology#SkyCoordinates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#hasDec",
