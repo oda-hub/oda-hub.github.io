@@ -17,7 +17,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.cdfd4273a6a9ee039e544892b72c33c2ddaeb40b5b5a6f8f43b992c04db4d169.js" integrity="sha256-zf1Cc6ap7gOeVEiStywzwt2utAtbWm&#43;PQ7mSwE200Wk=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.dfb092b6b16f8ea7d015f24af61605175aab6aa1be752373be9036e6496f6529.js" integrity="sha256-37CStrFvjqfQFfJK9hYFF1qraqG&#43;dSNzvpA25klvZSk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -231,7 +231,30 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <p>You can use a mock <a href="https://renkulab.io/gitlab/astronomy/mmoda/lightcurve-example">lightcurve notebook</a> as an example.</p>
 <h3 id="parametetrize-the-notebook">Parametetrize the notebook</h3>
 <ul>
-<li>create a cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):</li>
+<li>create a cell with the following tag &ldquo;parameters&rdquo; (see <a href="https://papermill.readthedocs.io/en/latest/usage-parameterize.html#designate-parameters-for-a-cell">papermill manual</a>):
+<ul>
+<li>
+<p>the names of the declared variables will be used as parameter names in the MMODA service (except the &ldquo;default&rdquo; parameters, see below)</p>
+</li>
+<li>
+<p>if not annotated, the types of the inputs parameters are determined based on the parameter default value</p>
+</li>
+<li>
+<p>one can annotate the input parameter by putting comment with the <code>term</code> from the <a href="https://odahub.io/docs/guide-ontology">ontology</a>.</p>
+</li>
+<li>
+<p>several default common parameters are always set by the MMODA frontend. These includes:
+| Type annotation | Parameter default name |
+| &mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&ndash; |
+| <a href="http://odahub.io/ontology#PointOfInterestRA">http://odahub.io/ontology#PointOfInterestRA</a> | RA |
+| <a href="http://odahub.io/ontology#PointOfInterestDEC">http://odahub.io/ontology#PointOfInterestDEC</a> | DEC |
+| <a href="http://odahub.io/ontology#StartTime">http://odahub.io/ontology#StartTime</a> | T1 |
+| <a href="http://odahub.io/ontology#EndTime">http://odahub.io/ontology#EndTime</a> | T2 |
+| <a href="http://odahub.io/ontology#AstrophysicalObject">http://odahub.io/ontology#AstrophysicalObject</a> | src_name |</p>
+<p>if notebook contains parameters anotated with these types, their names will be automatically converted by the dispatcher plugin to the default ones. If some of them are ommited, they will be added to the list of workflow parameters automatically.</p>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="annotate-the-notebook-outputs">Annotate the notebook outputs</h3>
 <ul>
@@ -241,7 +264,7 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 <li>outputs may be also strings which contain filenames for valid files. If they do, the whole file will be considered output.</li>
 </ul>
 </li>
-<li>if you want to give more detailed description of the notebook input and output, use <code>terms</code> from the <a href="docs/guide-ontology.">ontology</a>.</li>
+<li>if you want to give more detailed description of the notebook input and output, use <code>terms</code> from the <a href="[docs/guide-ontology.]%28https://odahub.io/docs/guide-ontology%29">ontology</a>.</li>
 </ul>
 <h3 id="publish-your-workflow-as-a-test-service">Publish your workflow as a test service</h3>
 <ul>
