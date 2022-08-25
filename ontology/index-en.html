@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Thu Aug 25 20:05:50 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Thu Aug 25 22:01:38 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -136,6 +136,9 @@ This ontology has the following classes and properties.</span>
       <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
    </li>
    <li>
+      <a href="#Feature" title="http://odahub.io/ontology#Feature">Feature</a>
+   </li>
+   <li>
       <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
    </li>
    <li>
@@ -152,6 +155,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Platform" title="http://odahub.io/ontology#Platform">Platform</a>
+   </li>
+   <li>
+      <a href="#PlatformFeature" title="http://odahub.io/ontology#PlatformFeature">PlatformFeature</a>
    </li>
    <li>
       <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
@@ -189,6 +195,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
+   </li>
+   <li>
+      <a href="#hasFeature" title="http://odahub.io/ontology#hasFeature">hasFeature</a>
    </li>
    <li>
       <a href="#hasRA" title="http://odahub.io/ontology#hasRA">hasRA</a>
@@ -255,6 +264,19 @@ This ontology has the following classes and properties.</span>
          <span>version i r i</span>
       </a>
    </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasOntology" title="http://odahub.io/ontology#hasOntology">hasOntology</a>
+   </li>
+   <li>
+      <a href="#Renku" title="http://odahub.io/ontology#Renku">Renku</a>
+   </li>
+   <li>
+      <a href="#selfHosted" title="http://odahub.io/ontology#selfHosted">selfHosted</a>
+   </li>
+   <li>
+      <a href="#Simbad" title="http://odahub.io/ontology#Simbad">Simbad</a>
+   </li>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
 </div>
   
@@ -293,6 +315,9 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
       </li>
       <li>
+         <a href="#Feature" title="http://odahub.io/ontology#Feature">Feature</a>
+      </li>
+      <li>
          <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
       </li>
       <li>
@@ -309,6 +334,9 @@ This section provides details for each class and property defined by MMODA Astro
       </li>
       <li>
          <a href="#Platform" title="http://odahub.io/ontology#Platform">Platform</a>
+      </li>
+      <li>
+         <a href="#PlatformFeature" title="http://odahub.io/ontology#PlatformFeature">PlatformFeature</a>
       </li>
       <li>
          <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
@@ -465,6 +493,33 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Feature">
+      <h3>Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Feature</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PlatformFeature" title="http://odahub.io/ontology#PlatformFeature">PlatformFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasFeature" title="http://odahub.io/ontology#hasFeature">hasFeature</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Gaia">
       <h3>Gaia<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -564,6 +619,40 @@ This section provides details for each class and property defined by MMODA Astro
       <div class="info">
          <span class="markdown">A space where an activity can be performed</span>
       </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasFeature" title="http://odahub.io/ontology#hasFeature">hasFeature</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Renku" title="http://odahub.io/ontology#Renku">Renku</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Simbad" title="http://odahub.io/ontology#Simbad">Simbad</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PlatformFeature">
+      <h3>PlatformFeature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#PlatformFeature</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Feature" title="http://odahub.io/ontology#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#hasOntology" title="http://odahub.io/ontology#hasOntology">hasOntology</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#selfHosted" title="http://odahub.io/ontology#selfHosted">selfHosted</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="PointOfInterest">
       <h3>PointOfInterest<sup class="type-c" title="class">c</sup>
@@ -795,6 +884,9 @@ Subclasses may have other ways to express the content.</span>
          <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
       </li>
       <li>
+         <a href="#hasFeature" title="http://odahub.io/ontology#hasFeature">hasFeature</a>
+      </li>
+      <li>
          <a href="#hasRA" title="http://odahub.io/ontology#hasRA">hasRA</a>
       </li>
       <li>
@@ -870,6 +962,34 @@ Subclasses may have other ways to express the content.</span>
             <dt>has range</dt>
             <dd>
                <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFeature">
+      <h3>hasFeature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#hasFeature</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Platform" title="http://odahub.io/ontology#Platform">Platform</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Feature" title="http://odahub.io/ontology#Feature">Feature</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1126,11 +1246,99 @@ Subclasses may have other ways to express the content.</span>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionIRI</p>
    </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasOntology" title="http://odahub.io/ontology#hasOntology">hasOntology</a>
+      </li>
+      <li>
+         <a href="#Renku" title="http://odahub.io/ontology#Renku">Renku</a>
+      </li>
+      <li>
+         <a href="#selfHosted" title="http://odahub.io/ontology#selfHosted">selfHosted</a>
+      </li>
+      <li>
+         <a href="#Simbad" title="http://odahub.io/ontology#Simbad">Simbad</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasOntology">
+      <h3>hasOntology<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#hasOntology</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#PlatformFeature" title="http://odahub.io/ontology#PlatformFeature">PlatformFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Renku">
+      <h3>Renku<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Renku</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Platform" title="http://odahub.io/ontology#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasFeature" title="http://odahub.io/ontology#hasFeature">hasFeature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#hasOntology" title="http://odahub.io/ontology#hasOntology">hasOntology</a>
+         </dd>
+         <dd>
+            <a href="#hasFeature" title="http://odahub.io/ontology#hasFeature">hasFeature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#selfHosted" title="http://odahub.io/ontology#selfHosted">selfHosted</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="selfHosted">
+      <h3>selfHosted<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#selfHosted</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#PlatformFeature" title="http://odahub.io/ontology#PlatformFeature">PlatformFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Simbad">
+      <h3>Simbad<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Simbad</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Platform" title="http://odahub.io/ontology#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
 </div>

@@ -81,6 +81,14 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
         rdfs:label "hasDec" .
 
 
+###  http://odahub.io/ontology#hasFeature
+:hasFeature rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Platform ;
+            rdfs:range :Feature ;
+            rdfs:label "hasFeature" .
+
+
 ###  http://odahub.io/ontology#hasRA
 :hasRA rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -158,6 +166,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
          rdfs:label "EndTime" .
 
 
+###  http://odahub.io/ontology#Feature
+:Feature rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:label "Feature" .
+
+
 ###  http://odahub.io/ontology#Gaia
 :Gaia rdf:type owl:Class ;
       rdfs:subClassOf :Instrument ;
@@ -192,6 +206,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 :Platform rdf:type owl:Class ;
           <http://purl.org/dc/elements/1.1/description> "A space where an activity can be performed" ;
           rdfs:label "Platform" .
+
+
+###  http://odahub.io/ontology#PlatformFeature
+:PlatformFeature rdf:type owl:Class ;
+                 rdfs:subClassOf :Feature ;
+                 rdfs:label "PlatformFeature" .
 
 
 ###  http://odahub.io/ontology#PointOfInterest
@@ -257,6 +277,36 @@ Subclasses may have other ways to express the content.""" ;
 ###  http://odahub.io/ontology#WorkflowParameter
 :WorkflowParameter rdf:type owl:Class ;
                    rdfs:label "WorkflowParameter" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://odahub.io/ontology#Renku
+:Renku rdf:type owl:NamedIndividual ,
+                :Platform ;
+       :hasFeature :hasOntology ,
+                   :selfHosted ;
+       rdfs:label "Renku" .
+
+
+###  http://odahub.io/ontology#Simbad
+:Simbad rdf:type owl:NamedIndividual ,
+                 :Platform ;
+        rdfs:label "Simbad" .
+
+
+###  http://odahub.io/ontology#hasOntology
+:hasOntology rdf:type owl:NamedIndividual ,
+                      :PlatformFeature ;
+             rdfs:label "hasOntology" .
+
+
+###  http://odahub.io/ontology#selfHosted
+:selfHosted rdf:type owl:NamedIndividual ,
+                     :PlatformFeature ;
+            rdfs:label "selfHosted" .
 
 
 #################################################################

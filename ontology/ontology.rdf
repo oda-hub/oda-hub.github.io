@@ -8,7 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:ontology="http://odahub.io/ontology#">
     <owl:Ontology rdf:about="http://odahub.io/ontology">
         <dc:abstract>IVOA kindly provides various data and object types, but very little is availble about workflow types. 
                                 It is possible to combine function types (e.g. https://fno.io) with data types. 
@@ -131,6 +132,18 @@
         <rdfs:domain rdf:resource="http://odahub.io/ontology#SkyCoordinates"/>
         <rdfs:range rdf:resource="http://odahub.io/ontology#Declination"/>
         <rdfs:label>hasDec</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://odahub.io/ontology#hasFeature -->
+
+
+    <owl:ObjectProperty rdf:about="http://odahub.io/ontology#hasFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://odahub.io/ontology#Platform"/>
+        <rdfs:range rdf:resource="http://odahub.io/ontology#Feature"/>
+        <rdfs:label>hasFeature</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -264,6 +277,16 @@
     
 
 
+    <!-- http://odahub.io/ontology#Feature -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Feature</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#Gaia -->
 
 
@@ -320,6 +343,16 @@
     <owl:Class rdf:about="http://odahub.io/ontology#Platform">
         <dc:description>A space where an activity can be performed</dc:description>
         <rdfs:label>Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#PlatformFeature -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#PlatformFeature">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Feature"/>
+        <rdfs:label>PlatformFeature</rdfs:label>
     </owl:Class>
     
 
@@ -426,6 +459,60 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:Class rdf:about="http://odahub.io/ontology#WorkflowParameter">
         <rdfs:label>WorkflowParameter</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://odahub.io/ontology#Renku -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Renku">
+        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
+        <hasFeature rdf:resource="http://odahub.io/ontology#hasOntology"/>
+        <hasFeature rdf:resource="http://odahub.io/ontology#selfHosted"/>
+        <rdfs:label>Renku</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology#Simbad -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Simbad">
+        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
+        <rdfs:label>Simbad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology#hasOntology -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#hasOntology">
+        <rdf:type rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
+        <rdfs:label>hasOntology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology#selfHosted -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#selfHosted">
+        <rdf:type rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
+        <rdfs:label>selfHosted</rdfs:label>
+    </owl:NamedIndividual>
     
 
 

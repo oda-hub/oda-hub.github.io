@@ -67,6 +67,13 @@
 <http://odahub.io/ontology#hasDec> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#Declination> .
 <http://odahub.io/ontology#hasDec> <http://www.w3.org/2000/01/rdf-schema#label> "hasDec" .
 # 
+# http://odahub.io/ontology#hasFeature
+<http://odahub.io/ontology#hasFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://odahub.io/ontology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#Platform> .
+<http://odahub.io/ontology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#Feature> .
+<http://odahub.io/ontology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#label> "hasFeature" .
+# 
 # http://odahub.io/ontology#hasRA
 <http://odahub.io/ontology#hasRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://odahub.io/ontology#hasRA> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -138,6 +145,11 @@
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#label> "EndTime" .
 # 
+# http://odahub.io/ontology#Feature
+<http://odahub.io/ontology#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
 # http://odahub.io/ontology#Gaia
 <http://odahub.io/ontology#Gaia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Gaia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Instrument> .
@@ -167,6 +179,11 @@
 <http://odahub.io/ontology#Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Platform> <http://purl.org/dc/elements/1.1/description> "A space where an activity can be performed" .
 <http://odahub.io/ontology#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform" .
+# 
+# http://odahub.io/ontology#PlatformFeature
+<http://odahub.io/ontology#PlatformFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#PlatformFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Feature> .
+<http://odahub.io/ontology#PlatformFeature> <http://www.w3.org/2000/01/rdf-schema#label> "PlatformFeature" .
 # 
 # http://odahub.io/ontology#PointOfInterest
 <http://odahub.io/ontology#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -221,6 +238,37 @@
 # http://odahub.io/ontology#WorkflowParameter
 <http://odahub.io/ontology#WorkflowParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#WorkflowParameter> <http://www.w3.org/2000/01/rdf-schema#label> "WorkflowParameter" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://odahub.io/ontology#Renku
+<http://odahub.io/ontology#Renku> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#Renku> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#Platform> .
+<http://odahub.io/ontology#Renku> <http://odahub.io/ontology#hasFeature> <http://odahub.io/ontology#hasOntology> .
+<http://odahub.io/ontology#Renku> <http://odahub.io/ontology#hasFeature> <http://odahub.io/ontology#selfHosted> .
+<http://odahub.io/ontology#Renku> <http://www.w3.org/2000/01/rdf-schema#label> "Renku" .
+# 
+# http://odahub.io/ontology#Simbad
+<http://odahub.io/ontology#Simbad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#Simbad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#Platform> .
+<http://odahub.io/ontology#Simbad> <http://www.w3.org/2000/01/rdf-schema#label> "Simbad" .
+# 
+# http://odahub.io/ontology#hasOntology
+<http://odahub.io/ontology#hasOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#hasOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#PlatformFeature> .
+<http://odahub.io/ontology#hasOntology> <http://www.w3.org/2000/01/rdf-schema#label> "hasOntology" .
+# 
+# http://odahub.io/ontology#selfHosted
+<http://odahub.io/ontology#selfHosted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#selfHosted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#PlatformFeature> .
+<http://odahub.io/ontology#selfHosted> <http://www.w3.org/2000/01/rdf-schema#label> "selfHosted" .
 # 
 # 
 # 
