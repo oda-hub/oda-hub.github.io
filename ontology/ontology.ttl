@@ -81,14 +81,6 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
         rdfs:label "hasDec" .
 
 
-###  http://odahub.io/ontology#hasFeature
-:hasFeature rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain :Platform ;
-            rdfs:range :Feature ;
-            rdfs:label "hasFeature" .
-
-
 ###  http://odahub.io/ontology#hasRA
 :hasRA rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -148,28 +140,10 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                   rdfs:label "AstroqueryModule" .
 
 
-###  http://odahub.io/ontology#BatchAnalysis
-:BatchAnalysis rdf:type owl:Class ;
-               rdfs:subClassOf :PlatformFeature ;
-               rdfs:label "BatchAnalysis" .
-
-
-###  http://odahub.io/ontology#CustomGUI
-:CustomGUI rdf:type owl:Class ;
-           rdfs:subClassOf :InteractiveAnalysis ;
-           rdfs:label "CustomGUI" .
-
-
 ###  http://odahub.io/ontology#DataProduct
 :DataProduct rdf:type owl:Class ;
              rdfs:subClassOf owl:Thing ;
              rdfs:label "DataProduct" .
-
-
-###  http://odahub.io/ontology#DataRepository
-:DataRepository rdf:type owl:Class ;
-                rdfs:subClassOf :Repository ;
-                rdfs:label "DataRepository" .
 
 
 ###  http://odahub.io/ontology#Declination
@@ -177,23 +151,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
              rdfs:label "Declination" .
 
 
-###  http://odahub.io/ontology#DeploymentOption
-:DeploymentOption rdf:type owl:Class ;
-                  rdfs:subClassOf :PlatformFeature ;
-                  rdfs:label "DeploymentOption" .
-
-
 ###  http://odahub.io/ontology#EndTime
 :EndTime rdf:type owl:Class ;
          rdfs:subClassOf :TimeInstant ,
                          :WorkflowParameter ;
          rdfs:label "EndTime" .
-
-
-###  http://odahub.io/ontology#Feature
-:Feature rdf:type owl:Class ;
-         rdfs:subClassOf owl:Thing ;
-         rdfs:label "Feature" .
 
 
 ###  http://odahub.io/ontology#Gaia
@@ -214,63 +176,16 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
             rdfs:label "Instrument" .
 
 
-###  http://odahub.io/ontology#InteractiveAnalysis
-:InteractiveAnalysis rdf:type owl:Class ;
-                     rdfs:subClassOf :PlatformFeature ;
-                     rdfs:label "InteractiveAnalysis" .
-
-
-###  http://odahub.io/ontology#JupyterLabServer
-:JupyterLabServer rdf:type owl:Class ;
-                  rdfs:subClassOf :InteractiveAnalysis ;
-                  rdfs:label "JupyterLabServer" .
-
-
-###  http://odahub.io/ontology#KnowledgeGraph
-:KnowledgeGraph rdf:type owl:Class ;
-                rdfs:subClassOf :PlatformFeature .
-
-
 ###  http://odahub.io/ontology#LightCurveList
 :LightCurveList rdf:type owl:Class ;
                 rdfs:subClassOf :DataProduct ;
                 rdfs:label "LightCurveList" .
 
 
-###  http://odahub.io/ontology#ManagedPlatformOption
-:ManagedPlatformOption rdf:type owl:Class ;
-                       rdfs:subClassOf :DeploymentOption ;
-                       rdfs:label "ManagedPlatformOption" .
-
-
 ###  http://odahub.io/ontology#ODAAPILightcurveList
 :ODAAPILightcurveList rdf:type owl:Class ;
                       rdfs:subClassOf :LightCurveList ;
                       rdfs:label "ODAAPILightcurveList" .
-
-
-###  http://odahub.io/ontology#Ontology
-:Ontology rdf:type owl:Class ;
-          rdfs:subClassOf :PlatformFeature ;
-          rdfs:label "Ontology" .
-
-
-###  http://odahub.io/ontology#OpenSourceRepositoryPlatform
-:OpenSourceRepositoryPlatform rdf:type owl:Class ;
-                              rdfs:subClassOf :Platform ;
-                              rdfs:label "OpenSourceRepositoryPlatform" .
-
-
-###  http://odahub.io/ontology#Platform
-:Platform rdf:type owl:Class ;
-          <http://purl.org/dc/elements/1.1/description> "A space where an activity can be performed" ;
-          rdfs:label "Platform" .
-
-
-###  http://odahub.io/ontology#PlatformFeature
-:PlatformFeature rdf:type owl:Class ;
-                 rdfs:subClassOf :Feature ;
-                 rdfs:label "PlatformFeature" .
 
 
 ###  http://odahub.io/ontology#PointOfInterest
@@ -299,22 +214,10 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
           rdfs:label "Quantity" .
 
 
-###  http://odahub.io/ontology#Repository
-:Repository rdf:type owl:Class ;
-            rdfs:subClassOf :PlatformFeature ;
-            rdfs:label "Repository" .
-
-
 ###  http://odahub.io/ontology#RightAscention
 :RightAscention rdf:type owl:Class ;
                 rdfs:subClassOf owl:Thing ;
                 rdfs:label "RightAscention" .
-
-
-###  http://odahub.io/ontology#SelfHostedOption
-:SelfHostedOption rdf:type owl:Class ;
-                  rdfs:subClassOf :DeploymentOption ;
-                  rdfs:label "SelfHostedOption" .
 
 
 ###  http://odahub.io/ontology#SkyCoordinates
@@ -324,12 +227,6 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                 rdfs:comment """Sky coordinates. Typically represented as a string as known to https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html .
 Subclasses may have other ways to express the content.""" ;
                 rdfs:label "SkyCoordinates" .
-
-
-###  http://odahub.io/ontology#SoftwareRepository
-:SoftwareRepository rdf:type owl:Class ;
-                    rdfs:subClassOf :Repository ;
-                    rdfs:label "SoftwareRepository" .
 
 
 ###  http://odahub.io/ontology#StartTime
@@ -354,118 +251,6 @@ Subclasses may have other ways to express the content.""" ;
 ###  http://odahub.io/ontology#WorkflowParameter
 :WorkflowParameter rdf:type owl:Class ;
                    rdfs:label "WorkflowParameter" .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://odahub.io/ontology#Binder
-:Binder rdf:type owl:NamedIndividual ,
-                 :Platform ;
-        rdfs:label "Binder" .
-
-
-###  http://odahub.io/ontology#Connectome
-:Connectome rdf:type owl:NamedIndividual ,
-                     :Platform ;
-            <http://purl.org/dc/elements/1.1/creator> "SWITCH" ;
-            rdfs:label "Connectome" .
-
-
-###  http://odahub.io/ontology#DataLabs
-:DataLabs rdf:type owl:NamedIndividual ,
-                   :Platform ;
-          <http://purl.org/dc/elements/1.1/creator> "ESA" ;
-          rdfs:label "DataLabs" .
-
-
-###  http://odahub.io/ontology#EOSCMarketplace
-:EOSCMarketplace rdf:type owl:NamedIndividual ,
-                          :Platform ;
-                 rdfs:label "EOSCMarketplace" .
-
-
-###  http://odahub.io/ontology#ESAP
-:ESAP rdf:type owl:NamedIndividual ,
-               :Platform ;
-      <http://purl.org/dc/elements/1.1/creator> "ESCAPE" ;
-      rdfs:label "ESAP" .
-
-
-###  http://odahub.io/ontology#FedoraOSRP
-:FedoraOSRP rdf:type owl:NamedIndividual ,
-                     :OpenSourceRepositoryPlatform ,
-                     :Platform ;
-            <http://purl.org/dc/elements/1.1/description> <https://duraspace.org/fedora/> ;
-            rdfs:label "FedoraOSRP" .
-
-
-###  http://odahub.io/ontology#MMODA
-:MMODA rdf:type owl:NamedIndividual ,
-                :Platform ;
-       <http://purl.org/dc/elements/1.1/creator> "APC" ,
-                                                 "EPFL" ,
-                                                 "KAU" ,
-                                                 "UNIGE" ;
-       rdfs:label "MMODA" .
-
-
-###  http://odahub.io/ontology#OpenAIREResearchGraph
-:OpenAIREResearchGraph rdf:type owl:NamedIndividual ,
-                                :Platform ;
-                       <http://purl.org/dc/elements/1.1/creator> "OpenAIRE" ;
-                       rdfs:label "OpenAIREResearchGraph" .
-
-
-###  http://odahub.io/ontology#Renku
-:Renku rdf:type owl:NamedIndividual ,
-                :Platform ,
-                [ rdf:type owl:Restriction ;
-                  owl:onProperty :hasFeature ;
-                  owl:someValuesFrom :KnowledgeGraph
-                ] ,
-                [ rdf:type owl:Restriction ;
-                  owl:onProperty :hasFeature ;
-                  owl:someValuesFrom :ManagedPlatformOption
-                ] ,
-                [ rdf:type owl:Restriction ;
-                  owl:onProperty :hasFeature ;
-                  owl:someValuesFrom :Ontology
-                ] ,
-                [ rdf:type owl:Restriction ;
-                  owl:onProperty :hasFeature ;
-                  owl:someValuesFrom :SelfHostedOption
-                ] ;
-       <http://purl.org/dc/elements/1.1/creator> "SDSC" ;
-       rdfs:label "Renku" .
-
-
-###  http://odahub.io/ontology#SCIMMA
-:SCIMMA rdf:type owl:NamedIndividual ,
-                 :Platform ;
-        rdfs:label "SCIMMA" .
-
-
-###  http://odahub.io/ontology#Simbad
-:Simbad rdf:type owl:NamedIndividual ,
-                 :Platform ;
-        <http://purl.org/dc/elements/1.1/creator> "CDS" ;
-        rdfs:label "Simbad" .
-
-
-###  http://odahub.io/ontology#Yareta
-:Yareta rdf:type owl:NamedIndividual ,
-                 :Platform ;
-        <http://purl.org/dc/elements/1.1/creator> "UNIGE" ;
-        rdfs:label "Yareta" .
-
-
-###  http://odahub.io/ontology#Zenodo
-:Zenodo rdf:type owl:NamedIndividual ,
-                 :Platform ;
-        <http://purl.org/dc/elements/1.1/creator> "CERN" ;
-        rdfs:label "Zenodo" .
 
 
 #################################################################

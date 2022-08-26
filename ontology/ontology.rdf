@@ -135,18 +135,6 @@
     
 
 
-    <!-- http://odahub.io/ontology#hasFeature -->
-
-
-    <owl:ObjectProperty rdf:about="http://odahub.io/ontology#hasFeature">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://odahub.io/ontology#Platform"/>
-        <rdfs:range rdf:resource="http://odahub.io/ontology#Feature"/>
-        <rdfs:label>hasFeature</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://odahub.io/ontology#hasRA -->
 
 
@@ -246,42 +234,12 @@
     
 
 
-    <!-- http://odahub.io/ontology#BatchAnalysis -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#BatchAnalysis">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
-        <rdfs:label>BatchAnalysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#CustomGUI -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#CustomGUI">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#InteractiveAnalysis"/>
-        <rdfs:label>CustomGUI</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://odahub.io/ontology#DataProduct -->
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#DataProduct">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>DataProduct</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#DataRepository -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#DataRepository">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Repository"/>
-        <rdfs:label>DataRepository</rdfs:label>
     </owl:Class>
     
 
@@ -295,16 +253,6 @@
     
 
 
-    <!-- http://odahub.io/ontology#DeploymentOption -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#DeploymentOption">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
-        <rdfs:label>DeploymentOption</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://odahub.io/ontology#EndTime -->
 
 
@@ -312,16 +260,6 @@
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInstant"/>
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#WorkflowParameter"/>
         <rdfs:label>EndTime</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#Feature -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#Feature">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:label>Feature</rdfs:label>
     </owl:Class>
     
 
@@ -356,35 +294,6 @@
     
 
 
-    <!-- http://odahub.io/ontology#InteractiveAnalysis -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#InteractiveAnalysis">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
-        <rdfs:label>InteractiveAnalysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#JupyterLabServer -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#JupyterLabServer">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#InteractiveAnalysis"/>
-        <rdfs:label>JupyterLabServer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#KnowledgeGraph -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#KnowledgeGraph">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
-    </owl:Class>
-    
-
-
     <!-- http://odahub.io/ontology#LightCurveList -->
 
 
@@ -395,62 +304,12 @@
     
 
 
-    <!-- http://odahub.io/ontology#ManagedPlatformOption -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#ManagedPlatformOption">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#DeploymentOption"/>
-        <rdfs:label>ManagedPlatformOption</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://odahub.io/ontology#ODAAPILightcurveList -->
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#ODAAPILightcurveList">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#LightCurveList"/>
         <rdfs:label>ODAAPILightcurveList</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#Ontology -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#Ontology">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
-        <rdfs:label>Ontology</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#OpenSourceRepositoryPlatform -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#OpenSourceRepositoryPlatform">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Platform"/>
-        <rdfs:label>OpenSourceRepositoryPlatform</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#Platform -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#Platform">
-        <dc:description>A space where an activity can be performed</dc:description>
-        <rdfs:label>Platform</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#PlatformFeature -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#PlatformFeature">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Feature"/>
-        <rdfs:label>PlatformFeature</rdfs:label>
     </owl:Class>
     
 
@@ -497,32 +356,12 @@
     
 
 
-    <!-- http://odahub.io/ontology#Repository -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#Repository">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#PlatformFeature"/>
-        <rdfs:label>Repository</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://odahub.io/ontology#RightAscention -->
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#RightAscention">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>RightAscention</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#SelfHostedOption -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#SelfHostedOption">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#DeploymentOption"/>
-        <rdfs:label>SelfHostedOption</rdfs:label>
     </owl:Class>
     
 
@@ -536,16 +375,6 @@
         <rdfs:comment>Sky coordinates. Typically represented as a string as known to https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html .
 Subclasses may have other ways to express the content.</rdfs:comment>
         <rdfs:label>SkyCoordinates</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://odahub.io/ontology#SoftwareRepository -->
-
-
-    <owl:Class rdf:about="http://odahub.io/ontology#SoftwareRepository">
-        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Repository"/>
-        <rdfs:label>SoftwareRepository</rdfs:label>
     </owl:Class>
     
 
@@ -587,186 +416,6 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:Class rdf:about="http://odahub.io/ontology#WorkflowParameter">
         <rdfs:label>WorkflowParameter</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://odahub.io/ontology#Binder -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Binder">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <rdfs:label>Binder</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#Connectome -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Connectome">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>SWITCH</dc:creator>
-        <rdfs:label>Connectome</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#DataLabs -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#DataLabs">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>ESA</dc:creator>
-        <rdfs:label>DataLabs</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#EOSCMarketplace -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#EOSCMarketplace">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <rdfs:label>EOSCMarketplace</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#ESAP -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#ESAP">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>ESCAPE</dc:creator>
-        <rdfs:label>ESAP</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#FedoraOSRP -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#FedoraOSRP">
-        <rdf:type rdf:resource="http://odahub.io/ontology#OpenSourceRepositoryPlatform"/>
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:description rdf:resource="https://duraspace.org/fedora/"/>
-        <rdfs:label>FedoraOSRP</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#MMODA -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#MMODA">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>APC</dc:creator>
-        <dc:creator>EPFL</dc:creator>
-        <dc:creator>KAU</dc:creator>
-        <dc:creator>UNIGE</dc:creator>
-        <rdfs:label>MMODA</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#OpenAIREResearchGraph -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#OpenAIREResearchGraph">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>OpenAIRE</dc:creator>
-        <rdfs:label>OpenAIREResearchGraph</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#Renku -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Renku">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://odahub.io/ontology#hasFeature"/>
-                <owl:someValuesFrom rdf:resource="http://odahub.io/ontology#KnowledgeGraph"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://odahub.io/ontology#hasFeature"/>
-                <owl:someValuesFrom rdf:resource="http://odahub.io/ontology#ManagedPlatformOption"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://odahub.io/ontology#hasFeature"/>
-                <owl:someValuesFrom rdf:resource="http://odahub.io/ontology#Ontology"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://odahub.io/ontology#hasFeature"/>
-                <owl:someValuesFrom rdf:resource="http://odahub.io/ontology#SelfHostedOption"/>
-            </owl:Restriction>
-        </rdf:type>
-        <dc:creator>SDSC</dc:creator>
-        <rdfs:label>Renku</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#SCIMMA -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#SCIMMA">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <rdfs:label>SCIMMA</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#Simbad -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Simbad">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>CDS</dc:creator>
-        <rdfs:label>Simbad</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#Yareta -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Yareta">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>UNIGE</dc:creator>
-        <rdfs:label>Yareta</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://odahub.io/ontology#Zenodo -->
-
-
-    <owl:NamedIndividual rdf:about="http://odahub.io/ontology#Zenodo">
-        <rdf:type rdf:resource="http://odahub.io/ontology#Platform"/>
-        <dc:creator>CERN</dc:creator>
-        <rdfs:label>Zenodo</rdfs:label>
-    </owl:NamedIndividual>
     
 
 
