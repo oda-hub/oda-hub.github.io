@@ -84,6 +84,18 @@
     "@value" : "Declination"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#DiscoveryWorkflow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DiscoveryWorkflow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Workflow"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#EndTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {

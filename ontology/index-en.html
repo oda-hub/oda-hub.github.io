@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Aug 26 11:23:04 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Aug 26 18:06:56 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -131,6 +131,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+   </li>
+   <li>
+      <a href="#DiscoveryWorkflow" title="http://odahub.io/ontology#DiscoveryWorkflow">DiscoveryWorkflow</a>
    </li>
    <li>
       <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
@@ -287,6 +290,9 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
       </li>
       <li>
+         <a href="#DiscoveryWorkflow" title="http://odahub.io/ontology#DiscoveryWorkflow">DiscoveryWorkflow</a>
+      </li>
+      <li>
          <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
       </li>
       <li>
@@ -440,6 +446,24 @@ This section provides details for each class and property defined by MMODA Astro
          <dd>
             <a href="#hasDec" title="http://odahub.io/ontology#hasDec">hasDec</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DiscoveryWorkflow">
+      <h3>DiscoveryWorkflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#DiscoveryWorkflow</p>
+      <div class="info">
+         <span class="markdown">workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -732,6 +756,11 @@ Subclasses may have other ways to express the content.</span>
             <a href="http://www.w3.org/2002/07/owl#Thing"
                target="_blank"
                title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DiscoveryWorkflow" title="http://odahub.io/ontology#DiscoveryWorkflow">DiscoveryWorkflow</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>

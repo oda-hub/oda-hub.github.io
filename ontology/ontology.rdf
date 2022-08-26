@@ -253,6 +253,17 @@
     
 
 
+    <!-- http://odahub.io/ontology#DiscoveryWorkflow -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#DiscoveryWorkflow">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Workflow"/>
+        <dc:description>workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision</dc:description>
+        <rdfs:label>DiscoveryWorkflow</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#EndTime -->
 
 

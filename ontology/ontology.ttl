@@ -151,6 +151,13 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
              rdfs:label "Declination" .
 
 
+###  http://odahub.io/ontology#DiscoveryWorkflow
+:DiscoveryWorkflow rdf:type owl:Class ;
+                   rdfs:subClassOf :Workflow ;
+                   <http://purl.org/dc/elements/1.1/description> "workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision" ;
+                   rdfs:label "DiscoveryWorkflow" .
+
+
 ###  http://odahub.io/ontology#EndTime
 :EndTime rdf:type owl:Class ;
          rdfs:subClassOf :TimeInstant ,

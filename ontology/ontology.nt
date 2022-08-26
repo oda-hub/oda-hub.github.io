@@ -132,6 +132,12 @@
 <http://odahub.io/ontology#Declination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Declination> <http://www.w3.org/2000/01/rdf-schema#label> "Declination" .
 # 
+# http://odahub.io/ontology#DiscoveryWorkflow
+<http://odahub.io/ontology#DiscoveryWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#DiscoveryWorkflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Workflow> .
+<http://odahub.io/ontology#DiscoveryWorkflow> <http://purl.org/dc/elements/1.1/description> "workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision" .
+<http://odahub.io/ontology#DiscoveryWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "DiscoveryWorkflow" .
+# 
 # http://odahub.io/ontology#EndTime
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
