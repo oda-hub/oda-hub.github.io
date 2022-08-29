@@ -19,7 +19,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.0a95d1719f723bf105a0e3c909adbc4523208874e5601100c47d1a7ded026f21.js" integrity="sha256-CpXRcZ9yO/EFoOPJCa28RSMgiHTlYBEAxH0afe0CbyE=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.ea94655ae5a04c28ca182a97cf51ae89625cf57c01c5b303114043c1da99d1a1.js" integrity="sha256-6pRlWuWgTCjKGCqXz1GuiWJc9XwBxbMDEUBDwdqZ0aE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -330,17 +330,24 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
   <a class="anchor" href="#optional-try-a-test-service">#</a>
 </h3>
 <ul>
-<li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda] --upgrade</code></li>
+<li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda,rdf,mmoda] --upgrade</code></li>
 <li>inspect the notebook <code>nbinspect my-notebook.ipynb</code></li>
 <li>try to run the notebook <code>nbrun my-notebook.ipynb</code>
 <ul>
 <li>it will use all default parameters</li>
-<li>you can specify parameters as <code>nbrun --inp-nbins=10 my-notebook.ipynb</code>, if <code>nbins</code> happens to be one of the parameters.</li>
+<li>you can specify parameters as <code>nbrun --inp-nbins=10 my-notebook.ipynb</code>, if <code>nbins</code> happens to be one of the parameters.
+try to start the service <code>nb2service my-notebook.ipynb</code></li>
 </ul>
 </li>
-<li>try to start the service <code>nb2service my-notebook.ipynb</code></li>
-<li>try containerized service <code>nb2deploy $PWD test --local</code></li>
 </ul>
+<div class="notice note" >
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#note-notice"></use></svg></span>Note</p><p>if you experience issues testing the service due to some &ldquo;import error&rdquo; or other strange messages try containerized service:</p>
+<ul>
+<li><code>nb2deploy $PWD test --local</code></li>
+<li>then, look onto http://0.0.0.0:8000 for some metadata about the service</li>
+<li>try to run some simple queries in http://0.0.0.0:8000/apidocs/</li>
+</ul></div>
+
 <h3 id="optional-add-some-verification-test-cases">
   (optional) Add some verification test cases
   <a class="anchor" href="#optional-add-some-verification-test-cases">#</a>
