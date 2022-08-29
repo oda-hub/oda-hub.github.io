@@ -165,6 +165,13 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
          rdfs:label "EndTime" .
 
 
+###  http://odahub.io/ontology#EndTimeISOT
+:EndTimeISOT rdf:type owl:Class ;
+             rdfs:subClassOf :EndTime ,
+                             :TimeInstantISOT ;
+             rdfs:label "EndTimeISOT" .
+
+
 ###  http://odahub.io/ontology#Gaia
 :Gaia rdf:type owl:Class ;
       rdfs:subClassOf :Instrument ;
@@ -243,10 +250,23 @@ Subclasses may have other ways to express the content.""" ;
            rdfs:label "StartTime" .
 
 
+###  http://odahub.io/ontology#StartTimeISOT
+:StartTimeISOT rdf:type owl:Class ;
+               rdfs:subClassOf :StartTime ,
+                               :TimeInstantISOT ;
+               rdfs:label "StartTimeISOT" .
+
+
 ###  http://odahub.io/ontology#TimeInstant
 :TimeInstant rdf:type owl:Class ;
              rdfs:subClassOf :Quantity ;
              rdfs:label "TimeInstant" .
+
+
+###  http://odahub.io/ontology#TimeInstantISOT
+:TimeInstantISOT rdf:type owl:Class ;
+                 rdfs:subClassOf :TimeInstant ;
+                 rdfs:label "TimeInstantISOT" .
 
 
 ###  http://odahub.io/ontology#Workflow

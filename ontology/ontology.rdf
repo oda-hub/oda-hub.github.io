@@ -275,6 +275,17 @@
     
 
 
+    <!-- http://odahub.io/ontology#EndTimeISOT -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#EndTimeISOT">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#EndTime"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInstantISOT"/>
+        <rdfs:label>EndTimeISOT</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#Gaia -->
 
 
@@ -401,12 +412,33 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     
 
 
+    <!-- http://odahub.io/ontology#StartTimeISOT -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#StartTimeISOT">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#StartTime"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInstantISOT"/>
+        <rdfs:label>StartTimeISOT</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#TimeInstant -->
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#TimeInstant">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Quantity"/>
         <rdfs:label>TimeInstant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#TimeInstantISOT -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#TimeInstantISOT">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInstant"/>
+        <rdfs:label>TimeInstantISOT</rdfs:label>
     </owl:Class>
     
 

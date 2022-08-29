@@ -107,6 +107,17 @@
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#EndTimeISOT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EndTimeISOT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#EndTime"
+  }, {
+    "@id" : "http://odahub.io/ontology#TimeInstantISOT"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#Gaia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -226,6 +237,17 @@
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#StartTimeISOT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "StartTimeISOT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#StartTime"
+  }, {
+    "@id" : "http://odahub.io/ontology#TimeInstantISOT"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#TimeInstant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -233,6 +255,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#Quantity"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TimeInstantISOT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TimeInstantISOT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#TimeInstant"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#Workflow",

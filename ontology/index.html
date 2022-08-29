@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Aug 26 18:06:56 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Mon Aug 29 12:06:27 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -139,6 +139,9 @@ This ontology has the following classes and properties.</span>
       <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
    </li>
    <li>
+      <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
+   </li>
+   <li>
       <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
    </li>
    <li>
@@ -175,7 +178,13 @@ This ontology has the following classes and properties.</span>
       <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
    </li>
    <li>
+      <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
+   </li>
+   <li>
       <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
+   </li>
+   <li>
+      <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
    </li>
    <li>
       <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
@@ -296,6 +305,9 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
       </li>
       <li>
+         <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
+      </li>
+      <li>
          <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
       </li>
       <li>
@@ -332,7 +344,13 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
       </li>
       <li>
+         <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
+      </li>
+      <li>
          <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
+      </li>
+      <li>
+         <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
       </li>
       <li>
          <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
@@ -479,6 +497,27 @@ This section provides details for each class and property defined by MMODA Astro
          <dd>
             <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EndTimeISOT">
+      <h3>EndTimeISOT<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#EndTimeISOT</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -720,6 +759,27 @@ Subclasses may have other ways to express the content.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StartTimeISOT">
+      <h3>StartTimeISOT<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#StartTimeISOT</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="TimeInstant">
@@ -739,6 +799,28 @@ Subclasses may have other ways to express the content.</span>
          <dd>
             <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
             <sup class="type-c" title="class">c</sup>, <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeInstantISOT">
+      <h3>TimeInstantISOT<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeInstantISOT</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
