@@ -148,7 +148,20 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#Declination
 :Declination rdf:type owl:Class ;
+             rdfs:subClassOf :Quantity ;
              rdfs:label "Declination" .
+
+
+###  http://odahub.io/ontology#DeclinationDegrees
+:DeclinationDegrees rdf:type owl:Class ;
+                    rdfs:subClassOf :Declination ;
+                    rdfs:label "DeclinationDegrees" .
+
+
+###  http://odahub.io/ontology#Degree
+:Degree rdf:type owl:Class ;
+        rdfs:subClassOf :Unit ;
+        rdfs:label "Degree" .
 
 
 ###  http://odahub.io/ontology#DiscoveryWorkflow
@@ -230,8 +243,14 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#RightAscention
 :RightAscention rdf:type owl:Class ;
-                rdfs:subClassOf owl:Thing ;
+                rdfs:subClassOf :Quantity ;
                 rdfs:label "RightAscention" .
+
+
+###  http://odahub.io/ontology#RightAscentionDegrees
+:RightAscentionDegrees rdf:type owl:Class ;
+                       rdfs:subClassOf :RightAscention ;
+                       rdfs:label "RightAscentionDegrees" .
 
 
 ###  http://odahub.io/ontology#SkyCoordinates
@@ -267,6 +286,12 @@ Subclasses may have other ways to express the content.""" ;
 :TimeInstantISOT rdf:type owl:Class ;
                  rdfs:subClassOf :TimeInstant ;
                  rdfs:label "TimeInstantISOT" .
+
+
+###  http://odahub.io/ontology#Unit
+:Unit rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Unit" .
 
 
 ###  http://odahub.io/ontology#Workflow

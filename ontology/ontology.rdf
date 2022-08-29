@@ -248,7 +248,28 @@
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#Declination">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Quantity"/>
         <rdfs:label>Declination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#DeclinationDegrees -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#DeclinationDegrees">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Declination"/>
+        <rdfs:label>DeclinationDegrees</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Degree -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Degree">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Unit"/>
+        <rdfs:label>Degree</rdfs:label>
     </owl:Class>
     
 
@@ -382,8 +403,18 @@
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#RightAscention">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Quantity"/>
         <rdfs:label>RightAscention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#RightAscentionDegrees -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#RightAscentionDegrees">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#RightAscention"/>
+        <rdfs:label>RightAscentionDegrees</rdfs:label>
     </owl:Class>
     
 
@@ -439,6 +470,16 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:Class rdf:about="http://odahub.io/ontology#TimeInstantISOT">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInstant"/>
         <rdfs:label>TimeInstantISOT</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Unit -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Unit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Unit</rdfs:label>
     </owl:Class>
     
 

@@ -130,7 +130,18 @@
 # 
 # http://odahub.io/ontology#Declination
 <http://odahub.io/ontology#Declination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Declination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Quantity> .
 <http://odahub.io/ontology#Declination> <http://www.w3.org/2000/01/rdf-schema#label> "Declination" .
+# 
+# http://odahub.io/ontology#DeclinationDegrees
+<http://odahub.io/ontology#DeclinationDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#DeclinationDegrees> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Declination> .
+<http://odahub.io/ontology#DeclinationDegrees> <http://www.w3.org/2000/01/rdf-schema#label> "DeclinationDegrees" .
+# 
+# http://odahub.io/ontology#Degree
+<http://odahub.io/ontology#Degree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Degree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Unit> .
+<http://odahub.io/ontology#Degree> <http://www.w3.org/2000/01/rdf-schema#label> "Degree" .
 # 
 # http://odahub.io/ontology#DiscoveryWorkflow
 <http://odahub.io/ontology#DiscoveryWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -199,8 +210,13 @@
 # 
 # http://odahub.io/ontology#RightAscention
 <http://odahub.io/ontology#RightAscention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#RightAscention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#RightAscention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Quantity> .
 <http://odahub.io/ontology#RightAscention> <http://www.w3.org/2000/01/rdf-schema#label> "RightAscention" .
+# 
+# http://odahub.io/ontology#RightAscentionDegrees
+<http://odahub.io/ontology#RightAscentionDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#RightAscentionDegrees> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#RightAscention> .
+<http://odahub.io/ontology#RightAscentionDegrees> <http://www.w3.org/2000/01/rdf-schema#label> "RightAscentionDegrees" .
 # 
 # http://odahub.io/ontology#SkyCoordinates
 <http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -230,6 +246,11 @@
 <http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
 <http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/2000/01/rdf-schema#label> "TimeInstantISOT" .
+# 
+# http://odahub.io/ontology#Unit
+<http://odahub.io/ontology#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://odahub.io/ontology#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
 # 
 # http://odahub.io/ontology#Workflow
 <http://odahub.io/ontology#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

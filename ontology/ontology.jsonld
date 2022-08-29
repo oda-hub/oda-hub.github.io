@@ -82,6 +82,27 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Declination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Quantity"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#DeclinationDegrees",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DeclinationDegrees"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Declination"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Degree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Degree"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Unit"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#DiscoveryWorkflow",
@@ -209,7 +230,16 @@
     "@value" : "RightAscention"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://odahub.io/ontology#Quantity"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#RightAscentionDegrees",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "RightAscentionDegrees"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#RightAscention"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#SkyCoordinates",
@@ -264,6 +294,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#TimeInstant"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#Workflow",
