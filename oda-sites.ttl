@@ -1,0 +1,10 @@
+@prefix oda:   <http://odahub.io/ontology#> .
+@prefix paper: <https://odahub.io/ontology/paper/> .
+
+oda:unige-production  a          oda:MMODASite ;
+        oda:APIURL               <https://www.astro.unige.ch/mmoda/dispatch-data> ;
+        oda:siteDeploymentLevel  oda:production .
+
+oda:unige-staging  a             oda:MMODASite ;
+        oda:APIURL               <https://dispatcher-staging.obsuks1.unige.ch> ;
+        oda:siteDeploymentLevel  oda:staging .
