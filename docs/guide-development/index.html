@@ -19,7 +19,7 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.ea94655ae5a04c28ca182a97cf51ae89625cf57c01c5b303114043c1da99d1a1.js" integrity="sha256-6pRlWuWgTCjKGCqXz1GuiWJc9XwBxbMDEUBDwdqZ0aE=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.d422061cd080289dab81f2f5033062add1c41f7b61733475f0b1933555a561c0.js" integrity="sha256-1CIGHNCAKJ2rgfL1AzBirdHEH3thczR18LGTNVWlYcA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -201,6 +201,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
         <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
         <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
+        <li><a href="#developing-service-in-renku">Developing service in Renku</a></li>
         <li><a href="#optional-add-some-verification-test-cases">(optional) Add some verification test cases</a></li>
       </ul>
     </li>
@@ -330,7 +331,7 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
   <a class="anchor" href="#optional-try-a-test-service">#</a>
 </h3>
 <ul>
-<li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda,rdf,mmoda] --upgrade</code></li>
+<li>install nb2workflow tooling <code>pip install nb2workflow[cwl,oda,rdf,mmoda] --upgrade</code>. Note that his command should be the only one you need to install the necessary dependencies for the workflow engine. You may of course also need some domain-specific packages .</li>
 <li>inspect the notebook <code>nbinspect my-notebook.ipynb</code></li>
 <li>try to run the notebook <code>nbrun my-notebook.ipynb</code>
 <ul>
@@ -346,8 +347,14 @@ try to start the service <code>nb2service my-notebook.ipynb</code></li>
 <li><code>nb2deploy $PWD test --local</code></li>
 <li>then, look onto http://0.0.0.0:8000 for some metadata about the service</li>
 <li>try to run some simple queries in http://0.0.0.0:8000/apidocs/</li>
-</ul></div>
+</ul>
+<p>If you still experience issues with this approach try to develop the workflow directly in <a href="">renkulab</a></p></div>
 
+<h3 id="developing-service-in-renku">
+  Developing service in Renku
+  <a class="anchor" href="#developing-service-in-renku">#</a>
+</h3>
+<p>TODO: explain how to run server</p>
 <h3 id="optional-add-some-verification-test-cases">
   (optional) Add some verification test cases
   <a class="anchor" href="#optional-add-some-verification-test-cases">#</a>
@@ -403,6 +410,7 @@ They will be tested automatically every time new workflow version is installed.<
         <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
         <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
         <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
+        <li><a href="#developing-service-in-renku">Developing service in Renku</a></li>
         <li><a href="#optional-add-some-verification-test-cases">(optional) Add some verification test cases</a></li>
       </ul>
     </li>

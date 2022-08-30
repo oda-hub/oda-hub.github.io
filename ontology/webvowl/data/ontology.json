@@ -26,7 +26,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/volodymyrss",
+        "value" : "https://github.com/dsavchenko",
         "type" : "iri"
       }, {
         "identifier" : "creator",
@@ -36,7 +36,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/dsavchenko",
+        "value" : "https://github.com/volodymyrss",
         "type" : "iri"
       } ],
       "logo" : [ {
@@ -45,16 +45,16 @@
         "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
         "type" : "iri"
       } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://odahub.io/ontology",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
         "type" : "label"
       } ],
       "abstract" : [ {
@@ -395,7 +395,7 @@
   }, {
     "instances" : 0,
     "union" : [ "2", "5" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "38"
   }, {
     "iri" : "http://odahub.io/ontology#RightAscentionDegrees",
@@ -638,7 +638,7 @@
     },
     "domain" : "21",
     "subproperty" : [ "4", "22", "23", "3" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "6"
   }, {
     "range" : "1",
