@@ -2,9 +2,13 @@
 @prefix paper: <https://odahub.io/ontology/paper/> .
 
 oda:unige-production  a          oda:MMODASite ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "production" , "prod" ;
         oda:APIURL               <https://www.astro.unige.ch/mmoda/dispatch-data> ;
         oda:siteDeploymentLevel  oda:production .
 
 oda:unige-staging  a             oda:MMODASite ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "staging" ;
         oda:APIURL               <https://dispatcher-staging.obsuks1.unige.ch> ;
         oda:siteDeploymentLevel  oda:staging .
