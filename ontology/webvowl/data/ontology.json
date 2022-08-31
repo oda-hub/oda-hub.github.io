@@ -638,7 +638,7 @@
     },
     "domain" : "21",
     "subproperty" : [ "4", "22", "23", "3" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "6"
   }, {
     "range" : "1",
