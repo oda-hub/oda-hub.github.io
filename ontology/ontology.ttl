@@ -203,6 +203,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
             rdfs:label "Instrument" .
 
 
+###  http://odahub.io/ontology#LightCurve
+:LightCurve rdf:type owl:Class ;
+            rdfs:subClassOf :DataProduct ;
+            rdfs:label "LightCurve" .
+
+
 ###  http://odahub.io/ontology#LightCurveList
 :LightCurveList rdf:type owl:Class ;
                 rdfs:subClassOf :DataProduct ;
