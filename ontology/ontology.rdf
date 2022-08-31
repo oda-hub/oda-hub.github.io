@@ -342,6 +342,7 @@
 
     <owl:Class rdf:about="http://odahub.io/ontology#LightCurve">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#DataProduct"/>
+        <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/product-type#timeseries"/>
         <rdfs:label>LightCurve</rdfs:label>
     </owl:Class>
     
@@ -510,6 +511,13 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:Class rdf:about="http://odahub.io/ontology#WorkflowParameter">
         <rdfs:label>WorkflowParameter</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.ivoa.net/rdf/product-type#timeseries -->
+
+
+    <owl:Class rdf:about="http://www.ivoa.net/rdf/product-type#timeseries"/>
     
 
 
