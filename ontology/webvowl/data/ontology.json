@@ -21,22 +21,22 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/andriineronov",
-        "type" : "iri"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
         "value" : "https://github.com/volodymyrss",
         "type" : "iri"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/dsavchenko",
+        "value" : "https://github.com/burnout87",
         "type" : "iri"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://github.com/burnout87",
+        "value" : "https://github.com/andriineronov",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://github.com/dsavchenko",
         "type" : "iri"
       } ],
       "logo" : [ {
@@ -44,12 +44,6 @@
         "language" : "undefined",
         "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
         "type" : "iri"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "undefined",
-        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.\n                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.",
-        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -61,6 +55,12 @@
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://github.com/volodymyrss/hugo-odahub.git",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "IVOA kindly provides various data and object types, but very little is availble about workflow types. \n                                It is possible to combine function types (e.g. https://fno.io) with data types. \n                                In this ontology we define supporting types, our own versions of some of the generic types, \n                                and anything else needed to descrie Astrophysical Analysis Workflows.\n                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -680,7 +680,7 @@
     },
     "domain" : "23",
     "subproperty" : [ "4", "24", "25", "3" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "6"
   }, {
     "range" : "11",
