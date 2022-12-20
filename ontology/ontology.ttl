@@ -117,6 +117,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
          rdfs:range :Workflow .
 
 
+###  http://odahub.io/ontology#limits
+:limits rdf:type owl:ObjectProperty ;
+        rdfs:domain :WorkflowParameter ;
+        rdfs:label "limits" .
+
+
 #################################################################
 #    Classes
 #################################################################

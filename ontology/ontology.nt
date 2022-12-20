@@ -98,6 +98,11 @@
 <http://odahub.io/ontology#isUsing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#Workflow> .
 <http://odahub.io/ontology#isUsing> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#Workflow> .
 # 
+# http://odahub.io/ontology#limits
+<http://odahub.io/ontology#limits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#limits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#WorkflowParameter> .
+<http://odahub.io/ontology#limits> <http://www.w3.org/2000/01/rdf-schema#label> "limits" .
+# 
 # 
 # 
 # #################################################################

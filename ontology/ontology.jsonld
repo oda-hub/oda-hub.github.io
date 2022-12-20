@@ -423,6 +423,15 @@
     "@id" : "http://odahub.io/ontology#isRequesting"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#limits",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "limits"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {

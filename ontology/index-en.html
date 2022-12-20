@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Thu Sep 08 17:06:20 CEST 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Tue Dec 20 09:53:11 CET 2022", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -238,6 +238,9 @@ This ontology has the following classes and properties.</span>
       <a href="#isUsing" title="http://odahub.io/ontology#isUsing">
          <span>is using</span>
       </a>
+   </li>
+   <li>
+      <a href="#limits" title="http://odahub.io/ontology#limits">limits</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -1001,6 +1004,11 @@ Subclasses may have other ways to express the content.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#limits" title="http://odahub.io/ontology#limits">limits</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
@@ -1035,6 +1043,9 @@ Subclasses may have other ways to express the content.</span>
          <a href="#isUsing" title="http://odahub.io/ontology#isUsing">
             <span>is using</span>
          </a>
+      </li>
+      <li>
+         <a href="#limits" title="http://odahub.io/ontology#limits">limits</a>
       </li>
    </ul>
    <div class="entity" id="hasCoordinates">
@@ -1230,6 +1241,23 @@ Subclasses may have other ways to express the content.</span>
             <dt>has range</dt>
             <dd>
                <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="limits">
+      <h3>limits<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#limits</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

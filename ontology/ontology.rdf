@@ -191,6 +191,16 @@
     
 
 
+    <!-- http://odahub.io/ontology#limits -->
+
+
+    <owl:ObjectProperty rdf:about="http://odahub.io/ontology#limits">
+        <rdfs:domain rdf:resource="http://odahub.io/ontology#WorkflowParameter"/>
+        <rdfs:label>limits</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
