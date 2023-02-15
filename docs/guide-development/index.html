@@ -19,24 +19,12 @@ For reproducibility, we want our workflows to be repeatable: producing the same 
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.a5396f4074ca1d594545e07fe569ef6d5c1426979b4212a1a6e72f5710c01ab5.js" integrity="sha256-pTlvQHTKHVlFReB/5WnvbVwUJpebQhKhpucvVxDAGrU=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.0c19015a951227d2001d9978a9695b6e4e1cb0b15439bfc3b9664c895a33098d.js" integrity="sha256-DBkBWpUSJ9IAHZl4qWlbbk4csLFUOb/DuWZMiVozCY0=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
   <script src="https://hypothes.is/embed.js" async></script>
-<script>
-    window.hypothesisConfig = function () {
-        console.log("hypothesisConfig");
-        return {
-            "groups": ["zPvGQbij"],
-            "theme": "classic"
-        };
-      };
-      
-    
-</script>
-
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -211,6 +199,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#write-a-working-repeatable-workflow">Write a working repeatable workflow</a></li>
         <li><a href="#parametetrize-the-notebook">Parametetrize the notebook</a></li>
         <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
+        <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
         <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
         <li><a href="#developing-service-in-renku">Developing service in Renku</a></li>
@@ -246,7 +235,6 @@ This is easy enough to do in first approximation, but might be harder to achieve
   Write a working repeatable workflow
   <a class="anchor" href="#write-a-working-repeatable-workflow">#</a>
 </h3>
-<p>We recommend to start by creating your project as a Renku repository with <a href="https://renkulab.io/projects/new?data=eyJ0aXRsZSI6IlRlc3QgTU1PREEiLCJkZXNjcmlwdGlvbiI6IlRlc3QgTU1PREEiLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vb2RhLWh1Yi9jb250cmlidXRlZC1wcm9qZWN0LXRlbXBsYXRlcyIsInJlZiI6Im1tb2RhLXNtYXJ0c2t5IiwidGVtcGxhdGUiOiJDdXN0b20vbW1vZGEifQ%3D%3D">this link</a>, you probably want to use the &ldquo;astronomy/mmoda&rdquo; namespace.</p>
 <p>First you need to make sure your notebook runs in a cloud environment. It needs to be repeatable - i.e. you can run it many times. If it depends on external services - try to make sure the requests are also repeatable - you might need to specify sufficient details. If the notebook does not produce the exactly
 the same result every time - it&rsquo;s unfortunate, but do not worry too much, it might still be reproducible (see motivation on <a href="https://github.com/volodymyrss/reproducibility-motivation/">the difference between reproducibility and repeatability</a>)</p>
 <ul>
@@ -317,7 +305,18 @@ the same result every time - it&rsquo;s unfortunate, but do not worry too much, 
 </li>
 <li>if you want to give more detailed description of the notebook input and output, use <code>terms</code> from the <a href="[docs/guide-ontology.]%28https://odahub.io/docs/guide-ontology%29">ontology</a>.</li>
 </ul>
-<h3 id="publish-your-workflow-as-a-test-service">
+<h3 id="adding-annotations-the-entire-notebook">
+  Adding annotations the entire notebook
+  <a class="anchor" href="#adding-annotations-the-entire-notebook">#</a>
+</h3>
+<p>Annotations can apply to parameters or entire notebook. In both cases they are kept in the notebook cell tagged <code>parameters</code>.
+For example:</p>
+<pre tabindex="0"><code># oda:version &#34;v0.1.1&#34;
+# oda:reference &#34;https://doi.org/10.1051/0004-6361/202037850&#34;
+
+source_name = &#34;Crab&#34; # oda:AstrophysicalObject
+reference_energy = 20 # oda:keV
+</code></pre><h3 id="publish-your-workflow-as-a-test-service">
   Publish your workflow as a test service
   <a class="anchor" href="#publish-your-workflow-as-a-test-service">#</a>
 </h3>
@@ -424,6 +423,7 @@ They will be tested automatically every time new workflow version is installed.<
         <li><a href="#write-a-working-repeatable-workflow">Write a working repeatable workflow</a></li>
         <li><a href="#parametetrize-the-notebook">Parametetrize the notebook</a></li>
         <li><a href="#annotate-the-notebook-outputs">Annotate the notebook outputs</a></li>
+        <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#publish-your-workflow-as-a-test-service">Publish your workflow as a test service</a></li>
         <li><a href="#optional-try-a-test-service">(optional) Try a test service</a></li>
         <li><a href="#developing-service-in-renku">Developing service in Renku</a></li>
