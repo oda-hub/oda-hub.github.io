@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Tue Mar 07 15:29:27 CET 2023", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Tue Mar 07 20:54:31 CET 2023", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -95,6 +95,7 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://odahub.io/ontology&gt;</td></tr>
 <tr><td></td><td></td></tr>
 <tr><td><b>product-type</b></td><td>&lt;http://www.ivoa.net/rdf/product-type&gt;</td></tr>
+<tr><td><b>unit</b></td><td>&lt;http://odahub.io/ontology/unit&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>fno</b></td><td>&lt;https://w3id.org/function/spec&gt;</td></tr>
@@ -102,7 +103,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
-<tr><td><b>oda</b></td><td>&lt;http://odahub.io/ontologyoda%3&gt;</td></tr>
 <tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
 </tbody>
@@ -119,6 +119,41 @@ This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
+      <a href="#Angle" title="http://odahub.io/ontology#Angle">
+         <span>angle</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AngleDegrees" title="http://odahub.io/ontology#AngleDegrees">
+         <span>angle degrees</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AngleMinutes" title="http://odahub.io/ontology#AngleMinutes">
+         <span>angle minutes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AngleSeconds" title="http://odahub.io/ontology#AngleSeconds">
+         <span>angle seconds</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">
+         <span>angle unit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#arcmin" title="http://odahub.io/ontology#arcmin">
+         <span>arcmin</span>
+      </a>
+   </li>
+   <li>
+      <a href="#arcsec" title="http://odahub.io/ontology#arcsec">
+         <span>arcsec</span>
+      </a>
+   </li>
+   <li>
       <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
    </li>
    <li>
@@ -129,7 +164,17 @@ This ontology has the following classes and properties.</span>
       <a href="#AstroqueryModule" title="http://odahub.io/ontology#AstroqueryModule">AstroqueryModule</a>
    </li>
    <li>
+      <a href="#Boolean" title="http://odahub.io/ontology#Boolean">
+         <span>boolean</span>
+      </a>
+   </li>
+   <li>
       <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+   </li>
+   <li>
+      <a href="#day" title="http://odahub.io/ontology#day">
+         <span>day</span>
+      </a>
    </li>
    <li>
       <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
@@ -138,10 +183,22 @@ This ontology has the following classes and properties.</span>
       <a href="#DeclinationDegrees" title="http://odahub.io/ontology#DeclinationDegrees">DeclinationDegrees</a>
    </li>
    <li>
-      <a href="#Degree" title="http://odahub.io/ontology#Degree">Degree</a>
+      <a href="#degree" title="http://odahub.io/ontology#degree">
+         <span>degree</span>
+      </a>
    </li>
    <li>
       <a href="#DiscoveryWorkflow" title="http://odahub.io/ontology#DiscoveryWorkflow">DiscoveryWorkflow</a>
+   </li>
+   <li>
+      <a href="#eV" title="http://odahub.io/ontology#eV">
+         <span>e v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EndTimeMJD" title="http://odahub.io/ontology#EndTimeMJD">
+         <span>end time m j d</span>
+      </a>
    </li>
    <li>
       <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
@@ -150,22 +207,171 @@ This ontology has the following classes and properties.</span>
       <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
    </li>
    <li>
+      <a href="#Energy" title="http://odahub.io/ontology#Energy">
+         <span>energy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Energy_eV" title="http://odahub.io/ontology#Energy_eV">
+         <span>energy e v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Energy_GeV" title="http://odahub.io/ontology#Energy_GeV">
+         <span>energy ge v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Energy_keV" title="http://odahub.io/ontology#Energy_keV">
+         <span>energy ke v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Energy_MeV" title="http://odahub.io/ontology#Energy_MeV">
+         <span>energy me v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Energy_TeV" title="http://odahub.io/ontology#Energy_TeV">
+         <span>energy te v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">
+         <span>energy unit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">
+         <span>expressed in unit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Float" title="http://odahub.io/ontology#Float">
+         <span>float</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Frequency" title="http://odahub.io/ontology#Frequency">
+         <span>frequency</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FrequencyGHz" title="http://odahub.io/ontology#FrequencyGHz">
+         <span>frequency g hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FrequencyHz" title="http://odahub.io/ontology#FrequencyHz">
+         <span>frequency hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FrequencyMHz" title="http://odahub.io/ontology#FrequencyMHz">
+         <span>frequency m hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GHz" title="http://odahub.io/ontology#GHz">
+         <span>g hz</span>
+      </a>
+   </li>
+   <li>
       <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
    </li>
    <li>
       <a href="#GaiaFilter" title="http://odahub.io/ontology#GaiaFilter">GaiaFilter</a>
    </li>
    <li>
+      <a href="#GeV" title="http://odahub.io/ontology#GeV">
+         <span>ge v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Hz" title="http://odahub.io/ontology#Hz">
+         <span>hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ISGRIEnergy" title="http://odahub.io/ontology#ISGRIEnergy">
+         <span>i s g r i energy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Image" title="http://odahub.io/ontology#Image">
+         <span>image</span>
+      </a>
+   </li>
+   <li>
       <a href="#Instrument" title="http://odahub.io/ontology#Instrument">Instrument</a>
+   </li>
+   <li>
+      <a href="#Integer" title="http://odahub.io/ontology#Integer">
+         <span>integer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#JEMXEnergy" title="http://odahub.io/ontology#JEMXEnergy">
+         <span>j e m x energy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#keV" title="http://odahub.io/ontology#keV">
+         <span>ke v</span>
+      </a>
    </li>
    <li>
       <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
    </li>
    <li>
-      <a href="#LightCurveList" title="http://odahub.io/ontology#LightCurveList">LightCurveList</a>
+      <a href="#MHz" title="http://odahub.io/ontology#MHz">
+         <span>m hz</span>
+      </a>
    </li>
    <li>
-      <a href="#ODAAPILightcurveList" title="http://odahub.io/ontology#ODAAPILightcurveList">ODAAPILightcurveList</a>
+      <a href="#MeV" title="http://odahub.io/ontology#MeV">
+         <span>me v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">
+         <span>numeric parameter</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ODAAstropyTable" title="http://odahub.io/ontology#ODAAstropyTable">
+         <span>o d a astropy table</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ODABinaryProduct" title="http://odahub.io/ontology#ODABinaryProduct">
+         <span>o d a binary product</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ODAPictureProduct" title="http://odahub.io/ontology#ODAPictureProduct">
+         <span>o d a picture product</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">
+         <span>o d a text product</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ParameterFormat" title="http://odahub.io/ontology#ParameterFormat">
+         <span>parameter format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Percentage" title="http://odahub.io/ontology#Percentage">
+         <span>percentage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">
+         <span>photometric band</span>
+      </a>
    </li>
    <li>
       <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
@@ -180,13 +386,28 @@ This ontology has the following classes and properties.</span>
       <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
    </li>
    <li>
-      <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+      <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
    </li>
    <li>
-      <a href="#RightAscentionDegrees" title="http://odahub.io/ontology#RightAscentionDegrees">RightAscentionDegrees</a>
+      <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
+   </li>
+   <li>
+      <a href="#second" title="http://odahub.io/ontology#second">
+         <span>second</span>
+      </a>
    </li>
    <li>
       <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
+   </li>
+   <li>
+      <a href="#Spectrum" title="http://odahub.io/ontology#Spectrum">
+         <span>spectrum</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StartTimeMJD" title="http://odahub.io/ontology#StartTimeMJD">
+         <span>start time m j d</span>
+      </a>
    </li>
    <li>
       <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
@@ -195,13 +416,60 @@ This ontology has the following classes and properties.</span>
       <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
    </li>
    <li>
+      <a href="#String" title="http://odahub.io/ontology#String">
+         <span>string</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TeV" title="http://odahub.io/ontology#TeV">
+         <span>te v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeFormat" title="http://odahub.io/ontology#TimeFormat">
+         <span>time format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">
+         <span>time instant i s o t</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeInstantMJD" title="http://odahub.io/ontology#TimeInstantMJD">
+         <span>time instant m j d</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">
+         <span>time interval</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">
+         <span>time interval days</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeIntervalSeconds" title="http://odahub.io/ontology#TimeIntervalSeconds">
+         <span>time interval seconds</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">
+         <span>time unit</span>
+      </a>
+   </li>
+   <li>
       <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
    </li>
    <li>
-      <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+      <a href="#/unit#Unit" title="http://odahub.io/ontology/unit#Unit">Unit</a>
    </li>
    <li>
-      <a href="#Unit" title="http://odahub.io/ontology#Unit">Unit</a>
+      <a href="#VisibleBand" title="http://odahub.io/ontology#VisibleBand">
+         <span>visible band</span>
+      </a>
    </li>
    <li>
       <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
@@ -210,6 +478,16 @@ This ontology has the following classes and properties.</span>
       <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#has_format" title="http://odahub.io/ontology#has_format">
+         <span>has format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#has_unit" title="http://odahub.io/ontology#has_unit">
+         <span>has unit</span>
+      </a>
+   </li>
    <li>
       <a href="#hasCoordinates" title="http://odahub.io/ontology#hasCoordinates">hasCoordinates</a>
    </li>
@@ -240,16 +518,21 @@ This ontology has the following classes and properties.</span>
          <span>is using</span>
       </a>
    </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#limits" title="http://odahub.io/ontology#limits">limits</a>
-   </li>
-   <li>
-      <a href="#oda:lower_limit" title="http://odahub.io/ontology#oda%3Alower_limit">oda:lower_limit</a>
+      <a href="#value" title="http://odahub.io/ontology#value">
+         <span>value</span>
+      </a>
    </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#http://purl.org/dc/elements/1.1/abstract" title="http://purl.org/dc/elements/1.1/abstract">
          <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#allowed_value" title="http://odahub.io/ontology#allowed_value">
+         <span>allowed value</span>
       </a>
    </li>
    <li>
@@ -263,8 +546,18 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#format" title="http://odahub.io/ontology#format">
+         <span>format</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://xmlns.com/foaf/0.1/logo" title="http://xmlns.com/foaf/0.1/logo">
          <span>logo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#lower_limit" title="http://odahub.io/ontology#lower_limit">
+         <span>lower limit</span>
       </a>
    </li>
    <li>
@@ -278,13 +571,134 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#symbol" title="http://odahub.io/ontology#symbol">
+         <span>symbol</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
          <span>title</span>
       </a>
    </li>
    <li>
+      <a href="#unit" title="http://odahub.io/ontology#unit">
+         <span>unit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#upper_limit" title="http://odahub.io/ontology#upper_limit">
+         <span>upper limit</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI">
          <span>version i r i</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/unit#arcmin" title="http://odahub.io/ontology/unit#arcmin">
+         <span>arcmin</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#arcsec" title="http://odahub.io/ontology/unit#arcsec">
+         <span>arcsec</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Day" title="http://odahub.io/ontology/unit#Day">
+         <span>day</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Degree" title="http://odahub.io/ontology/unit#Degree">
+         <span>degree</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#eV" title="http://odahub.io/ontology/unit#eV">
+         <span>e v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#GHz" title="http://odahub.io/ontology/unit#GHz">
+         <span>g hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#GeV" title="http://odahub.io/ontology/unit#GeV">
+         <span>ge v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Hour" title="http://odahub.io/ontology/unit#Hour">
+         <span>hour</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#hourangle_Hour" title="http://odahub.io/ontology/unit#hourangle_Hour">
+         <span>hourangle hour</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#hourangle_Minute" title="http://odahub.io/ontology/unit#hourangle_Minute">
+         <span>hourangle minute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#hourangle_Second" title="http://odahub.io/ontology/unit#hourangle_Second">
+         <span>hourangle second</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Hz" title="http://odahub.io/ontology/unit#Hz">
+         <span>hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ISOT" title="http://odahub.io/ontology#ISOT">
+         <span>i s o t</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#keV" title="http://odahub.io/ontology/unit#keV">
+         <span>ke v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#MHz" title="http://odahub.io/ontology/unit#MHz">
+         <span>m hz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MJD" title="http://odahub.io/ontology#MJD">
+         <span>m j d</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#MeV" title="http://odahub.io/ontology/unit#MeV">
+         <span>me v</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Minute" title="http://odahub.io/ontology/unit#Minute">
+         <span>minute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Radian" title="http://odahub.io/ontology/unit#Radian">
+         <span>radian</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#Second" title="http://odahub.io/ontology/unit#Second">
+         <span>second</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/unit#TeV" title="http://odahub.io/ontology/unit#TeV">
+         <span>te v</span>
       </a>
    </li>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
@@ -306,6 +720,41 @@ This section provides details for each class and property defined by MMODA Astro
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#Angle" title="http://odahub.io/ontology#Angle">
+            <span>angle</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AngleDegrees" title="http://odahub.io/ontology#AngleDegrees">
+            <span>angle degrees</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AngleMinutes" title="http://odahub.io/ontology#AngleMinutes">
+            <span>angle minutes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AngleSeconds" title="http://odahub.io/ontology#AngleSeconds">
+            <span>angle seconds</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">
+            <span>angle unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#arcmin" title="http://odahub.io/ontology#arcmin">
+            <span>arcmin</span>
+         </a>
+      </li>
+      <li>
+         <a href="#arcsec" title="http://odahub.io/ontology#arcsec">
+            <span>arcsec</span>
+         </a>
+      </li>
+      <li>
          <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
       </li>
       <li>
@@ -316,7 +765,17 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#AstroqueryModule" title="http://odahub.io/ontology#AstroqueryModule">AstroqueryModule</a>
       </li>
       <li>
+         <a href="#Boolean" title="http://odahub.io/ontology#Boolean">
+            <span>boolean</span>
+         </a>
+      </li>
+      <li>
          <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+      </li>
+      <li>
+         <a href="#day" title="http://odahub.io/ontology#day">
+            <span>day</span>
+         </a>
       </li>
       <li>
          <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
@@ -325,10 +784,22 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#DeclinationDegrees" title="http://odahub.io/ontology#DeclinationDegrees">DeclinationDegrees</a>
       </li>
       <li>
-         <a href="#Degree" title="http://odahub.io/ontology#Degree">Degree</a>
+         <a href="#degree" title="http://odahub.io/ontology#degree">
+            <span>degree</span>
+         </a>
       </li>
       <li>
          <a href="#DiscoveryWorkflow" title="http://odahub.io/ontology#DiscoveryWorkflow">DiscoveryWorkflow</a>
+      </li>
+      <li>
+         <a href="#eV" title="http://odahub.io/ontology#eV">
+            <span>e v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#EndTimeMJD" title="http://odahub.io/ontology#EndTimeMJD">
+            <span>end time m j d</span>
+         </a>
       </li>
       <li>
          <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
@@ -337,22 +808,171 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
       </li>
       <li>
+         <a href="#Energy" title="http://odahub.io/ontology#Energy">
+            <span>energy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Energy_eV" title="http://odahub.io/ontology#Energy_eV">
+            <span>energy e v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Energy_GeV" title="http://odahub.io/ontology#Energy_GeV">
+            <span>energy ge v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Energy_keV" title="http://odahub.io/ontology#Energy_keV">
+            <span>energy ke v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Energy_MeV" title="http://odahub.io/ontology#Energy_MeV">
+            <span>energy me v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Energy_TeV" title="http://odahub.io/ontology#Energy_TeV">
+            <span>energy te v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">
+            <span>energy unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">
+            <span>expressed in unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Float" title="http://odahub.io/ontology#Float">
+            <span>float</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Frequency" title="http://odahub.io/ontology#Frequency">
+            <span>frequency</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FrequencyGHz" title="http://odahub.io/ontology#FrequencyGHz">
+            <span>frequency g hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FrequencyHz" title="http://odahub.io/ontology#FrequencyHz">
+            <span>frequency hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FrequencyMHz" title="http://odahub.io/ontology#FrequencyMHz">
+            <span>frequency m hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#GHz" title="http://odahub.io/ontology#GHz">
+            <span>g hz</span>
+         </a>
+      </li>
+      <li>
          <a href="#Gaia" title="http://odahub.io/ontology#Gaia">Gaia</a>
       </li>
       <li>
          <a href="#GaiaFilter" title="http://odahub.io/ontology#GaiaFilter">GaiaFilter</a>
       </li>
       <li>
+         <a href="#GeV" title="http://odahub.io/ontology#GeV">
+            <span>ge v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Hz" title="http://odahub.io/ontology#Hz">
+            <span>hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ISGRIEnergy" title="http://odahub.io/ontology#ISGRIEnergy">
+            <span>i s g r i energy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Image" title="http://odahub.io/ontology#Image">
+            <span>image</span>
+         </a>
+      </li>
+      <li>
          <a href="#Instrument" title="http://odahub.io/ontology#Instrument">Instrument</a>
+      </li>
+      <li>
+         <a href="#Integer" title="http://odahub.io/ontology#Integer">
+            <span>integer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#JEMXEnergy" title="http://odahub.io/ontology#JEMXEnergy">
+            <span>j e m x energy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#keV" title="http://odahub.io/ontology#keV">
+            <span>ke v</span>
+         </a>
       </li>
       <li>
          <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
       </li>
       <li>
-         <a href="#LightCurveList" title="http://odahub.io/ontology#LightCurveList">LightCurveList</a>
+         <a href="#MHz" title="http://odahub.io/ontology#MHz">
+            <span>m hz</span>
+         </a>
       </li>
       <li>
-         <a href="#ODAAPILightcurveList" title="http://odahub.io/ontology#ODAAPILightcurveList">ODAAPILightcurveList</a>
+         <a href="#MeV" title="http://odahub.io/ontology#MeV">
+            <span>me v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">
+            <span>numeric parameter</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ODAAstropyTable" title="http://odahub.io/ontology#ODAAstropyTable">
+            <span>o d a astropy table</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ODABinaryProduct" title="http://odahub.io/ontology#ODABinaryProduct">
+            <span>o d a binary product</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ODAPictureProduct" title="http://odahub.io/ontology#ODAPictureProduct">
+            <span>o d a picture product</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">
+            <span>o d a text product</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ParameterFormat" title="http://odahub.io/ontology#ParameterFormat">
+            <span>parameter format</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Percentage" title="http://odahub.io/ontology#Percentage">
+            <span>percentage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">
+            <span>photometric band</span>
+         </a>
       </li>
       <li>
          <a href="#PointOfInterest" title="http://odahub.io/ontology#PointOfInterest">PointOfInterest</a>
@@ -367,13 +987,28 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
       </li>
       <li>
-         <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+         <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
       </li>
       <li>
-         <a href="#RightAscentionDegrees" title="http://odahub.io/ontology#RightAscentionDegrees">RightAscentionDegrees</a>
+         <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
+      </li>
+      <li>
+         <a href="#second" title="http://odahub.io/ontology#second">
+            <span>second</span>
+         </a>
       </li>
       <li>
          <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
+      </li>
+      <li>
+         <a href="#Spectrum" title="http://odahub.io/ontology#Spectrum">
+            <span>spectrum</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StartTimeMJD" title="http://odahub.io/ontology#StartTimeMJD">
+            <span>start time m j d</span>
+         </a>
       </li>
       <li>
          <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
@@ -382,13 +1017,60 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
       </li>
       <li>
+         <a href="#String" title="http://odahub.io/ontology#String">
+            <span>string</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TeV" title="http://odahub.io/ontology#TeV">
+            <span>te v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeFormat" title="http://odahub.io/ontology#TimeFormat">
+            <span>time format</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">
+            <span>time instant i s o t</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeInstantMJD" title="http://odahub.io/ontology#TimeInstantMJD">
+            <span>time instant m j d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">
+            <span>time interval</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">
+            <span>time interval days</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeIntervalSeconds" title="http://odahub.io/ontology#TimeIntervalSeconds">
+            <span>time interval seconds</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">
+            <span>time unit</span>
+         </a>
+      </li>
+      <li>
          <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
       </li>
       <li>
-         <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+         <a href="#/unit#Unit" title="http://odahub.io/ontology/unit#Unit">Unit</a>
       </li>
       <li>
-         <a href="#Unit" title="http://odahub.io/ontology#Unit">Unit</a>
+         <a href="#VisibleBand" title="http://odahub.io/ontology#VisibleBand">
+            <span>visible band</span>
+         </a>
       </li>
       <li>
          <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
@@ -397,6 +1079,150 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
       </li>
    </ul>
+   <div class="entity" id="Angle">
+      <h3>angle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Angle</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AngleDegrees" title="http://odahub.io/ontology#AngleDegrees">angle degrees</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AngleMinutes" title="http://odahub.io/ontology#AngleMinutes">angle minutes</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AngleSeconds" title="http://odahub.io/ontology#AngleSeconds">angle seconds</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngleDegrees">
+      <h3>angle degrees<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#AngleDegrees</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Angle" title="http://odahub.io/ontology#Angle">angle</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#degree" title="http://odahub.io/ontology#degree">degree</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DeclinationDegrees" title="http://odahub.io/ontology#DeclinationDegrees">DeclinationDegrees</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngleMinutes">
+      <h3>angle minutes<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#AngleMinutes</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Angle" title="http://odahub.io/ontology#Angle">angle</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#arcmin" title="http://odahub.io/ontology#arcmin">arcmin</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngleSeconds">
+      <h3>angle seconds<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#AngleSeconds</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Angle" title="http://odahub.io/ontology#Angle">angle</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#arcsec" title="http://odahub.io/ontology#arcsec">arcsec</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#AngleUnit">
+      <h3>angle unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#AngleUnit</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/unit#Unit" title="http://odahub.io/ontology/unit#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#/unit#arcmin" title="http://odahub.io/ontology/unit#arcmin">arcmin</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#arcsec" title="http://odahub.io/ontology/unit#arcsec">arcsec</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#Degree" title="http://odahub.io/ontology/unit#Degree">degree</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#hourangle_Hour" title="http://odahub.io/ontology/unit#hourangle_Hour">hourangle hour</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#hourangle_Minute" title="http://odahub.io/ontology/unit#hourangle_Minute">hourangle minute</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#hourangle_Second" title="http://odahub.io/ontology/unit#hourangle_Second">hourangle second</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#Radian" title="http://odahub.io/ontology/unit#Radian">radian</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="arcmin">
+      <h3>arcmin<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#arcmin</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AngleMinutes" title="http://odahub.io/ontology#AngleMinutes">angle minutes</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="arcsec">
+      <h3>arcsec<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#arcsec</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AngleSeconds" title="http://odahub.io/ontology#AngleSeconds">angle seconds</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="AstrophysicalObject">
       <h3>AstrophysicalObject<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -463,6 +1289,21 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Boolean">
+      <h3>boolean<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Boolean</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="DataProduct">
       <h3>DataProduct<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -481,7 +1322,32 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has sub-classes</dt>
          <dd>
             <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#LightCurveList" title="http://odahub.io/ontology#LightCurveList">LightCurveList</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Image" title="http://odahub.io/ontology#Image">image</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ODAAstropyTable" title="http://odahub.io/ontology#ODAAstropyTable">o d a astropy table</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ODABinaryProduct" title="http://odahub.io/ontology#ODABinaryProduct">o d a binary product</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ODAPictureProduct" title="http://odahub.io/ontology#ODAPictureProduct">o d a picture product</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">o d a text product</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Spectrum" title="http://odahub.io/ontology#Spectrum">spectrum</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="day">
+      <h3>day<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#day</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">time interval days</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -497,12 +1363,13 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has super-classes</dt>
          <dd>
             <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Angle" title="http://odahub.io/ontology#Angle">angle</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#DeclinationDegrees" title="http://odahub.io/ontology#DeclinationDegrees">DeclinationDegrees</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -523,21 +1390,32 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has super-classes</dt>
          <dd>
             <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AngleDegrees" title="http://odahub.io/ontology#AngleDegrees">angle degrees</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Degree">
-      <h3>Degree<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="degree">
+      <h3>degree<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#Degree</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#degree</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Unit" title="http://odahub.io/ontology#Unit">Unit</a>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AngleDegrees" title="http://odahub.io/ontology#AngleDegrees">angle degrees</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -560,6 +1438,42 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="eV">
+      <h3>e v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#eV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy_eV" title="http://odahub.io/ontology#Energy_eV">energy e v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EndTimeMJD">
+      <h3>end time m j d<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#EndTimeMJD</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantMJD" title="http://odahub.io/ontology#TimeInstantMJD">time instant m j d</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EndTime">
       <h3>EndTime<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -577,6 +1491,7 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has sub-classes</dt>
          <dd>
             <a href="#EndTimeISOT" title="http://odahub.io/ontology#EndTimeISOT">EndTimeISOT</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EndTimeMJD" title="http://odahub.io/ontology#EndTimeMJD">end time m j d</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -592,7 +1507,290 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has super-classes</dt>
          <dd>
             <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">time instant i s o t</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy">
+      <h3>energy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Energy</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy_eV" title="http://odahub.io/ontology#Energy_eV">energy e v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Energy_GeV" title="http://odahub.io/ontology#Energy_GeV">energy ge v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Energy_keV" title="http://odahub.io/ontology#Energy_keV">energy ke v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Energy_MeV" title="http://odahub.io/ontology#Energy_MeV">energy me v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Energy_TeV" title="http://odahub.io/ontology#Energy_TeV">energy te v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy_eV">
+      <h3>energy e v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Energy_eV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#eV" title="http://odahub.io/ontology#eV">e v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Energy" title="http://odahub.io/ontology#Energy">energy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy_GeV">
+      <h3>energy ge v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Energy_GeV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Energy" title="http://odahub.io/ontology#Energy">energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GeV" title="http://odahub.io/ontology#GeV">ge v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy_keV">
+      <h3>energy ke v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Energy_keV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Energy" title="http://odahub.io/ontology#Energy">energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#keV" title="http://odahub.io/ontology#keV">ke v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ISGRIEnergy" title="http://odahub.io/ontology#ISGRIEnergy">i s g r i energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#JEMXEnergy" title="http://odahub.io/ontology#JEMXEnergy">j e m x energy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy_MeV">
+      <h3>energy me v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Energy_MeV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Energy" title="http://odahub.io/ontology#Energy">energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MeV" title="http://odahub.io/ontology#MeV">me v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy_TeV">
+      <h3>energy te v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Energy_TeV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Energy" title="http://odahub.io/ontology#Energy">energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TeV" title="http://odahub.io/ontology#TeV">te v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#EnergyUnit">
+      <h3>energy unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#EnergyUnit</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/unit#Unit" title="http://odahub.io/ontology/unit#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#/unit#eV" title="http://odahub.io/ontology/unit#eV">e v</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#GHz" title="http://odahub.io/ontology/unit#GHz">g hz</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#GeV" title="http://odahub.io/ontology/unit#GeV">ge v</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#Hz" title="http://odahub.io/ontology/unit#Hz">hz</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#keV" title="http://odahub.io/ontology/unit#keV">ke v</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#MHz" title="http://odahub.io/ontology/unit#MHz">m hz</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#MeV" title="http://odahub.io/ontology/unit#MeV">me v</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#TeV" title="http://odahub.io/ontology/unit#TeV">te v</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ExpressedInUnit">
+      <h3>expressed in unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ExpressedInUnit</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#arcmin" title="http://odahub.io/ontology#arcmin">arcmin</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#arcsec" title="http://odahub.io/ontology#arcsec">arcsec</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#day" title="http://odahub.io/ontology#day">day</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#degree" title="http://odahub.io/ontology#degree">degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#eV" title="http://odahub.io/ontology#eV">e v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GHz" title="http://odahub.io/ontology#GHz">g hz</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GeV" title="http://odahub.io/ontology#GeV">ge v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Hz" title="http://odahub.io/ontology#Hz">hz</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#keV" title="http://odahub.io/ontology#keV">ke v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MHz" title="http://odahub.io/ontology#MHz">m hz</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MeV" title="http://odahub.io/ontology#MeV">me v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#second" title="http://odahub.io/ontology#second">second</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TeV" title="http://odahub.io/ontology#TeV">te v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Float">
+      <h3>float<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Float</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Angle" title="http://odahub.io/ontology#Angle">angle</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Energy" title="http://odahub.io/ontology#Energy">energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Frequency" title="http://odahub.io/ontology#Frequency">frequency</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Percentage" title="http://odahub.io/ontology#Percentage">percentage</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">time interval</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Frequency">
+      <h3>frequency<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Frequency</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FrequencyGHz" title="http://odahub.io/ontology#FrequencyGHz">frequency g hz</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FrequencyHz" title="http://odahub.io/ontology#FrequencyHz">frequency hz</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FrequencyMHz" title="http://odahub.io/ontology#FrequencyMHz">frequency m hz</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FrequencyGHz">
+      <h3>frequency g hz<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#FrequencyGHz</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Frequency" title="http://odahub.io/ontology#Frequency">frequency</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GHz" title="http://odahub.io/ontology#GHz">g hz</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FrequencyHz">
+      <h3>frequency hz<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#FrequencyHz</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Frequency" title="http://odahub.io/ontology#Frequency">frequency</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Hz" title="http://odahub.io/ontology#Hz">hz</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FrequencyMHz">
+      <h3>frequency m hz<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#FrequencyMHz</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Frequency" title="http://odahub.io/ontology#Frequency">frequency</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MHz" title="http://odahub.io/ontology#MHz">m hz</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GHz">
+      <h3>g hz<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#GHz</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FrequencyGHz" title="http://odahub.io/ontology#FrequencyGHz">frequency g hz</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -629,6 +1827,76 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="GeV">
+      <h3>ge v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#GeV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy_GeV" title="http://odahub.io/ontology#Energy_GeV">energy ge v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Hz">
+      <h3>hz<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Hz</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FrequencyHz" title="http://odahub.io/ontology#FrequencyHz">frequency hz</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ISGRIEnergy">
+      <h3>i s g r i energy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ISGRIEnergy</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Energy_keV" title="http://odahub.io/ontology#Energy_keV">energy ke v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Image">
+      <h3>image<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Image</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Instrument">
       <h3>Instrument<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -651,6 +1919,56 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Integer">
+      <h3>integer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Integer</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="JEMXEnergy">
+      <h3>j e m x energy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#JEMXEnergy</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Energy_keV" title="http://odahub.io/ontology#Energy_keV">energy ke v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="keV">
+      <h3>ke v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#keV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy_keV" title="http://odahub.io/ontology#Energy_keV">energy ke v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="LightCurve">
       <h3>LightCurve<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -669,37 +1987,186 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
-   <div class="entity" id="LightCurveList">
-      <h3>LightCurveList<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="MHz">
+      <h3>m hz<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#LightCurveList</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#MHz</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FrequencyMHz" title="http://odahub.io/ontology#FrequencyMHz">frequency m hz</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MeV">
+      <h3>me v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#MeV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy_MeV" title="http://odahub.io/ontology#Energy_MeV">energy me v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NumericParameter">
+      <h3>numeric parameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#NumericParameter</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Integer" title="http://odahub.io/ontology#Integer">integer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ODAAstropyTable">
+      <h3>o d a astropy table<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ODAAstropyTable</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#ODAAPILightcurveList" title="http://odahub.io/ontology#ODAAPILightcurveList">ODAAPILightcurveList</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
-   <div class="entity" id="ODAAPILightcurveList">
-      <h3>ODAAPILightcurveList<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="ODABinaryProduct">
+      <h3>o d a binary product<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#ODAAPILightcurveList</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ODABinaryProduct</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#LightCurveList" title="http://odahub.io/ontology#LightCurveList">LightCurveList</a>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ODAPictureProduct">
+      <h3>o d a picture product<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ODAPictureProduct</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ODATextProduct">
+      <h3>o d a text product<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ODATextProduct</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParameterFormat">
+      <h3>parameter format<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ParameterFormat</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#TimeFormat" title="http://odahub.io/ontology#TimeFormat">time format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#has_format" title="http://odahub.io/ontology#has_format">has format</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Percentage">
+      <h3>percentage<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Percentage</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PhotometricBand">
+      <h3>photometric band<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#PhotometricBand</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#String" title="http://odahub.io/ontology#String">string</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#VisibleBand" title="http://odahub.io/ontology#VisibleBand">visible band</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -729,7 +2196,7 @@ This section provides details for each class and property defined by MMODA Astro
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+            <a href="#DeclinationDegrees" title="http://odahub.io/ontology#DeclinationDegrees">DeclinationDegrees</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -745,7 +2212,7 @@ This section provides details for each class and property defined by MMODA Astro
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+            <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -769,30 +2236,31 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
             <sup class="type-c" title="class">c</sup>, <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
             <sup class="type-c" title="class">c</sup>, <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="RightAscention">
-      <h3>RightAscention<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="RightAscension">
+      <h3>RightAscension<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#RightAscention</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#RightAscension</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Angle" title="http://odahub.io/ontology#Angle">angle</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#RightAscentionDegrees" title="http://odahub.io/ontology#RightAscentionDegrees">RightAscentionDegrees</a>
+            <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -802,17 +2270,43 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
-   <div class="entity" id="RightAscentionDegrees">
-      <h3>RightAscentionDegrees<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="RightAscensionDegrees">
+      <h3>RightAscensionDegrees<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#RightAscentionDegrees</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#RightAscensionDegrees</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+            <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AngleDegrees" title="http://odahub.io/ontology#AngleDegrees">angle degrees</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="second">
+      <h3>second<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#second</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#TimeIntervalSeconds" title="http://odahub.io/ontology#TimeIntervalSeconds">time interval seconds</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -854,6 +2348,37 @@ Subclasses may have other ways to express the content.</span>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Spectrum">
+      <h3>spectrum<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Spectrum</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StartTimeMJD">
+      <h3>start time m j d<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#StartTimeMJD</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantMJD" title="http://odahub.io/ontology#TimeInstantMJD">time instant m j d</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="StartTime">
       <h3>StartTime<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -871,6 +2396,7 @@ Subclasses may have other ways to express the content.</span>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StartTimeMJD" title="http://odahub.io/ontology#StartTimeMJD">start time m j d</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -886,35 +2412,74 @@ Subclasses may have other ways to express the content.</span>
          <dt>has super-classes</dt>
          <dd>
             <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">time instant i s o t</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="TimeInstant">
-      <h3>TimeInstant<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="String">
+      <h3>string<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#TimeInstant</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#String</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
+            <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">TimeInstantISOT</a>
+            <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="TeV">
+      <h3>te v<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TeV</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy_TeV" title="http://odahub.io/ontology#Energy_TeV">energy te v</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeFormat">
+      <h3>time format<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeFormat</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParameterFormat" title="http://odahub.io/ontology#ParameterFormat">parameter format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ISOT" title="http://odahub.io/ontology#ISOT">i s o t</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MJD" title="http://odahub.io/ontology#MJD">m j d</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="TimeInstantISOT">
-      <h3>TimeInstantISOT<sup class="type-c" title="class">c</sup>
+      <h3>time instant i s o t<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -934,13 +2499,134 @@ Subclasses may have other ways to express the content.</span>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Unit">
+   <div class="entity" id="TimeInstantMJD">
+      <h3>time instant m j d<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeInstantMJD</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EndTimeMJD" title="http://odahub.io/ontology#EndTimeMJD">end time m j d</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StartTimeMJD" title="http://odahub.io/ontology#StartTimeMJD">start time m j d</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeInterval">
+      <h3>time interval<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeInterval</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">time interval days</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeIntervalSeconds" title="http://odahub.io/ontology#TimeIntervalSeconds">time interval seconds</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeIntervalDays">
+      <h3>time interval days<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeIntervalDays</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#day" title="http://odahub.io/ontology#day">day</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">time interval</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeIntervalSeconds">
+      <h3>time interval seconds<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeIntervalSeconds</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#second" title="http://odahub.io/ontology#second">second</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">time interval</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#TimeUnit">
+      <h3>time unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#TimeUnit</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/unit#Unit" title="http://odahub.io/ontology/unit#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#/unit#Day" title="http://odahub.io/ontology/unit#Day">day</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#Hour" title="http://odahub.io/ontology/unit#Hour">hour</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#Minute" title="http://odahub.io/ontology/unit#Minute">minute</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/unit#Second" title="http://odahub.io/ontology/unit#Second">second</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeInstant">
+      <h3>TimeInstant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeInstant</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantISOT" title="http://odahub.io/ontology#TimeInstantISOT">time instant i s o t</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstantMJD" title="http://odahub.io/ontology#TimeInstantMJD">time instant m j d</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Unit">
       <h3>Unit<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#Unit</p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Unit</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -951,7 +2637,29 @@ Subclasses may have other ways to express the content.</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Degree" title="http://odahub.io/ontology#Degree">Degree</a>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">time unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#has_unit" title="http://odahub.io/ontology#has_unit">has unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VisibleBand">
+      <h3>visible band<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#VisibleBand</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1001,18 +2709,41 @@ Subclasses may have other ways to express the content.</span>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
+            <a href="#Declination" title="http://odahub.io/ontology#Declination">Declination</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EndTime" title="http://odahub.io/ontology#EndTime">EndTime</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterestDEC" title="http://odahub.io/ontology#PointOfInterestDEC">PointOfInterestDEC</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterestRA" title="http://odahub.io/ontology#PointOfInterestRA">PointOfInterestRA</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
             <sup class="type-c" title="class">c</sup>, <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
             <sup class="type-c" title="class">c</sup>, <a href="#StartTime" title="http://odahub.io/ontology#StartTime">StartTime</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Boolean" title="http://odahub.io/ontology#Boolean">boolean</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#String" title="http://odahub.io/ontology#String">string</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#has_format" title="http://odahub.io/ontology#has_format">has format</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#has_unit" title="http://odahub.io/ontology#has_unit">has unit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#value" title="http://odahub.io/ontology#value">value</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#has_format" title="http://odahub.io/ontology#has_format">
+            <span>has format</span>
+         </a>
+      </li>
+      <li>
+         <a href="#has_unit" title="http://odahub.io/ontology#has_unit">
+            <span>has unit</span>
+         </a>
+      </li>
       <li>
          <a href="#hasCoordinates" title="http://odahub.io/ontology#hasCoordinates">hasCoordinates</a>
       </li>
@@ -1043,13 +2774,69 @@ Subclasses may have other ways to express the content.</span>
             <span>is using</span>
          </a>
       </li>
-      <li>
-         <a href="#limits" title="http://odahub.io/ontology#limits">limits</a>
-      </li>
-      <li>
-         <a href="#oda:lower_limit" title="http://odahub.io/ontology#oda%3Alower_limit">oda:lower_limit</a>
-      </li>
    </ul>
+   <div class="entity" id="has_format">
+      <h3>has format<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#has_format</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ParameterFormat" title="http://odahub.io/ontology#ParameterFormat">parameter format</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="has_unit">
+      <h3>has unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#has_unit</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/unit#Unit" title="http://odahub.io/ontology/unit#Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasCoordinates">
       <h3>hasCoordinates<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1128,7 +2915,7 @@ Subclasses may have other ways to express the content.</span>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#RightAscention" title="http://odahub.io/ontology#RightAscention">RightAscention</a>
+               <a href="#RightAscension" title="http://odahub.io/ontology#RightAscension">RightAscension</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1248,21 +3035,40 @@ Subclasses may have other ways to express the content.</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="limits">
-      <h3>limits<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#value" title="http://odahub.io/ontology#value">
+            <span>value</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="value">
+      <h3>value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#limits</p>
-   </div>
-   <div class="entity" id="oda:lower_limit">
-      <h3>oda:lower_limit<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://odahub.io/ontology#oda%3Alower_limit</p>
+         <strong>IRI:</strong> http://odahub.io/ontology#value</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="annotationproperties">
@@ -1271,6 +3077,11 @@ Subclasses may have other ways to express the content.</span>
       <li>
          <a href="#http://purl.org/dc/elements/1.1/abstract" title="http://purl.org/dc/elements/1.1/abstract">
             <span>abstract</span>
+         </a>
+      </li>
+      <li>
+         <a href="#allowed_value" title="http://odahub.io/ontology#allowed_value">
+            <span>allowed value</span>
          </a>
       </li>
       <li>
@@ -1284,8 +3095,18 @@ Subclasses may have other ways to express the content.</span>
          </a>
       </li>
       <li>
+         <a href="#format" title="http://odahub.io/ontology#format">
+            <span>format</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://xmlns.com/foaf/0.1/logo" title="http://xmlns.com/foaf/0.1/logo">
             <span>logo</span>
+         </a>
+      </li>
+      <li>
+         <a href="#lower_limit" title="http://odahub.io/ontology#lower_limit">
+            <span>lower limit</span>
          </a>
       </li>
       <li>
@@ -1299,8 +3120,23 @@ Subclasses may have other ways to express the content.</span>
          </a>
       </li>
       <li>
+         <a href="#symbol" title="http://odahub.io/ontology#symbol">
+            <span>symbol</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
             <span>title</span>
+         </a>
+      </li>
+      <li>
+         <a href="#unit" title="http://odahub.io/ontology#unit">
+            <span>unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#upper_limit" title="http://odahub.io/ontology#upper_limit">
+            <span>upper limit</span>
          </a>
       </li>
       <li>
@@ -1316,6 +3152,14 @@ Subclasses may have other ways to express the content.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/elements/1.1/abstract</p>
+   </div>
+   <div class="entity" id="allowed_value">
+      <h3>allowed value<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#allowed_value</p>
    </div>
    <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
       <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
@@ -1333,6 +3177,14 @@ Subclasses may have other ways to express the content.</span>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
    </div>
+   <div class="entity" id="format">
+      <h3>format<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#format</p>
+   </div>
    <div class="entity" id="http://xmlns.com/foaf/0.1/logo">
       <h3>logo<sup class="type-ap" title="annotation property">ap</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
@@ -1340,6 +3192,14 @@ Subclasses may have other ways to express the content.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://xmlns.com/foaf/0.1/logo</p>
+   </div>
+   <div class="entity" id="lower_limit">
+      <h3>lower limit<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#lower_limit</p>
    </div>
    <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
       <h3>preferred namespace uri<sup class="type-ap" title="annotation property">ap</sup>
@@ -1357,6 +3217,14 @@ Subclasses may have other ways to express the content.</span>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/elements/1.1/source</p>
    </div>
+   <div class="entity" id="symbol">
+      <h3>symbol<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#symbol</p>
+   </div>
    <div class="entity" id="http://purl.org/dc/elements/1.1/title">
       <h3>title<sup class="type-ap" title="annotation property">ap</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
@@ -1364,6 +3232,22 @@ Subclasses may have other ways to express the content.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+   </div>
+   <div class="entity" id="unit">
+      <h3>unit<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#unit</p>
+   </div>
+   <div class="entity" id="upper_limit">
+      <h3>upper limit<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#upper_limit</p>
    </div>
    <div class="entity" id="http://www.w3.org/2002/07/owl#versionIRI">
       <h3>version i r i<sup class="type-ap" title="annotation property">ap</sup>
@@ -1373,11 +3257,437 @@ Subclasses may have other ways to express the content.</span>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionIRI</p>
    </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/unit#arcmin" title="http://odahub.io/ontology/unit#arcmin">
+            <span>arcmin</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#arcsec" title="http://odahub.io/ontology/unit#arcsec">
+            <span>arcsec</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Day" title="http://odahub.io/ontology/unit#Day">
+            <span>day</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Degree" title="http://odahub.io/ontology/unit#Degree">
+            <span>degree</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#eV" title="http://odahub.io/ontology/unit#eV">
+            <span>e v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#GHz" title="http://odahub.io/ontology/unit#GHz">
+            <span>g hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#GeV" title="http://odahub.io/ontology/unit#GeV">
+            <span>ge v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Hour" title="http://odahub.io/ontology/unit#Hour">
+            <span>hour</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#hourangle_Hour" title="http://odahub.io/ontology/unit#hourangle_Hour">
+            <span>hourangle hour</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#hourangle_Minute" title="http://odahub.io/ontology/unit#hourangle_Minute">
+            <span>hourangle minute</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#hourangle_Second" title="http://odahub.io/ontology/unit#hourangle_Second">
+            <span>hourangle second</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Hz" title="http://odahub.io/ontology/unit#Hz">
+            <span>hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ISOT" title="http://odahub.io/ontology#ISOT">
+            <span>i s o t</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#keV" title="http://odahub.io/ontology/unit#keV">
+            <span>ke v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#MHz" title="http://odahub.io/ontology/unit#MHz">
+            <span>m hz</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MJD" title="http://odahub.io/ontology#MJD">
+            <span>m j d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#MeV" title="http://odahub.io/ontology/unit#MeV">
+            <span>me v</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Minute" title="http://odahub.io/ontology/unit#Minute">
+            <span>minute</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Radian" title="http://odahub.io/ontology/unit#Radian">
+            <span>radian</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#Second" title="http://odahub.io/ontology/unit#Second">
+            <span>second</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/unit#TeV" title="http://odahub.io/ontology/unit#TeV">
+            <span>te v</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/unit#arcmin">
+      <h3>arcmin<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#arcmin</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#arcsec">
+      <h3>arcsec<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#arcsec</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Day">
+      <h3>day<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Day</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">time unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Degree">
+      <h3>degree<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Degree</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#eV">
+      <h3>e v<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#eV</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#GHz">
+      <h3>g hz<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#GHz</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#GeV">
+      <h3>ge v<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#GeV</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Hour">
+      <h3>hour<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Hour</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">time unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#hourangle_Hour">
+      <h3>hourangle hour<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#hourangle_Hour</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#hourangle_Minute">
+      <h3>hourangle minute<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#hourangle_Minute</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#hourangle_Second">
+      <h3>hourangle second<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#hourangle_Second</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Hz">
+      <h3>hz<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Hz</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ISOT">
+      <h3>i s o t<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ISOT</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TimeFormat" title="http://odahub.io/ontology#TimeFormat">time format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#keV">
+      <h3>ke v<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#keV</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#MHz">
+      <h3>m hz<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#MHz</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MJD">
+      <h3>m j d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#MJD</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TimeFormat" title="http://odahub.io/ontology#TimeFormat">time format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#MeV">
+      <h3>me v<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#MeV</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Minute">
+      <h3>minute<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Minute</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">time unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Radian">
+      <h3>radian<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Radian</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#Second">
+      <h3>second<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#Second</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">time unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/unit#TeV">
+      <h3>te v<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology/unit#TeV</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/unit#EnergyUnit" title="http://odahub.io/ontology/unit#EnergyUnit">energy unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
 </div>

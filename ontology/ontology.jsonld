@@ -1,4 +1,372 @@
 [ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid14"
+    }, {
+      "@id" : "_:genid12"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "800.0"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "15.0"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid21"
+    }, {
+      "@id" : "_:genid19"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "35.0"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "3.0"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#MHz"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#MeV"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid29"
+    }, {
+      "@id" : "_:genid27"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "100.0"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.0"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid31"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "H"
+    }, {
+      "@value" : "J"
+    }, {
+      "@value" : "K"
+    }, {
+      "@value" : "L"
+    }, {
+      "@value" : "M"
+    }, {
+      "@value" : "N"
+    }, {
+      "@value" : "Q"
+    }, {
+      "@value" : "b"
+    }, {
+      "@value" : "g"
+    }, {
+      "@value" : "i"
+    }, {
+      "@value" : "r"
+    }, {
+      "@value" : "u"
+    }, {
+      "@value" : "v"
+    }, {
+      "@value" : "y"
+    }, {
+      "@value" : "z"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#TeV"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology#ISOT"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_format"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology#MJD"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_format"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://odahub.io/ontology/unit#TimeUnit"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid52"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "b"
+    }, {
+      "@value" : "g"
+    }, {
+      "@value" : "r"
+    }, {
+      "@value" : "v"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#arcmin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#arcsec"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Day"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#GHz"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Degree"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#eV"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#keV"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Second"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#GeV"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Hz"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#has_unit"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://odahub.io/ontology#value"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/abstract" : [ {
@@ -39,6 +407,38 @@
     "@value" : "MMODA Astrophysical Workflows and Data Products"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#Angle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Float"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#AngleDegrees",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Angle"
+  }, {
+    "@id" : "http://odahub.io/ontology#degree"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#AngleMinutes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Angle"
+  }, {
+    "@id" : "http://odahub.io/ontology#arcmin"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#AngleSeconds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Angle"
+  }, {
+    "@id" : "http://odahub.io/ontology#arcsec"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#AstrophysicalObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -69,6 +469,14 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#Boolean",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#DataProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -84,7 +492,11 @@
     "@value" : "Declination"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Angle"
+  }, {
     "@id" : "http://odahub.io/ontology#Quantity"
+  }, {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#DeclinationDegrees",
@@ -93,16 +505,9 @@
     "@value" : "DeclinationDegrees"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#AngleDegrees"
+  }, {
     "@id" : "http://odahub.io/ontology#Declination"
-  } ]
-}, {
-  "@id" : "http://odahub.io/ontology#Degree",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Degree"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#Unit"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#DiscoveryWorkflow",
@@ -139,6 +544,116 @@
     "@id" : "http://odahub.io/ontology#TimeInstantISOT"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#EndTimeMJD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#EndTime"
+  }, {
+    "@id" : "http://odahub.io/ontology#TimeInstantMJD"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Energy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Float"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Energy_GeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy"
+  }, {
+    "@id" : "http://odahub.io/ontology#GeV"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Energy_MeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy"
+  }, {
+    "@id" : "http://odahub.io/ontology#MeV"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Energy_TeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy"
+  }, {
+    "@id" : "http://odahub.io/ontology#TeV"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Energy_eV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy"
+  }, {
+    "@id" : "http://odahub.io/ontology#eV"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Energy_keV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy"
+  }, {
+    "@id" : "http://odahub.io/ontology#keV"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ExpressedInUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#NumericParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Float",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#NumericParameter"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Frequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Float"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#FrequencyGHz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Frequency"
+  }, {
+    "@id" : "http://odahub.io/ontology#GHz"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#FrequencyHz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Frequency"
+  }, {
+    "@id" : "http://odahub.io/ontology#Hz"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#FrequencyMHz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Frequency"
+  }, {
+    "@id" : "http://odahub.io/ontology#MHz"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#GHz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid6"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#Gaia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -157,6 +672,45 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#GeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Hz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ISGRIEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy_keV"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ISOT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "isot"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology#TimeFormat"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#DataProduct"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#Instrument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -164,6 +718,22 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#NumericParameter"
+  }, {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#JEMXEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Energy_keV"
+  }, {
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#LightCurve",
@@ -177,22 +747,81 @@
     "@id" : "http://www.ivoa.net/rdf/product-type#timeseries"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#LightCurveList",
+  "@id" : "http://odahub.io/ontology#MHz",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "LightCurveList"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid22"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#MJD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "mjd"
   } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology#TimeFormat"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#MeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#NumericParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ODAAstropyTable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#DataProduct"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#ODAAPILightcurveList",
+  "@id" : "http://odahub.io/ontology#ODABinaryProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ODAAPILightcurveList"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#LightCurveList"
+    "@id" : "http://odahub.io/ontology#DataProduct"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ODAPictureProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#DataProduct"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ODATextProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#DataProduct"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#ParameterFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Percentage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Float"
+  }, {
+    "@id" : "_:genid24"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#PhotometricBand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#String"
+  }, {
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#PointOfInterest",
@@ -210,7 +839,7 @@
     "@value" : "PointOfInterestDEC"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#Declination"
+    "@id" : "http://odahub.io/ontology#DeclinationDegrees"
   }, {
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
@@ -221,7 +850,7 @@
     "@value" : "PointOfInterestRA"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#RightAscention"
+    "@id" : "http://odahub.io/ontology#RightAscensionDegrees"
   }, {
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
@@ -235,22 +864,28 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#RightAscention",
+  "@id" : "http://odahub.io/ontology#RightAscension",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "RightAscention"
+    "@value" : "RightAscension"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Angle"
+  }, {
     "@id" : "http://odahub.io/ontology#Quantity"
+  }, {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#RightAscentionDegrees",
+  "@id" : "http://odahub.io/ontology#RightAscensionDegrees",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "RightAscentionDegrees"
+    "@value" : "RightAscensionDegrees"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#RightAscention"
+    "@id" : "http://odahub.io/ontology#AngleDegrees"
+  }, {
+    "@id" : "http://odahub.io/ontology#RightAscension"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#SkyCoordinates",
@@ -265,6 +900,12 @@
     "@id" : "http://odahub.io/ontology#Quantity"
   }, {
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#Spectrum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#DataProduct"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#StartTime",
@@ -289,6 +930,34 @@
     "@id" : "http://odahub.io/ontology#TimeInstantISOT"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#StartTimeMJD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#StartTime"
+  }, {
+    "@id" : "http://odahub.io/ontology#TimeInstantMJD"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#String",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid47"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TimeFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ParameterFormat"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#TimeInstant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -296,24 +965,65 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#Quantity"
+  }, {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#TimeInstantISOT",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TimeInstantISOT"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#TimeInstant"
+  }, {
+    "@id" : "_:genid48"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#Unit",
+  "@id" : "http://odahub.io/ontology#TimeInstantMJD",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Unit"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#TimeInstant"
+  }, {
+    "@id" : "_:genid49"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TimeInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Float"
+  }, {
+    "@id" : "_:genid50"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TimeIntervalDays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#TimeInterval"
+  }, {
+    "@id" : "http://odahub.io/ontology#day"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#TimeIntervalSeconds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#TimeInterval"
+  }, {
+    "@id" : "http://odahub.io/ontology#second"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#VisibleBand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://odahub.io/ontology#allowed_value" : [ {
+    "@value" : "b"
+  }, {
+    "@value" : "g"
+  }, {
+    "@value" : "r"
+  }, {
+    "@value" : "v"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://odahub.io/ontology#PhotometricBand"
+  }, {
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#Workflow",
@@ -330,6 +1040,52 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "WorkflowParameter"
   } ]
+}, {
+  "@id" : "http://odahub.io/ontology#allowed_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://odahub.io/ontology#arcmin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid57"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#arcsec",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid58"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid59"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#degree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid60"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#eV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid61"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://odahub.io/ontology#hasCoordinates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -370,7 +1126,31 @@
     "@value" : "hasRA"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://odahub.io/ontology#RightAscention"
+    "@id" : "http://odahub.io/ontology#RightAscension"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#has_format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://odahub.io/ontology#ParameterFormat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#has_unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
@@ -423,16 +1203,239 @@
     "@id" : "http://odahub.io/ontology#isRequesting"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#limits",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "limits"
+  "@id" : "http://odahub.io/ontology#keV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid62"
   } ]
 }, {
-  "@id" : "http://odahub.io/ontology#oda%3Alower_limit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://odahub.io/ontology#lower_limit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://odahub.io/ontology#second",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#ExpressedInUnit"
+  }, {
+    "@id" : "_:genid63"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#symbol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://odahub.io/ontology#unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://odahub.io/ontology#upper_limit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://odahub.io/ontology#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#AngleUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Unit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "day"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#TimeUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Degree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "deg"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#EnergyUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Unit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#GHz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "GHz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#GeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "GeV"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Hour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "hour"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#TimeUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Hz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "Hz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#MHz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "MHz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#MeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "MeV"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Minute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "m"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#TimeUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Radian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "rad"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Second",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "s"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#TimeUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#TeV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "TeV"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#TimeUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology/unit#Unit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "oda:lower_limit"
+    "@value" : "Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#arcmin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "arcmin"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#arcsec",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "arcsec"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#eV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "eV"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#hourangle_Hour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "h"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#hourangle_Minute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "m"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#hourangle_Second",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "s"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#AngleUnit"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology/unit#keV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#symbol" : [ {
+    "@value" : "keV"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology/unit#EnergyUnit"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/abstract",
