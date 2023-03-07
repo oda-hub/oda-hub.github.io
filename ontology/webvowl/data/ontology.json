@@ -15,7 +15,7 @@
       "versionIRI" : [ {
         "identifier" : "versionIRI",
         "language" : "undefined",
-        "value" : "0.1.0",
+        "value" : "4c1f238",
         "type" : "label"
       } ],
       "creator" : [ {
@@ -461,20 +461,6 @@
         "IRI-based" : "arcsec"
       }
     }, {
-      "iri" : "http://odahub.io/ontology/unit#hourangle_Second",
-      "baseIri" : "http://odahub.io/ontology/unit",
-      "annotations" : {
-        "symbol" : [ {
-          "identifier" : "symbol",
-          "language" : "undefined",
-          "value" : "s",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "hourangle_Second"
-      }
-    }, {
       "iri" : "http://odahub.io/ontology/unit#Degree",
       "baseIri" : "http://odahub.io/ontology/unit",
       "annotations" : {
@@ -487,6 +473,20 @@
       },
       "labels" : {
         "IRI-based" : "Degree"
+      }
+    }, {
+      "iri" : "http://odahub.io/ontology/unit#hourangle_Second",
+      "baseIri" : "http://odahub.io/ontology/unit",
+      "annotations" : {
+        "symbol" : [ {
+          "identifier" : "symbol",
+          "language" : "undefined",
+          "value" : "s",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "hourangle_Second"
       }
     }, {
       "iri" : "http://odahub.io/ontology/unit#hourangle_Minute",
@@ -587,22 +587,22 @@
       "allowed_value" : [ {
         "identifier" : "allowed_value",
         "language" : "undefined",
-        "value" : "b",
-        "type" : "label"
-      }, {
-        "identifier" : "allowed_value",
-        "language" : "undefined",
-        "value" : "r",
-        "type" : "label"
-      }, {
-        "identifier" : "allowed_value",
-        "language" : "undefined",
         "value" : "g",
         "type" : "label"
       }, {
         "identifier" : "allowed_value",
         "language" : "undefined",
+        "value" : "b",
+        "type" : "label"
+      }, {
+        "identifier" : "allowed_value",
+        "language" : "undefined",
         "value" : "v",
+        "type" : "label"
+      }, {
+        "identifier" : "allowed_value",
+        "language" : "undefined",
+        "value" : "r",
         "type" : "label"
       } ]
     },
@@ -1000,7 +1000,7 @@
       "IRI-based" : "Energy_TeV"
     },
     "id" : "75",
-    "superClasses" : [ "74", "92" ]
+    "superClasses" : [ "92", "74" ]
   }, {
     "iri" : "http://odahub.io/ontology#AngleMinutes",
     "baseIri" : "http://odahub.io/ontology",
@@ -2053,7 +2053,7 @@
       "IRI-based" : "value"
     },
     "domain" : "56",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "100"
   }, {
     "iri" : "http://odahub.io/ontology#hasDec",
@@ -2483,7 +2483,7 @@
       "IRI-based" : "value"
     },
     "domain" : "64",
-    "attributes" : [ "functional", "allValues", "datatype" ],
+    "attributes" : [ "datatype", "functional", "allValues" ],
     "id" : "188"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
@@ -2504,7 +2504,7 @@
       "IRI-based" : "value"
     },
     "domain" : "171",
-    "attributes" : [ "functional", "allValues", "datatype" ],
+    "attributes" : [ "datatype", "functional", "allValues" ],
     "id" : "191"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
@@ -2536,7 +2536,7 @@
       "IRI-based" : "value"
     },
     "domain" : "97",
-    "attributes" : [ "functional", "allValues", "datatype" ],
+    "attributes" : [ "datatype", "functional", "allValues" ],
     "id" : "195"
   }, {
     "range" : "56",
