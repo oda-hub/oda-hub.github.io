@@ -23,7 +23,7 @@ Discovering terms to use # The terms look like URLs, e." />
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.0c19015a951227d2001d9978a9695b6e4e1cb0b15439bfc3b9664c895a33098d.js" integrity="sha256-DBkBWpUSJ9IAHZl4qWlbbk4csLFUOb/DuWZMiVozCY0=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.b6b21ea1d83e2807038e29a764571357337c038d40e2d0ac43f5db23df7e4910.js" integrity="sha256-trIeodg&#43;KAcDjimnZFcTVzN8A41A4tCsQ/XbI99&#43;SRA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -201,6 +201,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#purpose">Purpose</a></li>
     <li><a href="#discovering-terms-to-use">Discovering <code>terms</code> to use</a></li>
     <li><a href="#adding-new-terms-to-the-ontology">Adding new <code>terms</code> to the ontology</a></li>
+    <li><a href="#ontology-locations-and-versions">Ontology locations and versions</a></li>
   </ul>
 </nav>
 
@@ -240,6 +241,14 @@ In an increasingly large number of cases we identify and assign annotations auto
 <p>Sometimes, it is necessary to add a new <code>term</code>. In principle, Workflow Developer may add a new <code>term</code> at will - it is their own understanding of what is being labeled. But the term will not be fully used until it is related to other <code>terms</code> in the Ontology, which is done either automatically or by the Ontology Developers.</p>
 <p>Ontology Developers can improve the common ontology with <a href="http://webprotege.obsuks1.unige.ch">http://webprotege.obsuks1.unige.ch</a> .</p>
 <p>There is also an experimental edit interface <a href="https://odahub.io/ontology/webvowl/index.html#opts=cd=130;dd=10;editorMode=true;filter_disjoint=false;mode_multiColor=true;mode_pnp=true;">here</a>, the edited result should be stored and uploaded manually.</p>
+<h2 id="ontology-locations-and-versions">
+  Ontology locations and versions
+  <a class="anchor" href="#ontology-locations-and-versions">#</a>
+</h2>
+<p>As ODA ontology is evolving, it is version-controlled.
+Also, at any given time, there are variants of the ODA ontology of different degrees of maturity.</p>
+<p>The principal ontology is stored in git here <a href="https://github.com/oda-hub/hugo-odahub/blob/master/ontology/ontology.ttl">https://github.com/oda-hub/hugo-odahub/blob/master/ontology/ontology.ttl</a> and published as <a href="https://odahub.io/ontology/ontology.ttl">https://odahub.io/ontology/ontology.ttl</a>.</p>
+<p>Development ontology for dispatcher testing may be available here <a href="https://raw.githubusercontent.com/oda-hub/dispatcher-app/master/tests/oda-ontology.ttl">https://raw.githubusercontent.com/oda-hub/dispatcher-app/master/tests/oda-ontology.ttl</a> and needs to be eventually synchronized with the main ontology, in principle before the dependent production services (e.g. a particular dispatcher version) are deployed.</p>
 </article>
  
       
@@ -284,6 +293,7 @@ In an increasingly large number of cases we identify and assign annotations auto
     <li><a href="#purpose">Purpose</a></li>
     <li><a href="#discovering-terms-to-use">Discovering <code>terms</code> to use</a></li>
     <li><a href="#adding-new-terms-to-the-ontology">Adding new <code>terms</code> to the ontology</a></li>
+    <li><a href="#ontology-locations-and-versions">Ontology locations and versions</a></li>
   </ul>
 </nav>
 
