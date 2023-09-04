@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://odahub.io/docs/guide-development/</guid>
-      <description>Workflow development Guide # Workflows are all things that can be computed, broadly speaking.
-For reproducibility, we want our workflows to be repeatable: producing the same output every time they are computed. This is easy enough to do in first approximation, but might be harder to achieve than it seems when the workflow relies on external resources. But we track every execution so it is not necessary to be overly concerned about these delicate details at every moment.</description>
+      <description>MMODA workflow development Guide # The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
+access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook, to derive a data product and The users of MMODA are encouraged to become its developers and add new ORDAS.</description>
     </item>
     
     <item>
