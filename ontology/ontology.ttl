@@ -201,6 +201,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#AstrophysicalObject
 :AstrophysicalObject rdf:type owl:Class ;
+                     rdfs:subClassOf :String ;
                      rdfs:comment "Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun." ;
                      rdfs:label "AstrophysicalObject" .
 
@@ -220,7 +221,8 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#Boolean
 :Boolean rdf:type owl:Class ;
-         rdfs:subClassOf :WorkflowParameter ,
+         rdfs:subClassOf :ParameterProduct ,
+                         :WorkflowParameter ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :value ;
                            owl:allValuesFrom xsd:boolean
@@ -322,6 +324,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#Float
 :Float rdf:type owl:Class ;
        rdfs:subClassOf :NumericParameter ,
+                       :ParameterProduct ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :value ;
                          owl:allValuesFrom xsd:float
@@ -424,6 +427,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#Integer
 :Integer rdf:type owl:Class ;
          rdfs:subClassOf :NumericParameter ,
+                         :ParameterProduct ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :value ;
                            owl:allValuesFrom xsd:integer
@@ -499,6 +503,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#ParameterFormat
 :ParameterFormat rdf:type owl:Class ;
                  rdfs:subClassOf owl:Thing .
+
+
+###  http://odahub.io/ontology#ParameterProduct
+:ParameterProduct rdf:type owl:Class ;
+                  rdfs:subClassOf :DataProduct .
 
 
 ###  http://odahub.io/ontology#Percentage
@@ -650,7 +659,8 @@ Subclasses may have other ways to express the content.""" ;
 
 ###  http://odahub.io/ontology#String
 :String rdf:type owl:Class ;
-        rdfs:subClassOf :WorkflowParameter .
+        rdfs:subClassOf :ParameterProduct ,
+                        :WorkflowParameter .
 
 
 ###  http://odahub.io/ontology#TeV
@@ -669,7 +679,8 @@ Subclasses may have other ways to express the content.""" ;
 
 ###  http://odahub.io/ontology#TimeInstant
 :TimeInstant rdf:type owl:Class ;
-             rdfs:subClassOf :Quantity ,
+             rdfs:subClassOf :ParameterProduct ,
+                             :Quantity ,
                              :WorkflowParameter ;
              rdfs:label "TimeInstant" .
 
