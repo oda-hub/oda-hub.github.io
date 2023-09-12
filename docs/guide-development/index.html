@@ -18,7 +18,7 @@ access publicly available external astronomical data archives to fetch data rele
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.040768e22b95d7ef7a38c57774dc789a27d9477ace382402b97d3d34d9156e68.js" integrity="sha256-BAdo4iuV1&#43;96OMV3dNx4mifZR3rOOCQCuX09NNkVbmg=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.7903944386219f09fae63f46eb11118b0b4c4db63b2d5b5912faa4e848107e8d.js" integrity="sha256-eQOUQ4Yhnwn65j9G6xERiwtMTbY7LVtZEvqk6EgQfo0=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -208,7 +208,8 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#make-the-notebook-available-for-deployment-on-mmoda-via-renkulabio">Make the notebook available for deployment on <strong>MMODA</strong> via <strong>renkulab.io</strong></a></li>
     <li><a href="#publish-your-workflow-as-an-mmoda-service">Publish your workflow as an <strong>MMODA</strong> service</a>
       <ul>
-        <li><a href="#support-the-workflow-development-via-renku-plugin">Support the workflow development via renku plugin</a></li>
+        <li><a href="#visualizing-project-knowledge-graph-with-renku-graph-vis-plugin">Visualizing project Knowledge Graph with <code>renku-graph-vis</code> plugin</a></li>
+        <li><a href="#tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">Tracking access to astronomical archives and services in the project Knowledge Graph by using <code>renku-aqs-annotation</code> plugin</a></li>
         <li><a href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">Inform <strong>MMODA</strong> team and suggest automatic test cases to ensure service stability</a></li>
       </ul>
     </li>
@@ -381,20 +382,13 @@ A test is implemented as another notebook, except that name of the notebook star
 <p>You can explore different examples of the notebooks converted to services in the <code>astronomy/mmoda</code> domain on renkulab.io, to see how to format the inputs and outputs. If unsure, first take a look on <a href="https://renkulab.io/projects/astronomy/mmoda/mmoda-nb2workflow-example">this simple repository</a>. You can also experiment with further possibilities exploring the <a href="https://odahub.io/ontology/">ontology</a> of the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> parameters and data products.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<h3 id="support-the-workflow-development-via-renku-plugin">
-  Support the workflow development via renku plugin
-  <a class="anchor" href="#support-the-workflow-development-via-renku-plugin">#</a>
-</h3>
-<p>To support the development of workflows in Renku, a set of dedicated funcitonailities, provided as Renku plugins, are made available. Specifically, these plugins aim to achieve the following:</p>
-<ul>
-<li>Offer a visualization of the project&rsquo;s Knowledge Graph (<code>renku-graph-vis</code> plugin)</li>
-<li>Intercept calls to <code>astroquery</code> functions and store them in the project&rsquo;s Knowledge Graph (<code>renku-aqs-annotation</code> plugin)</li>
-</ul>
-<p>See below how to install these plugins, which are not available by default.</p>
-<h4 id="visualizing-project-knowledge-graph-with-renku-graph-vis-plugin">
+<h3 id="visualizing-project-knowledge-graph-with-renku-graph-vis-plugin">
   Visualizing project Knowledge Graph with <code>renku-graph-vis</code> plugin
   <a class="anchor" href="#visualizing-project-knowledge-graph-with-renku-graph-vis-plugin">#</a>
-</h4>
+</h3>
+<p>The plugin can be installed via pip on your own environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_graph_vis
+</span></span></code></pre></div><p>Alternatively, it can be made available within a Renku session by adding it in the list of requirements of the Renku project, within your <code>requirements.txt</code> file.</p>
 <p>This plugin provides a graphical representation of the renku repository&rsquo;s knowledge graph, possibly from within the renku session.</p>
 <p>The plugin provides two CLI commands:</p>
 <ul>
@@ -408,23 +402,16 @@ A test is implemented as another notebook, except that name of the notebook star
 <p>This visualization also includes the ODA ontology, providing valuable insights into the types of entities within it that are known to the ontology, and therefore helping during the workflow development. The image below displays a graph where the ODA ontology has been imported, and it can be seen that the <code>SimbadClass</code> node is an instance of the <code>AstroqueryModule</code> class, while <code>Mrk 421</code> is an instance of the <code>AstrophysicalObject</code> class.</p>
 <p><img src="details_astroquery_annotations_2.png" alt="" /></p>
 <p>More technical details are presented in the README of the repo page: <a href="https://github.com/oda-hub/renku-graph-vis/">https://github.com/oda-hub/renku-graph-vis/</a></p>
+<h3 id="tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">
+  Tracking access to astronomical archives and services in the project Knowledge Graph by using <code>renku-aqs-annotation</code> plugin
+  <a class="anchor" href="#tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">#</a>
+</h3>
+<p>This plugin intercepts several key <code>astroquery</code> methods and stores annotations containing information about the calls to these methods (like the arguments used in the call) to the project&rsquo;s Knowledge Graph: <a href="https://github.com/oda-hub/renku-aqs-annotation">https://github.com/oda-hub/renku-aqs-annotation</a></p>
+<p>In the image below, the information added to the project Knowledge Graph is highlighted. Specifically, it can be seen that during a papermill run of the <code>test-notebook.ipynb</code> notebook (that produced <code>out.ipynb</code> as an output notebook) a call to the astroquery method <code>query_object</code>, via the <code>SimbadClass</code>, has been detected. This notebook is requesting the object <code>Mrk 421</code> object. The hightlighed labels on the edges provide information about the relationship between the two nodes: during the <code>papermill</code> execution, a call to the <code>query_object</code> method is executed (<code>call</code> label) and in turn, this requests the Astrophysical Object <code>Mrk 421</code>.</p>
+<p><img src="details_astroquery_annotations_1.png" alt="" /></p>
 <h5 id="installation">
   Installation
   <a class="anchor" href="#installation">#</a>
-</h5>
-<p>The plugin can be installed via pip on your own environment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_graph_vis
-</span></span></code></pre></div><p>Alternatively, it can be made available within a Renku session by adding it in the list of requirements of the Renku project, within your <code>requirements.txt</code> file.</p>
-<h4 id="tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">
-  Tracking access to astronomical archives and services in the project Knowledge Graph by using <code>renku-aqs-annotation</code> plugin
-  <a class="anchor" href="#tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">#</a>
-</h4>
-<p>This plugin intercepts several key <code>astroquery</code> methods and stores annotations containing information about the calls to these methods (like the arguments used in the call) to the project&rsquo;s Knowledge Graph: <a href="https://github.com/oda-hub/renku-aqs-annotation">https://github.com/oda-hub/renku-aqs-annotation</a></p>
-<p>In the image below, the information added to the project Knowledge Graph is highlighted. Specifically, it can be seen that during a papermill run of the <code>test-notebook.ipynb</code> notebook (that produced <code>out.ipynb</code> as an output notebook) a call to the astroquery method <code>query_object</code>, via the <code>Simbadclass</code>, has been detected. This notebook is requesting the object <code>Mrk 421</code> object. The hightlighed labels on the edges provide information about the relationship between the two nodes: during the <code>papermill</code> execution, a call to the <code>query_object</code> method is executed (<code>call</code> label) and in turn, this requests the Astrophysical Object <code>Mrk 421</code>.</p>
-<p><img src="details_astroquery_annotations_1.png" alt="" /></p>
-<h5 id="installation-1">
-  Installation
-  <a class="anchor" href="#installation-1">#</a>
 </h5>
 <p>The plugin can be installed either via pip on your own evironment:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_aqs_annotation
@@ -490,7 +477,8 @@ A test is implemented as another notebook, except that name of the notebook star
     <li><a href="#make-the-notebook-available-for-deployment-on-mmoda-via-renkulabio">Make the notebook available for deployment on <strong>MMODA</strong> via <strong>renkulab.io</strong></a></li>
     <li><a href="#publish-your-workflow-as-an-mmoda-service">Publish your workflow as an <strong>MMODA</strong> service</a>
       <ul>
-        <li><a href="#support-the-workflow-development-via-renku-plugin">Support the workflow development via renku plugin</a></li>
+        <li><a href="#visualizing-project-knowledge-graph-with-renku-graph-vis-plugin">Visualizing project Knowledge Graph with <code>renku-graph-vis</code> plugin</a></li>
+        <li><a href="#tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">Tracking access to astronomical archives and services in the project Knowledge Graph by using <code>renku-aqs-annotation</code> plugin</a></li>
         <li><a href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">Inform <strong>MMODA</strong> team and suggest automatic test cases to ensure service stability</a></li>
       </ul>
     </li>
