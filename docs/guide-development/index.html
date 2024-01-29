@@ -19,7 +19,7 @@ access publicly available external astronomical data archives to fetch data rele
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.f63c914c3e5e1eeb146e255257cde1545191c681dc62ea502ed134265448aa09.js" integrity="sha256-9jyRTD5eHusUbiVSV83hVFGRxoHcYupQLtE0JlRIqgk=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.b17ec8821fae26c2dcf32ef1ce3bd9064ee3673773e20d3574af2d0809b67120.js" integrity="sha256-sX7Igh&#43;uJsLc8y7xzjvZBk7jZzdz4g01dK8tCAm2cSA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -194,21 +194,21 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-build-a-repeatable-parameterized-workflow">1) Build a repeatable parameterized workflow</a>
+    <li><a href="#build-a-repeatable-parameterized-workflow">Build a repeatable parameterized workflow</a>
       <ul>
         <li><a href="#how-to-designate-input-parameters-and-output-cells-of-the-notebook">How to designate input parameters and output cells of the notebook</a></li>
         <li><a href="#how-to-define-input-parameters-in-the-dedicated-parameters-cell">How to define input parameters in the dedicated parameters cell</a></li>
         <li><a href="#default-parameters">Default parameters</a></li>
         <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
-        <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
+        <li><a href="#querying-external-astronomical-data-archives-from-a-notebook">Querying external astronomical data archives from a notebook</a></li>
       </ul>
     </li>
-    <li><a href="#2-make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">2) Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <a href="https://renkulab.io/">renkulab.io</a></a></li>
-    <li><a href="#3-publish-your-workflow-as-an-mmodahttpswwwastrounigechmmoda-service">3) Publish your workflow as an <a href="https://www.astro.unige.ch/mmoda">MMODA</a> service</a>
+    <li><a href="#make-the-notebook-available-for-deployment-on-mmoda-via-renkulabio">Make the notebook available for deployment on MMODA via renkulab.io</a></li>
+    <li><a href="#publish-your-workflow-as-an-mmoda-service">Publish your workflow as an MMODA service</a>
       <ul>
         <li><a href="#support-the-workflow-development-via-renku-plugin">Support the workflow development via renku plugin</a></li>
-        <li><a href="#inform-mmodahttpswwwastrounigechmmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">Inform <a href="https://www.astro.unige.ch/mmoda">MMODA</a> team and suggest automatic test cases to ensure service stability</a></li>
+        <li><a href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">Inform MMODA team and suggest automatic test cases to ensure service stability</a></li>
       </ul>
     </li>
   </ul>
@@ -236,9 +236,9 @@ The users of <a href="https://www.astro.unige.ch/mmoda">MMODA</a> are encouraged
 </ul>
 <p>The users of <a href="https://www.astro.unige.ch/mmoda">MMODA</a> are encouraged to become its developers and add new ORDAS. This help page provides a step-by step instructions on how to add new services to <a href="https://www.astro.unige.ch/mmoda">MMODA</a> .</p>
 <p>Workflows are all things that can be computed, broadly speaking. For reproducibility, we want our workflows to be repeatable: producing the same output every time they are computed. This looks easy enough in first approximation, but might be harder to achieve than it seems when the workflow relies on external data and compute resources  and has to yield an &ldquo;up-and-running&rdquo; ORDAS in an ever-evolving compute environment. This help page is also aimed at helping the developers in ensuring reproducibility and reusability of their workflows converted to ORDAS.</p>
-<h2 id="1-build-a-repeatable-parameterized-workflow">
-  1) Build a repeatable parameterized workflow
-  <a class="anchor" href="#1-build-a-repeatable-parameterized-workflow">#</a>
+<h2 id="build-a-repeatable-parameterized-workflow">
+  Build a repeatable parameterized workflow
+  <a class="anchor" href="#build-a-repeatable-parameterized-workflow">#</a>
 </h2>
 <p>Suppose you have a <a href="https://renkulab.io/projects/astronomy/mmoda/fermi/files/blob/Lightcurve.ipynb"><strong>jupyter notebook</strong></a> that derives some useful information (a lightcurve in the GeV gamma-ray band) on an astronomical source  from data found in an astronomical data archive (in our example, it will be <a href="https://fermi.gsfc.nasa.gov/ssc/data/access/">Fermi LAT data archive</a>).</p>
 <p>The first essential step in promoting the notebook to an ORDAS is to make the workflow of the notebook <strong>reusable</strong> by parameterizing it. For example, it is initeresting to enable generation of similar data products for different sources, by simply giving the source name or coordinates as <strong>input parameters</strong> to the workflow). It is also useful to explicitly tag the resulting data product (the lightcurve in our example) as the <strong>output</strong>, to make clear which of the numerous entities generated by the notebook is the final result. It is also possible to convert non-parametrized but strickly repeatable notebooks to services (for example, to assure reproducibility of a result published in a research publication), but this is less interesting since they always produce the same output data products.</p>
@@ -315,16 +315,16 @@ reference_energy = 20 # oda:keV
 <p>A cell tagged &ldquo;outputs&rdquo; defines the data product(s) that will be provided by the service:</p>
 <p><img src="tmp3.png" alt="image" /></p>
 <p>The outputs may be strings, floats, lists, numpy arrays, astropy tables etc. They may be also strings which contain filenames for valid files. If they do, the whole file will be considered as the output.  Similar to the &ldquo;parameters&rdquo; cell, the &ldquo;outputs&rdquo; cell should contain the definitions of the output variables followed by equality that assigns values to them and a comment that defines their type (for example, the variable <code>lightcurve_astropy_table</code> in the example shown above takes the value <code>lightcurve</code> which is an astropy table. the comment field <code># http://odahub.io/ontology#ODAAstropyTable</code> specifies this in terms of the MMODA <a href="https://odahub.io/ontology/">ontology</a>. If you want to give more detailed description of the notebook input and output, use <code>terms</code> from the pre-defined ontology described  <a href="[docs/guide-ontology.]%28https://odahub.io/docs/guide-ontology%29">here</a>.</p>
-<h3 id="quering-external-astronomical-data-archives-from-a-notebook">
-  Quering external astronomical data archives from a notebook
-  <a class="anchor" href="#quering-external-astronomical-data-archives-from-a-notebook">#</a>
+<h3 id="querying-external-astronomical-data-archives-from-a-notebook">
+  Querying external astronomical data archives from a notebook
+  <a class="anchor" href="#querying-external-astronomical-data-archives-from-a-notebook">#</a>
 </h3>
 <p>It is very likely that your analysis workflow needs to access astronomical data retrievable from an external archive. A good practice is to avoid placing  large volumes of data direcly into the container where the analysis notebook runs (this would overload the <a href="https://renkulab.io">renkulab.io</a> platform which we use for new service deployment).  A better approach is to query the relevant data using online services, for example, <a href="https://www.ivoa.net/documents/TAP/">Table Access Protocol (TAP)</a> services, or services available through the <a href="https://astroquery.readthedocs.io/en/latest/index.html">astroquery</a> Python module. In our example case of Fermi/LAT analysis, we use the <a href="https://astroquery.readthedocs.io/en/latest/fermi/fermi.html">astroquery.fermi</a> module to query the archive of publicly available Fermi/LAT data from <a href="https://fermi.gsfc.nasa.gov/ssc/">Fermi Science Support Center</a> in the Cell 4 of the notebook <a href="https://renkulab.io/projects/astronomy/mmoda/fermi/files/blob/Lightcurve.ipynb">Lightcurve.ipynb</a>.</p>
 <p>Of course, relying on external data archives and data access services may pose a problem for reproducibility of results and potentially for the service operational stability. The external services may have downtime period, they may be upgraded and change their API etc. We leave it to the developer to make sure the requests to external services are operational and reproducible. We encourage the developers to supply tests that will be automatically executed from time to time during service operations and are supposed to always yield exactly the same results. If this is not so, this may signal a problem with non-availability of some external services, in this cases you, as the service developer, will be alerted and invited to investigate the origin of the problem.  It may also happen that the notebook would not produce the exactly
 the same result every time but still be reproducible (see motivation on <a href="https://github.com/volodymyrss/reproducibility-motivation/">the difference between reproducibility and repeatability</a>).</p>
-<h2 id="2-make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">
-  2) Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <a href="https://renkulab.io/">renkulab.io</a>
-  <a class="anchor" href="#2-make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">#</a>
+<h2 id="make-the-notebook-available-for-deployment-on-mmoda-via-renkulabio">
+  Make the notebook available for deployment on MMODA via renkulab.io
+  <a class="anchor" href="#make-the-notebook-available-for-deployment-on-mmoda-via-renkulabio">#</a>
 </h2>
 <p>The parameterized workflow formulated as a Python notebook can be converted into a service provided by <a href="https://www.astro.unige.ch/mmoda/">MMODA</a>  by a bot that scans a specific location <code>astronomy/mmoda</code> in the project directory on the  <a href="https://renkulab.io/">renkulab.io</a> collaborative platform. Creating a new project in this directory will make it visible for the bot. In our example of Fermi/LAT lightcurve workflow, it is in the <a href="https://renkulab.io/projects/astronomy/mmoda/fermi">fermi</a> subdirectory of <code>astronomy/mmoda</code>.</p>
 <p>To proceed along this way, you first you need to make sure your notebook runs correctly in the  <a href="https://renkulab.io/">renkulab.io</a> environment. You can start a new project in the <code>astronomy/mmoda</code> by clicking on the &ldquo;Creat new project&rdquo; button.</p>
@@ -347,9 +347,9 @@ the same result every time but still be reproducible (see motivation on <a href=
 <p>If the notebook runs as expected and produces correct outputs, you may proceed to the next stage and deploy a new service.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<h2 id="3-publish-your-workflow-as-an-mmodahttpswwwastrounigechmmoda-service">
-  3) Publish your workflow as an <a href="https://www.astro.unige.ch/mmoda">MMODA</a> service
-  <a class="anchor" href="#3-publish-your-workflow-as-an-mmodahttpswwwastrounigechmmoda-service">#</a>
+<h2 id="publish-your-workflow-as-an-mmoda-service">
+  Publish your workflow as an MMODA service
+  <a class="anchor" href="#publish-your-workflow-as-an-mmoda-service">#</a>
 </h2>
 <p>If you project is in the <code>/astronomy/mmoda/</code> namespace, it is straightforward to convert it into a service. All you need to do is to add a <code>live-workflow</code> as a topic at the project Gitlab that you can access by clicking on the &ldquo;GitLab&rdquo; button at  the main project page on renkulab.io:</p>
 <p><img src="tmp11.png" alt="image" /></p>
@@ -413,9 +413,9 @@ the same result every time but still be reproducible (see motivation on <a href=
 <p>The plugin can be installed either via pip:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_aqs_annotation
 </span></span></code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your `requirements.txt`` file for the Renku project.</p>
-<h3 id="inform-mmodahttpswwwastrounigechmmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">
-  Inform <a href="https://www.astro.unige.ch/mmoda">MMODA</a> team and suggest automatic test cases to ensure service stability
-  <a class="anchor" href="#inform-mmodahttpswwwastrounigechmmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">#</a>
+<h3 id="inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">
+  Inform MMODA team and suggest automatic test cases to ensure service stability
+  <a class="anchor" href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">#</a>
 </h3>
 <p>Please contact <a href="https://www.astro.unige.ch/mmoda">MMODA</a> team (see contact form) to inform that you have created a new Open Research Data Analysis Service (ORDAS). We will check the functionalities and stability of your service, and we can inform the user community on availability of this new service. We will also ask you to suggest automatic tests of service operations that will be performed from time to time, to  make sure your service does not break with future updates or because of unavailability of external services providing the input data for your analysis workflow. We can also add acknowledgements to the data providers and to you as the workflow developer.</p>
 </article>
@@ -459,21 +459,21 @@ the same result every time but still be reproducible (see motivation on <a href=
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-build-a-repeatable-parameterized-workflow">1) Build a repeatable parameterized workflow</a>
+    <li><a href="#build-a-repeatable-parameterized-workflow">Build a repeatable parameterized workflow</a>
       <ul>
         <li><a href="#how-to-designate-input-parameters-and-output-cells-of-the-notebook">How to designate input parameters and output cells of the notebook</a></li>
         <li><a href="#how-to-define-input-parameters-in-the-dedicated-parameters-cell">How to define input parameters in the dedicated parameters cell</a></li>
         <li><a href="#default-parameters">Default parameters</a></li>
         <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
-        <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
+        <li><a href="#querying-external-astronomical-data-archives-from-a-notebook">Querying external astronomical data archives from a notebook</a></li>
       </ul>
     </li>
-    <li><a href="#2-make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">2) Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <a href="https://renkulab.io/">renkulab.io</a></a></li>
-    <li><a href="#3-publish-your-workflow-as-an-mmodahttpswwwastrounigechmmoda-service">3) Publish your workflow as an <a href="https://www.astro.unige.ch/mmoda">MMODA</a> service</a>
+    <li><a href="#make-the-notebook-available-for-deployment-on-mmoda-via-renkulabio">Make the notebook available for deployment on MMODA via renkulab.io</a></li>
+    <li><a href="#publish-your-workflow-as-an-mmoda-service">Publish your workflow as an MMODA service</a>
       <ul>
         <li><a href="#support-the-workflow-development-via-renku-plugin">Support the workflow development via renku plugin</a></li>
-        <li><a href="#inform-mmodahttpswwwastrounigechmmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">Inform <a href="https://www.astro.unige.ch/mmoda">MMODA</a> team and suggest automatic test cases to ensure service stability</a></li>
+        <li><a href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">Inform MMODA team and suggest automatic test cases to ensure service stability</a></li>
       </ul>
     </li>
   </ul>
