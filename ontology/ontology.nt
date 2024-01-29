@@ -9,7 +9,7 @@
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" .
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
 <http://odahub.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" .
-<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "0.1.2-1-g9821dcf" .
+<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "0.1.1" .
 <http://odahub.io/ontology> <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 # 
 # 
@@ -179,7 +179,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://odahub.io/ontology#AstrophysicalObject
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#String> .
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun." .
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "AstrophysicalObject" .
 # 
@@ -196,7 +195,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://odahub.io/ontology#Boolean
 <http://odahub.io/ontology#Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
 <http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
@@ -284,7 +282,6 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://odahub.io/ontology#Float
 <http://odahub.io/ontology#Float> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumericParameter> .
-<http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
 <http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
 _:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
@@ -378,7 +375,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://odahub.io/ontology#Integer
 <http://odahub.io/ontology#Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumericParameter> .
-<http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
 <http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
@@ -448,10 +444,6 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#ParameterFormat
 <http://odahub.io/ontology#ParameterFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#ParameterFormat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-# 
-# http://odahub.io/ontology#ParameterProduct
-<http://odahub.io/ontology#ParameterProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#ParameterProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
 # 
 # http://odahub.io/ontology#Percentage
 <http://odahub.io/ontology#Percentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -592,7 +584,6 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://odahub.io/ontology#String
 <http://odahub.io/ontology#String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#String> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
 <http://odahub.io/ontology#String> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 # 
 # http://odahub.io/ontology#TeV
@@ -609,7 +600,6 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://odahub.io/ontology#TimeInstant
 <http://odahub.io/ontology#TimeInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
 <http://odahub.io/ontology#TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Quantity> .
 <http://odahub.io/ontology#TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 <http://odahub.io/ontology#TimeInstant> <http://www.w3.org/2000/01/rdf-schema#label> "TimeInstant" .
