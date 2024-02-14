@@ -338,6 +338,21 @@
     
 
 
+    <!-- http://odahub.io/ontology#Angstrom -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Angstrom">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#Angstrom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#AstrophysicalObject -->
 
 
@@ -426,6 +441,65 @@
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Workflow"/>
         <dc:description>workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision</dc:description>
         <rdfs:label>DiscoveryWorkflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Distance -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Distance">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Distance_Mpc -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Distance_Mpc">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Distance"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Mpc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Distance_km -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Distance_km">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Distance"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#km"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Distance_kpc -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Distance_kpc">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Distance"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#kpc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Distance_m -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Distance_m">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Distance"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#m"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Distance_pc -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Distance_pc">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Distance"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#pc"/>
     </owl:Class>
     
 
@@ -751,6 +825,21 @@
     
 
 
+    <!-- http://odahub.io/ontology#Length -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Length">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Float"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:someValuesFrom rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#LightCurve -->
 
 
@@ -786,6 +875,21 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
                 <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#MeV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Mpc -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Mpc">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#Mpc"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1278,6 +1382,57 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     
 
 
+    <!-- http://odahub.io/ontology#Wavelength -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Wavelength">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Length"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Quantity"/>
+        <rdfs:label>Wavelength</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Wavelength_A -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Wavelength_A">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Angstrom"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Wavelength"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Wavelength_m -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Wavelength_m">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Wavelength"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#m"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Wavelength_micron -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Wavelength_micron">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Wavelength"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#micron"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#Wavelength_nm -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#Wavelength_nm">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Wavelength"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#nm"/>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#Workflow -->
 
 
@@ -1402,6 +1557,96 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     
 
 
+    <!-- http://odahub.io/ontology#km -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#km">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#km"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#kpc -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#kpc">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#kpc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#m -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#m">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#m"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#micron -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#micron">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#micron"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#nm -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#nm">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#nm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#pc -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#pc">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#pc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#second -->
 
 
@@ -1430,6 +1675,15 @@ Subclasses may have other ways to express the content.</rdfs:comment>
 
 
     <owl:Class rdf:about="http://odahub.io/ontology/unit#EnergyUnit">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology/unit#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#LengthUnit -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology/unit#LengthUnit">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology/unit#Unit"/>
     </owl:Class>
     
@@ -1489,6 +1743,15 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://odahub.io/ontology#MJD">
         <rdf:type rdf:resource="http://odahub.io/ontology#TimeFormat"/>
         <symbol>mjd</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#Angstrom -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#Angstrom">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
     </owl:NamedIndividual>
     
 
@@ -1579,6 +1842,16 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#Minute">
         <rdf:type rdf:resource="http://odahub.io/ontology/unit#TimeUnit"/>
         <symbol>m</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#Mpc -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#Mpc">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>Mpc</symbol>
     </owl:NamedIndividual>
     
 
@@ -1679,6 +1952,66 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#keV">
         <rdf:type rdf:resource="http://odahub.io/ontology/unit#EnergyUnit"/>
         <symbol>keV</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#km -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#km">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>km</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#kpc -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#kpc">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>kpc</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#m -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#m">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>m</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#micron -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#micron">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>um</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#nm -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#nm">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>nm</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://odahub.io/ontology/unit#pc -->
+
+
+    <owl:NamedIndividual rdf:about="http://odahub.io/ontology/unit#pc">
+        <rdf:type rdf:resource="http://odahub.io/ontology/unit#LengthUnit"/>
+        <symbol>pc</symbol>
     </owl:NamedIndividual>
     
 

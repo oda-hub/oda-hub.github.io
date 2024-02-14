@@ -177,6 +177,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://odahub.io/ontology#AngleSeconds> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Angle> .
 <http://odahub.io/ontology#AngleSeconds> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#arcsec> .
 # 
+# http://odahub.io/ontology#Angstrom
+<http://odahub.io/ontology#Angstrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Angstrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#Angstrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Angstrom> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
 # http://odahub.io/ontology#AstrophysicalObject
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#AstrophysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#String> .
@@ -198,10 +206,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://odahub.io/ontology#Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
 <http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
-<http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#DataProduct
 <http://odahub.io/ontology#DataProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -227,6 +235,35 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://odahub.io/ontology#DiscoveryWorkflow> <http://purl.org/dc/elements/1.1/description> "workflow which takes some dataset (crucially, unavailable at the time of the Workflow publishing) and produces some Evidence or a Decision" .
 <http://odahub.io/ontology#DiscoveryWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "DiscoveryWorkflow" .
 # 
+# http://odahub.io/ontology#Distance
+<http://odahub.io/ontology#Distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Distance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Length> .
+# 
+# http://odahub.io/ontology#Distance_Mpc
+<http://odahub.io/ontology#Distance_Mpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Distance_Mpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Distance> .
+<http://odahub.io/ontology#Distance_Mpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Mpc> .
+# 
+# http://odahub.io/ontology#Distance_km
+<http://odahub.io/ontology#Distance_km> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Distance_km> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Distance> .
+<http://odahub.io/ontology#Distance_km> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#km> .
+# 
+# http://odahub.io/ontology#Distance_kpc
+<http://odahub.io/ontology#Distance_kpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Distance_kpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Distance> .
+<http://odahub.io/ontology#Distance_kpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#kpc> .
+# 
+# http://odahub.io/ontology#Distance_m
+<http://odahub.io/ontology#Distance_m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Distance_m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Distance> .
+<http://odahub.io/ontology#Distance_m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#m> .
+# 
+# http://odahub.io/ontology#Distance_pc
+<http://odahub.io/ontology#Distance_pc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Distance_pc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Distance> .
+<http://odahub.io/ontology#Distance_pc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#pc> .
+# 
 # http://odahub.io/ontology#EndTime
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
@@ -247,10 +284,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://odahub.io/ontology#Energy
 <http://odahub.io/ontology#Energy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Float> .
-<http://odahub.io/ontology#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#EnergyUnit> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#EnergyUnit> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#Energy_GeV
 <http://odahub.io/ontology#Energy_GeV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -285,18 +322,18 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://odahub.io/ontology#Float> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumericParameter> .
 <http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
-<http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#Frequency
 <http://odahub.io/ontology#Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Float> .
-<http://odahub.io/ontology#Frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#EnergyUnit> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#EnergyUnit> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#FrequencyGHz
 <http://odahub.io/ontology#FrequencyGHz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -316,10 +353,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://odahub.io/ontology#GHz
 <http://odahub.io/ontology#GHz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#GHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#GHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#GHz> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#GHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#GHz> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#Gaia
 <http://odahub.io/ontology#Gaia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -334,37 +371,37 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://odahub.io/ontology#GeV
 <http://odahub.io/ontology#GeV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#GeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#GeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#GeV> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#GeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#GeV> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#Hz
 <http://odahub.io/ontology#Hz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Hz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#Hz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Hz> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Hz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Hz> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#ISGRIEnergy
 <http://odahub.io/ontology#ISGRIEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#ISGRIEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Energy_keV> .
-<http://odahub.io/ontology#ISGRIEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
-_:genid12 <http://www.w3.org/2001/XMLSchema#maxInclusive> "800.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
-_:genid14 <http://www.w3.org/2001/XMLSchema#minInclusive> "15.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#ISGRIEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2001/XMLSchema#maxInclusive> "800.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2001/XMLSchema#minInclusive> "15.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#Image
 <http://odahub.io/ontology#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -379,29 +416,37 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://odahub.io/ontology#Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumericParameter> .
 <http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ParameterProduct> .
-<http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#JEMXEnergy
 <http://odahub.io/ontology#JEMXEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#JEMXEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Energy_keV> .
-<http://odahub.io/ontology#JEMXEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid17 .
-_:genid17 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/2001/XMLSchema#maxInclusive> "35.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
-_:genid21 <http://www.w3.org/2001/XMLSchema#minInclusive> "3.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#JEMXEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2001/XMLSchema#maxInclusive> "35.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2001/XMLSchema#minInclusive> "3.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#Length
+<http://odahub.io/ontology#Length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Length> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Float> .
+<http://odahub.io/ontology#Length> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#LengthUnit> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#LightCurve
 <http://odahub.io/ontology#LightCurve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -412,18 +457,26 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#MHz
 <http://odahub.io/ontology#MHz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#MHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#MHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#MHz> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#MHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#MHz> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#MeV
 <http://odahub.io/ontology#MeV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#MeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#MeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
-_:genid23 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#MeV> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#MeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#MeV> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#Mpc
+<http://odahub.io/ontology#Mpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Mpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#Mpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Mpc> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#NumericParameter
 <http://odahub.io/ontology#NumericParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -456,28 +509,31 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#Percentage
 <http://odahub.io/ontology#Percentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Percentage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Float> .
-<http://odahub.io/ontology#Percentage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid25 .
-_:genid25 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
-_:genid27 <http://www.w3.org/2001/XMLSchema#maxInclusive> "100.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#Percentage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2001/XMLSchema#maxInclusive> "100.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#PhotometricBand
 <http://odahub.io/ontology#PhotometricBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#PhotometricBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#String> .
-<http://odahub.io/ontology#PhotometricBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
-_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid31 .
-_:genid31 <http://www.w3.org/2002/07/owl#oneOf> _:genid46 .
+<http://odahub.io/ontology#PhotometricBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#oneOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
@@ -489,43 +545,40 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "z" .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "y" .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "v" .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "u" .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "z" .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "r" .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "y" .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "i" .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "v" .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "g" .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "u" .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "b" .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "r" .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Q" .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "i" .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "N" .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "g" .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "M" .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "b" .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "L" .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Q" .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "K" .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "N" .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "J" .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "M" .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "H" .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "L" .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "K" .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "J" .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "H" .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#PointOfInterest
 <http://odahub.io/ontology#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -598,10 +651,10 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#TeV
 <http://odahub.io/ontology#TeV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#TeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#TeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#TeV> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#TeV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#TeV> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#TimeFormat
 <http://odahub.io/ontology#TimeFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -617,26 +670,26 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#TimeInstantISOT
 <http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
-<http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology#ISOT> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_format> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#TimeInstantISOT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology#ISOT> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_format> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#TimeInstantMJD
 <http://odahub.io/ontology#TimeInstantMJD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#TimeInstantMJD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstant> .
-<http://odahub.io/ontology#TimeInstantMJD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology#MJD> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_format> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#TimeInstantMJD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology#MJD> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_format> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#TimeInterval
 <http://odahub.io/ontology#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Float> .
-<http://odahub.io/ontology#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#TimeUnit> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://odahub.io/ontology/unit#TimeUnit> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#TimeIntervalDays
 <http://odahub.io/ontology#TimeIntervalDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -656,28 +709,54 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#VisibleBand
 <http://odahub.io/ontology#VisibleBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#VisibleBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#PhotometricBand> .
-<http://odahub.io/ontology#VisibleBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid52 .
-_:genid52 <http://www.w3.org/2002/07/owl#oneOf> _:genid56 .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "v" .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "r" .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "g" .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "b" .
+<http://odahub.io/ontology#VisibleBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#oneOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "v" .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "r" .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "g" .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "b" .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://odahub.io/ontology#VisibleBand> <http://odahub.io/ontology#allowed_value> "b" .
 <http://odahub.io/ontology#VisibleBand> <http://odahub.io/ontology#allowed_value> "g" .
 <http://odahub.io/ontology#VisibleBand> <http://odahub.io/ontology#allowed_value> "r" .
 <http://odahub.io/ontology#VisibleBand> <http://odahub.io/ontology#allowed_value> "v" .
+# 
+# http://odahub.io/ontology#Wavelength
+<http://odahub.io/ontology#Wavelength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Wavelength> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Length> .
+<http://odahub.io/ontology#Wavelength> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Quantity> .
+<http://odahub.io/ontology#Wavelength> <http://www.w3.org/2000/01/rdf-schema#label> "Wavelength" .
+# 
+# http://odahub.io/ontology#Wavelength_A
+<http://odahub.io/ontology#Wavelength_A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Wavelength_A> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Angstrom> .
+<http://odahub.io/ontology#Wavelength_A> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Wavelength> .
+# 
+# http://odahub.io/ontology#Wavelength_m
+<http://odahub.io/ontology#Wavelength_m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Wavelength_m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Wavelength> .
+<http://odahub.io/ontology#Wavelength_m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#m> .
+# 
+# http://odahub.io/ontology#Wavelength_micron
+<http://odahub.io/ontology#Wavelength_micron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Wavelength_micron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Wavelength> .
+<http://odahub.io/ontology#Wavelength_micron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#micron> .
+# 
+# http://odahub.io/ontology#Wavelength_nm
+<http://odahub.io/ontology#Wavelength_nm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Wavelength_nm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Wavelength> .
+<http://odahub.io/ontology#Wavelength_nm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#nm> .
 # 
 # http://odahub.io/ontology#Workflow
 <http://odahub.io/ontology#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -691,66 +770,114 @@ _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#arcmin
 <http://odahub.io/ontology#arcmin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#arcmin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#arcmin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
-_:genid57 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#arcmin> .
-_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#arcmin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#arcmin> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#arcsec
 <http://odahub.io/ontology#arcsec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#arcsec> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#arcsec> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
-_:genid58 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#arcsec> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#arcsec> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#arcsec> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#day
 <http://odahub.io/ontology#day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#day> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#day> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
-_:genid59 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Day> .
-_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#day> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Day> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#degree
 <http://odahub.io/ontology#degree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#degree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#degree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
-_:genid60 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Degree> .
-_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#degree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Degree> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#eV
 <http://odahub.io/ontology#eV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#eV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#eV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
-_:genid61 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#eV> .
-_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#eV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#eV> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#hour
 <http://odahub.io/ontology#hour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#hour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#hour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
-_:genid62 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Hour> .
-_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#hour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Hour> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#keV
 <http://odahub.io/ontology#keV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#keV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#keV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
-_:genid63 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#keV> .
-_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#keV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#keV> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#km
+<http://odahub.io/ontology#km> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#km> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#km> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#km> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#kpc
+<http://odahub.io/ontology#kpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#kpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#kpc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#kpc> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#m
+<http://odahub.io/ontology#m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#m> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#m> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#micron
+<http://odahub.io/ontology#micron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#micron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#micron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#micron> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#nm
+<http://odahub.io/ontology#nm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#nm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#nm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#nm> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#pc
+<http://odahub.io/ontology#pc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#pc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
+<http://odahub.io/ontology#pc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#pc> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology#second
 <http://odahub.io/ontology#second> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#second> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
-<http://odahub.io/ontology#second> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
-_:genid64 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Second> .
-_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://odahub.io/ontology#second> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#hasValue> <http://odahub.io/ontology/unit#Second> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#has_unit> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://odahub.io/ontology/unit#AngleUnit
 <http://odahub.io/ontology/unit#AngleUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -759,6 +886,10 @@ _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology/unit#EnergyUnit
 <http://odahub.io/ontology/unit#EnergyUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology/unit#EnergyUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology/unit#Unit> .
+# 
+# http://odahub.io/ontology/unit#LengthUnit
+<http://odahub.io/ontology/unit#LengthUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology/unit#LengthUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology/unit#Unit> .
 # 
 # http://odahub.io/ontology/unit#TimeUnit
 <http://odahub.io/ontology/unit#TimeUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -790,6 +921,10 @@ _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology#MJD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://odahub.io/ontology#MJD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#TimeFormat> .
 <http://odahub.io/ontology#MJD> <http://odahub.io/ontology#symbol> "mjd" .
+# 
+# http://odahub.io/ontology/unit#Angstrom
+<http://odahub.io/ontology/unit#Angstrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#Angstrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
 # 
 # http://odahub.io/ontology/unit#Day
 <http://odahub.io/ontology/unit#Day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -835,6 +970,11 @@ _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology/unit#Minute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://odahub.io/ontology/unit#Minute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#TimeUnit> .
 <http://odahub.io/ontology/unit#Minute> <http://odahub.io/ontology#symbol> "m" .
+# 
+# http://odahub.io/ontology/unit#Mpc
+<http://odahub.io/ontology/unit#Mpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#Mpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#Mpc> <http://odahub.io/ontology#symbol> "Mpc" .
 # 
 # http://odahub.io/ontology/unit#Radian
 <http://odahub.io/ontology/unit#Radian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -885,6 +1025,36 @@ _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology/unit#keV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://odahub.io/ontology/unit#keV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#EnergyUnit> .
 <http://odahub.io/ontology/unit#keV> <http://odahub.io/ontology#symbol> "keV" .
+# 
+# http://odahub.io/ontology/unit#km
+<http://odahub.io/ontology/unit#km> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#km> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#km> <http://odahub.io/ontology#symbol> "km" .
+# 
+# http://odahub.io/ontology/unit#kpc
+<http://odahub.io/ontology/unit#kpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#kpc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#kpc> <http://odahub.io/ontology#symbol> "kpc" .
+# 
+# http://odahub.io/ontology/unit#m
+<http://odahub.io/ontology/unit#m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#m> <http://odahub.io/ontology#symbol> "m" .
+# 
+# http://odahub.io/ontology/unit#micron
+<http://odahub.io/ontology/unit#micron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#micron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#micron> <http://odahub.io/ontology#symbol> "um" .
+# 
+# http://odahub.io/ontology/unit#nm
+<http://odahub.io/ontology/unit#nm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#nm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#nm> <http://odahub.io/ontology#symbol> "nm" .
+# 
+# http://odahub.io/ontology/unit#pc
+<http://odahub.io/ontology/unit#pc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology/unit#pc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology/unit#LengthUnit> .
+<http://odahub.io/ontology/unit#pc> <http://odahub.io/ontology#symbol> "pc" .
 # 
 # 
 # 
