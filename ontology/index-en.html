@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Wed Feb 14 11:28:57 CET 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Wed Feb 14 11:39:24 CET 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -288,6 +288,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#hour" title="http://odahub.io/ontology#hour">
+         <span>hour</span>
+      </a>
+   </li>
+   <li>
       <a href="#Hz" title="http://odahub.io/ontology#Hz">
          <span>hz</span>
       </a>
@@ -361,6 +366,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#ParameterFormat" title="http://odahub.io/ontology#ParameterFormat">
          <span>parameter format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">
+         <span>parameter product</span>
       </a>
    </li>
    <li>
@@ -448,6 +458,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">
          <span>time interval days</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TimeIntervalHours" title="http://odahub.io/ontology#TimeIntervalHours">
+         <span>time interval hours</span>
       </a>
    </li>
    <li>
@@ -889,6 +904,11 @@ This section provides details for each class and property defined by MMODA Astro
          </a>
       </li>
       <li>
+         <a href="#hour" title="http://odahub.io/ontology#hour">
+            <span>hour</span>
+         </a>
+      </li>
+      <li>
          <a href="#Hz" title="http://odahub.io/ontology#Hz">
             <span>hz</span>
          </a>
@@ -962,6 +982,11 @@ This section provides details for each class and property defined by MMODA Astro
       <li>
          <a href="#ParameterFormat" title="http://odahub.io/ontology#ParameterFormat">
             <span>parameter format</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">
+            <span>parameter product</span>
          </a>
       </li>
       <li>
@@ -1049,6 +1074,11 @@ This section provides details for each class and property defined by MMODA Astro
       <li>
          <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">
             <span>time interval days</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TimeIntervalHours" title="http://odahub.io/ontology#TimeIntervalHours">
+            <span>time interval hours</span>
          </a>
       </li>
       <li>
@@ -1234,6 +1264,11 @@ This section provides details for each class and property defined by MMODA Astro
          <span class="markdown">Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#String" title="http://odahub.io/ontology#String">string</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#AstrophysicalObjectOfInterest"
@@ -1300,6 +1335,7 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has super-classes</dt>
          <dd>
             <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1327,6 +1363,7 @@ This section provides details for each class and property defined by MMODA Astro
             <sup class="type-c" title="class">c</sup>, <a href="#ODABinaryProduct" title="http://odahub.io/ontology#ODABinaryProduct">o d a binary product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ODAPictureProduct" title="http://odahub.io/ontology#ODAPictureProduct">o d a picture product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">o d a text product</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Spectrum" title="http://odahub.io/ontology#Spectrum">spectrum</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -1671,6 +1708,7 @@ This section provides details for each class and property defined by MMODA Astro
             <sup class="type-c" title="class">c</sup>, <a href="#eV" title="http://odahub.io/ontology#eV">e v</a>
             <sup class="type-c" title="class">c</sup>, <a href="#GHz" title="http://odahub.io/ontology#GHz">g hz</a>
             <sup class="type-c" title="class">c</sup>, <a href="#GeV" title="http://odahub.io/ontology#GeV">ge v</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#hour" title="http://odahub.io/ontology#hour">hour</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Hz" title="http://odahub.io/ontology#Hz">hz</a>
             <sup class="type-c" title="class">c</sup>, <a href="#keV" title="http://odahub.io/ontology#keV">ke v</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MHz" title="http://odahub.io/ontology#MHz">m hz</a>
@@ -1692,6 +1730,7 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has super-classes</dt>
          <dd>
             <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1847,6 +1886,26 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="hour">
+      <h3>hour<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#hour</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#TimeIntervalHours" title="http://odahub.io/ontology#TimeIntervalHours">time interval hours</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Hz">
       <h3>hz<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1930,6 +1989,7 @@ This section provides details for each class and property defined by MMODA Astro
          <dt>has super-classes</dt>
          <dd>
             <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2133,6 +2193,30 @@ This section provides details for each class and property defined by MMODA Astro
          <dd>
             <a href="#has_format" title="http://odahub.io/ontology#has_format">has format</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParameterProduct">
+      <h3>parameter product<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ParameterProduct</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#TimeInstant" title="http://odahub.io/ontology#TimeInstant">TimeInstant</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Boolean" title="http://odahub.io/ontology#Boolean">boolean</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Integer" title="http://odahub.io/ontology#Integer">integer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#String" title="http://odahub.io/ontology#String">string</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -2428,11 +2512,13 @@ Subclasses may have other ways to express the content.</span>
          <dt>has super-classes</dt>
          <dd>
             <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
+            <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2536,6 +2622,7 @@ Subclasses may have other ways to express the content.</span>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#TimeIntervalDays" title="http://odahub.io/ontology#TimeIntervalDays">time interval days</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeIntervalHours" title="http://odahub.io/ontology#TimeIntervalHours">time interval hours</a>
             <sup class="type-c" title="class">c</sup>, <a href="#TimeIntervalSeconds" title="http://odahub.io/ontology#TimeIntervalSeconds">time interval seconds</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -2552,6 +2639,22 @@ Subclasses may have other ways to express the content.</span>
          <dt>has super-classes</dt>
          <dd>
             <a href="#day" title="http://odahub.io/ontology#day">day</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">time interval</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeIntervalHours">
+      <h3>time interval hours<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#TimeIntervalHours</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hour" title="http://odahub.io/ontology#hour">hour</a>
             <sup class="type-c" title="class">c</sup>, <a href="#TimeInterval" title="http://odahub.io/ontology#TimeInterval">time interval</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -2608,6 +2711,7 @@ Subclasses may have other ways to express the content.</span>
          <dd>
             <a href="#Quantity" title="http://odahub.io/ontology#Quantity">Quantity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>

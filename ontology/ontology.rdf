@@ -26,7 +26,7 @@
         <dc:title>MMODA Astrophysical Workflow Ontology</dc:title>
         <dc:title>MMODA Astrophysical Workflows and Data Products</dc:title>
         <vann:preferredNamespaceUri>http://odahub.io/ontology</vann:preferredNamespaceUri>
-        <owl:versionIRI>0.1.1-4-ge50bcc5</owl:versionIRI>
+        <owl:versionIRI>dev</owl:versionIRI>
         <foaf:logo rdf:resource="https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"/>
     </owl:Ontology>
     
@@ -342,6 +342,7 @@
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#AstrophysicalObject">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#String"/>
         <rdfs:comment>Any Astrophysical object, possibly contained in space and/or time: Galaxy, Gamma-Ray Burst, Universe. Note that an object can be spatially or temporarily contained within another: e.g. a BlazarFlare is an episode of Blazar life, and a SunSpot is on the Sun.</rdfs:comment>
         <rdfs:label>AstrophysicalObject</rdfs:label>
     </owl:Class>
@@ -373,6 +374,7 @@
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#Boolean">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ParameterProduct"/>
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#WorkflowParameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -539,6 +541,7 @@
 
     <owl:Class rdf:about="http://odahub.io/ontology#Float">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#NumericParameter"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ParameterProduct"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://odahub.io/ontology#value"/>
@@ -710,6 +713,7 @@
 
     <owl:Class rdf:about="http://odahub.io/ontology#Integer">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#NumericParameter"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ParameterProduct"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://odahub.io/ontology#value"/>
@@ -838,6 +842,15 @@
 
     <owl:Class rdf:about="http://odahub.io/ontology#ParameterFormat">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#ParameterProduct -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#ParameterProduct">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#DataProduct"/>
     </owl:Class>
     
 
@@ -1101,6 +1114,7 @@ Subclasses may have other ways to express the content.</rdfs:comment>
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#String">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ParameterProduct"/>
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#WorkflowParameter"/>
     </owl:Class>
     
@@ -1134,6 +1148,7 @@ Subclasses may have other ways to express the content.</rdfs:comment>
 
 
     <owl:Class rdf:about="http://odahub.io/ontology#TimeInstant">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ParameterProduct"/>
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#Quantity"/>
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#WorkflowParameter"/>
         <rdfs:label>TimeInstant</rdfs:label>
@@ -1192,6 +1207,16 @@ Subclasses may have other ways to express the content.</rdfs:comment>
     <owl:Class rdf:about="http://odahub.io/ontology#TimeIntervalDays">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInterval"/>
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#day"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#TimeIntervalHours -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#TimeIntervalHours">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#TimeInterval"/>
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#hour"/>
     </owl:Class>
     
 
@@ -1341,6 +1366,21 @@ Subclasses may have other ways to express the content.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
                 <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#eV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#hour -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#hour">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#ExpressedInUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://odahub.io/ontology#has_unit"/>
+                <owl:hasValue rdf:resource="http://odahub.io/ontology/unit#Hour"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
