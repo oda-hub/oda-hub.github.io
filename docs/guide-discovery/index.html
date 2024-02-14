@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Workflow Publishing and Discovery with KG: Astronomer Guide # Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/ Purpose of this note # We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
-collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities.">
+<meta name="description" content="Workflow Publishing and Discovery with KG: Astronomer Guide #           Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/    Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Workflow Publishing and Discovery with KG: Astronomer Guide # Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/ Purpose of this note # We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):
-collaborate on workflows discover and use ODA-built services discovery and use our record of globally available web-based data analysis services easily contribute your own analysis as web-servces annotate your work in the ways ready for consumption by the synthetic astronomer robots, making some of the reasonable reasoning for scienstics, and most of all, support scientists with discovery space empowering their irreplacible scientific capacities." />
+<meta property="og:description" content="Workflow Publishing and Discovery with KG: Astronomer Guide #           Latest-Version https://github.com/oda-hub/workflow-discovery/, also deployed as https://odahub.io/    Purpose of this note #  We want to demostrate on concrete and scientifically-useful working examples how an astronomer, who might indeed have relatively little interest to look in the code, can leverage ODA Knowledge Base and Knowledge Graphs together with other valuable resources (especially Renku):" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://odahub.io/docs/guide-discovery/" /><meta property="article:section" content="docs" />
 
@@ -19,7 +17,7 @@ collaborate on workflows discover and use ODA-built services discovery and use o
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.61f211eb31dbca9c82285a33507807beabe36fefec17e05073e15b4e292ac263.js" integrity="sha256-YfIR6zHbypyCKFozUHgHvqvjb&#43;/sF&#43;BQc&#43;FbTikqwmM=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.08db5cbcec0b8bef5a2c40c38b3a97bafb964005bff5592f8114261525193699.js" integrity="sha256-CNtcvOwLi&#43;9aLEDDizqXuvuWQAW/9VkvgRQmFSUZNpk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -163,7 +161,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -303,34 +301,34 @@ odaSources:AGN oda:equivalentTo cds:AGN .
 </h3>
 <p>For our purposes, the most important workflow properties are set by their inputs and outputs.</p>
 <p>We will use <code>nb2workflow</code> (commands below will need <code>pip install nb2workflow</code>) to add addition details and instrospection on the workflow notebooks.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name_input <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mrk 421&#34;</span> <span style="color:#75715e"># name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName</span>
-</span></span><span style="display:flex;"><span>radius_input <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.0</span> <span style="color:#75715e"># arcmin</span>
-</span></span></code></pre></div><p>They can be see for example with</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nbinspect final.ipynb
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;name_input&#34;</span>: <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34; name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;default_value&#34;</span>: <span style="color:#e6db74">&#34;Mrk 421&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;name_input&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;owl_type&#34;</span>: <span style="color:#e6db74">&#34;http://odahub.io/ontology/sourceName&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;python_type&#34;</span>: <span style="color:#e6db74">&#34;&lt;class &#39;str&#39;&gt;&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;Mrk 421&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>,
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;radius_input&#34;</span>: <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34; arcmin&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;default_value&#34;</span>: 3.0,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;radius_input&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;owl_type&#34;</span>: <span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema#float&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;python_type&#34;</span>: <span style="color:#e6db74">&#34;&lt;class &#39;float&#39;&gt;&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;value&#34;</span>: 3.0
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>...
-</span></span></code></pre></div><p>Notice how in the first case, owl_type (OWL being the ontology definition language) is derived from the comment.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">name_input <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mrk 421&#34;</span> <span style="color:#75715e"># name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName</span>
+radius_input <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.0</span> <span style="color:#75715e"># arcmin</span>
+</code></pre></div><p>They can be see for example with</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nbinspect final.ipynb
+...
+<span style="color:#e6db74">&#34;name_input&#34;</span>: <span style="color:#f92672">{</span>
+        <span style="color:#e6db74">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34; name of the object; if empty coordinates are used http://odahub.io/ontology/sourceName&#34;</span>,
+        <span style="color:#e6db74">&#34;default_value&#34;</span>: <span style="color:#e6db74">&#34;Mrk 421&#34;</span>,
+        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;name_input&#34;</span>,
+        <span style="color:#e6db74">&#34;owl_type&#34;</span>: <span style="color:#e6db74">&#34;http://odahub.io/ontology/sourceName&#34;</span>,
+        <span style="color:#e6db74">&#34;python_type&#34;</span>: <span style="color:#e6db74">&#34;&lt;class &#39;str&#39;&gt;&#34;</span>,
+        <span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;Mrk 421&#34;</span>
+    <span style="color:#f92672">}</span>,
+...
+<span style="color:#e6db74">&#34;radius_input&#34;</span>: <span style="color:#f92672">{</span>
+        <span style="color:#e6db74">&#34;comment&#34;</span>: <span style="color:#e6db74">&#34; arcmin&#34;</span>,
+        <span style="color:#e6db74">&#34;default_value&#34;</span>: 3.0,
+        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;radius_input&#34;</span>,
+        <span style="color:#e6db74">&#34;owl_type&#34;</span>: <span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema#float&#34;</span>,
+        <span style="color:#e6db74">&#34;python_type&#34;</span>: <span style="color:#e6db74">&#34;&lt;class &#39;float&#39;&gt;&#34;</span>,
+        <span style="color:#e6db74">&#34;value&#34;</span>: 3.0
+    <span style="color:#f92672">}</span>
+...
+</code></pre></div><p>Notice how in the first case, owl_type (OWL being the ontology definition language) is derived from the comment.
 And in the second case, it is derived from the variable type.</p>
 <p>To generate a graph from the notebook:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nb2rdf final-an.ipynb final.rdf
-</span></span></code></pre></div><p>This graph can be viewed, for example, with <a href="www.visualdataweb.de/webvowl">WebVOWL</a>. It can also be published in a common location (see <code>nb2service --help</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nb2rdf final-an.ipynb final.rdf
+</code></pre></div><p>This graph can be viewed, for example, with <a href="www.visualdataweb.de/webvowl">WebVOWL</a>. It can also be published in a common location (see <code>nb2service --help</code>).</p>
 <p><em>TODO: show command to publish</em></p>
 <h3 id="workflow-properties-from-capturing-workflow-behavior">
   Workflow properties from capturing workflow behavior
@@ -427,7 +425,7 @@ If <strong>Renku</strong> will provide simple a limited public graph, we could d
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){if(window.getSelection().toString())return;a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
 
 
  

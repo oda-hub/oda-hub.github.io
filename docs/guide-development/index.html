@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MMODA workflow development Guide # The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
-access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API The users of MMODA are encouraged to become its developers and add new ORDAS.">
+<meta name="description" content="MMODA workflow development Guide #  The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
+ access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API  The users of MMODA are encouraged to become its developers and add new ORDAS.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="MMODA workflow development Guide # The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
-access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API The users of MMODA are encouraged to become its developers and add new ORDAS." />
+<meta property="og:description" content="MMODA workflow development Guide #  The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
+ access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API  The users of MMODA are encouraged to become its developers and add new ORDAS." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://odahub.io/docs/guide-development/" /><meta property="article:section" content="docs" />
 
@@ -19,7 +19,7 @@ access publicly available external astronomical data archives to fetch data rele
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.61f211eb31dbca9c82285a33507807beabe36fefec17e05073e15b4e292ac263.js" integrity="sha256-YfIR6zHbypyCKFozUHgHvqvjb&#43;/sF&#43;BQc&#43;FbTikqwmM=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.08db5cbcec0b8bef5a2c40c38b3a97bafb964005bff5592f8114261525193699.js" integrity="sha256-CNtcvOwLi&#43;9aLEDDizqXuvuWQAW/9VkvgRQmFSUZNpk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -163,7 +163,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -307,10 +307,10 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>Annotations can apply to parameters or entire notebook. In both cases they are kept in the notebook cell tagged <code>parameters</code>.
 For example:</p>
-<pre tabindex="0"><code># oda:version &#34;v0.1.1&#34;
-# oda:reference &#34;https://doi.org/10.1051/0004-6361/202037850&#34;
+<pre tabindex="0"><code># oda:version &quot;v0.1.1&quot;
+# oda:reference &quot;https://doi.org/10.1051/0004-6361/202037850&quot;
 
-source_name = &#34;Crab&#34; # oda:AstrophysicalObject
+source_name = &quot;Crab&quot; # oda:AstrophysicalObject
 reference_energy = 20 # oda:keV
 </code></pre><h3 id="how-to-annotate-the-notebook-outputs">
   How to annotate the notebook outputs
@@ -348,12 +348,12 @@ A test is implemented as another notebook, except that name of the notebook star
 consider reporting task progress using ODA API class ProgressReporter:</p>
 <pre tabindex="0"><code>from oda_api.api import ProgressReporter
 pr = ProgressReporter()
-pr.report_progress(stage=&#39;simulation&#39;, progress=0, substage=&#39;step 1&#39;)
+pr.report_progress(stage='simulation', progress=0, substage='step 1')
 # implement step 1
-pr.report_progress(stage=&#39;simulation&#39;, progress=50, substage=&#39;step 2&#39;)
+pr.report_progress(stage='simulation', progress=50, substage='step 2')
 # implement step 2
-</code></pre><h2 id="make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">
-  Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <a href="https://renkulab.io/">renkulab.io</a>
+</code></pre>Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <h2 id="make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">
+  <a href="https://renkulab.io/">renkulab.io</a>
   <a class="anchor" href="#make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">#</a>
 </h2>
 <p>The parameterized workflow formulated as a Python notebook can be converted into a service provided by <a href="https://www.astro.unige.ch/mmoda/">MMODA</a>  by a bot that scans a specific location <code>astronomy/mmoda</code> in the project directory on the  <a href="https://renkulab.io/">renkulab.io</a> collaborative platform. Creating a new project in this directory will make it visible for the bot. In our example of Fermi/LAT lightcurve workflow, it is in the <a href="https://renkulab.io/projects/astronomy/mmoda/fermi">fermi</a> subdirectory of <code>astronomy/mmoda</code>.</p>
@@ -436,8 +436,8 @@ pr.report_progress(stage=&#39;simulation&#39;, progress=50, substage=&#39;step 2
   <a class="anchor" href="#installation">#</a>
 </h5>
 <p>The plugin can be installed via pip on your own environment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_graph_vis
-</span></span></code></pre></div><p>Alternatively, it can be made available within a Renku session by adding it in the list of requirements of the Renku project, within your <code>requirements.txt</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install renku_graph_vis
+</code></pre></div><p>Alternatively, it can be made available within a Renku session by adding it in the list of requirements of the Renku project, within your <code>requirements.txt</code> file.</p>
 <h4 id="tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">
   Tracking access to astronomical archives and services in the project Knowledge Graph by using <code>renku-aqs-annotation</code> plugin
   <a class="anchor" href="#tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">#</a>
@@ -450,8 +450,8 @@ pr.report_progress(stage=&#39;simulation&#39;, progress=50, substage=&#39;step 2
   <a class="anchor" href="#installation-1">#</a>
 </h5>
 <p>The plugin can be installed either via pip on your own evironment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_aqs_annotation
-</span></span></code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your `requirements.txt`` file for the Renku project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install renku_aqs_annotation
+</code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your `requirements.txt`` file for the Renku project.</p>
 <h3 id="inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">
   Inform <strong>MMODA</strong> team and suggest automatic test cases to ensure service stability
   <a class="anchor" href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">#</a>
@@ -473,7 +473,7 @@ pr.report_progress(stage=&#39;simulation&#39;, progress=50, substage=&#39;step 2
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){if(window.getSelection().toString())return;a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
 
 
  
