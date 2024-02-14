@@ -15,20 +15,10 @@
       "versionIRI" : [ {
         "identifier" : "versionIRI",
         "language" : "undefined",
-        "value" : "dev",
+        "value" : "0.1.2-7-g4a6d931",
         "type" : "label"
       } ],
       "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "https://github.com/burnout87",
-        "type" : "iri"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "https://github.com/volodymyrss",
-        "type" : "iri"
-      }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "https://github.com/dsavchenko",
@@ -38,6 +28,16 @@
         "language" : "undefined",
         "value" : "https://github.com/andriineronov",
         "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://github.com/burnout87",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://github.com/volodymyrss",
+        "type" : "iri"
       } ],
       "logo" : [ {
         "identifier" : "logo",
@@ -45,16 +45,16 @@
         "value" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png",
         "type" : "iri"
       } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://odahub.io/ontology",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/volodymyrss/hugo-odahub.git",
         "type" : "label"
       } ],
       "abstract" : [ {
@@ -96,7 +96,7 @@
     "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "64",
@@ -255,10 +255,10 @@
     "id" : "149",
     "type" : "owl:Class"
   }, {
-    "id" : "91",
+    "id" : "153",
     "type" : "owl:Class"
   }, {
-    "id" : "153",
+    "id" : "91",
     "type" : "owl:Class"
   }, {
     "id" : "37",
@@ -348,7 +348,7 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "56",
@@ -358,6 +358,16 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "http://odahub.io/ontology#PointOfInterest",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointOfInterest",
+      "undefined" : "PointOfInterest"
+    },
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
     "iri" : "http://odahub.io/ontology/unit#TimeUnit",
     "baseIri" : "http://odahub.io/ontology/unit",
     "instances" : 0,
@@ -365,20 +375,6 @@
       "IRI-based" : "TimeUnit"
     },
     "individuals" : [ {
-      "iri" : "http://odahub.io/ontology/unit#Minute",
-      "baseIri" : "http://odahub.io/ontology/unit",
-      "annotations" : {
-        "symbol" : [ {
-          "identifier" : "symbol",
-          "language" : "undefined",
-          "value" : "m",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "Minute"
-      }
-    }, {
       "iri" : "http://odahub.io/ontology/unit#Second",
       "baseIri" : "http://odahub.io/ontology/unit",
       "annotations" : {
@@ -391,6 +387,20 @@
       },
       "labels" : {
         "IRI-based" : "Second"
+      }
+    }, {
+      "iri" : "http://odahub.io/ontology/unit#Minute",
+      "baseIri" : "http://odahub.io/ontology/unit",
+      "annotations" : {
+        "symbol" : [ {
+          "identifier" : "symbol",
+          "language" : "undefined",
+          "value" : "m",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Minute"
       }
     }, {
       "iri" : "http://odahub.io/ontology/unit#Hour",
@@ -422,16 +432,6 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "9",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "http://odahub.io/ontology#PointOfInterest",
-    "baseIri" : "http://odahub.io/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PointOfInterest",
-      "undefined" : "PointOfInterest"
-    },
     "id" : "11",
     "superClasses" : [ "12" ]
   }, {
@@ -470,20 +470,6 @@
         "IRI-based" : "arcsec"
       }
     }, {
-      "iri" : "http://odahub.io/ontology/unit#hourangle_Second",
-      "baseIri" : "http://odahub.io/ontology/unit",
-      "annotations" : {
-        "symbol" : [ {
-          "identifier" : "symbol",
-          "language" : "undefined",
-          "value" : "s",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "hourangle_Second"
-      }
-    }, {
       "iri" : "http://odahub.io/ontology/unit#Degree",
       "baseIri" : "http://odahub.io/ontology/unit",
       "annotations" : {
@@ -496,6 +482,20 @@
       },
       "labels" : {
         "IRI-based" : "Degree"
+      }
+    }, {
+      "iri" : "http://odahub.io/ontology/unit#hourangle_Second",
+      "baseIri" : "http://odahub.io/ontology/unit",
+      "annotations" : {
+        "symbol" : [ {
+          "identifier" : "symbol",
+          "language" : "undefined",
+          "value" : "s",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "hourangle_Second"
       }
     }, {
       "iri" : "http://odahub.io/ontology/unit#hourangle_Minute",
@@ -542,7 +542,7 @@
     } ],
     "attributes" : [ "external" ],
     "id" : "25",
-    "superClasses" : [ "10" ]
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://odahub.io/ontology#degree",
     "baseIri" : "http://odahub.io/ontology",
@@ -582,11 +582,11 @@
       "IRI-based" : "SkyCoordinates",
       "undefined" : "SkyCoordinates"
     },
-    "subClasses" : [ "11" ],
+    "subClasses" : [ "9" ],
     "comment" : {
       "undefined" : "Sky coordinates. Typically represented as a string as known to https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html .\nSubclasses may have other ways to express the content."
     },
-    "id" : "12",
+    "id" : "10",
     "superClasses" : [ "69", "70" ]
   }, {
     "iri" : "http://odahub.io/ontology#VisibleBand",
@@ -594,11 +594,6 @@
     "instances" : 0,
     "annotations" : {
       "allowed_value" : [ {
-        "identifier" : "allowed_value",
-        "language" : "undefined",
-        "value" : "r",
-        "type" : "label"
-      }, {
         "identifier" : "allowed_value",
         "language" : "undefined",
         "value" : "b",
@@ -612,6 +607,11 @@
         "identifier" : "allowed_value",
         "language" : "undefined",
         "value" : "g",
+        "type" : "label"
+      }, {
+        "identifier" : "allowed_value",
+        "language" : "undefined",
+        "value" : "r",
         "type" : "label"
       } ]
     },
@@ -759,20 +759,6 @@
         "IRI-based" : "keV"
       }
     }, {
-      "iri" : "http://odahub.io/ontology/unit#MHz",
-      "baseIri" : "http://odahub.io/ontology/unit",
-      "annotations" : {
-        "symbol" : [ {
-          "identifier" : "symbol",
-          "language" : "undefined",
-          "value" : "MHz",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "MHz"
-      }
-    }, {
       "iri" : "http://odahub.io/ontology/unit#Hz",
       "baseIri" : "http://odahub.io/ontology/unit",
       "annotations" : {
@@ -785,6 +771,20 @@
       },
       "labels" : {
         "IRI-based" : "Hz"
+      }
+    }, {
+      "iri" : "http://odahub.io/ontology/unit#MHz",
+      "baseIri" : "http://odahub.io/ontology/unit",
+      "annotations" : {
+        "symbol" : [ {
+          "identifier" : "symbol",
+          "language" : "undefined",
+          "value" : "MHz",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "MHz"
       }
     }, {
       "iri" : "http://odahub.io/ontology/unit#eV",
@@ -803,7 +803,7 @@
     } ],
     "attributes" : [ "external" ],
     "id" : "93",
-    "superClasses" : [ "10" ]
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://odahub.io/ontology#TimeIntervalSeconds",
     "baseIri" : "http://odahub.io/ontology",
@@ -918,7 +918,7 @@
       "IRI-based" : "WorkflowParameter",
       "undefined" : "WorkflowParameter"
     },
-    "subClasses" : [ "95", "37", "107", "73", "4", "39", "6", "80", "12", "2", "96" ],
+    "subClasses" : [ "95", "37", "107", "73", "4", "39", "6", "80", "10", "2", "96" ],
     "id" : "69"
   }, {
     "iri" : "http://odahub.io/ontology#Workflow",
@@ -1124,11 +1124,11 @@
       "IRI-based" : "Quantity",
       "undefined" : "Quantity"
     },
-    "subClasses" : [ "37", "80", "12", "2" ],
+    "subClasses" : [ "37", "80", "10", "2" ],
     "id" : "70"
   }, {
     "instances" : 0,
-    "union" : [ "21", "12" ],
+    "union" : [ "21", "10" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "134"
   }, {
@@ -1223,6 +1223,15 @@
     "id" : "149",
     "superClasses" : [ "91" ]
   }, {
+    "iri" : "http://odahub.io/ontology#ODATextProduct",
+    "baseIri" : "http://odahub.io/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ODATextProduct"
+    },
+    "id" : "153",
+    "superClasses" : [ "91" ]
+  }, {
     "iri" : "http://odahub.io/ontology#DataProduct",
     "baseIri" : "http://odahub.io/ontology",
     "instances" : 0,
@@ -1232,15 +1241,6 @@
     },
     "subClasses" : [ "153", "154", "94", "141", "155", "90", "114", "149" ],
     "id" : "91"
-  }, {
-    "iri" : "http://odahub.io/ontology#ODATextProduct",
-    "baseIri" : "http://odahub.io/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ODATextProduct"
-    },
-    "id" : "153",
-    "superClasses" : [ "91" ]
   }, {
     "iri" : "http://odahub.io/ontology#RightAscension",
     "baseIri" : "http://odahub.io/ontology",
@@ -1555,9 +1555,9 @@
       "IRI-based" : "Unit",
       "undefined" : "Unit"
     },
-    "subClasses" : [ "9", "25", "93" ],
+    "subClasses" : [ "11", "25", "93" ],
     "attributes" : [ "external" ],
-    "id" : "10"
+    "id" : "12"
   }, {
     "iri" : "http://odahub.io/ontology#TimeInterval",
     "baseIri" : "http://odahub.io/ontology",
@@ -1975,42 +1975,42 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "3"
   }, {
     "range" : "2",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
     "range" : "2",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "range" : "18",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "21",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -2032,83 +2032,83 @@
       "undefined" : "hasRA"
     },
     "superproperty" : [ "29" ],
-    "domain" : "12",
+    "domain" : "10",
     "attributes" : [ "object" ],
     "id" : "33"
   }, {
     "range" : "44",
     "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "42"
   }, {
     "range" : "47",
     "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "45"
   }, {
     "range" : "50",
     "domain" : "49",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "48"
   }, {
     "range" : "50",
     "domain" : "52",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "51"
   }, {
     "range" : "50",
     "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "53"
   }, {
     "range" : "50",
     "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "55"
   }, {
     "range" : "50",
     "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "57"
   }, {
     "range" : "14",
     "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
     "range" : "14",
     "domain" : "62",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "61"
   }, {
     "range" : "65",
     "domain" : "64",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "63"
   }, {
     "range" : "68",
     "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "66"
   }, {
     "range" : "73",
     "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   }, {
     "range" : "73",
     "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "74"
   }, {
     "range" : "77",
     "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "75"
   }, {
     "range" : "80",
     "domain" : "79",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "78"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
@@ -2118,7 +2118,7 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "30",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "99"
   }, {
     "iri" : "http://odahub.io/ontology#isRequestingAstroObject",
@@ -2142,27 +2142,27 @@
       "IRI-based" : "value"
     },
     "domain" : "69",
-    "attributes" : [ "datatype", "functional" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "108"
   }, {
     "range" : "56",
     "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "110"
   }, {
     "range" : "56",
     "domain" : "97",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
     "range" : "56",
     "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "112"
   }, {
-    "range" : "10",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "115"
   }, {
     "iri" : "http://odahub.io/ontology#hasDec",
@@ -2173,23 +2173,23 @@
       "undefined" : "hasDec"
     },
     "superproperty" : [ "29" ],
-    "domain" : "12",
+    "domain" : "10",
     "attributes" : [ "object" ],
     "id" : "34"
   }, {
-    "range" : "10",
+    "range" : "12",
     "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "116"
   }, {
-    "range" : "10",
+    "range" : "12",
     "domain" : "93",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
     "iri" : "http://odahub.io/ontology#hasCoordinates",
     "baseIri" : "http://odahub.io/ontology",
-    "range" : "12",
+    "range" : "10",
     "label" : {
       "IRI-based" : "hasCoordinates",
       "undefined" : "hasCoordinates"
@@ -2201,12 +2201,12 @@
   }, {
     "range" : "52",
     "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
     "range" : "52",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
     "iri" : "http://odahub.io/ontology#has_format",
@@ -2222,127 +2222,127 @@
   }, {
     "range" : "52",
     "domain" : "87",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "121"
   }, {
     "range" : "4",
     "domain" : "82",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "122"
   }, {
     "range" : "4",
     "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "123"
   }, {
     "range" : "85",
     "domain" : "86",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
     "range" : "83",
     "domain" : "84",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
     "range" : "70",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "126"
   }, {
     "range" : "70",
-    "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "127"
   }, {
     "range" : "105",
     "domain" : "103",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "128"
   }, {
-    "range" : "12",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "129"
   }, {
     "range" : "70",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "130"
   }, {
     "range" : "40",
     "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "131"
   }, {
     "range" : "70",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "132"
   }, {
     "range" : "79",
     "domain" : "107",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "133"
   }, {
     "range" : "38",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
     "range" : "26",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "136"
   }, {
     "range" : "94",
     "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "137"
   }, {
     "range" : "120",
     "domain" : "139",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "138"
   }, {
     "range" : "106",
     "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "140"
   }, {
     "range" : "94",
     "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "144"
   }, {
     "range" : "94",
     "domain" : "95",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "145"
   }, {
     "range" : "94",
     "domain" : "96",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "146"
   }, {
     "range" : "94",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "147"
   }, {
     "range" : "37",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "148"
   }, {
     "range" : "91",
     "domain" : "149",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "150"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
     "baseIri" : "http://odahub.io/ontology",
-    "range" : "10",
+    "range" : "12",
     "label" : {
       "IRI-based" : "has_unit"
     },
@@ -2353,142 +2353,142 @@
   }, {
     "range" : "1",
     "domain" : "143",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "151"
   }, {
     "range" : "1",
     "domain" : "82",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "152"
   }, {
     "range" : "91",
     "domain" : "114",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "156"
   }, {
     "range" : "91",
     "domain" : "90",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "157"
   }, {
     "range" : "91",
     "domain" : "155",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "159"
   }, {
     "range" : "91",
     "domain" : "154",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "160"
   }, {
     "range" : "91",
     "domain" : "153",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "161"
   }, {
     "range" : "91",
     "domain" : "141",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "162"
   }, {
     "range" : "91",
     "domain" : "94",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "163"
   }, {
     "range" : "52",
     "domain" : "89",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "164"
   }, {
     "range" : "52",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "165"
   }, {
     "range" : "6",
     "domain" : "143",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "166"
   }, {
     "range" : "6",
     "domain" : "142",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "167"
   }, {
     "range" : "27",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "168"
   }, {
     "range" : "27",
     "domain" : "105",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "169"
   }, {
     "range" : "27",
     "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "170"
   }, {
     "range" : "27",
     "domain" : "68",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "171"
   }, {
     "range" : "104",
     "domain" : "87",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "172"
   }, {
     "range" : "8",
     "domain" : "142",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "173"
   }, {
     "range" : "8",
     "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "174"
   }, {
     "range" : "54",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "175"
   }, {
     "range" : "54",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "176"
   }, {
     "range" : "54",
     "domain" : "84",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "177"
   }, {
     "range" : "54",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "178"
   }, {
     "range" : "28",
     "domain" : "79",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "179"
   }, {
     "range" : "49",
     "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "180"
   }, {
     "range" : "54",
     "domain" : "86",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "181"
   }, {
     "range" : "28",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "182"
   }, {
     "iri" : "http://odahub.io/ontology#isRequesting",
@@ -2516,72 +2516,72 @@
   }, {
     "range" : "49",
     "domain" : "103",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "185"
   }, {
     "range" : "95",
     "domain" : "65",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "186"
   }, {
     "range" : "49",
     "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "187"
   }, {
     "range" : "98",
     "domain" : "97",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "188"
   }, {
     "range" : "92",
     "domain" : "90",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "189"
   }, {
     "range" : "95",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "190"
   }, {
     "range" : "101",
     "domain" : "89",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "191"
   }, {
     "range" : "69",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "192"
   }, {
     "range" : "69",
-    "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "193"
   }, {
     "range" : "73",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "194"
   }, {
     "range" : "69",
     "domain" : "96",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "195"
   }, {
     "range" : "69",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "196"
   }, {
     "range" : "69",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "197"
   }, {
     "range" : "69",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "198"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
@@ -2592,7 +2592,7 @@
     },
     "superproperty" : [ "29" ],
     "domain" : "52",
-    "attributes" : [ "functional", "object", "someValues" ],
+    "attributes" : [ "functional", "someValues", "object" ],
     "id" : "200"
   }, {
     "iri" : "http://odahub.io/ontology#value",
@@ -2602,7 +2602,7 @@
       "IRI-based" : "value"
     },
     "domain" : "50",
-    "attributes" : [ "datatype", "functional", "allValues" ],
+    "attributes" : [ "functional", "datatype", "allValues" ],
     "id" : "201"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
@@ -2613,7 +2613,7 @@
     },
     "superproperty" : [ "29" ],
     "domain" : "49",
-    "attributes" : [ "functional", "object", "someValues" ],
+    "attributes" : [ "functional", "someValues", "object" ],
     "id" : "203"
   }, {
     "iri" : "http://odahub.io/ontology#value",
@@ -2623,18 +2623,18 @@
       "IRI-based" : "value"
     },
     "domain" : "72",
-    "attributes" : [ "datatype", "functional", "allValues" ],
+    "attributes" : [ "functional", "datatype", "allValues" ],
     "id" : "204"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
     "baseIri" : "http://odahub.io/ontology",
-    "range" : "9",
+    "range" : "11",
     "label" : {
       "IRI-based" : "has_unit"
     },
     "superproperty" : [ "29" ],
     "domain" : "56",
-    "attributes" : [ "functional", "object", "someValues" ],
+    "attributes" : [ "functional", "someValues", "object" ],
     "id" : "206"
   }, {
     "iri" : "http://odahub.io/ontology#has_unit",
@@ -2645,7 +2645,7 @@
     },
     "superproperty" : [ "29" ],
     "domain" : "54",
-    "attributes" : [ "functional", "object", "someValues" ],
+    "attributes" : [ "functional", "someValues", "object" ],
     "id" : "207"
   }, {
     "iri" : "http://odahub.io/ontology#value",
@@ -2655,62 +2655,62 @@
       "IRI-based" : "value"
     },
     "domain" : "96",
-    "attributes" : [ "datatype", "functional", "allValues" ],
+    "attributes" : [ "functional", "datatype", "allValues" ],
     "id" : "208"
   }, {
     "range" : "69",
     "domain" : "107",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "209"
   }, {
     "range" : "69",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "210"
   }, {
     "range" : "69",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "211"
   }, {
     "range" : "69",
     "domain" : "73",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "212"
   }, {
     "range" : "27",
     "domain" : "101",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "213"
   }, {
     "range" : "27",
     "domain" : "104",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "214"
   }, {
     "range" : "69",
     "domain" : "95",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "215"
   }, {
     "range" : "27",
     "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "216"
   }, {
     "range" : "27",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "217"
   }, {
     "range" : "27",
     "domain" : "85",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "218"
   }, {
     "range" : "27",
     "domain" : "83",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "219"
   }, {
     "iri" : "http://odahub.io/ontology#isUsing",
@@ -2726,22 +2726,22 @@
   }, {
     "range" : "27",
     "domain" : "106",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "220"
   }, {
     "range" : "27",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "221"
   }, {
     "range" : "27",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "222"
   }, {
     "range" : "27",
     "domain" : "98",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "223"
   } ]
 }
