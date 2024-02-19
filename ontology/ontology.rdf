@@ -26,7 +26,7 @@
         <dc:title>MMODA Astrophysical Workflow Ontology</dc:title>
         <dc:title>MMODA Astrophysical Workflows and Data Products</dc:title>
         <vann:preferredNamespaceUri>http://odahub.io/ontology</vann:preferredNamespaceUri>
-        <owl:versionIRI>1287915</owl:versionIRI>
+        <owl:versionIRI>c124ad9</owl:versionIRI>
         <foaf:logo rdf:resource="https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"/>
     </owl:Ontology>
     
@@ -610,6 +610,24 @@
     
 
 
+    <!-- http://odahub.io/ontology#FileReference -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#FileReference">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#FileURL -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#FileURL">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#FileReference"/>
+    </owl:Class>
+    
+
+
     <!-- http://odahub.io/ontology#Float -->
 
 
@@ -937,6 +955,15 @@
 
     <owl:Class rdf:about="http://odahub.io/ontology#ODATextProduct">
         <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#DataProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://odahub.io/ontology#POSIXPath -->
+
+
+    <owl:Class rdf:about="http://odahub.io/ontology#POSIXPath">
+        <rdfs:subClassOf rdf:resource="http://odahub.io/ontology#FileReference"/>
     </owl:Class>
     
 

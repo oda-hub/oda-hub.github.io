@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Wed Feb 14 11:48:31 UTC 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Mon Feb 19 14:46:42 UTC 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -282,6 +282,16 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#FileReference" title="http://odahub.io/ontology#FileReference">
+         <span>file reference</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FileURL" title="http://odahub.io/ontology#FileURL">
+         <span>file u r l</span>
+      </a>
+   </li>
+   <li>
       <a href="#Float" title="http://odahub.io/ontology#Float">
          <span>float</span>
       </a>
@@ -436,6 +446,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">
          <span>o d a text product</span>
+      </a>
+   </li>
+   <li>
+      <a href="#POSIXPath" title="http://odahub.io/ontology#POSIXPath">
+         <span>p o s i x path</span>
       </a>
    </li>
    <li>
@@ -1041,6 +1056,16 @@ This section provides details for each class and property defined by MMODA Astro
          </a>
       </li>
       <li>
+         <a href="#FileReference" title="http://odahub.io/ontology#FileReference">
+            <span>file reference</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FileURL" title="http://odahub.io/ontology#FileURL">
+            <span>file u r l</span>
+         </a>
+      </li>
+      <li>
          <a href="#Float" title="http://odahub.io/ontology#Float">
             <span>float</span>
          </a>
@@ -1195,6 +1220,11 @@ This section provides details for each class and property defined by MMODA Astro
       <li>
          <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">
             <span>o d a text product</span>
+         </a>
+      </li>
+      <li>
+         <a href="#POSIXPath" title="http://odahub.io/ontology#POSIXPath">
+            <span>p o s i x path</span>
          </a>
       </li>
       <li>
@@ -2097,6 +2127,42 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="FileReference">
+      <h3>file reference<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#FileReference</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#String" title="http://odahub.io/ontology#String">string</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FileURL" title="http://odahub.io/ontology#FileURL">file u r l</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#POSIXPath" title="http://odahub.io/ontology#POSIXPath">p o s i x path</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FileURL">
+      <h3>file u r l<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#FileURL</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FileReference" title="http://odahub.io/ontology#FileReference">file reference</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Float">
       <h3>float<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -2717,6 +2783,21 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="POSIXPath">
+      <h3>p o s i x path<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#POSIXPath</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FileReference" title="http://odahub.io/ontology#FileReference">file reference</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ParameterFormat">
       <h3>parameter format<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3087,6 +3168,7 @@ Subclasses may have other ways to express the content.</span>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FileReference" title="http://odahub.io/ontology#FileReference">file reference</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
             <sup class="type-c" title="class">c</sup>
          </dd>

@@ -486,7 +486,7 @@
     "@value" : "http://odahub.io/ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@value" : "1287915"
+    "@value" : "c124ad9"
   } ],
   "http://xmlns.com/foaf/0.1/logo" : [ {
     "@id" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"
@@ -755,6 +755,18 @@
     "@id" : "http://odahub.io/ontology#NumericParameter"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#FileReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#String"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#FileURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#FileReference"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#Float",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -969,6 +981,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#DataProduct"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#POSIXPath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#FileReference"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#ParameterFormat",

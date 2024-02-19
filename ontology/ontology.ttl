@@ -22,7 +22,7 @@
                              <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" ,
                                                                      "MMODA Astrophysical Workflows and Data Products" ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" ;
-                             owl:versionIRI "1287915" ;
+                             owl:versionIRI "c124ad9" ;
                              <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 
 #################################################################
@@ -365,6 +365,16 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                  rdfs:subClassOf :NumericParameter .
 
 
+###  http://odahub.io/ontology#FileReference
+:FileReference rdf:type owl:Class ;
+               rdfs:subClassOf :String .
+
+
+###  http://odahub.io/ontology#FileURL
+:FileURL rdf:type owl:Class ;
+         rdfs:subClassOf :FileReference .
+
+
 ###  http://odahub.io/ontology#Float
 :Float rdf:type owl:Class ;
        rdfs:subClassOf :NumericParameter ,
@@ -560,6 +570,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#ODATextProduct
 :ODATextProduct rdf:type owl:Class ;
                 rdfs:subClassOf :DataProduct .
+
+
+###  http://odahub.io/ontology#POSIXPath
+:POSIXPath rdf:type owl:Class ;
+           rdfs:subClassOf :FileReference .
 
 
 ###  http://odahub.io/ontology#ParameterFormat

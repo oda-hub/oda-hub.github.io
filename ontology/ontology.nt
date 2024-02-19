@@ -9,7 +9,7 @@
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" .
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
 <http://odahub.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" .
-<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "1287915" .
+<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "c124ad9" .
 <http://odahub.io/ontology> <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 # 
 # 
@@ -318,6 +318,14 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://odahub.io/ontology#ExpressedInUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#ExpressedInUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumericParameter> .
 # 
+# http://odahub.io/ontology#FileReference
+<http://odahub.io/ontology#FileReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#FileReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#String> .
+# 
+# http://odahub.io/ontology#FileURL
+<http://odahub.io/ontology#FileURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#FileURL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#FileReference> .
+# 
 # http://odahub.io/ontology#Float
 <http://odahub.io/ontology#Float> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#Float> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumericParameter> .
@@ -497,6 +505,10 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#ODATextProduct
 <http://odahub.io/ontology#ODATextProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#ODATextProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
+# 
+# http://odahub.io/ontology#POSIXPath
+<http://odahub.io/ontology#POSIXPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#POSIXPath> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#FileReference> .
 # 
 # http://odahub.io/ontology#ParameterFormat
 <http://odahub.io/ontology#ParameterFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
