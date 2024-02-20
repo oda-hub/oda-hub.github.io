@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.b257f5e8cef5b82de2dea54631dbae9b289e466883e83b45086472548efadd18.js" integrity="sha256-slf16M71uC3i3qVGMduumyieRmiD6DtFCGRyVI763Rg=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.0fc7b85a66ada5a1795487a8d7b1175a0d1c137a534b6e1a49c1c0c03c8aee51.js" integrity="sha256-D8e4WmatpaF5VIeo17EXWg0cE3pTS24aScHAwDyK7lE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -371,7 +371,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
 <p><img src="tmp9_1.png" alt="image" /></p>
 <p>In the example of Fermi/LAT analysis we are considering, packages <code>astropy</code>, <code>matplotlib</code> and <code>astroquery</code> packages will be needed. They can be added in the requirements.txt file as shown above.</p>
 <p>Once you are done with uploading your notebook and adding missing Python packages into the requirements.txt file, you can commit changes to your project by going to the GitLab tab in the Jupyter lab interface. You will see files that have been added or modified appearing as such in the dedicated sub-panel as shown below:</p>
-<p><img src="tmp10_1.png" alt="image" /></p>
+<p><img src="tmp10_2.png" alt="image" /></p>
 <p>Promote these files to the &ldquo;Staged&rdquo; state by clicking at the &ldquo;+&rdquo; signs next to them and commit changes to your project by clicking at the &ldquo;Commit&rdquo; buttong just below the file list. Next, push the comitted changes to the Gitlab by pressing the &ldquo;push&rdquo; button (see the screenshot above).</p>
 <p>Now the CI/CD of the Gitlab will generate a new container in which all necessary Python packages and the notebook to be promoted to a service will be available. This may take a few minutes. You can test this new container in operation if you start a new interactive session on renkulab.io, using the container produced from your latest commit.</p>
 <p>If the notebook runs as expected and produces correct outputs, you may proceed to the next stage and deploy a new service.</p>
@@ -451,7 +451,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
 </h5>
 <p>The plugin can be installed either via pip on your own evironment:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install renku_aqs_annotation
-</code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your `requirements.txt`` file for the Renku project.</p>
+</code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your <code>requirements.txt</code> file for the Renku project.</p>
 <h3 id="inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">
   Inform <strong>MMODA</strong> team and suggest automatic test cases to ensure service stability
   <a class="anchor" href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">#</a>
