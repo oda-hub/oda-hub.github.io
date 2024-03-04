@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.0fc7b85a66ada5a1795487a8d7b1175a0d1c137a534b6e1a49c1c0c03c8aee51.js" integrity="sha256-D8e4WmatpaF5VIeo17EXWg0cE3pTS24aScHAwDyK7lE=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.4737e3cd5e6d749baa89bff911d3a3753cce6fe0bdbba18b4c5fc4e992dee595.js" integrity="sha256-RzfjzV5tdJuqib/5EdOjdTzOb&#43;C9u6GLTF/E6ZLe5ZU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -385,7 +385,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
 <p><img src="tmp11.png" alt="image" /></p>
 <p>At the GitLab webpage, go to the &ldquo;Settings&rdquo; section, the &ldquo;Topic&rdquo; field is in the &ldquo;General&rdquo; settings:</p>
 <p><img src="tmp12.png" alt="image" /></p>
-<p>Note that you may add multiple topics in this field. In the example of Fermi/LAT shown above, there is an additional topic &ldquo;MM Gamma-rays&rdquo; that helps <a href="https://www.astro.unige.ch/mmoda">MMODA</a> users to classify workflows by the messenger and waveband types. The additional topic will appear in the name of the tab of your workflow on <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend. The topics associated to your project are visible right below the project name on the Gitlab pages:</p>
+<p>Note that you may add multiple topics in this field. In the example of Fermi/LAT shown above, there is an additional topic &ldquo;MM Gamma-rays&rdquo; that helps <a href="https://www.astro.unige.ch/mmoda">MMODA</a> users to classify workflows by the messenger and waveband types. Any topic which starts with &ldquo;MM &quot; (note the space) will be shown as a messenger label in MMODA, excluding the &ldquo;MM &quot; prefix. The additional topic will appear in the name of the tab of your workflow on <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend. The topics associated to your project are visible right below the project name on the Gitlab pages:</p>
 <p><img src="tmp13.png" alt="image" /></p>
 <p>Once the project is associated to the <code>live-workflow</code> topic, it becomes visible to a bot that periodically scans the Gitlabs of the projects in the <code>astronomy/mmoda</code> domain, looking for new or modified &ldquo;live&rdquo; workflows that propose themselves as online services for MMODA. The bot will try to convert your notebook into a service and if this works, it will automatically add the new service  <a href="https://www.astro.unige.ch/mmoda">MMODA</a> (by default, on to its staging instance). You can monitor the progress of the bot work if you visit the &ldquo;COntinuous Integration / Continuous Development&rdquo; (CI/CD) section of the GitLab page of your project. It will show that a pipeline is in progress, both on the build of the updated renkulab project container image and on the &ldquo;External&rdquo; MMODA side:</p>
 <p><img src="tmp20.png" alt="image" /></p>
