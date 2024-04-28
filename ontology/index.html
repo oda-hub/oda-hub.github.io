@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Tue Feb 20 08:57:54 UTC 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Sun Apr 28 19:35:08 UTC 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -171,6 +171,16 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Boolean" title="http://odahub.io/ontology#Boolean">
          <span>boolean</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ComputeResource" title="http://odahub.io/ontology#ComputeResource">
+         <span>compute resource</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Dask" title="http://odahub.io/ontology#Dask">
+         <span>dask</span>
       </a>
    </li>
    <li>
@@ -394,6 +404,16 @@ This ontology has the following classes and properties.</span>
       <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
    </li>
    <li>
+      <a href="#LocalDB" title="http://odahub.io/ontology#LocalDB">
+         <span>local d b</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LongString" title="http://odahub.io/ontology#LongString">
+         <span>long string</span>
+      </a>
+   </li>
+   <li>
       <a href="#m" title="http://odahub.io/ontology#m">
          <span>m</span>
       </a>
@@ -497,6 +517,11 @@ This ontology has the following classes and properties.</span>
       <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
    </li>
    <li>
+      <a href="#S3" title="http://odahub.io/ontology#S3">
+         <span>s3</span>
+      </a>
+   </li>
+   <li>
       <a href="#second" title="http://odahub.io/ontology#second">
          <span>second</span>
       </a>
@@ -519,6 +544,16 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
+   </li>
+   <li>
+      <a href="#StorageAccessType" title="http://odahub.io/ontology#StorageAccessType">
+         <span>storage access type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StorageResource" title="http://odahub.io/ontology#StorageResource">
+         <span>storage resource</span>
+      </a>
    </li>
    <li>
       <a href="#String" title="http://odahub.io/ontology#String">
@@ -612,6 +647,11 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
+      <a href="#accessMode" title="http://odahub.io/ontology#accessMode">
+         <span>access mode</span>
+      </a>
+   </li>
+   <li>
       <a href="#has_format" title="http://odahub.io/ontology#has_format">
          <span>has format</span>
       </a>
@@ -651,7 +691,38 @@ This ontology has the following classes and properties.</span>
          <span>is using</span>
       </a>
    </li>
+   <li>
+      <a href="#usesOptionalResource" title="http://odahub.io/ontology#usesOptionalResource">
+         <span>uses optional resource</span>
+      </a>
+   </li>
+   <li>
+      <a href="#usesRequiredResource" title="http://odahub.io/ontology#usesRequiredResource">
+         <span>uses required resource</span>
+      </a>
+   </li>
+   <li>
+      <a href="#usesResource" title="http://odahub.io/ontology#usesResource">
+         <span>uses resource</span>
+      </a>
+   </li>
 </ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#memory_per_process" title="http://odahub.io/ontology#memory_per_process">
+         <span>memory per process</span>
+      </a>
+   </li>
+   <li>
+      <a href="#n_processes" title="http://odahub.io/ontology#n_processes">
+         <span>n processes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#resourceBindingEnvVarName"
+         title="http://odahub.io/ontology#resourceBindingEnvVarName">
+         <span>resource binding env var name</span>
+      </a>
+   </li>
    <li>
       <a href="#value" title="http://odahub.io/ontology#value">
          <span>value</span>
@@ -709,6 +780,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#title" title="http://odahub.io/ontology#title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
          <span>title</span>
       </a>
@@ -742,6 +818,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/unit#arcsec" title="http://odahub.io/ontology/unit#arcsec">
          <span>arcsec</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CRBeamS3" title="http://odahub.io/ontology#CRBeamS3">
+         <span>c r beam s3</span>
       </a>
    </li>
    <li>
@@ -865,6 +946,21 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#ReadAppend" title="http://odahub.io/ontology#ReadAppend">
+         <span>read append</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ReadOnly" title="http://odahub.io/ontology#ReadOnly">
+         <span>read only</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ReadWrite" title="http://odahub.io/ontology#ReadWrite">
+         <span>read write</span>
+      </a>
+   </li>
+   <li>
       <a href="#/unit#Second" title="http://odahub.io/ontology/unit#Second">
          <span>second</span>
       </a>
@@ -945,6 +1041,16 @@ This section provides details for each class and property defined by MMODA Astro
       <li>
          <a href="#Boolean" title="http://odahub.io/ontology#Boolean">
             <span>boolean</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ComputeResource" title="http://odahub.io/ontology#ComputeResource">
+            <span>compute resource</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Dask" title="http://odahub.io/ontology#Dask">
+            <span>dask</span>
          </a>
       </li>
       <li>
@@ -1168,6 +1274,16 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
       </li>
       <li>
+         <a href="#LocalDB" title="http://odahub.io/ontology#LocalDB">
+            <span>local d b</span>
+         </a>
+      </li>
+      <li>
+         <a href="#LongString" title="http://odahub.io/ontology#LongString">
+            <span>long string</span>
+         </a>
+      </li>
+      <li>
          <a href="#m" title="http://odahub.io/ontology#m">
             <span>m</span>
          </a>
@@ -1271,6 +1387,11 @@ This section provides details for each class and property defined by MMODA Astro
          <a href="#RightAscensionDegrees" title="http://odahub.io/ontology#RightAscensionDegrees">RightAscensionDegrees</a>
       </li>
       <li>
+         <a href="#S3" title="http://odahub.io/ontology#S3">
+            <span>s3</span>
+         </a>
+      </li>
+      <li>
          <a href="#second" title="http://odahub.io/ontology#second">
             <span>second</span>
          </a>
@@ -1293,6 +1414,16 @@ This section provides details for each class and property defined by MMODA Astro
       </li>
       <li>
          <a href="#StartTimeISOT" title="http://odahub.io/ontology#StartTimeISOT">StartTimeISOT</a>
+      </li>
+      <li>
+         <a href="#StorageAccessType" title="http://odahub.io/ontology#StorageAccessType">
+            <span>storage access type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StorageResource" title="http://odahub.io/ontology#StorageResource">
+            <span>storage resource</span>
+         </a>
       </li>
       <li>
          <a href="#String" title="http://odahub.io/ontology#String">
@@ -1632,6 +1763,49 @@ This section provides details for each class and property defined by MMODA Astro
          <dd>
             <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ComputeResource">
+      <h3>compute resource<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ComputeResource</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://odahub.io/ontology#Resource"
+               target="_blank"
+               title="http://odahub.io/ontology#Resource">resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Dask" title="http://odahub.io/ontology#Dask">dask</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#memory_per_process" title="http://odahub.io/ontology#memory_per_process">memory per process</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#n_processes" title="http://odahub.io/ontology#n_processes">n processes</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Dask">
+      <h3>dask<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#Dask</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ComputeResource" title="http://odahub.io/ontology#ComputeResource">compute resource</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2580,6 +2754,36 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LocalDB">
+      <h3>local d b<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#LocalDB</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StorageResource" title="http://odahub.io/ontology#StorageResource">storage resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LongString">
+      <h3>long string<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#LongString</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#String" title="http://odahub.io/ontology#String">string</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="m">
       <h3>m<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3025,6 +3229,26 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="S3">
+      <h3>s3<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#S3</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StorageResource" title="http://odahub.io/ontology#StorageResource">storage resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#CRBeamS3" title="http://odahub.io/ontology#CRBeamS3">c r beam s3</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="second">
       <h3>second<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3151,6 +3375,63 @@ Subclasses may have other ways to express the content.</span>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="StorageAccessType">
+      <h3>storage access type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#StorageAccessType</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#accessMode" title="http://odahub.io/ontology#accessMode">access mode</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ReadAppend" title="http://odahub.io/ontology#ReadAppend">read append</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ReadOnly" title="http://odahub.io/ontology#ReadOnly">read only</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ReadWrite" title="http://odahub.io/ontology#ReadWrite">read write</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StorageResource">
+      <h3>storage resource<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#StorageResource</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://odahub.io/ontology#Resource"
+               target="_blank"
+               title="http://odahub.io/ontology#Resource">resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#LocalDB" title="http://odahub.io/ontology#LocalDB">local d b</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#S3" title="http://odahub.io/ontology#S3">s3</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#accessMode" title="http://odahub.io/ontology#accessMode">access mode</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="String">
       <h3>string<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3169,6 +3450,7 @@ Subclasses may have other ways to express the content.</span>
          <dd>
             <a href="#AstrophysicalObject" title="http://odahub.io/ontology#AstrophysicalObject">AstrophysicalObject</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FileReference" title="http://odahub.io/ontology#FileReference">file reference</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LongString" title="http://odahub.io/ontology#LongString">long string</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -3534,6 +3816,7 @@ Subclasses may have other ways to express the content.</span>
             <sup class="type-op" title="object property">op</sup>, <a href="#isRequestingAstroObject"
                title="http://odahub.io/ontology#isRequestingAstroObject">is requesting astro object</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isUsing" title="http://odahub.io/ontology#isUsing">is using</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#usesResource" title="http://odahub.io/ontology#usesResource">uses resource</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -3579,6 +3862,11 @@ Subclasses may have other ways to express the content.</span>
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#accessMode" title="http://odahub.io/ontology#accessMode">
+            <span>access mode</span>
+         </a>
+      </li>
+      <li>
          <a href="#has_format" title="http://odahub.io/ontology#has_format">
             <span>has format</span>
          </a>
@@ -3618,7 +3906,44 @@ Subclasses may have other ways to express the content.</span>
             <span>is using</span>
          </a>
       </li>
+      <li>
+         <a href="#usesOptionalResource" title="http://odahub.io/ontology#usesOptionalResource">
+            <span>uses optional resource</span>
+         </a>
+      </li>
+      <li>
+         <a href="#usesRequiredResource" title="http://odahub.io/ontology#usesRequiredResource">
+            <span>uses required resource</span>
+         </a>
+      </li>
+      <li>
+         <a href="#usesResource" title="http://odahub.io/ontology#usesResource">
+            <span>uses resource</span>
+         </a>
+      </li>
    </ul>
+   <div class="entity" id="accessMode">
+      <h3>access mode<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#accessMode</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StorageResource" title="http://odahub.io/ontology#StorageResource">storage resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StorageAccessType" title="http://odahub.io/ontology#StorageAccessType">storage access type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="has_format">
       <h3>has format<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3879,15 +4204,160 @@ Subclasses may have other ways to express the content.</span>
          </dl>
       </div>
    </div>
+   <div class="entity" id="usesOptionalResource">
+      <h3>uses optional resource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#usesOptionalResource</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#usesResource" title="http://odahub.io/ontology#usesResource">uses resource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usesRequiredResource">
+      <h3>uses required resource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#usesRequiredResource</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#usesResource" title="http://odahub.io/ontology#usesResource">uses resource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usesResource">
+      <h3>uses resource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#usesResource</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#usesOptionalResource" title="http://odahub.io/ontology#usesOptionalResource">uses optional resource</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#usesRequiredResource" title="http://odahub.io/ontology#usesRequiredResource">uses required resource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Workflow" title="http://odahub.io/ontology#Workflow">Workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://odahub.io/ontology#Resource"
+                  target="_blank"
+                  title="http://odahub.io/ontology#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#memory_per_process" title="http://odahub.io/ontology#memory_per_process">
+            <span>memory per process</span>
+         </a>
+      </li>
+      <li>
+         <a href="#n_processes" title="http://odahub.io/ontology#n_processes">
+            <span>n processes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#resourceBindingEnvVarName"
+            title="http://odahub.io/ontology#resourceBindingEnvVarName">
+            <span>resource binding env var name</span>
+         </a>
+      </li>
       <li>
          <a href="#value" title="http://odahub.io/ontology#value">
             <span>value</span>
          </a>
       </li>
    </ul>
+   <div class="entity" id="memory_per_process">
+      <h3>memory per process<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#memory_per_process</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ComputeResource" title="http://odahub.io/ontology#ComputeResource">compute resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="n_processes">
+      <h3>n processes<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#n_processes</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ComputeResource" title="http://odahub.io/ontology#ComputeResource">compute resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="resourceBindingEnvVarName">
+      <h3>resource binding env var name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#resourceBindingEnvVarName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://odahub.io/ontology#Resource"
+                  target="_blank"
+                  title="http://odahub.io/ontology#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="value">
       <h3>value<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -3966,6 +4436,11 @@ Subclasses may have other ways to express the content.</span>
       <li>
          <a href="#symbol" title="http://odahub.io/ontology#symbol">
             <span>symbol</span>
+         </a>
+      </li>
+      <li>
+         <a href="#title" title="http://odahub.io/ontology#title">
+            <span>title</span>
          </a>
       </li>
       <li>
@@ -4069,6 +4544,14 @@ Subclasses may have other ways to express the content.</span>
       <p>
          <strong>IRI:</strong> http://odahub.io/ontology#symbol</p>
    </div>
+   <div class="entity" id="title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#title</p>
+   </div>
    <div class="entity" id="http://purl.org/dc/elements/1.1/title">
       <h3>title<sup class="type-ap" title="annotation property">ap</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
@@ -4117,6 +4600,11 @@ Subclasses may have other ways to express the content.</span>
       <li>
          <a href="#/unit#arcsec" title="http://odahub.io/ontology/unit#arcsec">
             <span>arcsec</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CRBeamS3" title="http://odahub.io/ontology#CRBeamS3">
+            <span>c r beam s3</span>
          </a>
       </li>
       <li>
@@ -4240,6 +4728,21 @@ Subclasses may have other ways to express the content.</span>
          </a>
       </li>
       <li>
+         <a href="#ReadAppend" title="http://odahub.io/ontology#ReadAppend">
+            <span>read append</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ReadOnly" title="http://odahub.io/ontology#ReadOnly">
+            <span>read only</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ReadWrite" title="http://odahub.io/ontology#ReadWrite">
+            <span>read write</span>
+         </a>
+      </li>
+      <li>
          <a href="#/unit#Second" title="http://odahub.io/ontology/unit#Second">
             <span>second</span>
          </a>
@@ -4292,6 +4795,27 @@ Subclasses may have other ways to express the content.</span>
          <dd>
             <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CRBeamS3">
+      <h3>c r beam s3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#CRBeamS3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#S3" title="http://odahub.io/ontology#S3">s3</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#accessMode" title="http://odahub.io/ontology#accessMode">access mode</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#ReadAppend" title="http://odahub.io/ontology#ReadAppend">read append</a>
          </dd>
       </dl>
    </div>
@@ -4651,6 +5175,51 @@ Subclasses may have other ways to express the content.</span>
          <dt>belongs to</dt>
          <dd>
             <a href="#/unit#AngleUnit" title="http://odahub.io/ontology/unit#AngleUnit">angle unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ReadAppend">
+      <h3>read append<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ReadAppend</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StorageAccessType" title="http://odahub.io/ontology#StorageAccessType">storage access type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ReadOnly">
+      <h3>read only<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ReadOnly</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StorageAccessType" title="http://odahub.io/ontology#StorageAccessType">storage access type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ReadWrite">
+      <h3>read write<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#ReadWrite</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StorageAccessType" title="http://odahub.io/ontology#StorageAccessType">storage access type</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

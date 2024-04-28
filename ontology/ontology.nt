@@ -9,7 +9,7 @@
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" .
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
 <http://odahub.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" .
-<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "71cb300" .
+<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "8331288" .
 <http://odahub.io/ontology> <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 # 
 # 
@@ -31,6 +31,9 @@
 # 
 # http://odahub.io/ontology#symbol
 <http://odahub.io/ontology#symbol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://odahub.io/ontology#title
+<http://odahub.io/ontology#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://odahub.io/ontology#unit
 <http://odahub.io/ontology#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -70,6 +73,11 @@
 # #
 # #################################################################
 # 
+# 
+# http://odahub.io/ontology#accessMode
+<http://odahub.io/ontology#accessMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#accessMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#StorageResource> .
+<http://odahub.io/ontology#accessMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#StorageAccessType> .
 # 
 # http://odahub.io/ontology#hasCoordinates
 <http://odahub.io/ontology#hasCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -130,6 +138,20 @@
 <http://odahub.io/ontology#isUsing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#Workflow> .
 <http://odahub.io/ontology#isUsing> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#Workflow> .
 # 
+# http://odahub.io/ontology#usesOptionalResource
+<http://odahub.io/ontology#usesOptionalResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#usesOptionalResource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://odahub.io/ontology#usesResource> .
+# 
+# http://odahub.io/ontology#usesRequiredResource
+<http://odahub.io/ontology#usesRequiredResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#usesRequiredResource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://odahub.io/ontology#usesResource> .
+# 
+# http://odahub.io/ontology#usesResource
+<http://odahub.io/ontology#usesResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://odahub.io/ontology#usesResource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://odahub.io/ontology#usesResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#Workflow> .
+<http://odahub.io/ontology#usesResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://odahub.io/ontology#Resource> .
+# 
 # 
 # 
 # #################################################################
@@ -138,6 +160,20 @@
 # #
 # #################################################################
 # 
+# 
+# http://odahub.io/ontology#memory_per_process
+<http://odahub.io/ontology#memory_per_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://odahub.io/ontology#memory_per_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://odahub.io/ontology#memory_per_process> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#ComputeResource> .
+# 
+# http://odahub.io/ontology#n_processes
+<http://odahub.io/ontology#n_processes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://odahub.io/ontology#n_processes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://odahub.io/ontology#n_processes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#ComputeResource> .
+# 
+# http://odahub.io/ontology#resourceBindingEnvVarName
+<http://odahub.io/ontology#resourceBindingEnvVarName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://odahub.io/ontology#resourceBindingEnvVarName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://odahub.io/ontology#Resource> .
 # 
 # http://odahub.io/ontology#value
 <http://odahub.io/ontology#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -210,6 +246,14 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#ComputeResource
+<http://odahub.io/ontology#ComputeResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#ComputeResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Resource> .
+# 
+# http://odahub.io/ontology#Dask
+<http://odahub.io/ontology#Dask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#Dask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ComputeResource> .
 # 
 # http://odahub.io/ontology#DataProduct
 <http://odahub.io/ontology#DataProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -462,6 +506,14 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology#LightCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ivoa.net/rdf/product-type#timeseries> .
 <http://odahub.io/ontology#LightCurve> <http://www.w3.org/2000/01/rdf-schema#label> "LightCurve" .
 # 
+# http://odahub.io/ontology#LocalDB
+<http://odahub.io/ontology#LocalDB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#LocalDB> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#StorageResource> .
+# 
+# http://odahub.io/ontology#LongString
+<http://odahub.io/ontology#LongString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#LongString> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#String> .
+# 
 # http://odahub.io/ontology#MHz
 <http://odahub.io/ontology#MHz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#MHz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#ExpressedInUnit> .
@@ -614,6 +666,9 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology#Quantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
 <http://odahub.io/ontology#Quantity> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity" .
 # 
+# http://odahub.io/ontology#Resource
+<http://odahub.io/ontology#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://odahub.io/ontology#RightAscension
 <http://odahub.io/ontology#RightAscension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#RightAscension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Angle> .
@@ -626,6 +681,10 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology#RightAscensionDegrees> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#AngleDegrees> .
 <http://odahub.io/ontology#RightAscensionDegrees> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#RightAscension> .
 <http://odahub.io/ontology#RightAscensionDegrees> <http://www.w3.org/2000/01/rdf-schema#label> "RightAscensionDegrees" .
+# 
+# http://odahub.io/ontology#S3
+<http://odahub.io/ontology#S3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#S3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#StorageResource> .
 # 
 # http://odahub.io/ontology#SkyCoordinates
 <http://odahub.io/ontology#SkyCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -654,6 +713,14 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology#StartTimeMJD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#StartTimeMJD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#StartTime> .
 <http://odahub.io/ontology#StartTimeMJD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#TimeInstantMJD> .
+# 
+# http://odahub.io/ontology#StorageAccessType
+<http://odahub.io/ontology#StorageAccessType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#StorageAccessType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://odahub.io/ontology#StorageResource
+<http://odahub.io/ontology#StorageResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#StorageResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#Resource> .
 # 
 # http://odahub.io/ontology#String
 <http://odahub.io/ontology#String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -924,6 +991,11 @@ _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# http://odahub.io/ontology#CRBeamS3
+<http://odahub.io/ontology#CRBeamS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#CRBeamS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#S3> .
+<http://odahub.io/ontology#CRBeamS3> <http://odahub.io/ontology#accessMode> <http://odahub.io/ontology#ReadAppend> .
+# 
 # http://odahub.io/ontology#ISOT
 <http://odahub.io/ontology#ISOT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://odahub.io/ontology#ISOT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#TimeFormat> .
@@ -933,6 +1005,21 @@ _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://odahub.io/ontology#MJD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://odahub.io/ontology#MJD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#TimeFormat> .
 <http://odahub.io/ontology#MJD> <http://odahub.io/ontology#symbol> "mjd" .
+# 
+# http://odahub.io/ontology#ReadAppend
+<http://odahub.io/ontology#ReadAppend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#ReadAppend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#StorageAccessType> .
+<http://odahub.io/ontology#ReadAppend> <http://odahub.io/ontology#title> "ReadAppend" .
+# 
+# http://odahub.io/ontology#ReadOnly
+<http://odahub.io/ontology#ReadOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#ReadOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#StorageAccessType> .
+<http://odahub.io/ontology#ReadOnly> <http://odahub.io/ontology#title> "ReadOnly" .
+# 
+# http://odahub.io/ontology#ReadWrite
+<http://odahub.io/ontology#ReadWrite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://odahub.io/ontology#ReadWrite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://odahub.io/ontology#StorageAccessType> .
+<http://odahub.io/ontology#ReadWrite> <http://odahub.io/ontology#title> "ReadWrite" .
 # 
 # http://odahub.io/ontology/unit#Angstrom
 <http://odahub.io/ontology/unit#Angstrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
