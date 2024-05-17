@@ -22,7 +22,7 @@
                              <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" ,
                                                                      "MMODA Astrophysical Workflows and Data Products" ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" ;
-                             owl:versionIRI "8331288" ;
+                             owl:versionIRI "f30ca46" ;
                              <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 
 #################################################################
@@ -192,6 +192,12 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 :memory_per_process rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
                     rdfs:domain :ComputeResource .
+
+
+###  http://odahub.io/ontology#mount
+:mount rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :HTTPURLFile .
 
 
 ###  http://odahub.io/ontology#n_processes
@@ -414,6 +420,37 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                             :keV .
 
 
+###  http://odahub.io/ontology#ExpressedInFormat
+:ExpressedInFormat rdf:type owl:Class ;
+                   rdfs:subClassOf :WorkflowParameter .
+
+
+###  http://odahub.io/ontology#ExpressedInISOT
+:ExpressedInISOT rdf:type owl:Class ;
+                 rdfs:subClassOf :ExpressedInFormat ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :has_format ;
+                                   owl:hasValue :ISOT
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :value ;
+                                   owl:allValuesFrom xsd:string
+                                 ] .
+
+
+###  http://odahub.io/ontology#ExpressedInMJD
+:ExpressedInMJD rdf:type owl:Class ;
+                rdfs:subClassOf :ExpressedInFormat ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_format ;
+                                  owl:hasValue :MJD
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :value ;
+                                  owl:allValuesFrom xsd:float
+                                ] .
+
+
 ###  http://odahub.io/ontology#ExpressedInUnit
 :ExpressedInUnit rdf:type owl:Class ;
                  rdfs:subClassOf :NumericParameter .
@@ -494,6 +531,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                        owl:onProperty :has_unit ;
                        owl:hasValue <http://odahub.io/ontology/unit#GeV>
                      ] .
+
+
+###  http://odahub.io/ontology#HTTPURLFile
+:HTTPURLFile rdf:type owl:Class ;
+             rdfs:subClassOf :StorageResource .
 
 
 ###  http://odahub.io/ontology#Hz
@@ -820,7 +862,11 @@ Subclasses may have other ways to express the content.""" ;
 ###  http://odahub.io/ontology#String
 :String rdf:type owl:Class ;
         rdfs:subClassOf :ParameterProduct ,
-                        :WorkflowParameter .
+                        :WorkflowParameter ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :value ;
+                          owl:allValuesFrom xsd:string
+                        ] .
 
 
 ###  http://odahub.io/ontology#TeV
@@ -847,20 +893,14 @@ Subclasses may have other ways to express the content.""" ;
 
 ###  http://odahub.io/ontology#TimeInstantISOT
 :TimeInstantISOT rdf:type owl:Class ;
-                 rdfs:subClassOf :TimeInstant ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :has_format ;
-                                   owl:hasValue :ISOT
-                                 ] .
+                 rdfs:subClassOf :ExpressedInISOT ,
+                                 :TimeInstant .
 
 
 ###  http://odahub.io/ontology#TimeInstantMJD
 :TimeInstantMJD rdf:type owl:Class ;
-                rdfs:subClassOf :TimeInstant ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :has_format ;
-                                  owl:hasValue :MJD
-                                ] .
+                rdfs:subClassOf :ExpressedInMJD ,
+                                :TimeInstant .
 
 
 ###  http://odahub.io/ontology#TimeInterval
@@ -1065,6 +1105,11 @@ Subclasses may have other ways to express the content.""" ;
                       owl:onProperty :has_unit ;
                       owl:hasValue <http://odahub.io/ontology/unit#nm>
                     ] .
+
+
+###  http://odahub.io/ontology#optional
+:optional rdf:type owl:Class ;
+          rdfs:subClassOf :WorkflowParameter .
 
 
 ###  http://odahub.io/ontology#pc
