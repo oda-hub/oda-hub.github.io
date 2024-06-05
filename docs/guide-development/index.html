@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.c73a62acfd9963773ffc13d5a29a98eb1a7357cf5c8f54eae91acf1952170ab5.js" integrity="sha256-xzpirP2ZY3c//BPVopqY6xpzV89cj1Tq6RrPGVIXCrU=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.ad017ac7e3e958c2bb9d2f11e5de76a0400380d9c1df77a2fe69de2bf82fd41d.js" integrity="sha256-rQF6x&#43;PpWMK7nS8R5d52oEADgNnB33ei/mneK/gv1B0=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -201,6 +201,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#default-parameters">Default parameters</a></li>
         <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#adding-external-resource-annotations">Adding external resource annotations</a></li>
+        <li><a href="#adding-token-annotations">Adding token annotations</a></li>
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
         <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
         <li><a href="#handling-exceptions">Handling exceptions</a></li>
@@ -355,6 +356,18 @@ if credentials_env:
 	credentials=json.loads(credentials_env)
 	client = Client(address=credentials[&quot;address&quot;])
 
+</code></pre><h3 id="adding-token-annotations">
+  Adding token annotations
+  <a class="anchor" href="#adding-token-annotations">#</a>
+</h3>
+<p>In case your notebook uses token to access some resources this should be reflected in the annotations in the notebook cell tagged <code>parameters</code> in the following way:</p>
+<pre tabindex="0"><code># oda:oda_token_access oda:InOdaContext .
+</code></pre><p>The above expression enables the standard mechanism to supply token using oda context variable. Then the token can be accessed from the code in the following way:</p>
+<pre tabindex="0"><code>from oda_api.api import get_context
+token = get_context()['token']
+</code></pre><p>However, we recommend instead using <code>oda_api.token</code> API, which also provides token validation and token discovery method as options</p>
+<pre tabindex="0"><code>from oda_api.token import discover_token
+token = discover_token(allow_invalid=True, token_discovery_methods=None)
 </code></pre><h3 id="how-to-annotate-the-notebook-outputs">
   How to annotate the notebook outputs
   <a class="anchor" href="#how-to-annotate-the-notebook-outputs">#</a>
@@ -548,6 +561,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
         <li><a href="#default-parameters">Default parameters</a></li>
         <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#adding-external-resource-annotations">Adding external resource annotations</a></li>
+        <li><a href="#adding-token-annotations">Adding token annotations</a></li>
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
         <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
         <li><a href="#handling-exceptions">Handling exceptions</a></li>
