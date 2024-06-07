@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.ad017ac7e3e958c2bb9d2f11e5de76a0400380d9c1df77a2fe69de2bf82fd41d.js" integrity="sha256-rQF6x&#43;PpWMK7nS8R5d52oEADgNnB33ei/mneK/gv1B0=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.b713972c7823b4088f41999f0a9951c537b4a8966086f71499ceb4b70667738f.js" integrity="sha256-txOXLHgjtAiPQZmfCplRxTe0qJZghvcUmc60twZnc48=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -365,10 +365,17 @@ if credentials_env:
 </code></pre><p>The above expression enables the standard mechanism to supply token using oda context variable. Then the token can be accessed from the code in the following way:</p>
 <pre tabindex="0"><code>from oda_api.api import get_context
 token = get_context()['token']
-</code></pre><p>However, we recommend instead using <code>oda_api.token</code> API, which also provides token validation and token discovery method as options</p>
-<pre tabindex="0"><code>from oda_api.token import discover_token
-token = discover_token(allow_invalid=True, token_discovery_methods=None)
-</code></pre><h3 id="how-to-annotate-the-notebook-outputs">
+</code></pre><p>However, we recommend instead using higer level  <code>oda_api.token</code> API, which also provides token validation and token discovery method as options. The code above is eqivalent to the following higher level code</p>
+<pre tabindex="0"><code>from oda_api.token import discover_token, TokenLocation
+token = discover_token(allow_invalid=True, token_discovery_methods=[TokenLocation.CONTEXT_FILE])
+</code></pre><p>Below is the entire list of token locations supported:</p>
+<pre tabindex="0"><code>class TokenLocation(Enum):
+    ODA_ENV_VAR = &quot;environment variable ODA_TOKEN&quot;
+    FILE_CUR_DIR = &quot;.oda-token file in current directory&quot;
+    FILE_HOME = &quot;.oda-token file in home&quot;
+    CONTEXT_FILE = &quot;context file current directory&quot;
+</code></pre><p>By default, token validation is enabled and the attempts are made to load the token from all the supported locations in the order they appear in the TokenLocation class.</p>
+<h3 id="how-to-annotate-the-notebook-outputs">
   How to annotate the notebook outputs
   <a class="anchor" href="#how-to-annotate-the-notebook-outputs">#</a>
 </h3>
