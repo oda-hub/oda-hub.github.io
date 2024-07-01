@@ -9,7 +9,7 @@
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" .
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
 <http://odahub.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" .
-<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "863518d" .
+<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "0361d29" .
 <http://odahub.io/ontology> <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 # 
 # 
