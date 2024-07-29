@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.442b771118966018e4fb0880bafd1121282a62324bf61dbcdf9d6126c9223c78.js" integrity="sha256-RCt3ERiWYBjk&#43;wiAuv0RISgqYjJL9h28351hJskiPHg=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.ded6f2e922f6c638d0dffe7429089fb3d26cd0073f4d15795ca83d9d8cd8a79a.js" integrity="sha256-3tby6SL2xjjQ3/50KQifs9Js0Ac/TRV5XKg9nYzYp5o=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -319,8 +319,8 @@ reference_energy = 20 # oda:keV
   <a class="anchor" href="#adding-external-resource-annotations">#</a>
 </h3>
 <p>In case your notebook explicitly calls some external resources, such as S3 storage or compute cluster this should be reflected in the annotations in the notebook cell tagged <code>parameters</code>. Below is the list of the resource annotations supported currently:</p>
-<p><code>oda:S3</code> - S3 storage</p>
-<p><code>oda:Dask</code> - Dask compute cluster</p>
+<p><code>oda:S3</code> - S3 storage<!-- raw HTML omitted -->
+<code>oda:Dask</code> - Dask compute cluster<!-- raw HTML omitted --></p>
 <p>All kinds of resources may have <code>resourceBindingEnvVarName</code> property. If the resource is available the corresponding enviroment variable stores json with the credentials needed to access the resource.</p>
 <p>For example, in the code below we declare the S3 storage:</p>
 <pre tabindex="0"><code># oda:usesRequiredResource oda:MyS3 .
