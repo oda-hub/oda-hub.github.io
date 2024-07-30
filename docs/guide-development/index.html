@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.37251063021429608ff8ec94190e205c2c780a79ad875a0787a7dd2a5976721e.js" integrity="sha256-NyUQYwIUKWCP&#43;OyUGQ4gXCx4Cnmth1oHh6fdKll2ch4=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.ad8374cdb87de262b9b852a7f9f7dcefa5d02a2245656e1f65db65a1824a402e.js" integrity="sha256-rYN0zbh94mK5uFKn&#43;ffc76XQKiJFZW4fZdtloYJKQC4=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -201,7 +201,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#default-parameters">Default parameters</a></li>
         <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#adding-external-resource-annotations">Adding external resource annotations</a></li>
-        <li><a href="#adding-token-annotations">Adding token annotations</a></li>
+        <li><a href="#how-to-upload-a-file-to-be-used-for-the-notebook-execution">How to upload a file to be used for the notebook execution</a></li>
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
         <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
         <li><a href="#handling-exceptions">Handling exceptions</a></li>
@@ -356,25 +356,29 @@ if credentials_env:
 	credentials=json.loads(credentials_env)
 	client = Client(address=credentials[&quot;address&quot;])
 
-</code></pre><h3 id="adding-token-annotations">
-  Adding token annotations
-  <a class="anchor" href="#adding-token-annotations">#</a>
+</code></pre><h3 id="how-to-upload-a-file-to-be-used-for-the-notebook-execution">
+  How to upload a file to be used for the notebook execution
+  <a class="anchor" href="#how-to-upload-a-file-to-be-used-for-the-notebook-execution">#</a>
 </h3>
-<p>In case your notebook uses token to access some resources this should be reflected in the annotations in the notebook cell tagged <code>parameters</code> in the following way:</p>
-<pre tabindex="0"><code># oda:oda_token_access oda:InOdaContext .
-</code></pre><p>The above expression enables the standard mechanism to supply token using oda context variable. Then the token can be accessed from the code in the following way:</p>
-<pre tabindex="0"><code>from oda_api.api import get_context
-token = get_context()['token']
-</code></pre><p>However, we recommend instead using higer level  <code>oda_api.token</code> API, which also provides token validation and token discovery method as options. The code above is eqivalent to the following higher level code</p>
-<pre tabindex="0"><code>from oda_api.token import discover_token, TokenLocation
-token = discover_token(allow_invalid=True)
-</code></pre><p>Below is the entire list of token locations supported in order of priority.</p>
-<pre tabindex="0"><code>class TokenLocation(Enum):
-    ODA_ENV_VAR = &quot;environment variable ODA_TOKEN&quot;
-    FILE_CUR_DIR = &quot;.oda-token file in current directory&quot;
-    FILE_HOME = &quot;.oda-token file in home&quot;
-    CONTEXT_FILE = &quot;context file current directory&quot;
-</code></pre><p>By default, token validation is enabled and the attempts are made to load the token from all the supported locations in the order they appear in the TokenLocation class. Note that token locations other than <code>TokenLocation.CONTEXT_FILE</code> are useful to test the notebook or run it iteratively, but they don&rsquo;t have any corresponding annotations in the ontology.</p>
+<p>In order to define a file as one of the input notebook parameters, two possible annotations (from the MMODA <a href="https://odahub.io/ontology/">ontology</a>) are available:</p>
+<ul>
+<li><code>oda:POSIXPath</code></li>
+<li><code>oda:FileURL</code></li>
+</ul>
+<h4 id="odaposixpath">
+  <code>oda:POSIXPath</code>
+  <a class="anchor" href="#odaposixpath">#</a>
+</h4>
+<p>This is used to reference a file locally available in the repository to be uploaded from the filesystem of the browser. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_file_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;image.png&#39;</span> <span style="color:#75715e"># oda:POSIXPath</span>
+</code></pre></div><p>In the frontend, an upload widget will be displayed. It is advisable to put an example file in the repository matching the default file name ( <code>'image.png'</code>  in the example above) to allow easy testing of the notebook.</p>
+<h4 id="odafileurl">
+  <code>oda:FileURL</code>
+  <a class="anchor" href="#odafileurl">#</a>
+</h4>
+<p>This annotation is instead used when the notebook expects parameter to be a URL of a file. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_file_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.isdc.unige.ch/integral/images/medium/integralTransparent.png&#39;</span> <span style="color:#75715e"># oda:FileURL</span>
+</code></pre></div><p>In the frontend, we will display a text box where the URL can be edited.</p>
 <h3 id="how-to-annotate-the-notebook-outputs">
   How to annotate the notebook outputs
   <a class="anchor" href="#how-to-annotate-the-notebook-outputs">#</a>
@@ -456,9 +460,10 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
 <p><img src="tmp14.png" alt="image" /></p>
 <p>You may now connect to the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend to test the functionalities of your service, check the correctness of appearance and format of the input parameters that you have specified in the <code>parameters</code> cell of the notebook, check the formatting and correctness of the data products that are produced upon pressing the &ldquo;Submit&rdquo; button on the frontend etc:</p>
 <p><img src="tmp15_1.png" alt="image" /></p>
-<p>Note that some of the input parameters in the example of the Fermi/LAT <a href="https://renkulab.io/projects/astronomy/mmoda/fermi/files/blob/Lightcurve.ipynb">Lightcurve.ipynb</a> notebook appear as multiple choice parameters with pre-defined values, while others are query fields. For some of the parameters, units are specified just below the query window. The names of the parameters are the names of the variables defined in the <code>parameters</code> cell of the notebook (see the screenshot of the parameters cell in the <a href="#build-a-repeatable-parameterized-workflow">section above</a> of this help page. Have a look in the example how this is regulated with parameter annotations.</p>
-<p>If the <code>outputs</code> cell of your notebook contains multiple data products, they will be shown as a list at the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend, as shown above. The names of the list items correspond to the names of the variables defined in the <code>outputs</code> cell. Each item of the list can be previewed or downloaded by clicking on the &ldquo;View&rdquo; button. The preview will depend on the type of the data product that has been specified after the comment  hash <code>#</code> tag in the <code>outputs</code> cell.</p>
-<p>You can explore different examples of the notebooks converted to services in the <code>astronomy/mmoda</code> domain on renkulab.io, to see how to format the inputs and outputs. If unsure, first take a look on <a href="https://renkulab.io/projects/astronomy/mmoda/mmoda-nb2workflow-example">this simple repository</a>. You can also experiment with further possibilities exploring the <a href="https://odahub.io/ontology/">ontology</a> of the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> parameters and data products.</p>
+<p>Note that some of the input parameters in the example of the Fermi/LAT <a href="https://renkulab.io/projects/astronomy/mmoda/fermi/files/blob/Lightcurve.ipynb">Lightcurve.ipynb</a> notebook appear as multiple choice parameters with pre-defined values, while others are query fields. For some of the parameters, units are specified just below the query window. The names of the parameters are the names of the variables defined in the <code>parameters</code> cell of the notebook (see the screenshot of the parameters cell in the <a href="#build-a-repeatable-parameterized-workflow">section above</a> of this help page). Have a look in the example how this is regulated with parameter annotations. Finally, when annoting an argument either as a <code>oda:PosixPATH</code> or as a <code>oda:FileURL</code>, as a result, on the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend a selector for choosing either a file to upload, or directly input the url of a file,  will be displayed, as shown in the example below:</p>
+<p><img src="tmp15_2.png" alt="image" /></p>
+<p>If the <code>outputs</code> cell of your notebook contains multiple data products, they will be shown as a list at the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend, as shown above. The names of the list items correspond to the names of the variables defined in the <code>outputs</code> cell. Each item of the list can be previewed or downloaded by clicking on the &ldquo;View&rdquo; button. The preview will depend on the type of the data product that has been specified after the comment  hash <code>#</code> tag in the <code>outputs</code> cell. Eventually, it is worth mentioning that the annotations <code>oda:PosixPATH</code> and <code>oda:FileURL</code> are not meant to be used as output, so, not appearing in the <code>outputs</code> cell of the notebook.</p>
+<p>You can explore different examples of the notebooks converted to services in the <code>astronomy/mmoda</code> domain on <a href="https://renkulab.io/projects">renkulab.io</a>, to see how to format the inputs and outputs. If unsure, first take a look on <a href="https://renkulab.io/projects/astronomy/mmoda/mmoda-nb2workflow-example">this simple repository</a>. You can also experiment with further possibilities exploring the <a href="https://odahub.io/ontology/">ontology</a> of the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> parameters and data products.</p>
 <p>By default, all notebooks residing in the root of the repository (except the ones named as <code>test_*.ipynb</code>) will be converted to separate data-products. If notebooks are in the subdirectory, one needs to add the configuration file <code>mmoda.yaml</code> with
 <code>notebook_path: &quot;subfolder/path&quot;</code>. It&rsquo;s also possible to include only some notebooks by putting into <code>mmoda.yaml</code> e.g. <code>filename_pattern: &quot;prefix_.*&quot;</code> to define the notebook name regex pattern.</p>
 <p>To add a help for the workflow one have to create a file <code>mmoda_help_page.md</code> in the root of the repository. This file will be converted by the bot to the help page, associated with the corresponding instrument tab in the MMODA platform interface.</p>
@@ -568,7 +573,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
         <li><a href="#default-parameters">Default parameters</a></li>
         <li><a href="#adding-annotations-the-entire-notebook">Adding annotations the entire notebook</a></li>
         <li><a href="#adding-external-resource-annotations">Adding external resource annotations</a></li>
-        <li><a href="#adding-token-annotations">Adding token annotations</a></li>
+        <li><a href="#how-to-upload-a-file-to-be-used-for-the-notebook-execution">How to upload a file to be used for the notebook execution</a></li>
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
         <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
         <li><a href="#handling-exceptions">Handling exceptions</a></li>
