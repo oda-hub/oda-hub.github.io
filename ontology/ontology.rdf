@@ -26,7 +26,7 @@
         <dc:title>MMODA Astrophysical Workflow Ontology</dc:title>
         <dc:title>MMODA Astrophysical Workflows and Data Products</dc:title>
         <vann:preferredNamespaceUri>http://odahub.io/ontology</vann:preferredNamespaceUri>
-        <owl:versionIRI>daa86b0</owl:versionIRI>
+        <owl:versionIRI>eee0dde</owl:versionIRI>
         <foaf:logo rdf:resource="https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"/>
     </owl:Ontology>
     
