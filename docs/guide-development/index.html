@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.614c039690525030f645426d058b5309892af8fc4bf60deef036b40264ff1235.js" integrity="sha256-YUwDlpBSUDD2RUJtBYtTCYkq&#43;PxL9g3u8Da0AmT/EjU=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.e329bfa26eafadf92bfa9e400e37d16dc36b706214789d3cc3fc8b63af96ffd3.js" integrity="sha256-4ym/om6vrfkr&#43;p5ADjfRbcNrcGIUeJ08w/yLY6&#43;W/9M=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -325,8 +325,8 @@ reference_energy = 20 # oda:keV
 <p>All kinds of resources may have <code>resourceBindingEnvVarName</code> property. If the resource is available the corresponding enviroment variable stores json with the credentials needed to access the resource.</p>
 <p>For example, in the code below we declare the S3 storage:</p>
 <pre tabindex="0"><code># oda:usesRequiredResource oda:MyS3 .
-# oda: MyS3 a oda:S3 .
-# oda: MyS3 oda:resourceBindingEnvVarName &quot;MY_S3_CREDENTIALS&quot; .
+# oda:MyS3 a oda:S3 .
+# oda:MyS3 oda:resourceBindingEnvVarName &quot;MY_S3_CREDENTIALS&quot; .
 </code></pre><p>In the code below we initialize the S3 storage session using the credentials provided by means of the environment variable:</p>
 <pre tabindex="0"><code>import json
 import os
@@ -343,10 +343,10 @@ if credentials_env:
 
 </code></pre><p>In the example below we declare dask cluster resource requirements in the parameter cell</p>
 <pre tabindex="0"><code># oda:usesRequiredResource oda:MyDaskCluster .
-# oda: MyDaskCluster a oda:Dask .
-# oda: MyDaskCluster oda:memory_per_process &quot;2G&quot; .
-# oda: MyDaskCluster oda:n_processes &quot;16&quot; .
-# oda: MyDaskCluster oda:resourceBindingEnvVarName &quot;MY_DASK_CREDENTIALS&quot; .
+# oda:MyDaskCluster a oda:Dask .
+# oda:MyDaskCluster oda:memory_per_process &quot;2G&quot; .
+# oda:MyDaskCluster oda:n_processes &quot;16&quot; .
+# oda:MyDaskCluster oda:resourceBindingEnvVarName &quot;MY_DASK_CREDENTIALS&quot; .
 </code></pre><p>Here <code>memory_per_process</code> and <code>n_processes</code> define minimal requirements to the resource.</p>
 <p>In the code below we open the dask cluster session</p>
 <pre tabindex="0"><code>import json
@@ -448,7 +448,6 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
 <p><img src="tmp4.png" alt="image" /></p>
 <p>You will need to choose the name of the new project. This name will be the name of your service appearing at the <a href="https://www.astro.unige.ch/mmoda">MMODA</a> frontend and discoverable via <a href="https://www.astro.unige.ch/mmoda">MMODA</a> API. Place your project in the <code>astronomy/mmoda</code> namespace by specifying this in the &ldquo;Namespace&rdquo; field as shown below:</p>
 <p><img src="tmp5.png" alt="image" /></p>
-<p>If you have no rights to create your project in this namespace, please contact the namespace maintainers, for example by writing to <code>contact@odahub.io</code>.</p>
 <p>Choose the &ldquo;Python 3&rdquo; template for the project and then click &ldquo;Create project&rdquo; button:</p>
 <p><img src="tmp6.png" alt="image" /></p>
 <p>To start working on the newly created project, you can launch an interactive Jupyter lab session by clicking on the &ldquo;Start&rdquo; button:</p>
