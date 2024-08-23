@@ -22,7 +22,7 @@
                              <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" ,
                                                                      "MMODA Astrophysical Workflows and Data Products" ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" ;
-                             owl:versionIRI "b3eabf3" ;
+                             owl:versionIRI "e8e0724" ;
                              <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 
 #################################################################
@@ -709,6 +709,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                             ] .
 
 
+###  http://odahub.io/ontology#PhosphorosFiltersTable
+:PhosphorosFiltersTable rdf:type owl:Class ;
+                        rdfs:subClassOf :StructuredParameter .
+
+
 ###  http://odahub.io/ontology#PhotometricBand
 :PhotometricBand rdf:type owl:Class ;
                  rdfs:subClassOf :String ,
@@ -867,6 +872,11 @@ Subclasses may have other ways to express the content.""" ;
                           owl:onProperty :value ;
                           owl:allValuesFrom xsd:string
                         ] .
+
+
+###  http://odahub.io/ontology#StructuredParameter
+:StructuredParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :WorkflowParameter .
 
 
 ###  http://odahub.io/ontology#TeV

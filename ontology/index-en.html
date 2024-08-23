@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Wed Aug 21 16:01:27 UTC 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Aug 23 07:36:37 UTC 2024", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -519,6 +519,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#PhosphorosFiltersTable"
+         title="http://odahub.io/ontology#PhosphorosFiltersTable">
+         <span>phosphoros filters table</span>
+      </a>
+   </li>
+   <li>
       <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">
          <span>photometric band</span>
       </a>
@@ -583,6 +589,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#String" title="http://odahub.io/ontology#String">
          <span>string</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StructuredParameter" title="http://odahub.io/ontology#StructuredParameter">
+         <span>structured parameter</span>
       </a>
    </li>
    <li>
@@ -1419,6 +1430,12 @@ This section provides details for each class and property defined by MMODA Astro
          </a>
       </li>
       <li>
+         <a href="#PhosphorosFiltersTable"
+            title="http://odahub.io/ontology#PhosphorosFiltersTable">
+            <span>phosphoros filters table</span>
+         </a>
+      </li>
+      <li>
          <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">
             <span>photometric band</span>
          </a>
@@ -1483,6 +1500,11 @@ This section provides details for each class and property defined by MMODA Astro
       <li>
          <a href="#String" title="http://odahub.io/ontology#String">
             <span>string</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StructuredParameter" title="http://odahub.io/ontology#StructuredParameter">
+            <span>structured parameter</span>
          </a>
       </li>
       <li>
@@ -3239,6 +3261,21 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PhosphorosFiltersTable">
+      <h3>phosphoros filters table<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#PhosphorosFiltersTable</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StructuredParameter" title="http://odahub.io/ontology#StructuredParameter">structured parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="PhotometricBand">
       <h3>photometric band<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3604,6 +3641,27 @@ Subclasses may have other ways to express the content.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FileReference" title="http://odahub.io/ontology#FileReference">file reference</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LongString" title="http://odahub.io/ontology#LongString">long string</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PhotometricBand" title="http://odahub.io/ontology#PhotometricBand">photometric band</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StructuredParameter">
+      <h3>structured parameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#StructuredParameter</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#WorkflowParameter" title="http://odahub.io/ontology#WorkflowParameter">WorkflowParameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PhosphorosFiltersTable"
+               title="http://odahub.io/ontology#PhosphorosFiltersTable">phosphoros filters table</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4003,6 +4061,7 @@ Subclasses may have other ways to express the content.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">numeric parameter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#optional" title="http://odahub.io/ontology#optional">optional</a>
             <sup class="type-c" title="class">c</sup>, <a href="#String" title="http://odahub.io/ontology#String">string</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StructuredParameter" title="http://odahub.io/ontology#StructuredParameter">structured parameter</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>

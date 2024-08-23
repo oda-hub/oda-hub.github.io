@@ -513,7 +513,7 @@
     "@value" : "http://odahub.io/ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@value" : "b3eabf3"
+    "@value" : "e8e0724"
   } ],
   "http://xmlns.com/foaf/0.1/logo" : [ {
     "@id" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"
@@ -1101,6 +1101,12 @@
     "@id" : "_:genid31"
   } ]
 }, {
+  "@id" : "http://odahub.io/ontology#PhosphorosFiltersTable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#StructuredParameter"
+  } ]
+}, {
   "@id" : "http://odahub.io/ontology#PhotometricBand",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1279,6 +1285,12 @@
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
   }, {
     "@id" : "_:genid54"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#StructuredParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#WorkflowParameter"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#TeV",

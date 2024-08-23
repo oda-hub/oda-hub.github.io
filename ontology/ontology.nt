@@ -9,7 +9,7 @@
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflow Ontology" .
 <http://odahub.io/ontology> <http://purl.org/dc/elements/1.1/title> "MMODA Astrophysical Workflows and Data Products" .
 <http://odahub.io/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://odahub.io/ontology" .
-<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "b3eabf3" .
+<http://odahub.io/ontology> <http://www.w3.org/2002/07/owl#versionIRI> "e8e0724" .
 <http://odahub.io/ontology> <http://xmlns.com/foaf/0.1/logo> <https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png> .
 # 
 # 
@@ -626,6 +626,10 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
+# http://odahub.io/ontology#PhosphorosFiltersTable
+<http://odahub.io/ontology#PhosphorosFiltersTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#PhosphorosFiltersTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#StructuredParameter> .
+# 
 # http://odahub.io/ontology#PhotometricBand
 <http://odahub.io/ontology#PhotometricBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#PhotometricBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#String> .
@@ -767,6 +771,10 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://odahub.io/ontology#value> .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://odahub.io/ontology#StructuredParameter
+<http://odahub.io/ontology#StructuredParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#StructuredParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
 # 
 # http://odahub.io/ontology#TeV
 <http://odahub.io/ontology#TeV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
