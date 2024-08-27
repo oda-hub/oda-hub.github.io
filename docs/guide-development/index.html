@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.06a2522e225ee454c1eeab839370529b4ff84af07d8bb5088e41104260be6cfa.js" integrity="sha256-BqJSLiJe5FTB7quDk3BSm0/4SvB9i7UIjkEQQmC&#43;bPo=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.a3b79d387e1f7c1742e80babcf68d547fdca5304552e5ffbf50adca020c722ef.js" integrity="sha256-o7edOH4ffBdC6Aurz2jVR/3KUwRVLl/79QrcoCDHIu8=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -210,6 +210,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
         <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
         <li><a href="#handling-exceptions">Handling exceptions</a></li>
+        <li><a href="#using-renku-secret-storage">Using renku secret storage</a></li>
         <li><a href="#how-to-add-a-test-to-the-notebook">How to add a test to the notebook</a></li>
         <li><a href="#reporting-progress-for-long-running-tasks">Reporting progress for long running tasks</a></li>
       </ul>
@@ -441,7 +442,17 @@ the same result every time but still be reproducible (see motivation on <a href=
 <p>It can happen that your analysis workflow is expected to produce no data products in some cases, for example, if there is no data for a specified source and time interval, if the parameters specified by the user have wrong format, or in other &ldquo;exceptions&rdquo;  In this case, it would be good to inform the user what happened. This can be done using the raise <code>RuntimeError()</code> method directly in the notebook, as shown below:</p>
 <p><img src="tmp21.png" alt="image" /></p>
 <p>Don&rsquo;t worry if you do not succeed to foresee all possible exceptions at the initial development stage. If unforeseen exceptions would occur when the service is already deployed and available to users, each time an unforeseen exception occurs, you will be notified and invited to patch your notebook to handle this exception (perhaps raising a new <code>RuntimeError()</code> case in the appropriate cell).</p>
-<h3 id="how-to-add-a-test-to-the-notebook">
+<h3 id="using-renku-secret-storage">
+  Using renku secret storage
+  <a class="anchor" href="#using-renku-secret-storage">#</a>
+</h3>
+<p>For the tasks running on renku platform there is a standard <a href="https://renku.readthedocs.io/en/latest/topic-guides/secrets/secrets.html#add-and-change-secrets">way</a> to define and access secrets. If the default secret mount path <code>/secrets</code> is used, the secret can be accessed using ODA API function <code>get_secret</code>, which returnes the secret by name:</p>
+<pre tabindex="0"><code>from oda_api.secret import get_secret
+secret = get_secret('my-secret')
+</code></pre><p>In case a custom secret mount path was used in renku project settings,  <code>ODA_SECRET_STORAGE</code> environment variable should be set prior to running the above code:</p>
+<pre tabindex="0"><code>import os
+os.environ['ODA_SECRET_STORAGE'] = '/secrets_custom'
+</code></pre><h3 id="how-to-add-a-test-to-the-notebook">
   How to add a test to the notebook
   <a class="anchor" href="#how-to-add-a-test-to-the-notebook">#</a>
 </h3>
@@ -623,6 +634,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
         <li><a href="#how-to-annotate-the-notebook-outputs">How to annotate the notebook outputs</a></li>
         <li><a href="#quering-external-astronomical-data-archives-from-a-notebook">Quering external astronomical data archives from a notebook</a></li>
         <li><a href="#handling-exceptions">Handling exceptions</a></li>
+        <li><a href="#using-renku-secret-storage">Using renku secret storage</a></li>
         <li><a href="#how-to-add-a-test-to-the-notebook">How to add a test to the notebook</a></li>
         <li><a href="#reporting-progress-for-long-running-tasks">Reporting progress for long running tasks</a></li>
       </ul>
