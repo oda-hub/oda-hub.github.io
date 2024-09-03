@@ -513,7 +513,7 @@
     "@value" : "http://odahub.io/ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@value" : "0e32d8c"
+    "@value" : "cde1cac"
   } ],
   "http://xmlns.com/foaf/0.1/logo" : [ {
     "@id" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"
