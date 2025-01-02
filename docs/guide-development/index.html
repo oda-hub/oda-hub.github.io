@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.127a3e0155d831e01ff148738dab81588f84d44e6c183d3ec45679bdbf45bfb0.js" integrity="sha256-Eno&#43;AVXYMeAf8UhzjauBWI&#43;E1E5sGD0&#43;xFZ5vb9Fv7A=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.9e11dd885036dfd8d9c6d287fa05fb100e733ad501a8db89d310e481e28e32f7.js" integrity="sha256-nhHdiFA239jZxtKH&#43;gX7EA5zOtUBqNuJ0xDkgeKOMvc=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -368,16 +368,22 @@ if credentials_env:
 </h2>
 <p>A number of annotations, for the correspondent visualization over the mmoda frontend, are available:</p>
 <ul>
-<li><code>oda:label</code>: to specify the title for the parameter</li>
-<li><code>oda:description</code>: to specify a tooltip, displayed when we over, with the mouse, over the parameter itself</li>
+<li><code>oda:label</code>: to specify the title for a parameter as well as for an output</li>
+<li><code>oda:description</code>: to specify a tooltip, displayed when, with the mouse, we over the parameter or the output itself</li>
 <li><code>oda:group</code>: to visually group together a set of parameters horizontally</li>
 </ul>
-<p>In the example code below we add these additional metadata annotations:</p>
+<p>In the example code below we add these additional metadata annotations, for three parameters:</p>
 <pre tabindex="0"><code>param_1 = '' # http://odahub.io/ontology#String ; oda:label &quot;First&quot; ; oda:group &quot;Group of parameters&quot; ; oda:description &quot;first&quot;
 param_2 = '' # http://odahub.io/ontology#String ; oda:label &quot;Second&quot; ; oda:group &quot;Group of parameters&quot; ; oda:description &quot;second&quot;
 param_3 = '' # http://odahub.io/ontology#String ; oda:label &quot;Third&quot; ; oda:group &quot;Group of parameters&quot; ; oda:description &quot;third&quot;
 </code></pre><p>Which, over the Mmoda interface, will result in the layout displayed in the image below:</p>
 <p><img src="grouped_params.png" alt="image" /></p>
+<p>Instead, in the snippet below, we add the same notations for three outputs (the <code>oda:group</code> annotation is not available for the output):</p>
+<pre tabindex="0"><code>result = astroim # http://odahub.io/ontology#Image ; oda:description &quot;restul test tooltip&quot;
+test_image = bin_image # http://odahub.io/ontology#ODAPictureProduct
+test_long = test_long # http://odahub.io/ontology#String ; oda:label &quot;Result&quot; ; oda:description &quot;test tooltip&quot;
+</code></pre><p>And those, over the Mmoda interface, will result in the following layout:</p>
+<p><img src="labeled_outputs.png" alt="image" /></p>
 <h3 id="how-to-upload-a-file-to-be-used-for-the-notebook-execution">
   How to upload a file to be used for the notebook execution
   <a class="anchor" href="#how-to-upload-a-file-to-be-used-for-the-notebook-execution">#</a>
