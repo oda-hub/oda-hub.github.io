@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MMODA workflow development Guide #  The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
- access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API  The users of MMODA are encouraged to become its developers and add new ORDAS.">
+<meta name="description" content="MMODA workflow development Guide # The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
+access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API The users of MMODA are encouraged to become its developers and add new ORDAS.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="MMODA workflow development Guide #  The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
- access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API  The users of MMODA are encouraged to become its developers and add new ORDAS." />
+<meta property="og:description" content="MMODA workflow development Guide # The MMODA platform provides access to the Astronomical Open Research Data Analysis Services (ORDAS). Good fraction of these services follow a simple scheme, they:
+access publicly available external astronomical data archives to fetch data relevant to specific source or source catalog, transform the fetched data using a workflow based on a Python notebook to derive a data product. display a preview of the data product on the MMODA frontend and/or return the data product to the user via Python API The users of MMODA are encouraged to become its developers and add new ORDAS." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://odahub.io/docs/guide-development/" /><meta property="article:section" content="docs" />
 
@@ -19,7 +19,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.9e11dd885036dfd8d9c6d287fa05fb100e733ad501a8db89d310e481e28e32f7.js" integrity="sha256-nhHdiFA239jZxtKH&#43;gX7EA5zOtUBqNuJ0xDkgeKOMvc=" crossorigin="anonymous"></script>
+  <script defer src="../../en.search.min.4ef7501a2224f8f3ea7ec076fde2683488a9e0fc3b5ace442a4fced032fab67c.js" integrity="sha256-TvdQGiIk&#43;PPqfsB2/eJoNIip4Pw7Ws5EKk/O0DL6tnw=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -163,7 +163,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -315,10 +315,10 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>Annotations can apply to parameters or entire notebook. In both cases they are kept in the notebook cell tagged <code>parameters</code>.
 For example:</p>
-<pre tabindex="0"><code># oda:version &quot;v0.1.1&quot;
-# oda:reference &quot;https://doi.org/10.1051/0004-6361/202037850&quot;
+<pre tabindex="0"><code># oda:version &#34;v0.1.1&#34;
+# oda:reference &#34;https://doi.org/10.1051/0004-6361/202037850&#34;
 
-source_name = &quot;Crab&quot; # oda:AstrophysicalObject
+source_name = &#34;Crab&#34; # oda:AstrophysicalObject
 reference_energy = 20 # oda:keV
 </code></pre><h3 id="adding-external-resource-annotations">
   Adding external resource annotations
@@ -331,37 +331,35 @@ reference_energy = 20 # oda:keV
 <p>For example, in the code below we declare the S3 storage:</p>
 <pre tabindex="0"><code># oda:usesRequiredResource oda:MyS3 .
 # oda:MyS3 a oda:S3 .
-# oda:MyS3 oda:resourceBindingEnvVarName &quot;MY_S3_CREDENTIALS&quot; .
+# oda:MyS3 oda:resourceBindingEnvVarName &#34;MY_S3_CREDENTIALS&#34; .
 </code></pre><p>In the code below we initialize the S3 storage session using the credentials provided by means of the environment variable:</p>
 <pre tabindex="0"><code>import json
 import os
 from minio import Minio
 
-credentials_env = os.environ.get('MY_S3_CREDENTIALS')
+credentials_env = os.environ.get(&#39;MY_S3_CREDENTIALS&#39;)
 if credentials_env:
 	credentials=json.loads(credentials_env)
 	client = Minio(
-            endpoint=credentials[&quot;endpoint&quot;],
-            access_key=credentials[&quot;access_key&quot;],
-            secret_key=credentials[&quot;secret_key&quot;],
+            endpoint=credentials[&#34;endpoint&#34;],
+            access_key=credentials[&#34;access_key&#34;],
+            secret_key=credentials[&#34;secret_key&#34;],
         )
-
 </code></pre><p>In the example below we declare dask cluster resource requirements in the parameter cell</p>
 <pre tabindex="0"><code># oda:usesRequiredResource oda:MyDaskCluster .
 # oda:MyDaskCluster a oda:Dask .
-# oda:MyDaskCluster oda:memory_per_process &quot;2G&quot; .
-# oda:MyDaskCluster oda:n_processes &quot;16&quot; .
-# oda:MyDaskCluster oda:resourceBindingEnvVarName &quot;MY_DASK_CREDENTIALS&quot; .
+# oda:MyDaskCluster oda:memory_per_process &#34;2G&#34; .
+# oda:MyDaskCluster oda:n_processes &#34;16&#34; .
+# oda:MyDaskCluster oda:resourceBindingEnvVarName &#34;MY_DASK_CREDENTIALS&#34; .
 </code></pre><p>Here <code>memory_per_process</code> and <code>n_processes</code> define minimal requirements to the resource.</p>
 <p>In the code below we open the dask cluster session</p>
 <pre tabindex="0"><code>import json
 from dask.distributed import Client
 
-credentials_env = os.environ.get('MY_DASK_CREDENTIALS')
+credentials_env = os.environ.get(&#39;MY_DASK_CREDENTIALS&#39;)
 if credentials_env:
 	credentials=json.loads(credentials_env)
-	client = Client(address=credentials[&quot;address&quot;])
-
+	client = Client(address=credentials[&#34;address&#34;])
 </code></pre><h2 id="annotations-for-the-visualization-over-the-mmoda-interface">
   Annotations for the visualization over the Mmoda interface
   <a class="anchor" href="#annotations-for-the-visualization-over-the-mmoda-interface">#</a>
@@ -373,15 +371,15 @@ if credentials_env:
 <li><code>oda:group</code>: to visually group together a set of parameters horizontally</li>
 </ul>
 <p>In the example code below we add these additional metadata annotations, for three parameters:</p>
-<pre tabindex="0"><code>param_1 = '' # http://odahub.io/ontology#String ; oda:label &quot;First&quot; ; oda:group &quot;Group of parameters&quot; ; oda:description &quot;first&quot;
-param_2 = '' # http://odahub.io/ontology#String ; oda:label &quot;Second&quot; ; oda:group &quot;Group of parameters&quot; ; oda:description &quot;second&quot;
-param_3 = '' # http://odahub.io/ontology#String ; oda:label &quot;Third&quot; ; oda:group &quot;Group of parameters&quot; ; oda:description &quot;third&quot;
+<pre tabindex="0"><code>param_1 = &#39;&#39; # http://odahub.io/ontology#String ; oda:label &#34;First&#34; ; oda:group &#34;Group of parameters&#34; ; oda:description &#34;first&#34;
+param_2 = &#39;&#39; # http://odahub.io/ontology#String ; oda:label &#34;Second&#34; ; oda:group &#34;Group of parameters&#34; ; oda:description &#34;second&#34;
+param_3 = &#39;&#39; # http://odahub.io/ontology#String ; oda:label &#34;Third&#34; ; oda:group &#34;Group of parameters&#34; ; oda:description &#34;third&#34;
 </code></pre><p>Which, over the Mmoda interface, will result in the layout displayed in the image below:</p>
 <p><img src="grouped_params.png" alt="image" /></p>
 <p>Instead, in the snippet below, we add the same notations for three outputs (the <code>oda:group</code> annotation is not available for the output):</p>
-<pre tabindex="0"><code>result = astroim # http://odahub.io/ontology#Image ; oda:description &quot;restul test tooltip&quot;
+<pre tabindex="0"><code>result = astroim # http://odahub.io/ontology#Image ; oda:description &#34;restul test tooltip&#34;
 test_image = bin_image # http://odahub.io/ontology#ODAPictureProduct
-test_long = test_long # http://odahub.io/ontology#String ; oda:label &quot;Result&quot; ; oda:description &quot;test tooltip&quot;
+test_long = test_long # http://odahub.io/ontology#String ; oda:label &#34;Result&#34; ; oda:description &#34;test tooltip&#34;
 </code></pre><p>And those, over the Mmoda interface, will result in the following layout:</p>
 <p><img src="labeled_outputs.png" alt="image" /></p>
 <h3 id="how-to-upload-a-file-to-be-used-for-the-notebook-execution">
@@ -398,15 +396,15 @@ test_long = test_long # http://odahub.io/ontology#String ; oda:label &quot;Resul
   <a class="anchor" href="#odaposixpath">#</a>
 </h4>
 <p>This is used to reference a file locally available in the repository to be uploaded from the filesystem of the browser. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_file_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;image.png&#39;</span> <span style="color:#75715e"># oda:POSIXPath</span>
-</code></pre></div><p>In the frontend, an upload widget will be displayed. It is advisable to put an example file in the repository matching the default file name ( <code>'image.png'</code>  in the example above) to allow easy testing of the notebook.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>img_file_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;image.png&#39;</span> <span style="color:#75715e"># oda:POSIXPath</span>
+</span></span></code></pre></div><p>In the frontend, an upload widget will be displayed. It is advisable to put an example file in the repository matching the default file name ( <code>'image.png'</code>  in the example above) to allow easy testing of the notebook.</p>
 <h4 id="odafileurl">
   <code>oda:FileURL</code>
   <a class="anchor" href="#odafileurl">#</a>
 </h4>
 <p>This annotation is instead used when the notebook expects parameter to be a URL of a file. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">img_file_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.isdc.unige.ch/integral/images/medium/integralTransparent.png&#39;</span> <span style="color:#75715e"># oda:FileURL</span>
-</code></pre></div><p>In the frontend, we will display a text box where the URL can be edited.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>img_file_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.isdc.unige.ch/integral/images/medium/integralTransparent.png&#39;</span> <span style="color:#75715e"># oda:FileURL</span>
+</span></span></code></pre></div><p>In the frontend, we will display a text box where the URL can be edited.</p>
 <h3 id="adding-token-annotations">
   Adding token annotations
   <a class="anchor" href="#adding-token-annotations">#</a>
@@ -415,16 +413,16 @@ test_long = test_long # http://odahub.io/ontology#String ; oda:label &quot;Resul
 <pre tabindex="0"><code># oda:oda_token_access oda:InOdaContext .
 </code></pre><p>The above expression enables the standard mechanism to supply token using oda context variable. Then the token can be accessed from the code in the following way:</p>
 <pre tabindex="0"><code>from oda_api.api import get_context
-token = get_context()['token']
+token = get_context()[&#39;token&#39;]
 </code></pre><p>However, we recommend instead using higer level  <code>oda_api.token</code> API, which also provides token validation and token discovery method as options. The code above is eqivalent to the following higher level code</p>
 <pre tabindex="0"><code>from oda_api.token import discover_token, TokenLocation
 token = discover_token(allow_invalid=True)
 </code></pre><p>Below is the entire list of token locations supported in order of priority.</p>
 <pre tabindex="0"><code>class TokenLocation(Enum):
-    ODA_ENV_VAR = &quot;environment variable ODA_TOKEN&quot;
-    FILE_CUR_DIR = &quot;.oda-token file in current directory&quot;
-    FILE_HOME = &quot;.oda-token file in home&quot;
-    CONTEXT_FILE = &quot;context file current directory&quot;
+    ODA_ENV_VAR = &#34;environment variable ODA_TOKEN&#34;
+    FILE_CUR_DIR = &#34;.oda-token file in current directory&#34;
+    FILE_HOME = &#34;.oda-token file in home&#34;
+    CONTEXT_FILE = &#34;context file current directory&#34;
 </code></pre><p>By default, token validation is enabled and the attempts are made to load the token from all the supported locations in the order they appear in the TokenLocation class. Note that token locations other than <code>TokenLocation.CONTEXT_FILE</code> are useful to test the notebook or run it iteratively, but they don&rsquo;t have any corresponding annotations in the ontology.</p>
 <h3 id="how-to-annotate-the-notebook-outputs">
   How to annotate the notebook outputs
@@ -454,19 +452,30 @@ the same result every time but still be reproducible (see motivation on <a href=
 </h3>
 <p>For the tasks running on renku platform there is a standard <a href="https://renku.readthedocs.io/en/latest/topic-guides/secrets/secrets.html#add-and-change-secrets">way</a> to define and access secrets.  The secret can be accessed using ODA API function <code>get_secret</code>, which takes secret name as a string parameter and returnes the secret as string or <code>None</code> if the secret is not found:</p>
 <pre tabindex="0"><code>from oda_api.secret import get_secret
-secret = get_secret('my-secret')
+secret = get_secret(&#39;my-secret&#39;)
 if secret is None:
-	print('secret is not defined')
+	print(&#39;secret is not defined&#39;)
 </code></pre><p>Here we asssume that the default secret mount path <code>/secrets</code> was used in the renku project settings. In case a custom secret mount path was used, <code>ODA_SECRET_STORAGE</code> environment variable should be set prior to running the above code:</p>
 <pre tabindex="0"><code>import os
-os.environ['ODA_SECRET_STORAGE'] = '/secrets_custom'
+os.environ[&#39;ODA_SECRET_STORAGE&#39;] = &#39;/secrets_custom&#39;
 </code></pre><h3 id="how-to-add-a-test-to-the-notebook">
   How to add a test to the notebook
   <a class="anchor" href="#how-to-add-a-test-to-the-notebook">#</a>
 </h3>
 <p>It is a good practice to test the developed notebook. This allows to make sure that the code remains valid in the future.
 A test is implemented as another notebook, except that name of the notebook starts with &ldquo;test_&rdquo;. The notebook should call other notebooks and check that the output matches expectations. See an example of such a test <a href="https://gitlab.renkulab.io/astronomy/mmoda/mmoda-nb2workflow-example/-/blob/master/notebooks/test_lightcurve.ipynb">here</a>.</p>
-<h3 id="reporting-progress-for-long-running-tasks">
+<p>The test consists of:</p>
+<ol>
+<li>load the nb2workflow runner (<code>from nb2workflow.nbadapter import run</code>)</li>
+<li>prepare a dictionary of the input parameters (<code>par_dict={...}</code>)</li>
+<li>running a notebook (<code>test_result = run('my_notebook.ipynb', par_dict)</code>)</li>
+<li>accessing results from <code>test_result</code>, which is a dictionary whose keys are the names of the output variables (e.g. <code>result = test_result['result']</code>)</li>
+<li>Make possible assessments on results</li>
+</ol>
+<p>By default, tests do not include output processing by the MMODA dispatcher, which is achieved through the <a href="https://github.com/oda-hub/dispatcher-plugin-nb2workflow">dispatcher-plugin-nb2workflow</a>. To test the output ontology and formatting, it is necessary to add some dependencies to the basic environment: in <code>environment.yml</code>, add libmagic to the dependencies; in <code>requirements.txt</code> add the dispatcher and the<code>dispatcher-plugin-nb2workflow</code> from the corresponding git repositories as shown below</p>
+<pre tabindex="0"><code>git+https://github.com/oda-hub/dispatcher-app.git#egg=cdci_data_analysis
+git+https://github.com/oda-hub/dispatcher-plugin-nb2workflow.git#egg=dispatcher-plugin-nb2workflow
+</code></pre><h3 id="reporting-progress-for-long-running-tasks">
   Reporting progress for long running tasks
   <a class="anchor" href="#reporting-progress-for-long-running-tasks">#</a>
 </h3>
@@ -474,12 +483,12 @@ A test is implemented as another notebook, except that name of the notebook star
 consider reporting task progress using ODA API class ProgressReporter:</p>
 <pre tabindex="0"><code>from oda_api.api import ProgressReporter
 pr = ProgressReporter()
-pr.report_progress(stage='simulation', progress=0, substage='step 1')
+pr.report_progress(stage=&#39;simulation&#39;, progress=0, substage=&#39;step 1&#39;)
 # implement step 1
-pr.report_progress(stage='simulation', progress=50, substage='step 2')
+pr.report_progress(stage=&#39;simulation&#39;, progress=50, substage=&#39;step 2&#39;)
 # implement step 2
-</code></pre>Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <h2 id="make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">
-  <a href="https://renkulab.io/">renkulab.io</a>
+</code></pre><h2 id="make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">
+  Make the notebook available for deployment on <a href="https://www.astro.unige.ch/mmoda/">MMODA</a> via <a href="https://renkulab.io/">renkulab.io</a>
   <a class="anchor" href="#make-the-notebook-available-for-deployment-on-mmodahttpswwwastrounigechmmoda-via-renkulabiohttpsrenkulabio">#</a>
 </h2>
 <p>The parameterized workflow formulated as a Python notebook can be converted into a service provided by <a href="https://www.astro.unige.ch/mmoda/">MMODA</a>  by a bot that scans a specific location <code>astronomy/mmoda</code> in the project directory on the  <a href="https://renkulab.io/">renkulab.io</a> collaborative platform. Creating a new project in this directory will make it visible for the bot. In our example of Fermi/LAT lightcurve workflow, it is in the <a href="https://renkulab.io/projects/astronomy/mmoda/fermi">fermi</a> subdirectory of <code>astronomy/mmoda</code>.</p>
@@ -564,8 +573,8 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
   <a class="anchor" href="#installation">#</a>
 </h5>
 <p>The plugin can be installed via pip on your own environment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install renku_graph_vis
-</code></pre></div><p>Alternatively, it can be made available within a Renku session by adding it in the list of requirements of the Renku project, within your <code>requirements.txt</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_graph_vis
+</span></span></code></pre></div><p>Alternatively, it can be made available within a Renku session by adding it in the list of requirements of the Renku project, within your <code>requirements.txt</code> file.</p>
 <h4 id="tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">
   Tracking access to astronomical archives and services in the project Knowledge Graph by using <code>renku-aqs-annotation</code> plugin
   <a class="anchor" href="#tracking-access-to-astronomical-archives-and-services-in-the-project-knowledge-graph-by-using-renku-aqs-annotation-plugin">#</a>
@@ -578,8 +587,8 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
   <a class="anchor" href="#installation-1">#</a>
 </h5>
 <p>The plugin can be installed either via pip on your own evironment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install renku_aqs_annotation
-</code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your <code>requirements.txt</code> file for the Renku project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install renku_aqs_annotation
+</span></span></code></pre></div><p>Just like the <code>renku_graph_vis</code> plugin, the <code>renku_aqs_annotation</code> plugin can be made available within a Renku session by adding it to the list of requirements in your <code>requirements.txt</code> file for the Renku project.</p>
 <h3 id="inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">
   Inform <strong>MMODA</strong> team and suggest automatic test cases to ensure service stability
   <a class="anchor" href="#inform-mmoda-team-and-suggest-automatic-test-cases-to-ensure-service-stability">#</a>
@@ -601,7 +610,7 @@ pr.report_progress(stage='simulation', progress=50, substage='step 2')
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){if(window.getSelection().toString())return;a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
