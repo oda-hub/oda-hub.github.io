@@ -565,7 +565,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#Image
 :Image rdf:type owl:Class ;
-       rdfs:subClassOf :DataProduct .
+       rdfs:subClassOf :NumpyDataProduct .
 
 
 ###  http://odahub.io/ontology#Instrument
@@ -611,7 +611,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://odahub.io/ontology#LightCurve
 :LightCurve rdf:type owl:Class ;
-            rdfs:subClassOf :DataProduct ,
+            rdfs:subClassOf :NumpyDataProduct ,
                             <http://www.ivoa.net/rdf/product-type#timeseries> ;
             rdfs:label "LightCurve" .
 
@@ -656,6 +656,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://odahub.io/ontology#NumericParameter
 :NumericParameter rdf:type owl:Class ;
                   rdfs:subClassOf :WorkflowParameter .
+
+
+###  http://odahub.io/ontology#NumpyDataProduct
+:NumpyDataProduct rdf:type owl:Class ;
+                  rdfs:subClassOf :DataProduct .
 
 
 ###  http://odahub.io/ontology#ODAAstropyTable
@@ -831,7 +836,7 @@ Subclasses may have other ways to express the content.""" ;
 
 ###  http://odahub.io/ontology#Spectrum
 :Spectrum rdf:type owl:Class ;
-          rdfs:subClassOf :DataProduct .
+          rdfs:subClassOf :NumpyDataProduct .
 
 
 ###  http://odahub.io/ontology#StartTime

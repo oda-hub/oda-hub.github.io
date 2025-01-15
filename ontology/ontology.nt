@@ -494,7 +494,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://odahub.io/ontology#Image
 <http://odahub.io/ontology#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
+<http://odahub.io/ontology#Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumpyDataProduct> .
 # 
 # http://odahub.io/ontology#Instrument
 <http://odahub.io/ontology#Instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -539,7 +539,7 @@ _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://odahub.io/ontology#LightCurve
 <http://odahub.io/ontology#LightCurve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#LightCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
+<http://odahub.io/ontology#LightCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumpyDataProduct> .
 <http://odahub.io/ontology#LightCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ivoa.net/rdf/product-type#timeseries> .
 <http://odahub.io/ontology#LightCurve> <http://www.w3.org/2000/01/rdf-schema#label> "LightCurve" .
 # 
@@ -578,6 +578,10 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://odahub.io/ontology#NumericParameter
 <http://odahub.io/ontology#NumericParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://odahub.io/ontology#NumericParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#WorkflowParameter> .
+# 
+# http://odahub.io/ontology#NumpyDataProduct
+<http://odahub.io/ontology#NumpyDataProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://odahub.io/ontology#NumpyDataProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
 # 
 # http://odahub.io/ontology#ODAAstropyTable
 <http://odahub.io/ontology#ODAAstropyTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -736,7 +740,7 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://odahub.io/ontology#Spectrum
 <http://odahub.io/ontology#Spectrum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://odahub.io/ontology#Spectrum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#DataProduct> .
+<http://odahub.io/ontology#Spectrum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://odahub.io/ontology#NumpyDataProduct> .
 # 
 # http://odahub.io/ontology#StartTime
 <http://odahub.io/ontology#StartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

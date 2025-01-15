@@ -951,7 +951,7 @@
   "@id" : "http://odahub.io/ontology#Image",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#DataProduct"
+    "@id" : "http://odahub.io/ontology#NumpyDataProduct"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#Instrument",
@@ -995,7 +995,7 @@
     "@value" : "LightCurve"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#DataProduct"
+    "@id" : "http://odahub.io/ontology#NumpyDataProduct"
   }, {
     "@id" : "http://www.ivoa.net/rdf/product-type#timeseries"
   } ]
@@ -1049,6 +1049,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#WorkflowParameter"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#NumpyDataProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#DataProduct"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#ODAAstropyTable",
@@ -1232,7 +1238,7 @@
   "@id" : "http://odahub.io/ontology#Spectrum",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://odahub.io/ontology#DataProduct"
+    "@id" : "http://odahub.io/ontology#NumpyDataProduct"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#StartTime",

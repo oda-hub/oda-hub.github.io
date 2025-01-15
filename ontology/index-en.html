@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Fri Jan 10 14:09:57 UTC 2025", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Wed Jan 15 10:31:40 UTC 2025", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -466,6 +466,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#NumericParameter" title="http://odahub.io/ontology#NumericParameter">
          <span>numeric parameter</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NumpyDataProduct" title="http://odahub.io/ontology#NumpyDataProduct">
+         <span>numpy data product</span>
       </a>
    </li>
    <li>
@@ -1380,6 +1385,11 @@ This section provides details for each class and property defined by MMODA Astro
          </a>
       </li>
       <li>
+         <a href="#NumpyDataProduct" title="http://odahub.io/ontology#NumpyDataProduct">
+            <span>numpy data product</span>
+         </a>
+      </li>
+      <li>
          <a href="#ODAAstropyTable" title="http://odahub.io/ontology#ODAAstropyTable">
             <span>o d a astropy table</span>
          </a>
@@ -1904,14 +1914,12 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Image" title="http://odahub.io/ontology#Image">image</a>
+            <a href="#NumpyDataProduct" title="http://odahub.io/ontology#NumpyDataProduct">numpy data product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ODAAstropyTable" title="http://odahub.io/ontology#ODAAstropyTable">o d a astropy table</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ODABinaryProduct" title="http://odahub.io/ontology#ODABinaryProduct">o d a binary product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ODAPictureProduct" title="http://odahub.io/ontology#ODAPictureProduct">o d a picture product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ODATextProduct" title="http://odahub.io/ontology#ODATextProduct">o d a text product</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ParameterProduct" title="http://odahub.io/ontology#ParameterProduct">parameter product</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Spectrum" title="http://odahub.io/ontology#Spectrum">spectrum</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2728,7 +2736,7 @@ This section provides details for each class and property defined by MMODA Astro
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <a href="#NumpyDataProduct" title="http://odahub.io/ontology#NumpyDataProduct">numpy data product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2904,7 +2912,7 @@ This section provides details for each class and property defined by MMODA Astro
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <a href="#NumpyDataProduct" title="http://odahub.io/ontology#NumpyDataProduct">numpy data product</a>
             <sup class="type-c" title="class">c</sup>, <a href="http://www.ivoa.net/rdf/product-type#timeseries"
                target="_blank"
                title="http://www.ivoa.net/rdf/product-type#timeseries">timeseries</a>
@@ -3081,6 +3089,28 @@ This section provides details for each class and property defined by MMODA Astro
             <a href="#ExpressedInUnit" title="http://odahub.io/ontology#ExpressedInUnit">expressed in unit</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Float" title="http://odahub.io/ontology#Float">float</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Integer" title="http://odahub.io/ontology#Integer">integer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NumpyDataProduct">
+      <h3>numpy data product<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#NumpyDataProduct</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#LightCurve" title="http://odahub.io/ontology#LightCurve">LightCurve</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Image" title="http://odahub.io/ontology#Image">image</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Spectrum" title="http://odahub.io/ontology#Spectrum">spectrum</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3504,7 +3534,7 @@ Subclasses may have other ways to express the content.</span>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DataProduct" title="http://odahub.io/ontology#DataProduct">DataProduct</a>
+            <a href="#NumpyDataProduct" title="http://odahub.io/ontology#NumpyDataProduct">numpy data product</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
