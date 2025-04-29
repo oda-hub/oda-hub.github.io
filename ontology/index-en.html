@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Tue Jan 21 20:49:32 UTC 2025", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://odahub.io/ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://odahub.io/ontology","name":"MMODA Astrophysical Workflow Ontology", "headline":"IVOA kindly provides various data and object types, but very little is availble about workflow types.                                 It is possible to combine function types (e.g. https://fno.io) with data types.                                 In this ontology we define supporting types, our own versions of some of the generic types,                                 and anything else needed to descrie Astrophysical Analysis Workflows.                                Please refer to https://odahub.io/docs/guide-ontology/ for instructions on how to contribute.", "datePublished":"Tue Apr 29 21:33:44 UTC 2025", "author":[{"@type":"Person","name":"https://github.com/andriineronov","url":"https://github.com/andriineronov"},{"@type":"Person","name":"https://github.com/burnout87","url":"https://github.com/burnout87"},{"@type":"Person","name":"https://github.com/dsavchenko","url":"https://github.com/dsavchenko"},{"@type":"Person","name":"https://github.com/volodymyrss","url":"https://github.com/volodymyrss"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -563,6 +563,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#SecretStorageResource" title="http://odahub.io/ontology#SecretStorageResource">
+         <span>secret storage resource</span>
+      </a>
+   </li>
+   <li>
       <a href="#SkyCoordinates" title="http://odahub.io/ontology#SkyCoordinates">SkyCoordinates</a>
    </li>
    <li>
@@ -1009,6 +1014,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/unit#Second" title="http://odahub.io/ontology/unit#Second">
          <span>second</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SecretStorage" title="http://odahub.io/ontology#SecretStorage">
+         <span>secret storage</span>
       </a>
    </li>
    <li>
@@ -1476,6 +1486,11 @@ This section provides details for each class and property defined by MMODA Astro
       <li>
          <a href="#second" title="http://odahub.io/ontology#second">
             <span>second</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SecretStorageResource" title="http://odahub.io/ontology#SecretStorageResource">
+            <span>secret storage resource</span>
          </a>
       </li>
       <li>
@@ -3487,6 +3502,28 @@ This section provides details for each class and property defined by MMODA Astro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="SecretStorageResource">
+      <h3>secret storage resource<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#SecretStorageResource</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://odahub.io/ontology#Resource"
+               target="_blank"
+               title="http://odahub.io/ontology#Resource">resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#SecretStorage" title="http://odahub.io/ontology#SecretStorage">secret storage</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="SkyCoordinates">
       <h3>SkyCoordinates<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -5018,6 +5055,11 @@ Subclasses may have other ways to express the content.</span>
          </a>
       </li>
       <li>
+         <a href="#SecretStorage" title="http://odahub.io/ontology#SecretStorage">
+            <span>secret storage</span>
+         </a>
+      </li>
+      <li>
          <a href="#/unit#TeV" title="http://odahub.io/ontology/unit#TeV">
             <span>te v</span>
          </a>
@@ -5506,6 +5548,28 @@ Subclasses may have other ways to express the content.</span>
          <dd>
             <a href="#/unit#TimeUnit" title="http://odahub.io/ontology/unit#TimeUnit">time unit</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecretStorage">
+      <h3>secret storage<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://odahub.io/ontology#SecretStorage</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SecretStorageResource" title="http://odahub.io/ontology#SecretStorageResource">secret storage resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#resourceBindingEnvVarName"
+               title="http://odahub.io/ontology#resourceBindingEnvVarName">resource binding env var name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"ODA_SECRET_STORAGE"</span>
          </dd>
       </dl>
    </div>

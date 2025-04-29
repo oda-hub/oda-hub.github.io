@@ -513,7 +513,7 @@
     "@value" : "http://odahub.io/ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@value" : "281d1ae"
+    "@value" : "908b077"
   } ],
   "http://xmlns.com/foaf/0.1/logo" : [ {
     "@id" : "https://www.astro.unige.ch/mmoda/sites/all/themes/bootstrap_mmoda/logo.png"
@@ -1219,6 +1219,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://odahub.io/ontology#StorageResource"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#SecretStorage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://odahub.io/ontology#resourceBindingEnvVarName" : [ {
+    "@value" : "ODA_SECRET_STORAGE"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://odahub.io/ontology#SecretStorageResource"
+  } ]
+}, {
+  "@id" : "http://odahub.io/ontology#SecretStorageResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://odahub.io/ontology#Resource"
   } ]
 }, {
   "@id" : "http://odahub.io/ontology#SkyCoordinates",
