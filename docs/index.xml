@@ -23,6 +23,13 @@
     </item>
     <item>
       <title></title>
+      <link>https://odahub.io/docs/guide-galaxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://odahub.io/docs/guide-galaxy/</guid>
+      <description>The Galaxy project # Galaxy is a free, open-source platform for data analysis, workflow authoring, training and education, tool publication, infrastructure management, and more. Our goal is to develop astronomy-related software tools and make them publicly available on servers running the Galaxy system. Since Galaxy can be deployed on multiple servers, we maintain a dedicated Galaxy staging server where tools can be previewed and tested before being published more widely.</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://odahub.io/docs/guide-ontology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://odahub.io/docs/guide-ontology/</guid>

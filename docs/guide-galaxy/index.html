@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Galaxy project # Galaxy is a free, open-source platform for data analysis, workflow authoring, training and education, tool publication, infrastructure management, and more. Our goal is to develop astronomy-related software tools and make them publicly available on servers running the Galaxy system. Since Galaxy can be deployed on multiple servers, we maintain a dedicated Galaxy staging server where tools can be previewed and tested before being published more widely.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="The Galaxy project # Galaxy is a free, open-source platform for data analysis, workflow authoring, training and education, tool publication, infrastructure management, and more. Our goal is to develop astronomy-related software tools and make them publicly available on servers running the Galaxy system. Since Galaxy can be deployed on multiple servers, we maintain a dedicated Galaxy staging server where tools can be previewed and tested before being published more widely." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://odahub.io/docs/guide-galaxy/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Guide Galaxy | About ODA</title>
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../../book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="../../flexsearch.min.js"></script>
+  <script defer src="../../en.search.min.ca3ed3a90405aff8888b77bd05c454cdb68c65393cd4dc9547c1436de486d07d.js" integrity="sha256-yj7TqQQFr/iIi3e9BcRUzbaMZTk81NyVR8FDbeSG0H0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <script src="https://hypothes.is/embed.js" async></script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../../"><span>About ODA</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/guide-development/" class="">Guide Development</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/guide-discovery/" class="">Guide Discovery</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/guide-galaxy/" class="active">Guide Galaxy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/guide-ontology/" class="">Guide Ontology</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/issues/" class="">Issues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/reasoning-engine/" class="">Reasoning Engine</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../docs/workflow-development-progression/" class="">Workflow Development Progression</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Guide Galaxy</strong>
+
+  <label for="toc-control">
+    
+    <img src="../../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#resolution-of-the-dependencies">Resolution of the dependencies</a></li>
+    <li><a href="#additional-configuration">Additional configuration</a></li>
+    <li><a href="#tool-linting-testing-and-preview">Tool linting, testing and preview</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="the-galaxy-project">
+  The Galaxy project
+  <a class="anchor" href="#the-galaxy-project">#</a>
+</h1>
+<p><a href="https://galaxyproject.org/">Galaxy</a> is a free, open-source platform for data analysis, workflow authoring, training and education, tool publication, infrastructure management, and more. Our goal is to develop astronomy-related software tools and make them publicly available on servers running the Galaxy system. Since Galaxy can be deployed on multiple servers, we maintain a dedicated <a href="https://galaxy.odahub.fr">Galaxy staging server</a> where tools can be previewed and tested before being published more widely.</p>
+<h1 id="converting-a-notebook-repository-into-a-galaxy-tool">
+  Converting a notebook repository into a Galaxy tool.
+  <a class="anchor" href="#converting-a-notebook-repository-into-a-galaxy-tool">#</a>
+</h1>
+<p>A workflow developed following the <a href="guide-development.md">Development Guide</a> can be automatically converted into a <a href="https://github.com/galaxyproject/galaxy">Galaxy</a> tool.</p>
+<p>To trigger the conversion, one must add <code>galaxy-tool</code> as a &ldquo;Project topic&rdquo; in the GitLab project settings. The bot monitoring the <a href="https://gitlab.renkulab.io/astronomy/mmoda">GitLab group</a> then attempts to convert the repository into a Galaxy tool and creates a corresponding pull request in the <a href="https://github.com/esg-epfl-apc/tools-astro">tools-astro repository</a>. This process is handled by the <code>galaxy.py</code> module from the <a href="https://github.com/oda-hub/nb2workflow">nb2workflow</a> package. If the automatic conversion process fails, one can debug it using <code>nb2galaxy</code> CLI directly. Run <code>nb2galaxy --help</code> to see the available command-line options.</p>
+<h2 id="resolution-of-the-dependencies">
+  Resolution of the dependencies
+  <a class="anchor" href="#resolution-of-the-dependencies">#</a>
+</h2>
+<p>Galaxy tools require dependencies to be available as Conda packages (not PyPI packages). Therefore, the conversion module attempts to reconcile the dependencies listed in both <code>requirements.txt</code> and <code>environment.yml</code> using Conda. First, each package from <code>requirements.txt</code> is searched by Conda. If the package with the same name exists in the configured conda channels (only <code>conda-forge</code> by default), it is included in the final list of packages for reconciliation. Otherwise, the package is ignored and a comment is added to the generated tool represented as an XML file.</p>
+<p>In the end, all dependencies are resolved together to obtain fixed versions of the required packages that are written in the tool&rsquo;s XML file.</p>
+<h2 id="additional-configuration">
+  Additional configuration
+  <a class="anchor" href="#additional-configuration">#</a>
+</h2>
+<p>A Galaxy ToolShed definition file <code>.shed.yml</code> can be manually included. If this file is not present, one is auto-generated with default options.
+Here is an example of a minimal, automatically generated <code>.shed.yml</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">categories</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#ae81ff">Astronomy</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#ae81ff">Tool Name</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">homepage_url</span>: <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">long_description</span>: <span style="color:#ae81ff">Tool Name</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">tool_name_astro_tool</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">owner</span>: <span style="color:#ae81ff">astroteam</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">remote_repository_url</span>: <span style="color:#ae81ff">https://github.com/esg-epfl-apc/tools-astro/tree/main/tools</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">unrestricted</span>
+</span></span></code></pre></div><p>It is recommended to provide the <code>description</code> and <code>long_description</code>, as they define how the tool appears in the Galaxy ToolShed. However, these values - along with other Galaxy-specific options - can be configured via the YAML frontmatter block in <code>galaxy_help.md</code>, as well (see below).</p>
+<p>Additional configuration options part of the YAML frontmatter block are:</p>
+<ul>
+<li><code>description: &lt;string&gt;</code> - a short description of the tool which can be used in <code>.shed.yml</code> if this file is not explicitly provided (default value: the tool name);</li>
+<li><code>long_description: &lt;string&gt;</code> - similar to <code>description: &lt;string&gt;</code>, but provides a more detailed explanation;</li>
+<li><code>additional_files: &lt;list|string&gt;</code> - specifies extra files (e.g. helper modules and data files) from the GitLab repository required by the tool, since by default, <code>nb2galaxy</code> converts only the notebooks to scripts and adds them to the tool directory. The paths can be a single string or a list of strings and should follow the <a href="https://docs.python.org/3/library/glob.html#glob.glob">glob</a> syntax (with <code>recursive=True</code>). <strong>Note</strong>: In Galaxy, the tool directory and the workdir (i.e. from where the tool is executed) are different. To address this, the conversion module sets two environment variables: <code>GALAXY_TOOL_DIR</code> and <code>BASEDIR</code>, both pointing to the tool root directory.</li>
+</ul>
+<p>In addition to these configuration options, the <code>galaxy_help.md</code> file - located in the root directory of the repository - has to include the tool documentation (delimited by <code>---</code> from the YAML block) that is automatically extracted and added into the tool XML file.</p>
+<p>Finally, a <code>citations.bib</code> file that contains tool references must be created. If an entry contains a DOI, only the DOI is used in the Galaxy tool XML file (this is the preferred method). Otherwise, the full BibTeX citation is included.</p>
+<h2 id="tool-linting-testing-and-preview">
+  Tool linting, testing and preview
+  <a class="anchor" href="#tool-linting-testing-and-preview">#</a>
+</h2>
+<p>The <a href="https://github.com/esg-epfl-apc/tools-astro">tools-astro repository</a> is set up with CI/CD pipelines that automatically lint the tool definition files and run tests to ensure the tool, with the default parameters, executes correctly and without exceptions. One can inspect the pipeline results and then fix issues or improve the original GitLab repository accordingly.</p>
+<p>Additionally, when the bot creates a GitHub pull request, it adds a <code>test-live</code> label. This triggers a CI/CD workflow that publishes a preview of the tool to our <a href="https://galaxy.odahub.fr">staging server</a>, under the <strong>Astro tools (staging)</strong> section. This allows the developer of the tool to preview and manually test it on the live Galaxy instance.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#resolution-of-the-dependencies">Resolution of the dependencies</a></li>
+    <li><a href="#additional-configuration">Additional configuration</a></li>
+    <li><a href="#tool-linting-testing-and-preview">Tool linting, testing and preview</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
